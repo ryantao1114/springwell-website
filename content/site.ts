@@ -6,7 +6,7 @@ export const site = {
     "Springwell Integrative Acupuncture offers calm, professional care for patients seeking support with pain, stress, sleep, fertility journeys, TMJ-related discomfort, and women's health in Northern Virginia and the DMV area.",
   bookingUrl:
     process.env.NEXT_PUBLIC_BOOKING_URL ||
-    "https://square.site/appointments/your-square-link",
+    "https://springwell-integrative-acupuncture.square.site/",
   phone: "Phone coming soon",
   email: "hello@springwellacu.com",
   address: "Address coming soon",
