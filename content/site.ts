@@ -18,7 +18,8 @@ export const site = {
     background:
       "PhD in Oral & Craniofacial Biology with a background in dentistry, orofacial pain research, and traditional Chinese medicine.",
     philosophy:
-      "Care at Springwell is calm, precise, and individualized. Each visit begins with listening carefully, understanding the full picture, and choosing a treatment plan that supports the patient's goals without overpromising outcomes."
+      "Care at Springwell is calm, precise, and individualized. Each visit begins with listening carefully, understanding the full picture, and choosing a treatment plan that supports the patient's goals without overpromising outcomes.",
+    headshotImage: "/images/provider-headshot.jpg"
   },
   seoKeywords: [
     "Acupuncture in Northern Virginia",

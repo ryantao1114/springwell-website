@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BookingButton } from "@/components/BookingButton";
 import { CTASection } from "@/components/CTASection";
 import { Hero } from "@/components/Hero";
+import { ProviderImage } from "@/components/ProviderImage";
 import { SectionHeading } from "@/components/SectionHeading";
 import { pageMetadata } from "@/content/metadata";
 import { featuredServices } from "@/content/services";
@@ -61,9 +62,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="min-h-80 rounded-md border border-dashed border-forestDeep/20 bg-sage/20 p-6 text-sm text-charcoal/60">
-            Professional headshot placeholder.
-          </div>
+          <ProviderImage />
         </div>
       </section>
 
