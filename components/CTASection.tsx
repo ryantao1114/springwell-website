@@ -7,7 +7,7 @@ type CTASectionProps = {
 
 export function CTASection({
   title = "Ready to schedule your first visit?",
-  description = "Book online through Square Appointments. The link is a placeholder and can be updated in the content settings."
+  description = "Book online through Square Appointments to request your first visit."
 }: CTASectionProps) {
   return (
     <section className="bg-forestDeep px-5 py-16 text-white">

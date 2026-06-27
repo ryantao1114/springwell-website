@@ -38,14 +38,14 @@ export function Hero({
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-champagne">
             {eyebrow}
           </p>
-          <h1 className="text-5xl font-semibold leading-none tracking-normal md:text-7xl lg:text-8xl">
+          <h1 className="break-words text-4xl font-black uppercase leading-none tracking-normal sm:text-5xl md:text-7xl lg:text-8xl">
             {title}
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-white/82 md:text-xl">
             {description}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <BookingButton className="bg-champagne text-forestDeep hover:bg-white" />
+            <BookingButton className="min-h-12 px-7 text-base bg-champagne text-forestDeep ring-1 ring-white/25 hover:bg-white" />
             {secondaryHref && secondaryLabel ? (
               <a
                 className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/25 bg-white/10 px-5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"

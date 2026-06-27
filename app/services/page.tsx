@@ -7,7 +7,7 @@ import { services } from "@/content/services";
 
 export const metadata: Metadata = pageMetadata(
   "Services",
-  "Explore acupuncture, electroacupuncture, cupping, gua sha, fertility acupuncture, pain relief acupuncture, stress and sleep support, and women's health acupuncture.",
+  "Explore acupuncture, electroacupuncture, cupping, gua sha, fertility acupuncture, pain management, stress and anxiety support, sleep support, digestive health, and women's health acupuncture.",
   "/services"
 );
 
@@ -19,7 +19,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Services"
             title="Acupuncture services with a calm, professional approach"
-            description="Each service includes space for individualized assessment and supportive care. Pricing and duration placeholders can be edited in the content file."
+            description="Each service includes space for individualized assessment, clear communication, and supportive care."
           />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (

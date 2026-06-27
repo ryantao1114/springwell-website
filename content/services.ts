@@ -1,9 +1,9 @@
 export const featuredServices = [
-  "Pain Relief",
-  "Fertility Support",
-  "Stress & Sleep",
-  "Women's Health",
-  "TMJ / Orofacial Pain"
+  "Pain Management",
+  "Fertility & IVF",
+  "Stress & Anxiety",
+  "Sleep & Insomnia",
+  "Digestive & IBS Support"
 ];
 
 export const services = [
@@ -35,12 +35,12 @@ export const services = [
     name: "Fertility Acupuncture",
     description:
       "Supportive acupuncture care for patients navigating fertility journeys, including IVF or IUI support.",
-    supports: "Patients seeking personalized support during reproductive health planning.",
+    supports: "Fertility wellness, IVF or IUI support, and reproductive health planning.",
     duration: "Duration coming soon",
     price: "Pricing coming soon"
   },
   {
-    name: "Pain Relief Acupuncture",
+    name: "Pain Management Acupuncture",
     description:
       "A focused care plan for patients experiencing recurring pain or movement limitations.",
     supports: "Neck pain, back pain, shoulder pain, headaches, TMJ-related discomfort, and orofacial pain.",
@@ -48,10 +48,18 @@ export const services = [
     price: "Pricing coming soon"
   },
   {
-    name: "Stress & Sleep Support",
+    name: "Stress & Anxiety Support",
     description:
-      "Calm, restorative acupuncture care for patients experiencing stress, insomnia, or nervous system strain.",
-    supports: "Stress, sleep disruption, fatigue, and anxiety-related tension.",
+      "Calm, restorative acupuncture care for patients experiencing stress, anxiety, or nervous system strain.",
+    supports: "Stress, anxiety-related tension, fatigue, and nervous system regulation.",
+    duration: "Duration coming soon",
+    price: "Pricing coming soon"
+  },
+  {
+    name: "Sleep & Insomnia Support",
+    description:
+      "Individualized acupuncture care for patients seeking support with sleep quality and restorative rest.",
+    supports: "Insomnia, sleep disruption, stress-related sleep concerns, and fatigue.",
     duration: "Duration coming soon",
     price: "Pricing coming soon"
   },
@@ -60,6 +68,14 @@ export const services = [
     description:
       "Individualized care for patients seeking support with menstrual comfort and women's health concerns.",
     supports: "Menstrual pain, PMS, cycle-related symptoms, and general women's wellness.",
+    duration: "Duration coming soon",
+    price: "Pricing coming soon"
+  },
+  {
+    name: "Digestive Health Acupuncture",
+    description:
+      "Personalized acupuncture care for patients seeking support with digestive comfort and gut-related concerns.",
+    supports: "Digestive health, IBS-related concerns, bloating, stress-related digestion changes, and general wellness.",
     duration: "Duration coming soon",
     price: "Pricing coming soon"
   }

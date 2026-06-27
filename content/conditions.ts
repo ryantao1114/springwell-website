@@ -13,6 +13,8 @@ export const conditions = [
   "PMS",
   "Women's Health",
   "Anxiety",
+  "Digestive Health",
+  "IBS Support",
   "Fatigue",
   "General Wellness"
 ].map((name) => ({

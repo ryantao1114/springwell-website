@@ -1,9 +1,9 @@
 export const site = {
   name: "SPRINGWELL",
   fullName: "Springwell Integrative Acupuncture",
-  tagline: "Personalized acupuncture care for modern life.",
+  tagline: "Personalized acupuncture care, centered on you.",
   description:
-    "Springwell Integrative Acupuncture offers calm, professional care for patients seeking support with pain, stress, sleep, fertility journeys, TMJ-related discomfort, and women's health in Northern Virginia and the DMV area.",
+    "Modern, evidence-informed acupuncture care with personalized treatment plans designed to support pain relief, stress management, women's health, and fertility wellness across Northern Virginia and the greater DMV region.",
   bookingUrl:
     process.env.NEXT_PUBLIC_BOOKING_URL ||
     "https://springwell-integrative-acupuncture.square.site/",
@@ -13,12 +13,12 @@ export const site = {
   serviceArea: "Northern Virginia, McLean, Falls Church, Fairfax, Vienna, Tysons, and the DMV area",
   hours: "Hours coming soon",
   provider: {
-    name: "Renjinmin Dai, L.Ac.",
+    name: "Renjinming Dai, L.Ac.",
     credential: "Licensed Acupuncturist in Virginia",
     background:
-      "PhD in Oral & Craniofacial Biology with a background in dentistry, orofacial pain research, and traditional Chinese medicine.",
+      "Clinical and research experience bridging Traditional Chinese Medicine and biomedical science.",
     philosophy:
-      "Care at Springwell is calm, precise, and individualized. Each visit begins with listening carefully, understanding the full picture, and choosing a treatment plan that supports the patient's goals without overpromising outcomes.",
+      "Her clinician-scientist perspective combines careful listening, Chinese Medicine pattern assessment, and evidence-informed treatment planning focused on symptoms, daily function, and quality of life.",
     headshotImage: "/images/provider-headshot.jpg"
   },
   seoKeywords: [

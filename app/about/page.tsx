@@ -7,7 +7,7 @@ import { site } from "@/content/site";
 
 export const metadata: Metadata = pageMetadata(
   "About",
-  "Learn about Renjinmin Dai, L.Ac., licensed acupuncturist in Virginia and provider at Springwell Integrative Acupuncture.",
+  "Learn about Renjinming Dai, L.Ac., licensed acupuncturist in Virginia and provider at Springwell Integrative Acupuncture.",
   "/about"
 );
 
