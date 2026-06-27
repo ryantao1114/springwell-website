@@ -6,12 +6,14 @@ export const careIntro = {
 };
 
 export const focusAreas = [
-  "Pain Management",
-  "Fertility & IVF",
-  "Stress & Anxiety",
-  "Sleep & Insomnia",
-  "Digestive & IBS Support"
-];
+  { label: "Pain Management", detailLabel: "Pain Management", icon: "spine" },
+  { label: "Fertility & IVF", detailLabel: "Fertility Acupuncture & IVF Support", icon: "lotus" },
+  { label: "Stress & Anxiety", detailLabel: "Stress & Anxiety", icon: "mind" },
+  { label: "Sleep & Insomnia", detailLabel: "Sleep Concerns", icon: "sleep" },
+  { label: "Digestive & IBS Support", detailLabel: "Digestive Health", icon: "stomach" }
+] as const;
+
+export type FocusAreaIconName = (typeof focusAreas)[number]["icon"];
 
 export const whySpringwell = {
   eyebrow: "WHY SPRINGWELL",

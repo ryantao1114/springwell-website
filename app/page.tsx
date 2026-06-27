@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BookingButton } from "@/components/BookingButton";
 import { CTASection } from "@/components/CTASection";
+import { FocusAreaIcon } from "@/components/FocusAreaIcon";
 import { Hero } from "@/components/Hero";
 import { careIntro, focusAreas, whySpringwell } from "@/content/home";
 import { pageMetadata } from "@/content/metadata";
@@ -52,13 +53,13 @@ export default function HomePage() {
                 <Link
                   className="grid min-h-20 grid-cols-[3rem_1fr_auto] items-center gap-3 py-5 text-forestDeep transition hover:bg-white/60 sm:min-h-24 sm:grid-cols-[4.5rem_1px_1fr_auto] sm:gap-5"
                   href="/services"
-                  key={service}
+                  key={service.label}
                 >
                   <span className="text-3xl font-semibold text-champagne md:text-4xl">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="hidden h-12 w-px bg-forestDeep/10 sm:block" />
-                  <span className="text-lg font-semibold leading-7 md:text-2xl">{service}</span>
+                  <span className="text-lg font-semibold leading-7 md:text-2xl">{service.label}</span>
                   <span className="text-sm font-bold text-champagne">-&gt;</span>
                 </Link>
               ))}
@@ -89,8 +90,9 @@ export default function HomePage() {
 
             <div className="mt-8 grid gap-4 border-y border-forestDeep/10 py-6 sm:grid-cols-5">
               {focusAreas.map((service) => (
-                <div className="text-center text-sm font-semibold leading-6 text-forestDeep" key={service}>
-                  {service}
+                <div className="text-center text-sm font-semibold leading-6 text-forestDeep" key={service.label}>
+                  <FocusAreaIcon name={service.icon} />
+                  <p className="mt-3">{service.detailLabel}</p>
                 </div>
               ))}
             </div>
