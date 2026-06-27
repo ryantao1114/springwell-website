@@ -16,7 +16,7 @@ export const site = {
     name: "Renjinming Dai, L.Ac.",
     credential: "Licensed Acupuncturist in Virginia",
     background:
-      "Clinical and research experience bridging Traditional Chinese Medicine and biomedical science.",
+      "Training in Traditional Chinese Medicine and biomedical engineering.",
     philosophy:
       "Her clinician-scientist perspective combines careful listening, Chinese Medicine pattern assessment, and evidence-informed treatment planning focused on symptoms, daily function, and quality of life.",
     headshotImage: "/images/provider-headshot.jpg"

@@ -18,7 +18,7 @@ export const whySpringwell = {
   title: "Modern acupuncture care, grounded in Chinese Medicine",
   emphasis: "and guided by how you feel and function.",
   paragraphs: [
-    "At Springwell Acupuncture, patients receive care from Renjinming Dai, a Virginia licensed acupuncturist with training in Traditional Chinese Medicine and biomedical research. Renjinming takes a thoughtful, patient-centered approach, using careful listening, Chinese Medicine assessment, and individualized treatment planning to support comfort, function, and overall well-being.",
+    "At Springwell Acupuncture, patients receive care from Renjinming Dai, a Virginia licensed acupuncturist with training in Traditional Chinese Medicine and biomedical engineering. Renjinming takes a thoughtful, patient-centered approach, using careful listening, Chinese Medicine assessment, and individualized treatment planning to support comfort, function, and overall well-being.",
     "At Springwell, care is individualized rather than routine. Treatment plans are developed around each patient's presentation and refined over time based on their response. We support patients seeking care for pain management, fertility acupuncture and IVF support, stress and anxiety, sleep concerns, and digestive health.",
     "Located in Northern Virginia, Springwell Acupuncture serves patients throughout the greater DMV area."
   ],
