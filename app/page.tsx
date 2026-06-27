@@ -10,7 +10,7 @@ import { pageMetadata } from "@/content/metadata";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Personalized Acupuncture Care",
+  site.fullName,
   site.description
 );
 
