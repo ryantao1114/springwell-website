@@ -1,6 +1,7 @@
 export const site = {
   name: "SPRINGWELL",
   fullName: "Springwell Integrative Acupuncture",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://springwellacu.com",
   tagline: "Personalized acupuncture care, centered on you.",
   description:
     "Modern, evidence-informed acupuncture care with personalized treatment plans designed to support pain relief, stress management, women's health, and fertility wellness across Northern Virginia and the greater DMV region.",

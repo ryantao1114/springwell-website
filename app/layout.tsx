@@ -7,7 +7,7 @@ import { Header } from "@/components/Header";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(site.url),
   title: {
     default: `${site.fullName} | Acupuncture in Northern Virginia`,
     template: `%s | ${site.fullName}`
