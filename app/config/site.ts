@@ -3,12 +3,12 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://springwellacu.com",
   bookingUrl:
     process.env.NEXT_PUBLIC_BOOKING_URL ||
-    "https://springwell-integrative-acupuncture.square.site/",
+    "https://app.squareup.com/appointments/book/4j5cnvy44yi5kt/L9E4KW7SXV9DE/start",
   description:
     "Personalized acupuncture in Northern Virginia for women’s health, fertility and IVF support, pain management, TMJ and orofacial pain, stress, sleep, and digestive concerns.",
-  email: "hello@springwellacu.com",
+  email: "info@springwellacu.com",
   phone: "",
-  address: "",
+  address: "463 Carlisle Dr., Room 4, Herndon, VA 20170",
   socialLinks: [
     {
       label: "Instagram",
