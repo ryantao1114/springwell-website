@@ -36,7 +36,7 @@ export default function ThemeOptionsPage() {
                   <small>MODERN ACUPUNCTURE · NORTHERN VIRGINIA</small>
                   <h3>Care for the season you’re in.</h3>
                   <p>Personalized acupuncture for fertility, pain management, and whole-person wellbeing.</p>
-                  <div><button>Request an appointment</button><a>Explore services →</a></div>
+                  <div><button>Request an appointment</button><a>Explore services</a></div>
                 </div>
                 <div className="preview-art"><i /><i /><strong>SW</strong><span>Fertility · Pain · Wellness</span></div>
               </div>
