@@ -1,5 +1,5 @@
 export function ArrowIcon() {
-  return <span aria-hidden="true" className="arrow-icon">↗</span>;
+  return null;
 }
 
 export function CheckIcon() {
