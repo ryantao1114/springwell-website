@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowIcon, CheckIcon } from "../components/icons";
 import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
+import { site } from "../config/site";
 
 export default function PricingPage() {
   return (
@@ -18,11 +19,7 @@ export default function PricingPage() {
             <article className="cost-card featured" id="initial-visit">
               <p className="eyebrow">New patient</p>
               <h2>Initial consultation + treatment</h2>
-              <div className="price-breakdown" aria-label="Initial visit price breakdown">
-                <div><span>Consultation</span><strong>$50</strong></div>
-                <div><span>Acupuncture session</span><strong>$95</strong></div>
-                <div className="price-total"><span>Initial visit total</span><strong>$145</strong></div>
-              </div>
+              <strong className="cost-value"><span>Total</span>💲145</strong>
               <p>Approximately 60–75 minutes, including a comprehensive intake, traditional Chinese medicine assessment, first acupuncture treatment, and care planning.</p>
               <ul className="check-list single-column">
                 <li><CheckIcon /> Detailed health history</li>
@@ -32,17 +29,31 @@ export default function PricingPage() {
                 <li><CheckIcon /> Personalized first treatment</li>
                 <li><CheckIcon /> Recommended next steps</li>
               </ul>
+              <a className="button button-primary pricing-book-button" href={site.bookingUrl} target="_blank" rel="noreferrer">Book new patient visit <ArrowIcon /></a>
             </article>
             <article className="cost-card" id="follow-up">
               <p className="eyebrow">Returning patient</p>
               <h2>Follow-up acupuncture</h2>
-              <strong className="cost-value"><span>Per session</span>$95</strong>
+              <strong className="cost-value"><span>Per session</span>💲95</strong>
               <p>Approximately 45–60 minutes, including a progress check, updated treatment focus, and full acupuncture session.</p>
               <ul className="check-list single-column">
                 <li><CheckIcon /> Progress review</li>
                 <li><CheckIcon /> Adjusted treatment plan</li>
                 <li><CheckIcon /> Full acupuncture session</li>
               </ul>
+              <a className="button button-primary pricing-book-button" href={site.bookingUrl} target="_blank" rel="noreferrer">Book follow-up care <ArrowIcon /></a>
+            </article>
+            <article className="cost-card" id="cupping">
+              <p className="eyebrow">Cupping</p>
+              <h2>Fire cupping</h2>
+              <strong className="cost-value"><span>30 minutes</span>💲50</strong>
+              <p>A focused cupping session for muscle tightness, stiffness, and tension patterns.</p>
+              <ul className="check-list single-column">
+                <li><CheckIcon /> Brief health and comfort check</li>
+                <li><CheckIcon /> Individualized cup placement</li>
+                <li><CheckIcon /> Aftercare guidance</li>
+              </ul>
+              <a className="button button-primary pricing-book-button" href={site.bookingUrl} target="_blank" rel="noreferrer">Book cupping <ArrowIcon /></a>
             </article>
           </div>
 
