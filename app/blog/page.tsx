@@ -420,11 +420,10 @@ export default function BlogPage() {
       </section>
       <section className="section-pad blog-section">
         <div className="container blog-list">
-          {posts.map((post, index) => (
+          {posts.map((post) => (
             <article className="journal-article" id={post.id} key={post.id}>
               <div className="journal-article-image">
                 <Image src={post.image} alt={post.imageAlt} fill sizes="(max-width: 860px) 100vw, 35vw" />
-                <span>0{index + 1}</span>
               </div>
               <div className="journal-article-copy">
                 <div className="journal-meta"><span>{post.category}</span><span>{post.readTime}</span></div>
