@@ -1,26 +1,42 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { site } from "../config/site";
 
-export function AppointmentForm() {
-  const [sent, setSent] = useState(false);
+export function AppointmentForm({ mode = "appointment" }: { mode?: "appointment" | "question" }) {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSent(true);
+    setStatus("sending");
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    data.set("_subject", mode === "question" ? "New question from Springwell website" : "New appointment request from Springwell website");
+    data.set("_captcha", "false");
+    data.set("_template", "table");
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${site.email}`, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      if (!response.ok) throw new Error("Unable to send form");
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
-  if (sent) {
+  if (status === "sent") {
     return (
       <div className="form-success" role="status">
         <span>✓</span>
-        <h2>Your request is ready.</h2>
+        <h2>Thank you for reaching out.</h2>
         <p>
-          Your request has been noted in this preview. For the fastest confirmed
-          appointment, please use Book Online. Do not include sensitive medical
-          information in this form.
+          Your message has been sent to {site.email}. We will reply as soon as possible.
         </p>
-        <button className="button button-secondary" onClick={() => setSent(false)} type="button">
+        <button className="button button-secondary" onClick={() => setStatus("idle")} type="button">
           Return to form
         </button>
       </div>
@@ -28,7 +44,10 @@ export function AppointmentForm() {
   }
 
   return (
-    <form className="appointment-form" onSubmit={submit}>
+    <form className="appointment-form" onSubmit={submit} action={`https://formsubmit.co/ajax/${site.email}`} method="POST">
+      <input type="hidden" name="_subject" value={mode === "question" ? "New question from Springwell website" : "New appointment request from Springwell website"} />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
       <div className="field-row">
         <label>First name<input name="firstName" autoComplete="given-name" required /></label>
         <label>Last name<input name="lastName" autoComplete="family-name" required /></label>
@@ -38,7 +57,7 @@ export function AppointmentForm() {
         <label>Phone<input type="tel" name="phone" autoComplete="tel" required /></label>
       </div>
       <label>
-        What would you like support with?
+        {mode === "question" ? "What is your question about?" : "What would you like support with?"}
         <select name="service" defaultValue="" required>
           <option disabled value="">Select a service</option>
           <option>Women’s health or menstrual support</option>
@@ -54,13 +73,10 @@ export function AppointmentForm() {
         </select>
       </label>
       <label>
-        Preferred appointment time
+        {mode === "question" ? "Preferred way to hear back" : "Preferred appointment time"}
         <select name="timing" defaultValue="" required>
           <option disabled value="">Select a preference</option>
-          <option>Weekday morning</option>
-          <option>Weekday afternoon</option>
-          <option>Weekday evening</option>
-          <option>Saturday</option>
+          {mode === "question" ? <><option>Email</option><option>Phone</option></> : <><option>Weekday morning</option><option>Weekday afternoon</option><option>Weekday evening</option><option>Sunday</option></>}
         </select>
       </label>
       <label>
@@ -71,7 +87,8 @@ export function AppointmentForm() {
         <input type="checkbox" required />
         <span>I understand this is an appointment request and not confirmation or emergency care.</span>
       </label>
-      <button className="button button-primary form-button" type="submit">Send appointment request <span>↗</span></button>
+      {status === "error" && <p className="form-error" role="alert">We could not send the form right now. Please email {site.email} directly.</p>}
+      <button className="button button-primary form-button" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : mode === "question" ? "Send your question" : "Send appointment request"}</button>
       <p className="form-disclaimer">For medical emergencies, call 911 or seek immediate medical care.</p>
     </form>
   );
