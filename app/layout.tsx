@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import { ImageFallbacks } from "./components/image-fallbacks";
 import { LocalBusinessJsonLd } from "./components/local-business-json-ld";
 import { site } from "./config/site";
 
@@ -53,6 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={geistSans.variable}>
       <body className="antialiased">
+        <ImageFallbacks />
         <LocalBusinessJsonLd />
         {children}
         <Analytics />
