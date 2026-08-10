@@ -105,8 +105,7 @@ export function HomeHero() {
           </div>
         </div>
 
-        <div className="home-video-controls" aria-label="Hero video controls">
-          <button type="button" className="video-arrow" onClick={() => goTo(active - 1)} aria-label="Previous care area">Previous</button>
+        <div className="home-video-controls" aria-label="Choose a care area">
           <div className="video-dots" role="tablist" aria-label="Choose a care area">
             {slides.map((item, index) => (
               <button
@@ -120,15 +119,6 @@ export function HomeHero() {
               />
             ))}
           </div>
-          <button type="button" className="video-arrow" onClick={() => goTo(active + 1)} aria-label="Next care area">Next</button>
-          <button
-            type="button"
-            className="video-play-toggle"
-            onClick={() => setPlaying((current) => !current)}
-            aria-label={playing ? "Pause hero video" : "Play hero video"}
-          >
-            {playing ? "Pause" : "Play"}
-          </button>
         </div>
       </div>
     </section>
