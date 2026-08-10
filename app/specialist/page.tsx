@@ -47,7 +47,7 @@ export default function SpecialistPage() {
       <InteriorHero
         eyebrow="What we treat"
         title="Care shaped around the concerns that brought you here."
-        text={<>Explore the conditions and symptoms Springwell commonly supports, from women’s health and fertility care to pain, stress, sleep, and digestive concerns.</>}
+        text="Explore the conditions and symptoms Springwell commonly supports, from women’s health and fertility care to pain, stress, sleep, and digestive concerns."
         image="/images/acupuncture-treatment-hero.png"
       />
 
@@ -84,7 +84,7 @@ export default function SpecialistPage() {
         <div className="container">
           <div className="section-heading split-heading">
             <div>
-            <p className="eyebrow">Areas of care</p>
+              <p className="eyebrow">Areas of care</p>
               <h2>Start with the concern that brought you here.</h2>
             </div>
             <p>
