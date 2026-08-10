@@ -18,41 +18,8 @@ export default function ServicesPage() {
         eyebrow="Our services"
         title="Three therapies. One individualized plan."
         text="Explore the treatments available at Springwell. Each service has its own page with a clear explanation of the clinical approach, what a visit may involve, and safety considerations."
-        image="/images/service-acupuncture.png"
+        image="/images/service-acupuncture.webp"
       />
-
-      <section className="section-pad service-overview-section">
-        <div className="container">
-          <div className="section-heading split-heading">
-            <div>
-              <p className="eyebrow">Treatment modalities</p>
-              <h2>Traditional care, explained clearly.</h2>
-            </div>
-            <p>
-              Services may be used individually or combined when appropriate,
-              based on your goals, health history, and response to care.
-            </p>
-          </div>
-
-          <div className="service-overview-grid">
-            {services.map((service) => (
-              <article className="service-overview-card" key={service.slug}>
-                <Link className="service-overview-image" href={`/services/${service.slug}`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={service.image} alt={service.imageAlt} />
-                  <span>{service.number}</span>
-                </Link>
-                <p className="eyebrow">{service.eyebrow}</p>
-                <h2>{service.title}</h2>
-                <p>{service.summary}</p>
-                <Link className="text-link" href={`/services/${service.slug}`}>
-                  Explore {service.title} <ArrowIcon />
-                </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="section-pad service-care-map">
         <div className="container">

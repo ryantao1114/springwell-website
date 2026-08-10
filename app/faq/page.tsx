@@ -33,13 +33,13 @@ export default function FAQPage() {
         eyebrow="Common questions"
         title="Know what to expect before you arrive."
         text="A first acupuncture visit should feel approachable. Here are clear answers to the questions we hear most often."
-        image="/images/acupuncture-treatment-hero.png"
+        image="/images/acupuncture-treatment-hero.webp"
       />
       <section className="section-pad faq-section">
         <div className="container faq-grid">
           <aside>
             <div className="faq-aside-image">
-              <Image src="/images/acupuncture-treatment-hero.png" alt="Fine acupuncture needles prepared for a treatment" fill sizes="(max-width: 860px) 100vw, 30vw" />
+              <Image src="/images/acupuncture-treatment-hero.webp" alt="Fine acupuncture needles prepared for a treatment" fill sizes="(max-width: 860px) 100vw, 30vw" />
             </div>
             <p className="eyebrow">Still wondering?</p>
             <h2>We’re happy to help.</h2>

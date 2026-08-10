@@ -4,6 +4,8 @@ export type Service = {
   eyebrow: string;
   title: string;
   summary: string;
+  introTitle: string;
+  introCopy: string;
   image: string;
   imageAlt: string;
   primaryLabel: string;
@@ -15,6 +17,7 @@ export type Service = {
   commonReasons?: string[];
   careAreas: string[];
   clinicalNote: string;
+  faqs: { question: string; answer: string }[];
 };
 
 export const services: Service[] = [
@@ -25,7 +28,9 @@ export const services: Service[] = [
     title: "Acupuncture",
     summary:
       "A personalized treatment using very fine, sterile, single-use needles placed at selected points on the body.",
-    image: "/images/service-acupuncture.png",
+    introTitle: "Care that begins with one point and considers the whole person.",
+    introCopy: "Our licensed acupuncturist selects points according to your symptoms, health history, treatment goals, and traditional tongue and pulse assessment. The aim is thoughtful, individualized care that connects a local treatment with the wider patterns affecting how you feel.",
+    image: "/images/service-acupuncture.webp",
     imageAlt: "Acupuncture treatment using fine needles",
     primaryLabel: "How it may work",
     primaryCopy:
@@ -37,15 +42,21 @@ export const services: Service[] = [
     safetyCopy:
       "Temporary soreness, light bruising, or a brief heavy or tingling sensation can occur. We use sterile, single-use needles and adjust technique to your comfort.",
     careAreas: [
-      "Women’s health and menstrual cycle support",
-      "Natural conception, IUI, and IVF support",
-      "TMJ, jaw, and orofacial pain",
-      "Headaches, neck, shoulder, and back tension",
-      "Stress, sleep disruption, and fatigue",
-      "Bloating and stress-sensitive digestive discomfort",
+      "Women’s health and menstrual cycle concerns",
+      "Fertility planning, IUI, and IVF support",
+      "TMJ, jaw, and facial pain",
+      "Headaches and neck, shoulder, or back tension",
+      "Stress, sleep difficulties, and fatigue",
+      "Bloating and stress-sensitive digestive concerns",
     ],
     clinicalNote:
-      "Acupuncture is supportive care. It does not replace evaluation for new, severe, or unexplained symptoms, and fertility acupuncture does not replace care from a reproductive endocrinologist or OB-GYN.",
+      "Acupuncture may be used as supportive care alongside appropriate medical evaluation and treatment. New, severe, or unexplained symptoms should be assessed by a qualified healthcare professional. Fertility care should remain coordinated with your reproductive endocrinologist or OB-GYN.",
+    faqs: [
+      { question: "What happens during an acupuncture visit?", answer: "We begin with a detailed conversation about your symptoms, health history, and goals. When appropriate, the visit includes tongue and pulse assessment, gentle needle placement, a quiet rest period, and a plan for follow-up." },
+      { question: "Does acupuncture hurt?", answer: "Most people feel little or no pain. A brief pinch, heaviness, warmth, tingling, or a dull sensation can occur, and we adjust the treatment to your comfort." },
+      { question: "How often should I receive acupuncture?", answer: "Frequency depends on the severity, duration, and pattern of your concern. We discuss a practical starting plan and adjust it according to your response." },
+      { question: "Can acupuncture replace medical care?", answer: "No. Acupuncture is supportive care. New, severe, or unexplained symptoms should be evaluated by an appropriate medical professional, and fertility care should remain coordinated with your medical team." },
+    ],
   },
   {
     slug: "cupping",
@@ -54,7 +65,9 @@ export const services: Service[] = [
     title: "Fire Cupping",
     summary:
       "A warming Traditional Chinese Medicine therapy used to ease areas of tension and restriction and encourage the smooth movement of Qi and Blood.",
-    image: "/images/service-cupping.jpg",
+    introTitle: "Warmth, movement, and a more comfortable sense of the body.",
+    introCopy: "Fire cupping uses carefully controlled suction to create a local treatment signal. It may be selected for areas that feel tight, sore, heavy, or restricted, and can be used alone or alongside acupuncture when appropriate.",
+    image: "/images/service-cupping.webp",
     imageAlt: "Traditional glass cups used for cupping therapy",
     primaryLabel: "Traditional Chinese Medicine perspective",
     primaryCopy:
@@ -85,6 +98,12 @@ export const services: Service[] = [
     ],
     clinicalNote:
       "Cupping marks are a temporary skin response, not proof that toxins were removed. We screen for skin conditions, bleeding risk, pregnancy-related considerations, and other reasons a technique may not be appropriate.",
+    faqs: [
+      { question: "What does fire cupping feel like?", answer: "Most people notice firm warmth and a gentle pulling sensation. Suction is adjusted to the area, your skin, and your comfort." },
+      { question: "How long do cupping marks last?", answer: "Circular marks are common and usually fade over several days. Their color does not measure toxins removed or treatment success." },
+      { question: "What concerns may cupping support?", answer: "Patients often choose cupping for tight neck and shoulders, low-back stiffness, overworked muscles, soreness, and tension that feels heavy or restricted." },
+      { question: "Can cupping be combined with acupuncture?", answer: "Yes. When appropriate, cupping may be used alongside acupuncture to address both local muscle tension and a broader treatment plan." },
+    ],
   },
   {
     slug: "herbal-medicine",
@@ -93,7 +112,9 @@ export const services: Service[] = [
     title: "Herbal Medicine",
     summary:
       "An individualized approach using carefully selected traditional formulas rather than a one-size-fits-all supplement.",
-    image: "/images/service-herbal-medicine.jpg",
+    introTitle: "Traditional formulas, considered with modern safety standards.",
+    introCopy: "Chinese herbal medicine is not a generic supplement list. Formula selection considers your symptoms, constitution, medications, supplements, pregnancy or fertility care, and response over time, with clear communication about safety and coordination.",
+    image: "/images/service-herbal-medicine.webp",
     imageAlt: "Chinese herbs arranged for an individualized formula",
     primaryLabel: "How it may work",
     primaryCopy:
@@ -113,6 +134,12 @@ export const services: Service[] = [
     ],
     clinicalNote:
       "A formula is never chosen from a symptom list alone. Product quality, ingredient identity, dose, medication interactions, pregnancy status, and coordination with your medical team all matter.",
+    faqs: [
+      { question: "Are Chinese herbs the same as supplements?", answer: "Not exactly. A formula is selected and adjusted around your symptoms, health history, medications, supplements, pregnancy or fertility care, and response over time." },
+      { question: "How do you choose a formula?", answer: "We review your symptoms and timeline, medications, allergies, and relevant medical care, then consider tongue and pulse findings before discussing whether an individualized formula is appropriate." },
+      { question: "Can herbs interact with medications?", answer: "Yes. Tell us about every prescription, over-the-counter medicine, supplement, pregnancy or fertility treatment, and planned procedure before using an herbal product." },
+      { question: "Do herbs replace prescribed treatment?", answer: "No. Herbal medicine is complementary care and should not replace prescribed treatment or medical evaluation. Do not stop medication without speaking with the prescribing clinician." },
+    ],
   },
 ];
 

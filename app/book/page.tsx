@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { CheckIcon } from "../components/icons";
 import { InteriorHero, PageShell } from "../components/site-shell";
 import { AppointmentForm } from "./appointment-form";
+import { SquareAppointmentsEmbed } from "./square-appointments-embed";
 import { site } from "../config/site";
 
 export const metadata: Metadata = {
@@ -20,13 +21,13 @@ export default function BookPage() {
         eyebrow="Request an appointment"
         title="Tell us how we can support you."
         text="Share a few details below. We’ll follow up to answer questions, confirm availability, and help plan your first visit."
-        image="/images/acupuncture-treatment-hero.png"
+        image="/images/acupuncture-treatment-hero.webp"
       />
       <section className="section-pad booking-section">
         <div className="container booking-grid">
           <div className="booking-aside">
             <div className="contact-image">
-              <Image src="/images/acupuncture-treatment-hero.png" alt="Fine acupuncture needles prepared for treatment" fill sizes="(max-width: 860px) 100vw, 38vw" />
+              <Image src="/images/acupuncture-treatment-hero.webp" alt="Fine acupuncture needles prepared for treatment" fill sizes="(max-width: 860px) 100vw, 38vw" />
             </div>
             <p className="eyebrow">Before you book</p>
             <h2>Your first visit, made simple.</h2>
@@ -43,6 +44,15 @@ export default function BookPage() {
             <p className="small-copy">Looking for more information first? <Link href="/faq">Read common questions.</Link></p>
           </div>
           <div className="form-card">
+            <div className="online-booking-block">
+              <p className="eyebrow">Book online</p>
+              <h2>Choose a time that works for you.</h2>
+              <p className="booking-intro">
+                Use the secure Square booking calendar to view current availability and request an appointment.
+              </p>
+              <SquareAppointmentsEmbed />
+            </div>
+            <div className="booking-form-divider" aria-hidden="true"><span>or send an appointment request</span></div>
             <AppointmentForm />
           </div>
         </div>

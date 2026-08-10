@@ -7,31 +7,31 @@ import { site } from "../config/site";
 
 const slides = [
   {
-    eyebrow: "Women’s health · Fertility · IVF",
-    title: "Care for every chapter of women’s health.",
-    text: "Personalized acupuncture care for menstrual health, hormonal transitions, fertility planning, IVF support, and the physical and emotional changes that shape each stage of life.",
-    video: "/images/videos/hero-womens-health.mp4",
-    poster: "/images/home-hero-care.jpg",
+    eyebrow: "Acupuncture for women’s health · Fertility · IVF",
+    title: "Acupuncture for women’s health, fertility, and IVF support.",
+    text: "Personalized acupuncture care for menstrual health, hormonal changes, fertility planning, IVF support, and the health concerns women may experience across every stage of life.",
+    video: "/images/videos/hero-womens-health-uploaded-v4.mp4",
+    poster: "/images/videos/hero-womens-health-uploaded-poster-v4.webp",
     alt: "Gentle clinical care for women’s health and fertility support",
     href: "/specialist#womens-health",
     linkLabel: "Explore women’s health care",
   },
   {
-    eyebrow: "Pain management · Neck, back & muscle pain",
-    title: "A thoughtful plan for pain and movement.",
-    text: "Acupuncture care for neck, back, shoulder, and muscle pain, TMJ and orofacial pain, headaches, and tension that affects movement and daily comfort.",
+    eyebrow: "Acupuncture for pain · Neck, back · Muscle · TMJ",
+    title: "Acupuncture for neck, back, muscle, and TMJ pain.",
+    text: "Focused acupuncture care for neck, back, shoulder, and muscle pain, TMJ and facial pain, headaches, and tension that affects movement and daily comfort.",
     video: "/images/videos/hero-pain.mp4",
-    poster: "/images/videos/hero-pain-poster.jpg",
+    poster: "/images/videos/hero-pain-poster.webp",
     alt: "Flowing water representing movement and recovery in pain care",
     href: "/specialist#pain-management",
     linkLabel: "Explore pain care",
   },
   {
-    eyebrow: "Stress relief · Sleep support · Digestive health",
-    title: "Support for rest, recovery, and digestion.",
-    text: "When stress affects sleep, energy, appetite, or digestion, care should reflect the connected pattern—not treat each concern as a separate problem.",
+    eyebrow: "Acupuncture for stress · Sleep · Digestive health",
+    title: "Acupuncture for stress, sleep, and digestive health.",
+    text: "Acupuncture support for stress-related tension, sleep difficulties, low energy, and digestive symptoms such as bloating, nausea, and irregularity.",
     video: "/images/videos/hero-stress-digestion.mp4",
-    poster: "/images/videos/hero-stress-digestion-poster.jpg",
+    poster: "/images/videos/hero-stress-digestion-poster.webp",
     alt: "A quiet woodland stream representing rest, recovery, and digestive support",
     href: "/specialist#stress-sleep-digestion",
     linkLabel: "Explore stress & digestive care",
@@ -92,7 +92,7 @@ export function HomeHero() {
           <p className="hero-lead">{slide.text}</p>
           <div className="button-row">
             <Link className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">
-              Book Online <ArrowIcon />
+              Book Your Visit <ArrowIcon />
             </Link>
             <Link className="text-link" href={slide.href}>
               {slide.linkLabel} <ArrowIcon />
@@ -106,7 +106,7 @@ export function HomeHero() {
         </div>
 
         <div className="home-video-controls" aria-label="Hero video controls">
-          <button type="button" className="video-arrow" onClick={() => goTo(active - 1)} aria-label="Previous care area">←</button>
+          <button type="button" className="video-arrow" onClick={() => goTo(active - 1)} aria-label="Previous care area">Previous</button>
           <div className="video-dots" role="tablist" aria-label="Choose a care area">
             {slides.map((item, index) => (
               <button
@@ -120,7 +120,7 @@ export function HomeHero() {
               />
             ))}
           </div>
-          <button type="button" className="video-arrow" onClick={() => goTo(active + 1)} aria-label="Next care area">→</button>
+          <button type="button" className="video-arrow" onClick={() => goTo(active + 1)} aria-label="Next care area">Next</button>
           <button
             type="button"
             className="video-play-toggle"

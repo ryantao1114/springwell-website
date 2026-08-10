@@ -2,111 +2,69 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowIcon, CheckIcon } from "../components/icons";
-import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
+import { PageShell } from "../components/site-shell";
+import { site } from "../config/site";
 
 export const metadata: Metadata = {
-  title: "About Springwell & Renjinming Dai",
+  title: "About Springwell | Modern Acupuncture in Northern Virginia",
   description:
-    "Learn about Springwell Acupuncture, Traditional Chinese Medicine, and Virginia-licensed acupuncturist Renjinming Dai’s women’s health, fertility, and pain-focused clinical perspective.",
+    "Learn about Springwell Integrative Acupuncture in Herndon, Virginia, and Renjinming Dai’s thoughtful approach to acupuncture and Chinese medicine.",
   alternates: { canonical: "/about" },
 };
-
-const endnotes = [
-  "National Center for Complementary and Integrative Health. Traditional Chinese Medicine: What You Need To Know. Bethesda, MD: National Institutes of Health; updated April 2019.",
-  "National Center for Complementary and Integrative Health. Acupuncture: Effectiveness and Safety. Bethesda, MD: National Institutes of Health; updated October 2022.",
-  "Dai R, Tao R, Li X, Shang T, Zhao S, Ren Q. Expression profiling of mRNA and functional network analyses of genes regulated by human papilloma virus E6 and E7 proteins in HaCaT cells. Frontiers in Microbiology. 2022;13:979087.",
-  "Ge X, Wekselblatt JB, Elmore S, Wang B, Wang T, Dai R, et al. In Vivo Cytosolic Delivery of Biomolecules into Neurons for Super-Resolution Imaging and Genome Modification. Advanced Science. 2025;12(25):e2501033.",
-];
 
 export default function AboutPage() {
   return (
     <PageShell>
-      <InteriorHero
-        eyebrow="About Springwell"
-        title="Traditional depth. Modern perspective. Personal care."
-        text="Learn what Chinese medicine means in modern practice—and how Renjinming Dai’s clinical training, women’s health focus, and interdisciplinary education shape care at Springwell."
-        image="/images/chinese-medicine-consultation.jpg"
-      />
+      <section className="about-modern-hero" aria-labelledby="about-title">
+        <div className="about-modern-hero-media"><Image src="/images/about-facial-acupuncture.webp" alt="A patient receiving a calm acupuncture treatment" fill priority sizes="100vw" /></div>
+        <div className="about-modern-hero-card">
+          <p className="eyebrow">About Springwell</p>
+          <h1 id="about-title">Traditional depth.<br />Modern perspective.<br />Personal care.</h1>
+          <p>Springwell Integrative Acupuncture is a modern acupuncture and Chinese medicine clinic in Herndon, Virginia. We serve Herndon, Reston, Northern Virginia, and the greater DMV region with thoughtful, individualized care.</p>
+          <a className="button button-dark" href={site.bookingUrl} target="_blank" rel="noreferrer">Book now <ArrowIcon /></a>
+        </div>
+      </section>
 
-      <section className="section-pad medicine-intro" id="traditional-chinese-medicine">
-        <div className="container medicine-intro-grid">
-          <div className="medicine-intro-heading">
-            <p className="eyebrow">Understanding Chinese medicine</p>
-            <h2>Seeing the Pattern Behind Your Symptoms</h2>
-            <Image
-              className="medicine-intro-image"
-              src="/images/chinese-medicine-consultation.jpg"
-              alt="Traditional Chinese medicine practitioner taking a patient’s pulse"
-              width={735}
-              height={489}
-            />
+      <section className="about-offer" aria-label="New patient offer">
+        <div className="container">
+          <p className="eyebrow">A simple place to begin</p>
+          <h2>New patients receive 💲50 off their first visit.</h2>
+          <p>Explore a thoughtful first step for women’s health, fertility and IVF support, pain, stress, sleep, and digestive concerns.</p>
+          <a className="button button-primary offer-inline-button" href={site.bookingUrl} target="_blank" rel="noreferrer">Claim your offer <ArrowIcon /></a>
+        </div>
+      </section>
+
+      <section className="about-acupuncture-section" id="acupuncture" aria-labelledby="about-acupuncture-title">
+        <div className="container about-acupuncture-grid">
+          <div className="about-acupuncture-media">
+            <Image src="/images/about-acupuncture-user.webp" alt="An acupuncture meridian model showing traditional points and pathways" fill sizes="(max-width: 860px) 100vw, 44vw" />
           </div>
-          <div className="medicine-intro-copy">
-            <p className="lead-copy">
-              Chinese medicine is far more than “energy medicine.” It is a
-              comprehensive clinical tradition built on centuries of observation
-              and practice. It looks at how symptoms, body functions,
-              constitution, and daily life relate to one another. Treatment may
-              include acupuncture, Chinese herbal medicine, moxibustion, cupping,
-              and personalized dietary and lifestyle guidance.<sup>[1]</sup>
-            </p>
-            <p>
-              Rather than relying on a disease name alone, Traditional Chinese
-              Medicine looks for patterns within the whole clinical picture.
-              During a consultation, we consider what you are experiencing, when
-              it began, what improves or aggravates it, related changes elsewhere
-              in the body, and findings from traditional tongue and pulse
-              examination. These details help us develop an individualized
-              treatment plan.
-            </p>
-            <p>
-              This reflects a longstanding principle of Chinese medicine: care
-              pays attention not only to established illness, but also to early
-              or recurring changes in how you feel and function. The goal is not
-              to make every symptom sound mysterious. It is to understand the
-              pattern clearly enough to choose a focused, practical next step.
-            </p>
-            <p>
-              Today, Chinese medicine continues to evolve within modern
-              healthcare. In China, it is taught at universities and practiced in
-              hospitals, where traditional assessment may be considered alongside
-              laboratory testing, medical imaging, and other conventional care.
-              Complementary treatment should support—not delay—appropriate medical
-              evaluation.<sup>[1]</sup>
-            </p>
+          <div className="about-acupuncture-copy">
+            <p className="eyebrow">About acupuncture</p>
+            <h2 id="about-acupuncture-title">What is acupuncture?</h2>
+            <p className="about-acupuncture-lead">A traditional therapy studied through a modern lens.</p>
+            <p>Acupuncture uses very fine, sterile needles at carefully selected points on the body. The gentle sensory input may influence pain processing, muscle tone, local tissue response, and autonomic regulation.</p>
+            <p>At Springwell, acupuncture is individualized around your symptoms, history, goals, and response. Traditional assessment—including careful questions, tongue observation, and pulse evaluation—helps shape a focused treatment plan.</p>
+            <div className="about-acupuncture-points">
+              <div><strong>Individualized</strong><span>Points and techniques are selected for your pattern and needs.</span></div>
+              <div><strong>Supportive</strong><span>Care can complement medical, fertility, dental, or mental-health treatment.</span></div>
+              <div><strong>Thoughtful</strong><span>Your comfort, safety, and response guide each visit.</span></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section-pad acupuncture-explained" id="acupuncture">
-        <div className="container acupuncture-grid">
-          <div className="acupuncture-art-photo">
-            <Image
-              src="/images/acupuncture-treatment-hero.png"
-              alt="Close-up of fine acupuncture needles being placed during treatment"
-              fill
-              sizes="(max-width: 860px) 100vw, 48vw"
-            />
-            <span>Acupuncture</span>
-          </div>
-          <div className="acupuncture-copy">
-            <p className="eyebrow">What is acupuncture?</p>
-            <h2>A traditional therapy studied through a modern lens.</h2>
-            <p>
-              Acupuncture uses very fine, sterile, single-use needles placed at
-              selected points on the body. Modern research suggests that needle
-              stimulation engages sensory nerves, connective tissue, and signaling
-              pathways involved in pain processing, muscle tone, circulation, and
-              autonomic regulation. It is not one single mechanism and it is not a
-              substitute for an appropriate diagnosis.<sup>[2]</sup>
-            </p>
-            <div className="acupuncture-facts">
-              <div><CheckIcon /><span>Sterile, single-use needles</span></div>
-              <div><CheckIcon /><span>Individualized point selection</span></div>
-              <div><CheckIcon /><span>May complement conventional care</span></div>
-              <div><CheckIcon /><span>Comfort checked throughout treatment</span></div>
-            </div>
-            <Link className="text-link" href="/services/acupuncture">Explore acupuncture care <ArrowIcon /></Link>
+      <section className="about-benefits" aria-labelledby="benefits-title">
+        <div className="container">
+          <h2 id="benefits-title">Benefits Of Acupuncture</h2>
+          <div className="about-benefits-grid">
+            {[
+              ["/images/benefits/pain.webp", "Helps Manage Pain"],
+              ["/images/benefits/muscle-tension.webp", "Eases Muscle Tension"],
+              ["/images/benefits/stress-regulation.webp", "Supports Stress Regulation"],
+              ["/images/benefits/mobility-function.webp", "Supports Mobility & Function"],
+              ["/images/benefits/care.webp", "Complements Your Care"],
+            ].map(([icon, label]) => <div className="about-benefit" key={label}><span className="about-benefit-icon"><img src={icon} alt="" /></span><p>{label}</p></div>)}
           </div>
         </div>
       </section>
@@ -115,40 +73,40 @@ export default function AboutPage() {
         <div className="container provider-grid">
           <div className="provider-portrait provider-portrait-image">
             <Image
-              src="/images/home-hero-care.jpg"
-              alt="Hands-on pulse assessment in a calm clinical setting"
+              src="/images/provider-renjinming.webp"
+              alt="Renjinming Dai, licensed acupuncturist at Springwell"
               fill
               sizes="(max-width: 860px) 100vw, 42vw"
             />
             <div className="provider-caption">Renjinming Dai<br />L.Ac. · Dipl. Ac.</div>
           </div>
           <div className="provider-copy">
-            <p className="eyebrow">Meet your acupuncturist</p>
-            <h2>Renjinming Dai</h2>
-            <p className="credentials">Licensed Acupuncturist in Virginia · Diplomate of Acupuncture</p>
+            <h2>Meet Your Acupuncturist</h2>
+            <div className="provider-name-row">
+              <h3 className="provider-name">Renjinming Dai</h3>
+              <a
+                className="provider-linkedin provider-linkedin-compact"
+                href="https://www.linkedin.com/in/renjinming-d-6086122a6/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Renjinming Dai on LinkedIn"
+              >
+                <span aria-hidden="true">in</span>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+            <p className="credentials">Licensed Acupuncturist in Virginia · Diplomate of Acupuncture (NCCAOM)</p>
             <p className="provider-lead">
-              Renjinming Dai is a Virginia-licensed, board-certified acupuncturist
-              with advanced education in Traditional Chinese Medicine Gynecology
-              and biomedical engineering. Her clinical formation in Chinese
-              medicine included hospital-based training in China, with a focus on
-              pattern differentiation, women’s health, reproductive wellbeing,
-              and individualized treatment planning.
+              Renjinming Dai brings together formal Chinese medicine education, hospital-based clinical training, and research experience in China and the United States.
             </p>
             <p>
-              She is especially interested in supporting women through the changing
-              stages of reproductive health—from menstrual and hormonal concerns to
-              fertility care, IVF support, and preparation for pregnancy. She also
-              works with patients seeking focused support for jaw and facial pain,
-              headaches, stress, sleep disruption, digestive concerns, and
-              musculoskeletal tension.
+              She earned a master’s degree in Traditional Chinese Medicine Gynecology from Nanjing University of Chinese Medicine and completed three years of structured clinical training at Jiangsu Province Hospital of Chinese Medicine. Her research background includes women’s health, reproductive medicine, and neuroscience.
             </p>
             <p>
-              Renjinming’s scientific training shapes how she reads evidence,
-              communicates uncertainty, and collaborates with other healthcare
-              professionals. Her research experience includes molecular and
-              biomedical projects in women’s disease research and neuroscience,
-              giving her a practical bridge between traditional pattern-based care
-              and the modern health information patients bring to the clinic.<sup>[3,4]</sup>
+              Renjinming has a particular interest in menstrual and hormonal concerns, fertility and IVF support, pain, stress, sleep difficulties, and digestive health. Her approach combines careful listening, individualized assessment, and traditional diagnostic methods such as tongue and pulse evaluation.
+            </p>
+            <p>
+              Outside the clinic, she enjoys traveling, spending time outdoors, cooking, and discovering new foods.
             </p>
             <div className="provider-specialty-links" aria-label="Explore specialist care">
               <Link href="/specialist#fertility-ivf">Women’s Health &amp; Fertility</Link>
@@ -159,40 +117,45 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="container provider-training-grid">
+        <div className="container provider-research" aria-labelledby="representative-work-title">
           <div>
-            <p className="eyebrow">Clinical formation</p>
-            <h3>Training that values both depth and clarity.</h3>
+            <p className="eyebrow">Representative research</p>
+            <h3 id="representative-work-title">Research across biology, neuroscience, and women’s health.</h3>
           </div>
-          <div className="provider-training-list">
-            <div><strong>M.S.</strong><span>Traditional Chinese Medicine Gynecology · Nanjing University of Chinese Medicine</span></div>
-            <div><strong>M.S.</strong><span>Biomedical Engineering · United States</span></div>
-            <div><strong>Dipl. Ac.</strong><span>Diplomate of Acupuncture · NCCAOM</span></div>
-            <div><strong>L.Ac.</strong><span>Licensed Acupuncturist in Virginia</span></div>
+          <div className="provider-research-list">
+            <article>
+              <p>Dai R, Tao R, Li X, Shang T, Zhao S, Ren Q.</p>
+              <p>Expression profiling of mRNA and functional network analyses of genes regulated by human papilloma virus E6 and E7 proteins in HaCaT cells.</p>
+              <span>Frontiers in Microbiology. 2022;13:979087.</span>
+            </article>
+            <article>
+              <p>Ge X, Dai R, et al.</p>
+              <p>In Vivo Cytosolic Delivery of Biomolecules into Neurons for Super-Resolution Imaging and Genome Modification.</p>
+              <span>Advanced Science. 2025;12(25):e2501033.</span>
+            </article>
           </div>
         </div>
 
         <div className="container xia-note" id="xia-guicheng-tradition">
-          <p className="eyebrow light">A rhythm-centered perspective</p>
-          <h3>Women’s health is not a collection of isolated symptoms.</h3>
-          <p>
-            Renjinming’s training in Chinese medicine gynecology emphasized the
-            timing and rhythm of the menstrual cycle, changes across reproductive
-            stages, and the value of individualized pattern differentiation. At
-            Springwell, this perspective is paired with careful history-taking,
-            appropriate referrals, and a treatment plan that stays understandable
-            and practical.
-          </p>
-        </div>
-
-        <div className="container provider-endnotes" id="provider-references">
-          <div>
-            <p className="eyebrow">References</p>
-            <h3>Selected endnotes</h3>
+          <div className="xia-note-media">
+            <Image
+              src="/images/womens-health-specialty.webp"
+              alt="Women resting together in warm afternoon light"
+              fill
+              sizes="(max-width: 860px) 100vw, 44vw"
+            />
           </div>
-          <ol>
-            {endnotes.map((note, index) => <li key={note} id={`endnote-${index + 1}`}>{note}</li>)}
-          </ol>
+          <div className="xia-note-copy">
+            <p className="eyebrow light">Women’s Health Specialty</p>
+            <h3>Specialized Training in Traditional Chinese Medicine Gynecology</h3>
+            <p>A rhythm-centered perspective on women’s health.</p>
+            <p>
+              Renjinming’s master’s education and hospital-based clinical training placed particular emphasis on menstrual health, fertility, and reproductive care. During her training, she learned from clinicians carrying forward the academic approach of TCM Master Xia Guicheng, whose work emphasized the phases and rhythms of the menstrual cycle and individualized pattern differentiation.
+            </p>
+            <p>
+              At Springwell, this perspective informs an individualized approach that considers menstrual cycle patterns, symptoms, health history, lifestyle, and reproductive goals. Care is supported by careful history-taking, clear communication, and appropriate coordination with other healthcare professionals.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -210,7 +173,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <BottomCTA />
+      <section className="section-pad about-location-section" id="location">
+        <div className="container about-location-grid">
+          <div>
+            <p className="eyebrow">Visit Springwell</p>
+            <h2>Thoughtful care in Herndon, Virginia.</h2>
+            <p>Our clinic is located at <strong>{site.address}</strong>. We welcome patients from Herndon, Reston, Northern Virginia, and the greater DMV region.</p>
+            <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book Your Visit <ArrowIcon /></a>
+          </div>
+          <div className="about-map-wrap">
+            <iframe title="Map showing Springwell Acupuncture at 463 Carlisle Dr., Room 4, Herndon, Virginia" src="https://www.google.com/maps?q=463+Carlisle+Dr,+Herndon,+VA+20170&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+          </div>
+        </div>
+      </section>
+
     </PageShell>
   );
 }

@@ -31,7 +31,7 @@ const posts: BlogPost[] = [
     title: "Where acupuncture may fit into an IVF journey",
     summary: "A practical guide to supportive acupuncture care before and during fertility treatment—and what it does not replace.",
     readTime: "6 min read",
-    image: "/images/home-hero-care.jpg",
+    image: "/images/home-hero-care.webp",
     imageAlt: "Gentle wrist assessment during a fertility-focused consultation",
     related: "/specialist#fertility-ivf",
     sections: [
@@ -68,7 +68,7 @@ const posts: BlogPost[] = [
     title: "Acupuncture for menstrual cramps and cycle-related symptoms",
     summary: "How a Chinese medicine assessment looks at timing, pain quality, flow, sleep, digestion, and the rest of the cycle.",
     readTime: "5 min read",
-    image: "/images/chinese-medicine-consultation.jpg",
+    image: "/images/chinese-medicine-consultation.webp",
     imageAlt: "Pulse assessment during a Traditional Chinese Medicine consultation",
     related: "/specialist#womens-health",
     sections: [
@@ -104,7 +104,7 @@ const posts: BlogPost[] = [
     title: "TMJ pain is more than a jaw-joint problem",
     summary: "Why jaw muscles, clenching, headaches, neck tension, sleep, and stress all matter in a focused orofacial pain assessment.",
     readTime: "6 min read",
-    image: "/images/acupuncture-treatment-hero.png",
+    image: "/images/acupuncture-treatment-hero.webp",
     imageAlt: "Fine needles being placed during a pain-focused acupuncture treatment",
     related: "/specialist#orofacial-pain",
     sections: [
@@ -140,7 +140,7 @@ const posts: BlogPost[] = [
     title: "Acupuncture for headaches, neck tension, and persistent pain",
     summary: "A clear look at how acupuncture may fit into a pain plan without reducing every symptom to a single cause.",
     readTime: "5 min read",
-    image: "/images/service-acupuncture.png",
+    image: "/images/service-acupuncture.webp",
     imageAlt: "Acupuncture treatment representing pain and muscle tension care",
     related: "/specialist#pain-management",
     sections: [
@@ -176,7 +176,7 @@ const posts: BlogPost[] = [
     title: "Neck, back, and muscle pain: building a more useful care plan",
     summary: "A practical look at how pain, movement, sleep, workload, and muscle tension can be considered together.",
     readTime: "5 min read",
-    image: "/images/service-acupuncture.png",
+    image: "/images/service-acupuncture.webp",
     imageAlt: "Acupuncture treatment representing neck, back, and muscle pain care",
     related: "/specialist#pain-management",
     sections: [
@@ -212,7 +212,7 @@ const posts: BlogPost[] = [
     title: "Fire cupping for muscle tension: what the marks mean",
     summary: "What traditional cupping is intended to support, why circular marks appear, and how safety screening shapes the treatment.",
     readTime: "5 min read",
-    image: "/images/service-cupping.jpg",
+    image: "/images/service-cupping.webp",
     imageAlt: "Glass cups placed on the back during traditional cupping",
     related: "/services/cupping",
     sections: [
@@ -248,7 +248,7 @@ const posts: BlogPost[] = [
     title: "Stress, sleep, and the body’s recovery rhythm",
     summary: "Why stress and sleep are often discussed together—and how acupuncture can be framed as supportive care rather than a promise of instant relaxation.",
     readTime: "5 min read",
-    image: "/images/service-cupping.jpg",
+    image: "/images/service-cupping.webp",
     imageAlt: "Warm cupping treatment in a quiet setting",
     related: "/specialist#stress-sleep-digestion",
     sections: [
@@ -284,7 +284,7 @@ const posts: BlogPost[] = [
     title: "Bloating, constipation, and stress-sensitive digestion",
     summary: "How an acupuncture consultation can organize digestive symptoms while keeping red flags and medical evaluation in view.",
     readTime: "6 min read",
-    image: "/images/service-herbal-medicine.jpg",
+    image: "/images/service-herbal-medicine.webp",
     imageAlt: "Traditional herbs prepared for an individualized digestive consultation",
     related: "/specialist#stress-sleep-digestion",
     sections: [
@@ -320,7 +320,7 @@ const posts: BlogPost[] = [
     title: "Chinese herbal medicine: why individualized safety matters",
     summary: "Herbal formulas are not automatically gentle or interchangeable. Learn what to review before using one for digestion, women’s health, stress, or sleep.",
     readTime: "6 min read",
-    image: "/images/service-herbal-medicine.jpg",
+    image: "/images/service-herbal-medicine.webp",
     imageAlt: "Dried herbs and prepared ingredients for a formula consultation",
     related: "/services/herbal-medicine",
     sections: [
@@ -356,7 +356,7 @@ const posts: BlogPost[] = [
     title: "What to expect at your first acupuncture visit",
     summary: "A simple walkthrough of the conversation, assessment, treatment, and next-step planning at Springwell.",
     readTime: "4 min read",
-    image: "/images/chinese-medicine-consultation.jpg",
+    image: "/images/chinese-medicine-consultation.webp",
     imageAlt: "Patient consultation and pulse assessment in Traditional Chinese Medicine",
     related: "/book",
     sections: [
@@ -407,7 +407,7 @@ export default function BlogPage() {
         eyebrow="Springwell journal"
         title="Useful guidance for informed, whole-person care."
         text="Clear, grounded articles about women’s health, fertility and IVF support, pain management, stress, sleep, digestion, cupping, and Chinese herbal medicine."
-        image="/images/service-herbal-medicine.jpg"
+        image="/images/service-herbal-medicine.webp"
       />
       <section className="blog-topic-nav" aria-label="Blog topics">
         <div className="container">
@@ -420,11 +420,10 @@ export default function BlogPage() {
       </section>
       <section className="section-pad blog-section">
         <div className="container blog-list">
-          {posts.map((post, index) => (
+          {posts.map((post) => (
             <article className="journal-article" id={post.id} key={post.id}>
               <div className="journal-article-image">
                 <Image src={post.image} alt={post.imageAlt} fill sizes="(max-width: 860px) 100vw, 35vw" />
-                <span>0{index + 1}</span>
               </div>
               <div className="journal-article-copy">
                 <div className="journal-meta"><span>{post.category}</span><span>{post.readTime}</span></div>

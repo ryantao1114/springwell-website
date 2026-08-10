@@ -12,7 +12,6 @@ const nav = [
     label: "About Us",
     intro: "The perspective, training, and principles behind your care.",
     items: [
-      { href: "/about#traditional-chinese-medicine", title: "About Traditional Chinese Medicine", text: "A whole-person clinical system shaped through centuries of practice and observation.", tone: "spring" },
       { href: "/about#acupuncture", title: "About Acupuncture", text: "How this traditional therapy is understood and practiced through a modern lens.", tone: "needle" },
       { href: "/about#provider", title: "About Our Provider", text: "Meet Renjinming Dai and explore her clinical, academic, and research background.", tone: "portrait" },
     ],
@@ -29,12 +28,12 @@ const nav = [
   },
   {
     href: "/specialist",
-    label: "Specialist",
+    label: "What We Treat",
     intro: "Focused care areas for women’s health, pain, stress, sleep, digestion, and fertility support.",
     items: [
-      { href: "/specialist#fertility-ivf", title: "Women’s Health & IVF", text: "Support for cycle care, natural conception, IUI, IVF, and reproductive wellbeing.", tone: "fertility" },
-      { href: "/specialist#pain-management", title: "Pain Management", text: "Care for TMJ, facial pain, headaches, neck tension, and musculoskeletal discomfort.", tone: "orofacial" },
-      { href: "/specialist#stress-sleep", title: "Stress, Sleep & Digestion", text: "A whole-person approach to stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
+      { href: "/care/womens-health-fertility", title: "Women’s Health & IVF", text: "Support for cycle care, natural conception, IUI, IVF, and reproductive wellbeing.", tone: "fertility" },
+      { href: "/care/pain-management", title: "Pain Management", text: "Care for TMJ, facial pain, headaches, neck tension, and musculoskeletal discomfort.", tone: "orofacial" },
+      { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "A whole-person approach to stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
   },
   {
@@ -42,8 +41,8 @@ const nav = [
     label: "Pricing",
     intro: "Straightforward visit costs and payment information before you schedule.",
     items: [
-      { href: "/pricing#initial-visit", title: "Initial Visit", text: "$50 consultation plus a $95 acupuncture treatment · 60–75 minutes.", tone: "initial" },
-      { href: "/pricing#follow-up", title: "Follow-Up", text: "$95 for a progress review and full acupuncture session · 45–60 minutes.", tone: "followup" },
+      { href: "/pricing#initial-visit", title: "Initial Visit", text: "💲50 consultation plus a 💲95 acupuncture treatment · 60–75 minutes.", tone: "initial" },
+      { href: "/pricing#follow-up", title: "Follow-Up", text: "💲95 for a progress review and full acupuncture session · 45–60 minutes.", tone: "followup" },
       { href: "/pricing#insurance", title: "Insurance & Superbills", text: "Learn about self-pay care and possible out-of-network reimbursement.", tone: "insurance" },
     ],
   },
@@ -120,7 +119,7 @@ export function SiteHeader() {
     >
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="Springwell Acupuncture home" onClick={closeNavigation}>
-          <span className="brand-mark">SW</span>
+          <span className="brand-mark"><img src="/images/springwell-logo.webp" alt="Springwell Acupuncture" /></span>
           <span className="brand-name">
             <strong>Springwell</strong>
             <small>Acupuncture</small>
@@ -165,14 +164,14 @@ export function SiteHeader() {
                     <p className="eyebrow">Explore {item.label}</p>
                     <h2>{item.label}</h2>
                     <p>{item.intro}</p>
-                    <Link className="text-link" href={item.href} onClick={closeNavigation}>
+                    {item.label !== "Services" && item.label !== "What We Treat" && <Link className="text-link" href={item.href} onClick={closeNavigation}>
                       View overview <ArrowIcon />
-                    </Link>
+                    </Link>}
                   </div>
                   <div className="mega-menu-grid">
-                    {item.items.map((subitem, index) => (
+                    {item.items.map((subitem) => (
                       <Link className="mega-menu-card" href={subitem.href} key={subitem.href} onClick={closeNavigation}>
-                        <span className={`mega-menu-visual visual-${subitem.tone}`} aria-hidden="true"><i>0{index + 1}</i></span>
+                        <span className={`mega-menu-visual visual-${subitem.tone}`} aria-hidden="true" />
                         <strong>{subitem.title}</strong>
                         <small>{subitem.text}</small>
                       </Link>
@@ -185,11 +184,11 @@ export function SiteHeader() {
             <Link href={item.href} key={item.href} onClick={closeNavigation}>{item.label}</Link>
           ))}
           <Link className="mobile-book-link" href={site.bookingUrl} target="_blank" rel="noreferrer" onClick={closeNavigation}>
-            Book Online <ArrowIcon />
+            Book Your Visit <ArrowIcon />
           </Link>
         </nav>
         <Link className="button button-small button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">
-          Book Online <ArrowIcon />
+          Book Your Visit <ArrowIcon />
         </Link>
       </div>
     </header>
@@ -202,7 +201,7 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div>
           <Link className="brand footer-brand" href="/">
-            <span className="brand-mark">SW</span>
+            <span className="brand-mark"><img src="/images/springwell-logo.webp" alt="Springwell Acupuncture" /></span>
             <span className="brand-name">
               <strong>Springwell</strong>
               <small>Acupuncture</small>
@@ -228,20 +227,20 @@ export function SiteFooter() {
           <p className="footer-label">Explore</p>
           <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
-          <Link href="/specialist">Specialist</Link>
+          <Link href="/specialist">What We Treat</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/blog">Blog</Link>
         </div>
         <div>
           <p className="footer-label">Visit</p>
-          <p>Northern Virginia</p>
-          <p>Appointments by request</p>
-          <p>Exact practice address shared before your visit</p>
+          <p>463 Carlisle Dr., Room 4</p>
+          <p>Herndon, VA 20170</p>
+          <p>Serving Herndon, Reston, and Northern Virginia</p>
         </div>
         <div>
           <p className="footer-label">Contact</p>
           <a href={`mailto:${site.email}`}>{site.email}</a>
-          <p>Phone details available by email</p>
+          <p>Questions and scheduling by email</p>
           <Link className="text-link footer-link" href="/contact">Contact us <ArrowIcon /></Link>
         </div>
       </div>
@@ -266,6 +265,62 @@ export function PageShell({ children, variant }: { children: React.ReactNode; va
       <SiteHeader />
       <main>{children}</main>
       <SiteFooter />
+      <NewPatientOffer />
+    </div>
+  );
+}
+
+function NewPatientOffer() {
+  const [open, setOpen] = useState(false);
+
+  const dismiss = () => {
+    window.sessionStorage.setItem("springwell-new-patient-offer-dismissed", "true");
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    const dismissed = window.sessionStorage.getItem("springwell-new-patient-offer-dismissed");
+    if (dismissed) return;
+
+    const timer = window.setTimeout(() => setOpen(true), 1400);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") dismiss();
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [open]);
+
+  if (!open) return null;
+
+  return (
+    <div className="offer-overlay" role="presentation" onMouseDown={(event) => {
+      if (event.target === event.currentTarget) dismiss();
+    }}>
+      <section className="new-patient-offer" role="dialog" aria-modal="true" aria-labelledby="new-patient-offer-title">
+        <button className="offer-close" type="button" onClick={dismiss} aria-label="Close new patient offer">×</button>
+        <div className="offer-image" role="img" aria-label="A peaceful acupuncture treatment setting" />
+        <div className="offer-content">
+          <p className="eyebrow">A welcome for new patients</p>
+          <h2 id="new-patient-offer-title"><span>💲50</span> off your first acupuncture visit</h2>
+          <p className="offer-copy">Begin with a thoughtful consultation and personalized acupuncture care designed around your health goals.</p>
+          <Link className="button button-primary offer-button" href={site.bookingUrl} target="_blank" rel="noreferrer" onClick={dismiss}>
+            Claim offer &amp; book online <ArrowIcon />
+          </Link>
+          <p className="offer-terms">For new patients only. One offer per patient. May not be combined with other discounts. Please mention this offer when booking.</p>
+        </div>
+      </section>
     </div>
   );
 }
@@ -305,16 +360,12 @@ export function BottomCTA() {
   return (
     <section className="section-pad cta-section compact-cta">
       <div className="container cta-card">
-        <div>
-          <p className="eyebrow light">Care starts here</p>
-          <h2>Ready to take the next step?</h2>
-        </div>
-        <div>
-          <p>Share what brings you in, and we’ll help you plan your first visit.</p>
-          <Link className="button button-light" href={site.bookingUrl} target="_blank" rel="noreferrer">
-            Book Online <ArrowIcon />
-          </Link>
-        </div>
+        <p className="eyebrow light">Springwell Acupuncture</p>
+        <h2>Ready to take the next step?</h2>
+        <p className="cta-copy">Tell us what brings you in, and we’ll help you choose the right first visit.</p>
+        <Link className="button button-light cta-button" href={site.bookingUrl} target="_blank" rel="noreferrer">
+          Book Your Visit <ArrowIcon />
+        </Link>
       </div>
     </section>
   );
