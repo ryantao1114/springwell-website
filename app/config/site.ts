@@ -8,7 +8,7 @@ export const site = {
     "Personalized acupuncture in Northern Virginia for women’s health, fertility and IVF support, pain management, TMJ and orofacial pain, stress, sleep, and digestive concerns.",
   email: "info@springwellacu.com",
   phone: "",
-  address: "463 Carlisle Dr., Room 4, Herndon, VA 20170",
+  address: "463 Carlisle Dr., Section B, Herndon, VA 20170",
   socialLinks: [
     {
       label: "Instagram",
