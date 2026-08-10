@@ -13,7 +13,7 @@ const focusAreas = [
     text: "Individualized care for menstrual health, hormonal transitions, fertility, and the changing needs of women through every stage of life.",
     concerns: ["Period pain, PMS & irregular cycles", "Hormonal transition support", "Fertility, IUI & IVF support"],
     image: "/images/home-womens-health.jpeg",
-    alt: "Gentle wrist assessment during a women’s health consultation",
+    alt: "Practitioner and patient discussing women’s health and fertility care",
     careHref: "/care/womens-health-fertility",
     specialistHref: "/specialist#womens-health",
     blogHref: "/blog#fertility-ivf",
@@ -52,7 +52,7 @@ const focusAreas = [
     text: "Careful support for digestive symptoms, with attention to eating patterns, stress, medications, and the wider health picture.",
     concerns: ["Bloating & abdominal discomfort", "Constipation or irregularity", "Nausea & sensitive digestion"],
     image: "/images/home-digestive-support.jpeg",
-    alt: "Traditional herbs arranged for an individualized consultation",
+    alt: "Acupuncture treatment supporting digestive comfort and bloating",
     careHref: "/care/digestive-support",
     specialistHref: "/specialist#stress-sleep-digestion",
     blogHref: "/blog#digestive-support",
@@ -270,7 +270,14 @@ export default function Home() {
             {focusAreas.map((area) => (
               <article className="home-focus-item" key={area.number}>
                 <Link className="home-focus-image" href={area.careHref}>
-                  <Image src={area.image} alt={area.alt} fill sizes="(max-width: 860px) 100vw, 42vw" />
+                  <Image
+                    src={area.image}
+                    alt={area.alt}
+                    fill
+                    sizes="(max-width: 680px) calc(100vw - 40px), (max-width: 1100px) 48vw, 520px"
+                    quality={95}
+                    unoptimized
+                  />
                 </Link>
                 <div className="home-focus-copy">
                   <p className="eyebrow">{area.eyebrow}</p>
