@@ -10,27 +10,58 @@ function fallbackDataUri(label: string) {
 
 export function ImageFallbacks() {
   useEffect(() => {
-    const replace = (img: HTMLImageElement) => {
+    const replaceImage = (img: HTMLImageElement) => {
       if (img.dataset.springwellFallback === "1") return;
       img.dataset.springwellFallback = "1";
       img.removeAttribute("srcset");
       img.src = fallbackDataUri(img.alt || "Springwell Acupuncture");
     };
 
+    const replaceVideo = (video: HTMLVideoElement) => {
+      if (video.dataset.springwellFallback === "1") return;
+      video.dataset.springwellFallback = "1";
+      video.pause();
+      video.poster = fallbackDataUri(video.getAttribute("aria-label") || "Springwell Acupuncture");
+      video.querySelectorAll("source").forEach((source) => source.removeAttribute("src"));
+      video.removeAttribute("src");
+    };
+
     const onError = (event: Event) => {
-      if (event.target instanceof HTMLImageElement) replace(event.target);
+      const target = event.target;
+      if (target instanceof HTMLImageElement) replaceImage(target);
+      if (target instanceof HTMLVideoElement) replaceVideo(target);
+      if (target instanceof HTMLSourceElement && target.parentElement instanceof HTMLVideoElement) {
+        replaceVideo(target.parentElement);
+      }
     };
 
     document.addEventListener("error", onError, true);
+
     document.querySelectorAll<HTMLImageElement>("img").forEach((img) => {
-      if (img.complete && img.naturalWidth === 0) replace(img);
+      if (img.complete && img.naturalWidth === 0) replaceImage(img);
+    });
+
+    document.querySelectorAll<HTMLVideoElement>("video").forEach((video) => {
+      video.addEventListener("error", () => replaceVideo(video), { once: true });
+      video.querySelectorAll("source").forEach((source) => {
+        source.addEventListener("error", () => replaceVideo(video), { once: true });
+      });
     });
 
     const observer = new MutationObserver(() => {
       document.querySelectorAll<HTMLImageElement>("img").forEach((img) => {
-        if (img.complete && img.naturalWidth === 0) replace(img);
+        if (img.complete && img.naturalWidth === 0) replaceImage(img);
+      });
+      document.querySelectorAll<HTMLVideoElement>("video").forEach((video) => {
+        if (video.dataset.springwellWatched === "1") return;
+        video.dataset.springwellWatched = "1";
+        video.addEventListener("error", () => replaceVideo(video), { once: true });
+        video.querySelectorAll("source").forEach((source) => {
+          source.addEventListener("error", () => replaceVideo(video), { once: true });
+        });
       });
     });
+
     observer.observe(document.body, { childList: true, subtree: true });
 
     return () => {
