@@ -1559,6 +1559,8 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
   height: 320px;
   border-radius: 4px 82px 4px 4px;
 }
+.home-focus-item:nth-child(2) .home-focus-image img { object-position: center 42%; }
+.home-focus-item:nth-child(3) .home-focus-image img { object-position: center 58%; }
 .home-focus-item:nth-child(even) .home-focus-image { border-radius: 82px 4px 4px 4px; }
 .home-focus-item .home-focus-copy {
   min-height: 0;
