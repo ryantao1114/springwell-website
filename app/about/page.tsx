@@ -16,12 +16,22 @@ export default function AboutPage() {
   return (
     <PageShell>
       <section className="about-modern-hero" aria-labelledby="about-title">
-        <div className="about-modern-hero-media"><Image src="/images/about-facial-acupuncture.jpeg" alt="A patient receiving a calm acupuncture treatment" fill priority sizes="100vw" /></div>
-        <div className="about-modern-hero-card">
-          <p className="eyebrow">About Springwell</p>
-          <h1 id="about-title">Traditional depth.<br />Modern perspective.<br />Personal care.</h1>
-          <p>Springwell Integrative Acupuncture is a modern acupuncture and Chinese medicine clinic in Herndon, Virginia. We serve Herndon, Reston, Northern Virginia, and the greater DMV region with thoughtful, individualized care.</p>
-          <a className="button button-dark" href={site.bookingUrl} target="_blank" rel="noreferrer">Book now <ArrowIcon /></a>
+        <div className="container about-modern-hero-grid">
+          <div className="about-modern-hero-card">
+            <p className="eyebrow">About Springwell</p>
+            <h1 id="about-title">Traditional depth.<br />Modern perspective.<br />Personal care.</h1>
+            <p>Springwell Integrative Acupuncture is a modern acupuncture and Chinese medicine clinic in Herndon, Virginia. We serve Herndon, Reston, Northern Virginia, and the greater DMV region with thoughtful, individualized care.</p>
+            <a className="button button-dark" href={site.bookingUrl} target="_blank" rel="noreferrer">Book now <ArrowIcon /></a>
+          </div>
+          <div className="about-modern-hero-media">
+            <Image
+              src="/images/about-springwell-user.webp"
+              alt="Acupuncture meridian model representing Springwell’s traditional and modern approach"
+              fill
+              priority
+              sizes="(max-width: 860px) 100vw, 52vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -59,12 +69,14 @@ export default function AboutPage() {
           <h2 id="benefits-title">Benefits Of Acupuncture</h2>
           <div className="about-benefits-grid">
             {[
-              ["/images/benefits/pain.png", "Helps Manage Pain"],
-              ["/images/benefits/muscle-tension.png", "Eases Muscle Tension"],
-              ["/images/benefits/stress-regulation.png", "Supports Stress Regulation"],
-              ["/images/benefits/mobility-function.png", "Supports Mobility & Function"],
-              ["/images/benefits/care.png", "Complements Your Care"],
-            ].map(([icon, label]) => <div className="about-benefit" key={label}><span className="about-benefit-icon"><img src={icon} alt="" /></span><p>{label}</p></div>)}
+              ["/images/benefits/pain.webp", "Helps Manage Pain"],
+              ["/images/benefits/muscle-tension.webp", "Eases Muscle Tension"],
+              ["/images/benefits/stress-regulation.webp", "Supports Stress Regulation"],
+              ["/images/benefits/mobility-function.webp", "Supports Mobility & Function"],
+              ["/images/benefits/menstrual-reproductive.webp", "Supports Menstrual & Reproductive Wellness"],
+              ["/images/benefits/care.webp", "Complements Your Care"],
+              ["/images/benefits/digestive-comfort.webp", "Supports Digestive Comfort"],
+            ].map(([icon, label]) => <div className="about-benefit" key={label}><span className="about-benefit-icon"><Image src={icon} alt="" width={220} height={220} sizes="150px" /></span><p>{label}</p></div>)}
           </div>
         </div>
       </section>
