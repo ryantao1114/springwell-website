@@ -5,6 +5,7 @@ import { CheckIcon } from "../../components/icons";
 import { BottomCTA, PageShell } from "../../components/site-shell";
 import { getService, services } from "../service-data";
 import { MechanismAnimation } from "../mechanism-animation";
+import { TcmPerspective } from "../tcm-perspective";
 import { site } from "../../config/site";
 
 type ServicePageProps = {
@@ -110,6 +111,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
       </section>
+
+      <TcmPerspective />
 
       <BottomCTA />
     </PageShell>
