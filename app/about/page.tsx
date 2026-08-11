@@ -47,7 +47,7 @@ export default function AboutPage() {
       <section className="about-acupuncture-section" id="acupuncture" aria-labelledby="about-acupuncture-title">
         <div className="container about-acupuncture-grid">
           <div className="about-acupuncture-media">
-            <Image src="/images/about-acupuncture-user.jpeg" alt="An acupuncture meridian model showing traditional points and pathways" fill sizes="(max-width: 860px) 100vw, 44vw" />
+            <Image src="/images/about-acupuncture-user.webp" alt="Traditional acupuncture model marked with meridian points" fill sizes="(max-width: 860px) 100vw, 44vw" />
           </div>
           <div className="about-acupuncture-copy">
             <p className="eyebrow">About acupuncture</p>
@@ -151,8 +151,8 @@ export default function AboutPage() {
         <div className="container xia-note" id="xia-guicheng-tradition">
           <div className="xia-note-media">
             <Image
-              src="/images/womens-health-specialty.jpeg"
-              alt="Women resting together in warm afternoon light"
+              src="/images/womens-health-specialty.webp"
+              alt="Four women resting together in warm afternoon light"
               fill
               sizes="(max-width: 860px) 100vw, 44vw"
             />
