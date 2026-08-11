@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckIcon } from "../../components/icons";
+import { ArrowIcon, CheckIcon } from "../../components/icons";
 import { BottomCTA, PageShell } from "../../components/site-shell";
 import { getService, services } from "../service-data";
 import { MechanismAnimation } from "../mechanism-animation";
 import { TcmPerspective } from "../tcm-perspective";
 import { site } from "../../config/site";
+import heroStyles from "./acupuncture-hero.module.css";
 
 type ServicePageProps = {
   params: Promise<{ slug: string }>;
@@ -32,22 +34,46 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
+  const isAcupuncture = service.slug === "acupuncture";
 
   return (
     <PageShell>
-      <section className={`service-page-hero service-hero-${service.slug}`}>
-        <div className="container service-page-hero-grid">
-          <div className="service-page-hero-copy">
-            <Link className="service-back-link" href="/services">Services</Link>
-            <p className="eyebrow">{service.eyebrow}</p>
-            <h1>{service.title}</h1>
-            <p>{service.summary}</p>
-            <a className="button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book an appointment</a>
+      <section className={`service-page-hero service-hero-${service.slug} ${isAcupuncture ? heroStyles.hero : ""}`}>
+        {isAcupuncture && (
+          <>
+            <div className={heroStyles.background} aria-hidden="true">
+              <Image
+                src="/images/acupuncture-hero-background.webp"
+                alt=""
+                fill
+                priority
+                sizes="100vw"
+                unoptimized
+              />
+            </div>
+            <div className={heroStyles.overlay} aria-hidden="true" />
+          </>
+        )}
+        <div className={`container service-page-hero-grid ${isAcupuncture ? heroStyles.grid : ""}`}>
+          <div className={`service-page-hero-copy ${isAcupuncture ? heroStyles.copy : ""}`}>
+            <Link className={`service-back-link ${isAcupuncture ? heroStyles.back : ""}`} href="/services">Services</Link>
+            <p className={`eyebrow ${isAcupuncture ? heroStyles.eyebrow : ""}`}>{service.eyebrow}</p>
+            <h1 className={isAcupuncture ? heroStyles.title : undefined}>{service.title}</h1>
+            <p className={isAcupuncture ? heroStyles.summary : undefined}>{service.summary}</p>
+            {isAcupuncture ? (
+              <a className={`button button-light ${heroStyles.button}`} href={site.bookingUrl} target="_blank" rel="noreferrer">
+                BOOK NOW <ArrowIcon />
+              </a>
+            ) : (
+              <a className="button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book an appointment</a>
+            )}
           </div>
-          <div className="service-page-image">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={service.image} alt={service.imageAlt} />
-          </div>
+          {!isAcupuncture && (
+            <div className="service-page-image">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={service.image} alt={service.imageAlt} />
+            </div>
+          )}
         </div>
       </section>
 
