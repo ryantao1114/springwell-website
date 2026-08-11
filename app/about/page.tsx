@@ -47,7 +47,7 @@ export default function AboutPage() {
       <section className="about-acupuncture-section" id="acupuncture" aria-labelledby="about-acupuncture-title">
         <div className="container about-acupuncture-grid">
           <div className="about-acupuncture-media">
-            <Image src="/images/about-acupuncture-user.webp" alt="Traditional acupuncture model marked with meridian points" fill sizes="(max-width: 860px) 100vw, 44vw" />
+            <Image src="/images/about-acupuncture-user.webp" alt="Traditional acupuncture model marked with meridian points" fill sizes="(max-width: 860px) 100vw, 44vw" style={{ objectFit: "cover", objectPosition: "center 42%" }} />
           </div>
           <div className="about-acupuncture-copy">
             <p className="eyebrow">About acupuncture</p>
@@ -76,7 +76,7 @@ export default function AboutPage() {
               ["/images/benefits/menstrual-reproductive.webp", "Supports Menstrual & Reproductive Wellness"],
               ["/images/benefits/care.webp", "Complements Your Care"],
               ["/images/benefits/digestive-comfort.webp", "Supports Digestive Comfort"],
-            ].map(([icon, label]) => <div className="about-benefit" key={label}><span className="about-benefit-icon"><Image src={icon} alt="" width={220} height={220} sizes="150px" /></span><p>{label}</p></div>)}
+            ].map(([icon, label]) => <div className="about-benefit" key={label}><span className="about-benefit-icon" style={{ aspectRatio: "1 / 1" }}><Image src={icon} alt="" width={220} height={220} sizes="150px" style={{ objectFit: "cover", borderRadius: "50%" }} /></span><p>{label}</p></div>)}
           </div>
         </div>
       </section>
@@ -149,12 +149,13 @@ export default function AboutPage() {
         </div>
 
         <div className="container xia-note" id="xia-guicheng-tradition">
-          <div className="xia-note-media">
+          <div className="xia-note-media" style={{ minHeight: 520 }}>
             <Image
               src="/images/womens-health-specialty.webp"
               alt="Four women resting together in warm afternoon light"
               fill
               sizes="(max-width: 860px) 100vw, 44vw"
+              style={{ objectFit: "cover", objectPosition: "center 32%" }}
             />
           </div>
           <div className="xia-note-copy">
