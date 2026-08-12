@@ -40,10 +40,10 @@ export const conditionDetails: Record<string, ConditionDetail> = {
 
 export const careAreas: CareArea[] = [
   {
-    slug: "womens-health-fertility", number: "01", eyebrow: "Fertility & IVF acupuncture support",
-    title: "Fertility & IVF Acupuncture Support", seoTitle: "Fertility & IVF Acupuncture Support",
-    summary: "Feel more supported, grounded, and cared for at every step. At Springwell Integrative Acupuncture in Herndon, Virginia, we provide personalized fertility and IVF acupuncture for patients from Herndon, Reston, Tysons, and communities throughout Northern Virginia. Whether you are preparing to conceive, beginning IUI or IVF, or navigating the demands of a treatment cycle, acupuncture can be integrated alongside reproductive care to support comfort, restful sleep, stress relief, and a greater sense of steadiness throughout the process.",
-    image: "/images/home-womens-health.jpeg", imageAlt: "A gentle pulse assessment during a women’s health acupuncture consultation",
+    slug: "womens-health-fertility", number: "01", eyebrow: "Women’s health · Fertility · IVF",
+    title: "Women’s Health Acupuncture", seoTitle: "Women’s Health Acupuncture in Herndon, VA",
+    summary: "At Springwell Acupuncture, we provide personalized women’s health acupuncture in Herndon, Virginia, for patients from Herndon, Reston, Tysons, and communities throughout Northern Virginia. Our care supports women through different stages of life, including menstrual concerns, fertility, IVF and IUI support, stress, and sleep. Each treatment is individualized based on your health history, current symptoms, and goals, with acupuncture designed to complement your ongoing medical care.",
+    image: "/images/home-womens-health-hero-hd.webp", imageAlt: "A practitioner offering supportive care during a women’s health consultation",
     introTitle: "Care that follows your changing health—not a one-size-fits-all protocol.",
     introCopy: "Women’s health concerns can shift across the menstrual cycle, fertility treatment, pregnancy planning, and other life transitions. We begin with your timeline, symptoms, medical care, and goals, then create a focused plan that fits real life.",
     conditions: ["Period pain & PMS", "Irregular cycles", "PCOS-related symptoms", "Fertility, IUI & IVF support", "Stress during reproductive care", "Perimenopause symptoms"],
