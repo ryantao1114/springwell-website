@@ -94,6 +94,14 @@
   letter-spacing: .06em;
 }
 
+.cuppingBackground img {
+  object-position: center 58%;
+}
+
+.herbalmedicineBackground img {
+  object-position: center 45%;
+}
+
 @keyframes copyIn {
   to { opacity: 1; transform: translateY(0); }
 }
@@ -124,6 +132,8 @@
       linear-gradient(180deg, rgba(24, 20, 18, .12), rgba(24, 20, 18, .4));
   }
   .background img { object-position: 58% 50%; }
+  .cuppingBackground img { object-position: 61% 54%; }
+  .herbalmedicineBackground img { object-position: 54% 48%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

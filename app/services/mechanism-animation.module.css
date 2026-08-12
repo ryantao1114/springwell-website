@@ -1,0 +1,14 @@
+.featureImage {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+}
+
+.cuppingImage {
+  object-position: center 42% !important;
+}
+
+.herbalImage {
+  object-position: center !important;
+}

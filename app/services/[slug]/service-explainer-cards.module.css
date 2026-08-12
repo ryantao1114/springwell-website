@@ -1,4 +1,6 @@
 .section {
+  --card-min-height: 870px;
+  --content-min-height: 560px;
   padding: 112px 0 124px;
   overflow: hidden;
   background: var(--paper);
@@ -23,7 +25,7 @@
 
 .card {
   min-width: 0;
-  min-height: 870px;
+  min-height: var(--card-min-height);
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -70,12 +72,18 @@
 }
 
 .content {
-  min-height: 560px;
+  min-height: var(--content-min-height);
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
   padding: 32px 14px 12px;
+}
+
+.section[data-theme="cupping"],
+.section[data-theme="herbal-medicine"] {
+  --card-min-height: 750px;
+  --content-min-height: 440px;
 }
 
 .content h3 {
@@ -109,7 +117,7 @@
   }
 
   .card {
-    min-height: 810px;
+    min-height: calc(var(--card-min-height) - 60px);
   }
 
   .card:last-child {

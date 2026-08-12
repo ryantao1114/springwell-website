@@ -36,45 +36,25 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const service = getService(slug);
   if (!service) notFound();
   const isAcupuncture = service.slug === "acupuncture";
+  const heroImage = isAcupuncture ? "/images/acupuncture-hero-background.webp" : service.image;
 
   return (
     <PageShell>
-      <section className={`service-page-hero service-hero-${service.slug} ${isAcupuncture ? heroStyles.hero : ""}`}>
-        {isAcupuncture && (
-          <>
-            <div className={heroStyles.background} aria-hidden="true">
-              <Image
-                src="/images/acupuncture-hero-background.webp"
-                alt=""
-                fill
-                priority
-                sizes="100vw"
-                unoptimized
-              />
-            </div>
-            <div className={heroStyles.overlay} aria-hidden="true" />
-          </>
-        )}
-        <div className={`container service-page-hero-grid ${isAcupuncture ? heroStyles.grid : ""}`}>
-          <div className={`service-page-hero-copy ${isAcupuncture ? heroStyles.copy : ""}`}>
-            <Link className={`service-back-link ${isAcupuncture ? heroStyles.back : ""}`} href="/services">Services</Link>
-            <p className={`eyebrow ${isAcupuncture ? heroStyles.eyebrow : ""}`}>{service.eyebrow}</p>
-            <h1 className={isAcupuncture ? heroStyles.title : undefined}>{service.title}</h1>
-            <p className={isAcupuncture ? heroStyles.summary : undefined}>{service.summary}</p>
-            {isAcupuncture ? (
-              <a className={`button button-light ${heroStyles.button}`} href={site.bookingUrl} target="_blank" rel="noreferrer">
-                BOOK NOW <ArrowIcon />
-              </a>
-            ) : (
-              <a className="button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book an appointment</a>
-            )}
+      <section className={`service-page-hero service-hero-${service.slug} ${heroStyles.hero}`}>
+        <div className={`${heroStyles.background} ${heroStyles[`${service.slug.replace("-", "")}Background`] ?? ""}`} aria-hidden="true">
+          <Image src={heroImage} alt="" fill priority sizes="100vw" unoptimized />
+        </div>
+        <div className={heroStyles.overlay} aria-hidden="true" />
+        <div className={`container service-page-hero-grid ${heroStyles.grid}`}>
+          <div className={`service-page-hero-copy ${heroStyles.copy}`}>
+            <Link className={`service-back-link ${heroStyles.back}`} href="/services">Services</Link>
+            <p className={`eyebrow ${heroStyles.eyebrow}`}>{service.eyebrow}</p>
+            <h1 className={heroStyles.title}>{service.title}</h1>
+            <p className={heroStyles.summary}>{service.summary}</p>
+            <a className={`button button-light ${heroStyles.button}`} href={site.bookingUrl} target="_blank" rel="noreferrer">
+              BOOK NOW <ArrowIcon />
+            </a>
           </div>
-          {!isAcupuncture && (
-            <div className="service-page-image">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={service.image} alt={service.imageAlt} />
-            </div>
-          )}
         </div>
       </section>
 
@@ -86,7 +66,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
-      {isAcupuncture ? <ServiceExplainerCards /> : <MechanismAnimation kind={service.slug} />}
+      {!isAcupuncture && <MechanismAnimation kind={service.slug} />}
+
+      <ServiceExplainerCards service={service} />
 
       {service.slug === "acupuncture" && <section className="section-pad expected-results-section" aria-labelledby="expected-results-title">
         <div className="container expected-results-grid">
@@ -102,14 +84,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
       </section>}
-
-      {!isAcupuncture && <section className="section-pad service-explainer-section">
-          <div className="container service-explainer-grid">
-            <article><span>01</span><p className="eyebrow">{service.primaryLabel}</p><p>{service.primaryCopy}</p></article>
-            <article><span>02</span><p className="eyebrow">{service.visitLabel}</p><p>{service.visitCopy}</p></article>
-            <article className="service-safety-card"><span>03</span><p className="eyebrow">{service.safetyLabel}</p><p>{service.safetyCopy}</p></article>
-          </div>
-        </section>}
 
       <section className="section-pad service-care-detail-section">
         <div className="container service-care-detail-grid">

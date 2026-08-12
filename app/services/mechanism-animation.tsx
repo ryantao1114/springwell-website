@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import imageStyles from "./mechanism-animation.module.css";
+
 type MechanismAnimationProps = {
   kind: "acupuncture" | "cupping" | "herbal-medicine";
 };
@@ -57,13 +60,13 @@ export function MechanismAnimation({ kind }: MechanismAnimationProps) {
 
 function CuppingFeature() {
   return <div className="mechanism-feature-visual">
-    {/* eslint-disable-next-line @next/next/no-img-element */}<img src="/images/mechanism/cupping-reference.png" alt="Scientific illustration showing controlled suction, local tissue lift, and mechanical input during cupping" />
+    <Image className={`${imageStyles.featureImage} ${imageStyles.cuppingImage}`} src="/images/cupping-marks-overview.webp" alt="Temporary circular marks on the back following cupping" fill sizes="(max-width: 860px) calc(100vw - 48px), 55vw" />
   </div>;
 }
 
 function HerbalFeature() {
   return <div className="mechanism-feature-visual herbal-feature-visual">
-    {/* eslint-disable-next-line @next/next/no-img-element */}<img src="/images/herbal-medicine-user.jpg" alt="Traditional Chinese herbs arranged for herbal medicine care" />
+    <Image className={`${imageStyles.featureImage} ${imageStyles.herbalImage}`} src="/images/herbal-medicine-user.webp" alt="Traditional Chinese herbs arranged for herbal medicine care" fill sizes="(max-width: 860px) calc(100vw - 48px), 55vw" />
     <div className="mechanism-feature-overlay"><span>01 · Symptoms</span><span>02 · Formula</span><span>03 · Review</span></div>
     <div className="mechanism-feature-caption"><strong>A formula that can change with you.</strong><small>Ingredients, proportions, interactions, and response are reviewed together.</small></div>
   </div>;
