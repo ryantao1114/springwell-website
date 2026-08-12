@@ -35,6 +35,29 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const service = getService(slug);
   if (!service) notFound();
   const isAcupuncture = service.slug === "acupuncture";
+  const acupunctureExplainerCards = [
+    {
+      number: "01",
+      label: service.primaryLabel,
+      copy: service.primaryCopy,
+      image: "/images/service-acupuncture.webp",
+      imageAlt: "Acupuncturist gently placing a fine needle during treatment",
+    },
+    {
+      number: "02",
+      label: service.visitLabel,
+      copy: service.visitCopy,
+      image: "/images/chinese-medicine-consultation.webp",
+      imageAlt: "Practitioner performing a traditional pulse assessment during a consultation",
+    },
+    {
+      number: "03",
+      label: service.safetyLabel,
+      copy: service.safetyCopy,
+      image: "/images/first-session-rest.webp",
+      imageAlt: "Patient resting comfortably during an acupuncture session",
+    },
+  ];
 
   return (
     <PageShell>
@@ -85,7 +108,31 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
-      <MechanismAnimation kind={service.slug} />
+      {isAcupuncture ? (
+        <section className="section-pad service-explainer-section acupuncture-explainer-section" aria-label="How acupuncture works and what to expect">
+          <div className="container service-explainer-grid acupuncture-explainer-grid">
+            {acupunctureExplainerCards.map((card) => (
+              <article key={card.number}>
+                <div className="acupuncture-explainer-image">
+                  <Image
+                    src={card.image}
+                    alt={card.imageAlt}
+                    fill
+                    sizes="(max-width: 980px) calc(100vw - 48px), 33vw"
+                  />
+                  <span className="acupuncture-explainer-number">{card.number}</span>
+                </div>
+                <div className="acupuncture-explainer-copy">
+                  <p className="eyebrow">{card.label}</p>
+                  <p>{card.copy}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : (
+        <MechanismAnimation kind={service.slug} />
+      )}
 
       {service.slug === "acupuncture" && <section className="section-pad expected-results-section" aria-labelledby="expected-results-title">
         <div className="container expected-results-grid">
@@ -102,13 +149,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>}
 
-      <section className="section-pad service-explainer-section">
+      {!isAcupuncture && <section className="section-pad service-explainer-section">
         <div className="container service-explainer-grid">
           <article><span>01</span><p className="eyebrow">{service.primaryLabel}</p><p>{service.primaryCopy}</p></article>
           <article><span>02</span><p className="eyebrow">{service.visitLabel}</p><p>{service.visitCopy}</p></article>
           <article className="service-safety-card"><span>03</span><p className="eyebrow">{service.safetyLabel}</p><p>{service.safetyCopy}</p></article>
         </div>
-      </section>
+      </section>}
 
       <section className="section-pad service-care-detail-section">
         <div className="container service-care-detail-grid">
