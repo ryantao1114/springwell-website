@@ -1,38 +1,39 @@
 import Image from "next/image";
 import { ArrowIcon } from "../../components/icons";
 import { site } from "../../config/site";
-import type { Service } from "../service-data";
 import styles from "./service-explainer-cards.module.css";
 
-type ServiceExplainerCardsProps = {
-  service: Service;
-};
-
-const acupunctureImages = [
+const cards = [
   {
-    src: "/images/first-session-treatment.webp",
-    alt: "Fine acupuncture needle being placed during treatment",
-    position: "center 48%",
+    label: "How Acupuncture May Help",
+    copy: "Acupuncture may help manage pain, ease muscle tension, support mobility, and promote relaxation. It may also complement care for stress, sleep, digestive concerns, and menstrual or reproductive wellness. Treatment is tailored to your symptoms, health history, and goals.",
+    image: {
+      src: "/images/acupuncture-card-help.webp",
+      alt: "Electroacupuncture clips connected to fine acupuncture needles",
+      position: "center 50%",
+    },
   },
   {
-    src: "/images/first-session-assessment.webp",
-    alt: "Acupuncturist discussing symptoms and treatment goals with a patient",
-    position: "center 45%",
+    label: "What to Expect",
+    copy: "Your first visit begins with a conversation about your health history, current concerns, and treatment goals. Your practitioner will select individualized acupuncture points and gently place fine needles while you rest comfortably. Based on your condition and treatment goals, electroacupuncture or cupping may also be included. Your treatment plan may be adjusted over time according to your needs and response.",
+    image: {
+      src: "/images/acupuncture-card-expect.webp",
+      alt: "Acupuncturist gently placing a needle during a back treatment",
+      position: "center 43%",
+    },
   },
   {
-    src: "/images/first-session-rest.webp",
-    alt: "Patient resting comfortably during an acupuncture session",
-    position: "center 42%",
+    label: "Safety & Comfort",
+    copy: "Treatment is provided by a licensed acupuncturist using sterile, single-use needles. Most patients feel little or no discomfort, although temporary soreness, mild bruising, heaviness, or tingling may occur. Your health history is reviewed, and each technique is adjusted for your safety and comfort.",
+    image: {
+      src: "/images/acupuncture-card-safety.webp",
+      alt: "Patient resting comfortably during a licensed acupuncture treatment",
+      position: "center 46%",
+    },
   },
 ] as const;
 
-export function ServiceExplainerCards({ service }: ServiceExplainerCardsProps) {
-  const cards = [
-    { number: "01", label: service.primaryLabel, copy: service.primaryCopy },
-    { number: "02", label: service.visitLabel, copy: service.visitCopy },
-    { number: "03", label: service.safetyLabel, copy: service.safetyCopy },
-  ];
-
+export function ServiceExplainerCards() {
   return (
     <section className={styles.section} aria-labelledby="acupuncture-explainer-title">
       <div className="container">
@@ -42,23 +43,19 @@ export function ServiceExplainerCards({ service }: ServiceExplainerCardsProps) {
         </div>
 
         <div className={styles.grid}>
-          {cards.map((card, index) => {
-            const image = acupunctureImages[index];
-
-            return (
-              <article className={styles.card} key={card.number}>
+          {cards.map((card) => (
+              <article className={styles.card} key={card.label}>
                 <div className={styles.image}>
                   <Image
-                    src={image.src}
-                    alt={image.alt}
+                    src={card.image.src}
+                    alt={card.image.alt}
                     fill
                     sizes="(max-width: 680px) calc(100vw - 64px), (max-width: 1050px) calc(50vw - 52px), 390px"
-                    style={{ objectPosition: image.position }}
+                    style={{ objectPosition: card.image.position }}
                   />
                 </div>
 
                 <div className={styles.content}>
-                  <span className={styles.number}>{card.number}</span>
                   <h3>{card.label}</h3>
                   <p>{card.copy}</p>
                   <a
@@ -72,8 +69,7 @@ export function ServiceExplainerCards({ service }: ServiceExplainerCardsProps) {
                   </a>
                 </div>
               </article>
-            );
-          })}
+          ))}
         </div>
       </div>
     </section>

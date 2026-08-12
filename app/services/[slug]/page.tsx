@@ -86,7 +86,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
-      {isAcupuncture ? <ServiceExplainerCards service={service} /> : <MechanismAnimation kind={service.slug} />}
+      {isAcupuncture ? <ServiceExplainerCards /> : <MechanismAnimation kind={service.slug} />}
 
       {service.slug === "acupuncture" && <section className="section-pad expected-results-section" aria-labelledby="expected-results-title">
         <div className="container expected-results-grid">
