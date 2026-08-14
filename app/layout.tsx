@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { ImageFallbacks } from "./components/image-fallbacks";
-import { HomeLocationMap } from "./components/home-location-map";
 import { LocalBusinessJsonLd } from "./components/local-business-json-ld";
 import { site } from "./config/site";
 
@@ -39,13 +38,13 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     type: "website",
-    images: ["/images/provider-renjinming.jpg"],
+    images: ["/images/provider-renjinming-2026.webp"],
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
-    images: ["/images/provider-renjinming.jpg"],
+    images: ["/images/provider-renjinming-2026.webp"],
   },
   other: {
     "codex-preview": "development",
@@ -66,7 +65,6 @@ export default function RootLayout({
       <body className="antialiased">
         <LocalBusinessJsonLd />
         {children}
-        <HomeLocationMap />
         <ImageFallbacks />
         <Analytics />
         <SpeedInsights />

@@ -7,7 +7,16 @@ import { ArrowIcon } from "./icons";
 
 const nav = [
   { href: "/", label: "Home" },
-  { href: "/services/acupuncture", label: "Acupuncture" },
+  {
+    href: "/services/acupuncture",
+    label: "Acupuncture",
+    intro: "Traditional treatments, explained clearly and selected according to your needs.",
+    items: [
+      { href: "/services/acupuncture", title: "Acupuncture", text: "Personalized treatment using sterile, single-use needles, with electroacupuncture when appropriate.", tone: "needle" },
+      { href: "/services/cupping", title: "Cupping", text: "Focused support for muscle tightness, soreness, stiffness, and movement-related tension.", tone: "cups" },
+      { href: "/services/herbal-medicine", title: "Herbal Medicine", text: "Individualized traditional formula guidance with careful medication and safety screening.", tone: "herbs" },
+    ],
+  },
   {
     href: "/specialist",
     label: "Specialties",
@@ -181,6 +190,8 @@ export function SiteFooter() {
           <p className="footer-label">Explore</p>
           <Link href="/">Home</Link>
           <Link href="/services/acupuncture">Acupuncture</Link>
+          <Link href="/services/cupping">Cupping</Link>
+          <Link href="/services/herbal-medicine">Herbal Medicine</Link>
           <Link href="/specialist">Specialties</Link>
           <Link href="/about">About</Link>
           <Link href="/new-patients">New Patients</Link>

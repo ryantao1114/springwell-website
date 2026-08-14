@@ -85,7 +85,8 @@ export default function AboutPage() {
         <div className="container provider-grid">
           <div className="provider-portrait provider-portrait-image">
             <Image
-              src="/images/provider-renjinming.jpg"
+              src="/images/provider-renjinming-2026.webp"
+              unoptimized
               alt="Renjinming Dai, licensed acupuncturist at Springwell"
               fill
               sizes="(max-width: 860px) 100vw, 42vw"

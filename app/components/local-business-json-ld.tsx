@@ -6,7 +6,7 @@ export function LocalBusinessJsonLd() {
     "@type": ["MedicalBusiness", "LocalBusiness"],
     name: site.name,
     url: site.url,
-    image: new URL("/images/provider-renjinming.jpg", site.url).toString(),
+    image: new URL("/images/provider-renjinming-2026.webp", site.url).toString(),
     description: site.description,
     email: site.email,
     telephone: site.phone || undefined,

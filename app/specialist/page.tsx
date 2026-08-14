@@ -54,7 +54,7 @@ export default function SpecialistPage() {
       <section className="section-pad specialist-provider-intro">
         <div className="container specialist-provider-grid">
           <div className="specialist-provider-image">
-            <Image src="/images/provider-renjinming.jpg" alt="Renjinming Dai, licensed acupuncturist at Springwell" fill sizes="(max-width: 860px) 100vw, 45vw" />
+            <Image src="/images/provider-renjinming-2026.webp" alt="Renjinming Dai, licensed acupuncturist at Springwell" fill unoptimized sizes="(max-width: 860px) 100vw, 45vw" />
           </div>
           <div>
             <p className="eyebrow">Licensed acupuncturist</p>

@@ -11,7 +11,7 @@
   --coral: #7d91b5;
   --gold: #aa8d6e;
   --text: #594c47;
-  --muted: #776d68;
+  --muted: #6d625d;
   --line: rgba(105, 85, 76, 0.17);
   --mist-surface: #edf3f8;
   --mist-mid: #c9d9e8;
@@ -40,7 +40,7 @@ button, summary { cursor: pointer; }
 .eyebrow {
   margin: 0 0 18px;
   color: var(--coral);
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   line-height: 1.3;
