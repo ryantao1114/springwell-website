@@ -9,6 +9,7 @@ export const site = {
   email: "info@springwellacu.com",
   phone: "",
   address: "463 Carlisle Dr., Section B, Herndon, VA 20170",
+  directionsUrl: "https://www.google.com/maps/search/?api=1&query=463+Carlisle+Dr+Herndon+VA+20170",
   socialLinks: [
     {
       label: "Instagram",

@@ -7,65 +7,19 @@ import { ArrowIcon } from "./icons";
 
 const nav = [
   { href: "/", label: "Home" },
-  {
-    href: "/about",
-    label: "About Us",
-    intro: "The perspective, training, and principles behind your care.",
-    items: [
-      { href: "/about#acupuncture", title: "About Acupuncture", text: "How this traditional therapy is understood and practiced through a modern lens.", tone: "needle" },
-      { href: "/about#provider", title: "About Our Provider", text: "Meet Renjinming Dai and explore her clinical, academic, and research background.", tone: "portrait" },
-    ],
-  },
-  {
-    href: "/services",
-    label: "Services",
-    intro: "Traditional therapies, explained clearly and tailored thoughtfully.",
-    items: [
-      { href: "/services/acupuncture", title: "Acupuncture", text: "Personalized, gentle treatment using sterile, single-use needles.", tone: "needle" },
-      { href: "/services/cupping", title: "Fire Cupping", text: "Traditional warming care for muscle tightness, stiffness, and tension patterns.", tone: "cups" },
-      { href: "/services/herbal-medicine", title: "Herbal Medicine", text: "Individualized formula guidance with careful safety screening.", tone: "herbs" },
-    ],
-  },
+  { href: "/services/acupuncture", label: "Acupuncture" },
   {
     href: "/specialist",
-    label: "What We Treat",
-    intro: "Focused care areas for women’s health, pain, stress, sleep, digestion, and fertility support.",
+    label: "Specialties",
+    intro: "Focused, individualized care for the concerns that bring you in.",
     items: [
-      { href: "/care/womens-health-fertility", title: "Women’s Health & IVF", text: "Support for cycle care, natural conception, IUI, IVF, and reproductive wellbeing.", tone: "fertility" },
-      { href: "/care/pain-management", title: "Pain Management", text: "Care for TMJ, facial pain, headaches, neck tension, and musculoskeletal discomfort.", tone: "orofacial" },
+      { href: "/care/womens-health-fertility", title: "Women’s Health & Fertility", text: "Menstrual health, fertility, IUI, IVF, and reproductive wellbeing.", tone: "fertility" },
+      { href: "/care/pain-management", title: "Pain Management", text: "Headache, TMJ, neck, back, muscle tension, and persistent pain support.", tone: "orofacial" },
       { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "A whole-person approach to stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
   },
-  {
-    href: "/pricing",
-    label: "Pricing",
-    intro: "Straightforward visit costs and payment information before you schedule.",
-    items: [
-      { href: "/pricing#initial-visit", title: "Initial Visit", text: "💲50 consultation plus a 💲95 acupuncture treatment · 60–75 minutes.", tone: "initial" },
-      { href: "/pricing#follow-up", title: "Follow-Up", text: "💲95 for a progress review and full acupuncture session · 45–60 minutes.", tone: "followup" },
-      { href: "/pricing#insurance", title: "Insurance & Superbills", text: "Learn about self-pay care and possible out-of-network reimbursement.", tone: "insurance" },
-    ],
-  },
-  {
-    href: "/blog",
-    label: "Blog",
-    intro: "Grounded, patient-friendly guidance for informed whole-person care.",
-    items: [
-      { href: "/blog#fertility-ivf", title: "Fertility & IVF", text: "Patient-friendly guidance for fertility support and acupuncture during IVF care.", tone: "fertility" },
-      { href: "/blog#pain-management", title: "Pain Management", text: "Understand TMJ, headaches, muscle tension, and supportive treatment options.", tone: "orofacial" },
-      { href: "/blog#stress-sleep-digestion", title: "Stress, Sleep & Digestion", text: "Practical education about sleep, stress, digestion, and herbal safety.", tone: "wellness" },
-    ],
-  },
-  {
-    href: "/contact",
-    label: "Contact Us",
-    intro: "Choose the simplest next step for questions, planning, or scheduling.",
-    items: [
-      { href: "/contact#request", title: "Request an Appointment", text: "Tell us what brings you in and share your preferred appointment times.", tone: "request" },
-      { href: "/contact#visit-details", title: "Visit Details", text: "Review location, hours, contact information, and first-visit timing.", tone: "visit" },
-      { href: "/faq", title: "Frequently Asked Questions", text: "Prepare for treatment and find answers to common questions.", tone: "faq" },
-    ],
-  },
+  { href: "/about", label: "About" },
+  { href: "/new-patients", label: "New Patients" },
 ];
 
 export function SiteHeader() {
@@ -184,11 +138,11 @@ export function SiteHeader() {
             <Link href={item.href} key={item.href} onClick={closeNavigation}>{item.label}</Link>
           ))}
           <Link className="mobile-book-link" href={site.bookingUrl} target="_blank" rel="noreferrer" onClick={closeNavigation}>
-            Book Your Visit <ArrowIcon />
+            Book Now <ArrowIcon />
           </Link>
         </nav>
         <Link className="button button-small button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">
-          Book Your Visit <ArrowIcon />
+          Book Now <ArrowIcon />
         </Link>
       </div>
     </header>
@@ -226,10 +180,10 @@ export function SiteFooter() {
         <div>
           <p className="footer-label">Explore</p>
           <Link href="/">Home</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/specialist">What We Treat</Link>
-          <Link href="/pricing">Pricing</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/services/acupuncture">Acupuncture</Link>
+          <Link href="/specialist">Specialties</Link>
+          <Link href="/about">About</Link>
+          <Link href="/new-patients">New Patients</Link>
         </div>
         <div>
           <p className="footer-label">Visit</p>
@@ -265,62 +219,6 @@ export function PageShell({ children, variant }: { children: React.ReactNode; va
       <SiteHeader />
       <main>{children}</main>
       <SiteFooter />
-      <NewPatientOffer />
-    </div>
-  );
-}
-
-function NewPatientOffer() {
-  const [open, setOpen] = useState(false);
-
-  const dismiss = () => {
-    window.sessionStorage.setItem("springwell-new-patient-offer-dismissed", "true");
-    setOpen(false);
-  };
-
-  useEffect(() => {
-    const dismissed = window.sessionStorage.getItem("springwell-new-patient-offer-dismissed");
-    if (dismissed) return;
-
-    const timer = window.setTimeout(() => setOpen(true), 1400);
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    if (!open) return;
-
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") dismiss();
-    };
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", closeOnEscape);
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", closeOnEscape);
-    };
-  }, [open]);
-
-  if (!open) return null;
-
-  return (
-    <div className="offer-overlay" role="presentation" onMouseDown={(event) => {
-      if (event.target === event.currentTarget) dismiss();
-    }}>
-      <section className="new-patient-offer" role="dialog" aria-modal="true" aria-labelledby="new-patient-offer-title">
-        <button className="offer-close" type="button" onClick={dismiss} aria-label="Close new patient offer">×</button>
-        <div className="offer-image" role="img" aria-label="A peaceful acupuncture treatment setting" />
-        <div className="offer-content">
-          <p className="eyebrow">A welcome for new patients</p>
-          <h2 id="new-patient-offer-title"><span>💲50</span> off your first acupuncture visit</h2>
-          <p className="offer-copy">Begin with a thoughtful consultation and personalized acupuncture care designed around your health goals.</p>
-          <Link className="button button-primary offer-button" href={site.bookingUrl} target="_blank" rel="noreferrer" onClick={dismiss}>
-            Claim offer &amp; book online <ArrowIcon />
-          </Link>
-          <p className="offer-terms">For new patients only. One offer per patient. May not be combined with other discounts. Please mention this offer when booking.</p>
-        </div>
-      </section>
     </div>
   );
 }

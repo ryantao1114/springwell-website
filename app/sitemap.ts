@@ -14,6 +14,7 @@ const routes = [
   { path: "/care/stress-sleep", priority: 0.85 },
   { path: "/care/digestive-support", priority: 0.85 },
   { path: "/pricing", priority: 0.8 },
+  { path: "/new-patients", priority: 0.9 },
   { path: "/blog", priority: 0.7 },
   { path: "/faq", priority: 0.7 },
   { path: "/contact", priority: 0.8 },
