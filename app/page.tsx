@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "./components/icons";
+import { CurrencyMark } from "./components/currency-mark";
 import { PageShell } from "./components/site-shell";
 import { site } from "./config/site";
 import styles from "./home-redesign.module.css";
@@ -24,6 +25,35 @@ const approach = [
   ["04", "Ongoing plan", "Treatment frequency and approach evolve according to your response, priorities, and goals."],
 ] as const;
 
+function ProcessIllustration({ type }: { type: string }) {
+  return (
+    <svg className={styles.processIllustration} viewBox="0 0 220 150" role="img" aria-label="Simple line drawing illustrating this treatment step">
+      <path className={styles.processLine} d="M28 116c29-12 36-33 62-34 24-1 28 18 51 18 23 0 27-23 51-29" />
+      {type === "assessment" && <>
+        <path className={styles.processLine} d="M77 81c-8-20 3-40 23-43 18-3 32 11 29 28-2 14-13 22-28 24M101 53c8-7 19-6 24 2M84 112c7-18 19-24 34-22" />
+        <circle className={styles.processDot} cx="137" cy="48" r="4" />
+        <path className={styles.processAccent} d="M148 40l15-9m-11 20 18-1" />
+      </>}
+      {type === "treatment" && <>
+        <path className={styles.processLine} d="M100 35c-13 8-15 26-7 35l-10 25m17-45 18 9 22-4m-30 17 22 20 10 25m-21-31-25 20" />
+        <circle className={styles.processDot} cx="101" cy="28" r="8" />
+        <path className={styles.processAccent} d="M150 42c13 6 22 16 26 29m-7-31 8 2-2 8" />
+      </>}
+      {type === "response" && <>
+        <path className={styles.processLine} d="M73 106c8-35 25-53 51-54 23-1 37 16 31 36-5 17-20 24-37 19M96 72l10 25m17-41-4 29m23-16-16 23" />
+        <path className={styles.processAccent} d="M167 35v30m-7-23 7-7 7 7" />
+        <circle className={styles.processDot} cx="106" cy="97" r="4" /><circle className={styles.processDot} cx="119" cy="85" r="4" />
+      </>}
+      {type === "plan" && <>
+        <path className={styles.processLine} d="M53 104c17-33 39-40 58-26 13 9 21 25 38 21 17-3 24-22 25-45" />
+        <path className={styles.processAccent} d="M164 54l10-10 10 10" />
+        <circle className={styles.processDot} cx="72" cy="87" r="5" /><circle className={styles.processDot} cx="111" cy="88" r="5" />
+        <path className={styles.processLine} d="M42 115h130" />
+      </>}
+    </svg>
+  );
+}
+
 const benefits = [
   ["pain", "Helps Manage Pain", "May support symptom relief as part of a broader pain-management plan."],
   ["muscle-tension", "Eases Muscle Tension", "Targets areas of tightness that may affect comfort and daily movement."],
@@ -44,7 +74,7 @@ export default function Home() {
 
     <section className={`${styles.section} ${styles.providerSection}`}><div className={`container ${styles.providerGrid}`}><div className={styles.providerImage}><Image src="/images/provider-renjinming-2026.webp" alt="Renjinming Dai, licensed acupuncturist at Springwell" fill unoptimized sizes="(max-width: 860px) 100vw, 43vw" /></div><div className={styles.providerCopy}><p className="eyebrow">Meet your acupuncturist</p><h2>Renjinming Dai, L.Ac.</h2><p className={styles.credentials}>Virginia Licensed Acupuncturist · Diplomate of Acupuncture (NCCAOM)</p><div className={styles.providerPoints}><div><h3>Specialized training</h3><p>Graduate training in Traditional Chinese Medicine gynecology, with particular experience in women’s and reproductive health.</p></div><div><h3>Biomedical perspective</h3><p>Training and research experience spanning traditional Chinese medicine, biomedical engineering, and pain science.</p></div><div><h3>Individualized care</h3><p>Treatment is adapted to your symptoms, medical history, current care, and response—not a one-size-fits-all protocol.</p></div></div><TextLink href="/about#provider">Meet Renjinming</TextLink></div></div></section>
 
-    <section className={`${styles.section} ${styles.approachSection}`}><div className="container"><NarrowHeading eyebrow="What to expect" title="A modern approach rooted in traditional medicine" text="Clear communication, careful assessment, and treatment that changes with you." /><div className={styles.approachGrid}>{approach.map(([number,title,text]) => <InfoCard key={number} number={number} title={title} text={text} />)}</div><TextLink href="/services/acupuncture">Learn about acupuncture</TextLink></div></section>
+    <section className={`${styles.section} ${styles.approachSection}`}><div className={`container ${styles.processLayout}`}><div className={styles.processIntro}><p className="eyebrow">What to expect</p><h2>A modern approach rooted in traditional medicine</h2><p>Clear communication, careful assessment, and treatment that changes with you.</p><TextLink href="/services/acupuncture">Learn about acupuncture</TextLink></div><div className={styles.processSteps}>{approach.map(([number,title,text], index) => <article className={styles.processStep} key={number}><span className={styles.processNumber}>{number}</span><div><ProcessIllustration type={["assessment", "treatment", "response", "plan"][index]} /><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
 
     <section className={styles.section}><div className="container"><SectionHeading eyebrow="Potential benefits" title="How acupuncture may support your care" text="Acupuncture is one component of care. Response varies, and appropriate medical evaluation remains important." /><div className={styles.benefitGrid}>{benefits.map(([icon,title,text]) => <article className={styles.iconCard} key={title}><Image src={`/images/benefits/${icon}.webp`} alt="" width={76} height={76} /><div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
 
@@ -52,7 +82,7 @@ export default function Home() {
 
     <section className={styles.section}><div className="container"><NarrowHeading eyebrow="Why Springwell" title="Clinical depth, delivered with warmth" /><div className={styles.whyGrid}><InfoCard number="01" title="Specialized Training in Women’s Health" text="Graduate training in Traditional Chinese Medicine gynecology informs care for menstrual health, fertility concerns, reproductive treatment, and changing needs across different stages of life." /><InfoCard number="02" title="Traditional Medicine with a Modern Perspective" text="Traditional Chinese medicine training is considered alongside biomedical knowledge, pain science, safety, current treatment, and the evolving research around acupuncture." /><InfoCard number="03" title="Thoughtful Fertility, IUI & IVF Support" text="Care is tailored to your symptoms, cycle, treatment stage, and emotional needs while complementing—not replacing—the guidance of your reproductive medicine team." /></div></div></section>
 
-    <section className={`${styles.section} ${styles.visitSection}`}><div className="container"><SectionHeading eyebrow="New patients" title="Your first visit, made clear" text="Know what happens and what it costs before you schedule." /><div className={styles.visitGrid}><div className={styles.visitSteps}><div><span>01</span><h3>Book</h3><p>Choose an available appointment online.</p></div><div><span>02</span><h3>Tell us what brings you in</h3><p>Complete your intake form before your visit.</p></div><div><span>03</span><h3>Your first appointment</h3><p>We review your concerns, medical history, and goals, followed by individualized treatment.</p></div></div><aside className={styles.priceCard}><p className="eyebrow">Straightforward pricing</p><div><span>Initial Visit</span><strong>$145</strong><small>Consultation + acupuncture treatment</small></div><div><span>Follow-up</span><strong>$95</strong><small>Progress review + acupuncture treatment</small></div><Link className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book your first visit <ArrowIcon /></Link><TextLink href="/new-patients">New patient details</TextLink></aside></div></div></section>
+    <section className={`${styles.section} ${styles.visitSection}`}><div className="container"><SectionHeading eyebrow="New patients" title="Your first visit, made clear" text="Know what happens and what it costs before you schedule." /><div className={styles.visitGrid}><div className={styles.visitSteps}><div><span>01</span><h3>Book</h3><p>Choose an available appointment online.</p></div><div><span>02</span><h3>Tell us what brings you in</h3><p>Complete your intake form before your visit.</p></div><div><span>03</span><h3>Your first appointment</h3><p>We review your concerns, medical history, and goals, followed by individualized treatment.</p></div></div><aside className={styles.priceCard}><p className="eyebrow">Straightforward pricing</p><div><span>Initial Visit</span><strong><CurrencyMark />145</strong><small>Consultation + acupuncture treatment</small></div><div><span>Follow-up</span><strong><CurrencyMark />95</strong><small>Progress review + acupuncture treatment</small></div><div><span>Cupping</span><strong><CurrencyMark />50</strong><small>Focused cupping session · 30 minutes</small></div><Link className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book your first visit <ArrowIcon /></Link><TextLink href="/new-patients">New patient details</TextLink></aside></div></div></section>
 
     <section className={styles.insuranceBand}><div className={`container ${styles.insuranceGrid}`}><div><p className="eyebrow">Insurance & payment</p><h2>Clear options, without surprises.</h2></div><p>Springwell currently welcomes self-pay patients and is pursuing participation with selected insurance networks. Superbills are available for patients seeking possible out-of-network reimbursement.</p><Link className="button button-secondary" href="/pricing#insurance">Payment details <ArrowIcon /></Link></div></section>
 

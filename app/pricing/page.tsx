@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowIcon, CheckIcon } from "../components/icons";
 import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
+import { CurrencyMark } from "../components/currency-mark";
 import { site } from "../config/site";
 
 export default function PricingPage() {
@@ -19,7 +20,7 @@ export default function PricingPage() {
             <article className="cost-card featured" id="initial-visit">
               <p className="eyebrow">New patient</p>
               <h2>Initial consultation + treatment</h2>
-              <strong className="cost-value"><span>Total</span>💲145</strong>
+              <strong className="cost-value"><span>Total</span><span className="currency-amount"><CurrencyMark />145</span></strong>
               <p>Approximately 60–75 minutes, including a comprehensive intake, traditional Chinese medicine assessment, first acupuncture treatment, and care planning.</p>
               <ul className="check-list single-column">
                 <li><CheckIcon /> Detailed health history</li>
@@ -34,7 +35,7 @@ export default function PricingPage() {
             <article className="cost-card" id="follow-up">
               <p className="eyebrow">Returning patient</p>
               <h2>Follow-up acupuncture</h2>
-              <strong className="cost-value"><span>Per session</span>💲95</strong>
+              <strong className="cost-value"><span>Per session</span><span className="currency-amount"><CurrencyMark />95</span></strong>
               <p>Approximately 45–60 minutes, including a progress check, updated treatment focus, and full acupuncture session.</p>
               <ul className="check-list single-column">
                 <li><CheckIcon /> Progress review</li>
@@ -46,7 +47,7 @@ export default function PricingPage() {
             <article className="cost-card" id="cupping">
               <p className="eyebrow">Cupping</p>
               <h2>Fire cupping</h2>
-              <strong className="cost-value"><span>30 minutes</span>💲50</strong>
+              <strong className="cost-value"><span>30 minutes</span><span className="currency-amount"><CurrencyMark />50</span></strong>
               <p>A focused cupping session for muscle tightness, stiffness, and tension patterns.</p>
               <ul className="check-list single-column">
                 <li><CheckIcon /> Brief health and comfort check</li>

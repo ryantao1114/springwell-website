@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowIcon, CheckIcon } from "../components/icons";
+import { CurrencyMark } from "../components/currency-mark";
 import { PageShell } from "../components/site-shell";
 import { site } from "../config/site";
 
@@ -38,7 +39,7 @@ export default function AboutPage() {
       <section className="about-offer" aria-label="New patient offer">
         <div className="container">
           <p className="eyebrow">A simple place to begin</p>
-          <h2>New patients receive 💲50 off their first visit.</h2>
+          <h2>New patients receive <CurrencyMark />50 off their first visit.</h2>
           <p>Explore a thoughtful first step for women’s health, fertility and IVF support, pain, stress, sleep, and digestive concerns.</p>
           <a className="button button-primary offer-inline-button" href={site.bookingUrl} target="_blank" rel="noreferrer">Claim your offer <ArrowIcon /></a>
         </div>

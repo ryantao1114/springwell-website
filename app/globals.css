@@ -19,6 +19,16 @@
 }
 
 * { box-sizing: border-box; }
+.currency-mark {
+  display: inline-flex;
+  width: .68em;
+  height: .82em;
+  margin-right: .05em;
+  vertical-align: -.06em;
+  color: #4f7b63;
+}
+.currency-mark svg { width: 100%; height: 100%; overflow: visible; }
+.currency-mark path { fill: none; stroke: currentColor; stroke-width: 2.35; stroke-linecap: round; stroke-linejoin: round; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
@@ -710,6 +720,8 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .cost-card > p:not(.eyebrow) { color: var(--muted); }
 .cost-value { display: flex; align-items: baseline; gap: 14px; margin: 14px 0 26px; color: var(--ink); font-family: var(--serif); font-size: 3.4rem; font-weight: 500; line-height: 1; }
 .cost-value span { color: var(--muted); font-family: var(--font-geist-sans); font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.cost-value .currency-amount { display: inline-flex; align-items: baseline; gap: .02em; color: var(--ink); font-family: var(--serif); font-size: 3.4rem; font-weight: 500; letter-spacing: 0; text-transform: none; }
+.cost-value .currency-amount .currency-mark { width: .68em; height: .82em; color: #4f7b63; }
 .price-breakdown { margin: 14px 0 28px; border-top: 1px solid var(--line); }
 .price-breakdown > div { min-height: 54px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line); }
 .price-breakdown span { color: var(--muted); font-size: .8rem; }
