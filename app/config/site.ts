@@ -1,15 +1,26 @@
 export const site = {
-  name: "Springwell Acupuncture",
+  name: "SpringWell Acupuncture",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://springwellacu.com",
   bookingUrl:
     process.env.NEXT_PUBLIC_BOOKING_URL ||
     "https://app.squareup.com/appointments/book/4j5cnvy44yi5kt/L9E4KW7SXV9DE/start",
   description:
-    "Personalized acupuncture in Northern Virginia for women’s health, fertility and IVF support, pain management, TMJ and orofacial pain, stress, sleep, and digestive concerns.",
+    "Holistic Care. Acupuncture. 463 Carlisle Dr., Suite B, Herndon, VA 20170. Personalized care for women’s health, fertility, pain, stress, sleep, and digestion.",
   email: "info@springwellacu.com",
-  phone: "",
-  address: "463 Carlisle Dr., Section B, Herndon, VA 20170",
-  directionsUrl: "https://www.google.com/maps/search/?api=1&query=463+Carlisle+Dr+Herndon+VA+20170",
+  phone: "703-495-2857",
+  phoneHref: "tel:+17034952857",
+  address: "463 Carlisle Dr., Suite B, Herndon, VA 20170",
+  streetAddress: "463 Carlisle Dr., Suite B",
+  addressLocality: "Herndon",
+  addressRegion: "VA",
+  postalCode: "20170",
+  directionsUrl: "https://www.google.com/maps/search/?api=1&query=463+Carlisle+Dr+Suite+B+Herndon+VA+20170",
+  hours: {
+    days: "Tuesday, Thursday, Friday & Sunday",
+    time: "9:00 AM–5:30 PM",
+    opens: "09:00",
+    closes: "17:30",
+  },
   socialLinks: [
     {
       label: "Instagram",
@@ -18,6 +29,8 @@ export const site = {
     },
   ],
   serviceArea: [
+    "Herndon",
+    "Reston",
     "Northern Virginia",
     "McLean",
     "Falls Church",
@@ -32,6 +45,10 @@ export const site = {
     "Silver Spring",
   ],
   seoKeywords: [
+    "SpringWell Acupuncture",
+    "Springwell Acupuncture Herndon",
+    "acupuncture Herndon VA",
+    "holistic care Herndon Virginia",
     "Northern Virginia acupuncture",
     "DMV acupuncture clinic",
     "fertility acupuncture Northern Virginia",

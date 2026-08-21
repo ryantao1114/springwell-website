@@ -1887,3 +1887,54 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem) !important; font-weight: 650; }
 @media(max-width:560px){.pain-path-grid{grid-template-columns:1fr}.pain-path-grid article{min-height:0}.pain-path-grid article>span{margin-bottom:24px}}
 @media(max-width:860px){.fertility-support-layout{grid-template-columns:1fr 1fr;gap:18px}.fertility-support-image{grid-column:1 / -1;grid-row:1;min-height:440px;max-width:520px;width:100%;margin:0 auto}.fertility-support-column{grid-row:2}.fertility-support-heading{margin-bottom:38px}}
 @media(max-width:560px){.fertility-support-heading h2{font-size:clamp(2.45rem,11vw,3.35rem)!important}.fertility-support-layout{grid-template-columns:1fr;gap:16px}.fertility-support-image{grid-column:auto;min-height:390px;border-radius:120px 120px 22px 22px}.fertility-support-column{grid-row:auto}.fertility-support-column article{min-height:0;padding:25px 22px}}
+
+
+/* Keep the primary navigation visible and readable across every page. */
+.page-shell {
+  --springwell-header-height: 88px;
+  padding-top: var(--springwell-header-height);
+}
+
+.page-shell > .site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 251, 243, 0.97);
+  backdrop-filter: blur(16px);
+}
+
+.site-header .site-nav,
+.site-header .nav-trigger {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.site-header .header-inner > .button {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+  .page-shell {
+    --springwell-header-height: 78px;
+  }
+}
+
+@media (max-width: 860px) {
+  .page-shell {
+    --springwell-header-height: 76px;
+  }
+
+  .site-header .site-nav > a,
+  .site-header .nav-trigger {
+    font-size: 1.02rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .page-shell {
+    --springwell-header-height: 72px;
+  }
+}

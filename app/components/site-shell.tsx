@@ -7,6 +7,7 @@ import { ArrowIcon } from "./icons";
 
 const nav = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   {
     href: "/services/acupuncture",
     label: "Acupuncture",
@@ -27,7 +28,6 @@ const nav = [
       { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "A whole-person approach to stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
   },
-  { href: "/about", label: "About" },
   { href: "/new-patients", label: "New Patients" },
 ];
 
@@ -81,10 +81,10 @@ export function SiteHeader() {
       }}
     >
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="Springwell Acupuncture home" onClick={closeNavigation}>
-          <span className="brand-mark"><img src="/images/springwell-logo.png" alt="Springwell Acupuncture" /></span>
+        <Link className="brand" href="/" aria-label={`${site.name} home`} onClick={closeNavigation}>
+          <span className="brand-mark"><img src="/images/springwell-logo.png" alt={site.name} /></span>
           <span className="brand-name">
-            <strong>Springwell</strong>
+            <strong>SpringWell</strong>
             <small>Acupuncture</small>
           </span>
         </Link>
@@ -164,9 +164,9 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div>
           <Link className="brand footer-brand" href="/">
-            <span className="brand-mark"><img src="/images/springwell-logo.png" alt="Springwell Acupuncture" /></span>
+            <span className="brand-mark"><img src="/images/springwell-logo.png" alt={site.name} /></span>
             <span className="brand-name">
-              <strong>Springwell</strong>
+              <strong>SpringWell</strong>
               <small>Acupuncture</small>
             </span>
           </Link>
@@ -189,28 +189,30 @@ export function SiteFooter() {
         <div>
           <p className="footer-label">Explore</p>
           <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
           <Link href="/services/acupuncture">Acupuncture</Link>
           <Link href="/services/cupping">Cupping</Link>
           <Link href="/services/herbal-medicine">Herbal Medicine</Link>
           <Link href="/specialist">Specialties</Link>
-          <Link href="/about">About</Link>
           <Link href="/new-patients">New Patients</Link>
         </div>
         <div>
           <p className="footer-label">Visit</p>
-          <p>463 Carlisle Dr., Room 4</p>
-          <p>Herndon, VA 20170</p>
+          <p>{site.streetAddress}</p>
+          <p>{site.addressLocality}, {site.addressRegion} {site.postalCode}</p>
+          <p>{site.hours.days}<br />{site.hours.time}</p>
           <p>Serving Herndon, Reston, and Northern Virginia</p>
         </div>
         <div>
           <p className="footer-label">Contact</p>
+          <a href={site.phoneHref}>{site.phone}</a>
           <a href={`mailto:${site.email}`}>{site.email}</a>
-          <p>Questions and scheduling by email</p>
+          <p>Questions and scheduling by phone or email</p>
           <Link className="text-link footer-link" href="/contact">Contact us <ArrowIcon /></Link>
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© 2026 Springwell Acupuncture. All rights reserved.</span>
+        <span>© 2026 {site.name}. All rights reserved.</span>
         <span>Information on this site is educational and is not medical advice.</span>
       </div>
     </footer>

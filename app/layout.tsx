@@ -24,9 +24,10 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Springwell Acupuncture | Northern Virginia Acupuncture Clinic",
+    default: "SpringWell Acupuncture | Holistic Care & Acupuncture in Herndon, VA",
     template: `%s | ${site.name}`,
   },
+  applicationName: site.name,
   description: site.description,
   keywords: [...site.seoKeywords],
   alternates: {
@@ -38,13 +39,19 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     type: "website",
-    images: ["/images/provider-renjinming-2026.webp"],
+    images: [
+      { url: "/images/springwell-logo.png", alt: site.name },
+      {
+        url: "/images/provider-renjinming-2026.webp",
+        alt: "Personalized acupuncture and holistic care in Herndon, Virginia",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
-    images: ["/images/provider-renjinming-2026.webp"],
+    images: ["/images/springwell-logo.png"],
   },
   other: {
     "codex-preview": "development",
@@ -52,6 +59,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
+    apple: "/images/springwell-logo.png",
   },
 };
 

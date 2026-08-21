@@ -8,8 +8,8 @@ import { site } from "./config/site";
 import styles from "./home-redesign.module.css";
 
 export const metadata: Metadata = {
-  title: "Modern Acupuncture in Herndon, VA | Springwell Acupuncture",
-  description: "Thoughtfully tailored acupuncture for women’s health, fertility, pain, stress, sleep, and digestive wellbeing in Herndon and Northern Virginia.",
+  title: "SpringWell Acupuncture | Holistic Care & Acupuncture in Herndon, VA",
+  description: site.description,
 };
 
 const specialties = [
@@ -67,7 +67,7 @@ export default function Home() {
   return <PageShell>
     <section className={styles.hero}><div className={`container ${styles.heroGrid}`}>
       <div className={styles.heroCopy}><p className="eyebrow">Modern acupuncture in Herndon, Virginia</p><h1>Acupuncture care, thoughtfully tailored to you.</h1><p className={styles.heroLead}>Supporting women’s health, pain, stress, sleep, and whole-person wellness in Herndon and Northern Virginia.</p><div className={styles.actions}><Link className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book an appointment <ArrowIcon /></Link><Link className="button button-secondary" href="#specialties">Explore our care <ArrowIcon /></Link></div><p className={styles.heroNote}>Virginia-licensed acupuncturist · Individualized, evidence-informed care</p></div>
-      <div className={styles.heroImage}><Image src="/images/home-hero-treatment.jpg" alt="A licensed acupuncturist providing a gentle treatment" fill priority unoptimized sizes="(max-width: 860px) 100vw, 48vw" /><div className={styles.heroImageCaption}><span>Springwell Acupuncture</span><strong>Herndon, Virginia</strong></div></div>
+      <div className={styles.heroImage}><Image src="/images/home-hero-treatment.jpg" alt="A licensed acupuncturist providing a gentle treatment" fill priority unoptimized sizes="(max-width: 860px) 100vw, 48vw" /><div className={styles.heroImageCaption}><span>{site.name}</span><strong>Herndon, Virginia</strong></div></div>
     </div></section>
 
     <section className={styles.section} id="specialties"><div className="container"><SectionHeading eyebrow="Specialties" title="Focused care for the concerns that matter most" text="Explore our primary areas of care. Treatment is tailored to your symptoms, health history, current medical care, and individual goals." /><div className={styles.specialtyGrid}>{specialties.map((item) => <article className={styles.editorialCard} key={item.title}><Link className={styles.cardImage} href={item.href}><Image src={item.image} alt={item.alt} fill sizes="(max-width: 760px) 100vw, 33vw" /></Link><div className={styles.cardBody}><h3>{item.title}</h3><p>{item.text}</p><TextLink href={item.href}>Explore care</TextLink></div></article>)}</div></div></section>
@@ -86,7 +86,7 @@ export default function Home() {
 
     <section className={styles.insuranceBand}><div className={`container ${styles.insuranceGrid}`}><div><p className="eyebrow">Insurance & payment</p><h2>Clear options, without surprises.</h2></div><p>Springwell currently welcomes self-pay patients and is pursuing participation with selected insurance networks. Superbills are available for patients seeking possible out-of-network reimbursement.</p><Link className="button button-secondary" href="/pricing#insurance">Payment details <ArrowIcon /></Link></div></section>
 
-    <section className={styles.section}><div className={`container ${styles.locationGrid}`}><div><p className="eyebrow">Herndon, Virginia</p><h2>Conveniently located in Northern Virginia</h2><p>{site.address}</p><p className={styles.cities}>Serving Herndon · Reston · Sterling · Vienna · Tysons · Fairfax</p><a className="button button-secondary" href={site.directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div><div className={styles.locationImage}><Image src="/images/acupuncture-treatment-hero.webp" alt="A quiet acupuncture treatment at Springwell" fill sizes="(max-width: 860px) 100vw, 48vw" /></div></div></section>
+    <section className={styles.section}><div className={`container ${styles.locationGrid}`}><div><p className="eyebrow">Herndon, Virginia</p><h2>Conveniently located in Northern Virginia</h2><p>{site.address}</p><p><a href={site.phoneHref}>{site.phone}</a></p><p>{site.hours.days}<br />{site.hours.time}</p><p className={styles.cities}>Serving Herndon · Reston · Sterling · Vienna · Tysons · Fairfax</p><a className="button button-secondary" href={site.directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div><div className={styles.locationImage}><Image src="/images/acupuncture-treatment-hero.webp" alt="A quiet acupuncture treatment at Springwell" fill sizes="(max-width: 860px) 100vw, 48vw" /></div></div></section>
 
     <section className={styles.finalCta}><div className="container"><p className="eyebrow light">Ready to begin?</p><h2>Personalized acupuncture care begins with understanding what brings you in.</h2><Link className="button button-light" href={site.bookingUrl} target="_blank" rel="noreferrer">Book an appointment <ArrowIcon /></Link></div></section>
   </PageShell>;

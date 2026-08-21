@@ -5,9 +5,9 @@ import { AppointmentForm } from "../book/appointment-form";
 import { site } from "../config/site";
 
 export const metadata: Metadata = {
-  title: "Contact Springwell Acupuncture",
+  title: "Contact SpringWell Acupuncture",
   description:
-    "Contact Springwell Acupuncture in Northern Virginia about women’s health, fertility and IVF support, pain management, stress, sleep, and digestive care.",
+    "Call SpringWell Acupuncture at 703-495-2857. Visit 463 Carlisle Dr., Suite B, Herndon, VA 20170, Tuesday, Thursday, Friday, and Sunday, 9:00 AM–5:30 PM.",
   alternates: { canonical: "/contact" },
 };
 
@@ -30,7 +30,9 @@ export default function ContactPage() {
               <span className="contact-detail-label">Address</span>
               <address>{site.address}</address>
               <span className="contact-detail-label">Hours</span>
-              <p>Tuesday, Thursday, Friday &amp; Sunday<br />By appointment</p>
+              <p>{site.hours.days}<br />{site.hours.time}</p>
+              <span className="contact-detail-label">Phone</span>
+              <a href={site.phoneHref}>{site.phone}</a>
               <span className="contact-detail-label">Email</span>
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </div>
