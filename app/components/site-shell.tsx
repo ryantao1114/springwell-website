@@ -82,7 +82,7 @@ export function SiteHeader() {
     >
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label={`${site.name} home`} onClick={closeNavigation}>
-          <span className="brand-mark"><img src="/images/springwell-logo.png" alt={site.name} /></span>
+          <span className="brand-mark"><img src="/images/springwell-official-logo.png" alt={site.name} /></span>
           <span className="brand-name">
             <strong>SpringWell</strong>
             <small>Acupuncture</small>
@@ -164,7 +164,7 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div>
           <Link className="brand footer-brand" href="/">
-            <span className="brand-mark"><img src="/images/springwell-logo.png" alt={site.name} /></span>
+            <span className="brand-mark"><img src="/images/springwell-official-logo.png" alt={site.name} /></span>
             <span className="brand-name">
               <strong>SpringWell</strong>
               <small>Acupuncture</small>

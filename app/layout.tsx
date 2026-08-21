@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     type: "website",
     images: [
-      { url: "/images/springwell-logo.png", alt: site.name },
+      { url: "/images/springwell-official-logo.png", alt: site.name },
       {
         url: "/images/provider-renjinming-2026.webp",
         alt: "Personalized acupuncture and holistic care in Herndon, Virginia",
@@ -51,15 +51,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
-    images: ["/images/springwell-logo.png"],
+    images: ["/images/springwell-official-logo.png"],
   },
   other: {
     "codex-preview": "development",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/images/springwell-logo.png",
+    icon: "/images/springwell-official-logo.png",
+    shortcut: "/images/springwell-official-logo.png",
+    apple: "/images/springwell-official-logo.png",
   },
 };
 

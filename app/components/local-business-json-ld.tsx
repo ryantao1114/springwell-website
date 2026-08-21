@@ -1,7 +1,7 @@
 import { site } from "../config/site";
 
 export function LocalBusinessJsonLd() {
-  const logo = new URL("/images/springwell-logo.png", site.url).toString();
+  const logo = new URL("/images/springwell-official-logo.png", site.url).toString();
   const business = {
     "@id": `${site.url}/#business`,
     "@type": ["MedicalBusiness", "LocalBusiness"],
