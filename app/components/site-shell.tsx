@@ -20,7 +20,7 @@ const nav = [
   },
   {
     href: "/specialist",
-    label: "Specialties",
+    label: "What We Treat",
     intro: "Focused, individualized care for the concerns that bring you in.",
     items: [
       { href: "/care/womens-health-fertility", title: "Women’s Health & Fertility", text: "Menstrual health, fertility, IUI, IVF, and reproductive wellbeing.", tone: "fertility" },
@@ -127,7 +127,7 @@ export function SiteHeader() {
                     <p className="eyebrow">Explore {item.label}</p>
                     <h2>{item.label}</h2>
                     <p>{item.intro}</p>
-                    {item.label !== "Services" && item.label !== "What We Treat" && <Link className="text-link" href={item.href} onClick={closeNavigation}>
+                    {item.label !== "Services" && <Link className="text-link" href={item.href} onClick={closeNavigation}>
                       View overview <ArrowIcon />
                     </Link>}
                   </div>
@@ -193,7 +193,7 @@ export function SiteFooter() {
           <Link href="/services/acupuncture">Acupuncture</Link>
           <Link href="/services/cupping">Cupping</Link>
           <Link href="/services/herbal-medicine">Herbal Medicine</Link>
-          <Link href="/specialist">Specialties</Link>
+          <Link href="/specialist">What We Treat</Link>
           <Link href="/new-patients">New Patients</Link>
         </div>
         <div>
