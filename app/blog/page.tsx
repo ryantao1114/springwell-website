@@ -407,31 +407,34 @@ export default function BlogPage() {
       <InteriorHero
         eyebrow="Springwell journal"
         title="Research and practical guidance for thoughtful care."
-        text="Explore evidence focused research articles and patient friendly guides as two distinct collections."
+        text="Explore regularly updated evidence on fertility, pain, and stress, with concise patient guides for everyday questions."
         image="/images/service-herbal-medicine.jpg"
       />
       <section className="blog-topic-nav" aria-label="Blog topics">
         <div className="container">
           <span>Explore the journal</span>
-          <a href="#research-articles">Research articles</a>
+          <a href="#evidence-insights">Evidence &amp; Insights</a>
           <a href="#patient-guides">Patient guides</a>
-          <a href="#fertility-ivf">Fertility &amp; IVF</a>
-          <a href="#pain-management">Pain management</a>
         </div>
       </section>
-      <section className={styles.featuredSection} id="research-articles" aria-labelledby="featured-research-title">
+      <section className={styles.featuredSection} id="evidence-insights" aria-labelledby="evidence-insights-title">
         <div className="container">
           <div className={styles.collectionHeading}>
-            <p className="eyebrow">Research articles</p>
-            <h2 id="featured-research-title">New research, interpreted with context.</h2>
-            <p>Focused reviews of current studies, including the findings, limitations, and practical questions patients may want to discuss with their care team.</p>
+            <p className="eyebrow">Evidence &amp; Insights</p>
+            <h2 id="evidence-insights-title">Research updates for fertility, pain, and stress.</h2>
+            <p>Periodically updated reviews of emerging evidence, with clear context about findings, limitations, and questions to discuss with your care team.</p>
+            <div className={styles.topicPills} aria-label="Evidence topics">
+              <span>Fertility</span>
+              <span>Pain</span>
+              <span>Stress</span>
+            </div>
           </div>
           <div className={styles.featuredGrid}>
           <div className={styles.featuredImage}>
             <Image src="/images/home-womens-health-hero-hd.webp" alt="A calm fertility care consultation at Springwell Acupuncture" fill priority sizes="(max-width: 860px) 100vw, 44vw" />
           </div>
           <div className={styles.featuredCopy}>
-            <p className="eyebrow">Featured research · IVF</p>
+            <p className="eyebrow">Fertility · IVF</p>
             <h3>Can Acupuncture Support Embryo Quality During IVF?</h3>
             <p>A patient friendly review of a 2026 systematic review and meta analysis examining embryo quality, fertilization, oocyte quality, and treatment timing.</p>
             <div className={styles.featuredMeta}><time dateTime="2026-08-25">August 25, 2026</time><span>10 min read</span></div>
@@ -444,36 +447,39 @@ export default function BlogPage() {
         <div className="container blog-list">
           <div className={styles.collectionHeading}>
             <p className="eyebrow">Patient guides</p>
-            <h2 id="patient-guides-title">Useful guidance for informed, whole-person care.</h2>
-            <p>Clear, grounded articles about women’s health, fertility and IVF support, pain management, stress, sleep, digestion, cupping, and Chinese herbal medicine.</p>
+            <h2 id="patient-guides-title">Practical guidance, when you need it.</h2>
+            <p>Concise introductions to common questions about acupuncture and supportive care.</p>
           </div>
-          {posts.map((post) => (
-            <article className="journal-article" id={post.id} key={post.id}>
-              <div className="journal-article-image">
-                <Image src={post.image} alt={post.imageAlt} fill sizes="(max-width: 860px) 100vw, 35vw" />
-              </div>
-              <div className="journal-article-copy">
-                <div className="journal-meta"><span>{post.category}</span><span>{post.readTime}</span></div>
-                <h2>{post.title}</h2>
-                <p className="journal-summary">{post.summary}</p>
-                <div className="journal-body">
-                  {post.sections.map((section) => (
-                    <section key={section.heading}>
-                      <h3>{section.heading}</h3>
-                      {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                    </section>
-                  ))}
+          <div className={styles.guideGrid}>
+            {posts.map((post) => (
+              <article className={styles.guideCard} id={post.id} key={post.id}>
+                <div className={styles.guideImage}>
+                  <Image src={post.image} alt={post.imageAlt} fill sizes="(max-width: 760px) 100vw, 44vw" />
                 </div>
-                <div className="journal-footer">
-                  <Link className="text-link" href={post.related}>Explore related care <ArrowIcon /></Link>
-                  <details className="journal-references">
-                    <summary>Sources used for this article</summary>
-                    <ol>{post.references.map((reference) => <li key={reference}>{reference}</li>)}</ol>
+                <div className={styles.guideCopy}>
+                  <div className={styles.guideMeta}><span>{post.category}</span><span>{post.readTime}</span></div>
+                  <h3>{post.title}</h3>
+                  <p>{post.summary}</p>
+                  <details className={styles.guideDetails}>
+                    <summary>Read guide</summary>
+                    <div className={styles.guideExpanded}>
+                      {post.sections.map((section) => (
+                        <section key={section.heading}>
+                          <h4>{section.heading}</h4>
+                          {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                        </section>
+                      ))}
+                      <Link className="text-link" href={post.related}>Explore related care <ArrowIcon /></Link>
+                      <div className={styles.guideSources}>
+                        <h4>Sources used for this guide</h4>
+                        <ol>{post.references.map((reference) => <li key={reference}>{reference}</li>)}</ol>
+                      </div>
+                    </div>
                   </details>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
           <div className="blog-disclaimer">
             <strong>Educational note:</strong> These articles are for general education and do not diagnose or treat an individual condition. Acupuncture, cupping, and herbal medicine should not replace emergency care, appropriate medical evaluation, or prescribed treatment.
           </div>
