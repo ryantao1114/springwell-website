@@ -428,17 +428,43 @@ export default function BlogPage() {
               <span>Stress</span>
             </div>
           </div>
-          <div className={styles.featuredGrid}>
-          <div className={styles.featuredImage}>
-            <Image src="/images/home-womens-health-hero-hd.webp" alt="A calm fertility care consultation at Springwell Acupuncture" fill priority sizes="(max-width: 860px) 100vw, 44vw" />
-          </div>
-          <div className={styles.featuredCopy}>
-            <p className="eyebrow">Fertility · IVF</p>
-            <h3>Can Acupuncture Support Embryo Quality During IVF?</h3>
-            <p>A patient friendly review of a 2026 systematic review and meta analysis examining embryo quality, fertilization, oocyte quality, and treatment timing.</p>
-            <div className={styles.featuredMeta}><time dateTime="2026-08-25">August 25, 2026</time><span>10 min read</span></div>
-            <Link className="button button-primary" href="/blog/acupuncture-embryo-quality-ivf-meta-analysis-2026">Read the article <ArrowIcon /></Link>
-          </div>
+          <div className={styles.evidenceGrid}>
+            <article className={styles.evidenceCard}>
+              <div className={styles.evidenceImage}>
+                <Image src="/images/home-womens-health-hero-hd.webp" alt="A calm fertility care consultation at Springwell Acupuncture" fill priority sizes="(max-width: 760px) 100vw, 31vw" />
+              </div>
+              <div className={styles.evidenceCopy}>
+                <p className="eyebrow">Fertility · IVF</p>
+                <h3>Can Acupuncture Support Embryo Quality During IVF?</h3>
+                <p>A 2026 meta analysis examining embryo quality, fertilization, oocyte quality, and treatment timing.</p>
+                <div className={styles.featuredMeta}><time dateTime="2026-08-25">August 25, 2026</time><span>10 min read</span></div>
+                <Link className="text-link" href="/blog/acupuncture-embryo-quality-ivf-meta-analysis-2026">Read the article <ArrowIcon /></Link>
+              </div>
+            </article>
+            <article className={styles.evidenceCard}>
+              <div className={styles.evidenceImage}>
+                <Image src="/images/home-pain-management-upload.webp" alt="Acupuncture support for migraine and pain management" fill sizes="(max-width: 760px) 100vw, 31vw" />
+              </div>
+              <div className={styles.evidenceCopy}>
+                <p className="eyebrow">Pain · Migraine</p>
+                <h3>Can Acupuncture Reduce Migraine Days?</h3>
+                <p>A 2025 meta analysis of 23 randomized trials examining migraine frequency, duration, and quality of life.</p>
+                <div className={styles.featuredMeta}><time dateTime="2026-08-25">August 25, 2026</time><span>8 min read</span></div>
+                <Link className="text-link" href="/blog/acupuncture-migraine-meta-analysis-2025">Read the article <ArrowIcon /></Link>
+              </div>
+            </article>
+            <article className={styles.evidenceCard}>
+              <div className={styles.evidenceImage}>
+                <Image src="/images/home-stress-sleep-upload.webp" alt="A calm setting representing stress and anxiety support" fill sizes="(max-width: 760px) 100vw, 31vw" />
+              </div>
+              <div className={styles.evidenceCopy}>
+                <p className="eyebrow">Stress · Anxiety</p>
+                <h3>Can Acupuncture Support Anxiety Symptoms?</h3>
+                <p>A 2026 meta analysis of 20 randomized trials examining short term anxiety outcomes and follow up.</p>
+                <div className={styles.featuredMeta}><time dateTime="2026-08-25">August 25, 2026</time><span>8 min read</span></div>
+                <Link className="text-link" href="/blog/acupuncture-anxiety-meta-analysis-2026">Read the article <ArrowIcon /></Link>
+              </div>
+            </article>
           </div>
         </div>
       </section>
