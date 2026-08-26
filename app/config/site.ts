@@ -5,16 +5,16 @@ export const site = {
     process.env.NEXT_PUBLIC_BOOKING_URL ||
     "https://app.squareup.com/appointments/book/4j5cnvy44yi5kt/L9E4KW7SXV9DE/start",
   description:
-    "Holistic Care. Acupuncture. 463 Carlisle Dr., Suite B, Herndon, VA 20170. Personalized care for women’s health, fertility, pain, stress, sleep, and digestion.",
+    "Holistic Care. Acupuncture. 463 Carlisle Dr, Suite B, Second Floor, Herndon, VA 20170. Personalized care for women’s health, fertility, pain, stress, sleep, and digestion.",
   email: "info@springwellacu.com",
   phone: "703-495-2857",
   phoneHref: "tel:+17034952857",
-  address: "463 Carlisle Dr., Suite B, Herndon, VA 20170",
-  streetAddress: "463 Carlisle Dr., Suite B",
+  address: "463 Carlisle Dr, Suite B, Second Floor, Herndon, VA 20170",
+  streetAddress: "463 Carlisle Dr, Suite B, Second Floor",
   addressLocality: "Herndon",
   addressRegion: "VA",
   postalCode: "20170",
-  directionsUrl: "https://www.google.com/maps/search/?api=1&query=463+Carlisle+Dr+Suite+B+Herndon+VA+20170",
+  directionsUrl: "https://www.google.com/maps/search/?api=1&query=463+Carlisle+Dr+Suite+B+Second+Floor+Herndon+VA+20170",
   hours: {
     days: "Tuesday, Thursday, Friday & Sunday",
     time: "9:00 AM–5:30 PM",

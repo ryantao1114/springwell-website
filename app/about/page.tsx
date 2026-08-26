@@ -197,7 +197,7 @@ export default function AboutPage() {
             <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book Your Visit <ArrowIcon /></a>
           </div>
           <div className="about-map-wrap">
-            <iframe title="Map showing SpringWell Acupuncture at 463 Carlisle Dr., Suite B, Herndon, Virginia" src="https://www.google.com/maps?q=463+Carlisle+Dr,+Suite+B,+Herndon,+VA+20170&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+            <iframe title={`Map showing ${site.name} at ${site.address}`} src={`https://www.google.com/maps?q=${encodeURIComponent(site.address)}&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
           </div>
         </div>
       </section>
