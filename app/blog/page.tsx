@@ -406,35 +406,47 @@ export default function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <InteriorHero
         eyebrow="Springwell journal"
-        title="Useful guidance for informed, whole-person care."
-        text="Clear, grounded articles about women’s health, fertility and IVF support, pain management, stress, sleep, digestion, cupping, and Chinese herbal medicine."
+        title="Research and practical guidance for thoughtful care."
+        text="Explore evidence focused research articles and patient friendly guides as two distinct collections."
         image="/images/service-herbal-medicine.jpg"
       />
       <section className="blog-topic-nav" aria-label="Blog topics">
         <div className="container">
-          <span>Browse by topic</span>
+          <span>Explore the journal</span>
+          <a href="#research-articles">Research articles</a>
+          <a href="#patient-guides">Patient guides</a>
           <a href="#fertility-ivf">Fertility &amp; IVF</a>
           <a href="#pain-management">Pain management</a>
-          <a href="#stress-sleep-digestion">Stress, sleep &amp; digestion</a>
-          <a href="#first-acupuncture-visit">Getting started</a>
         </div>
       </section>
-      <section className={styles.featuredSection} aria-labelledby="featured-research-title">
-        <div className={`container ${styles.featuredGrid}`}>
+      <section className={styles.featuredSection} id="research-articles" aria-labelledby="featured-research-title">
+        <div className="container">
+          <div className={styles.collectionHeading}>
+            <p className="eyebrow">Research articles</p>
+            <h2 id="featured-research-title">New research, interpreted with context.</h2>
+            <p>Focused reviews of current studies, including the findings, limitations, and practical questions patients may want to discuss with their care team.</p>
+          </div>
+          <div className={styles.featuredGrid}>
           <div className={styles.featuredImage}>
             <Image src="/images/home-womens-health-hero-hd.webp" alt="A calm fertility care consultation at Springwell Acupuncture" fill priority sizes="(max-width: 860px) 100vw, 44vw" />
           </div>
           <div className={styles.featuredCopy}>
             <p className="eyebrow">Featured research · IVF</p>
-            <h2 id="featured-research-title">Can Acupuncture Support Embryo Quality During IVF?</h2>
+            <h3>Can Acupuncture Support Embryo Quality During IVF?</h3>
             <p>A patient friendly review of a 2026 systematic review and meta analysis examining embryo quality, fertilization, oocyte quality, and treatment timing.</p>
             <div className={styles.featuredMeta}><time dateTime="2026-08-25">August 25, 2026</time><span>10 min read</span></div>
             <Link className="button button-primary" href="/blog/acupuncture-embryo-quality-ivf-meta-analysis-2026">Read the article <ArrowIcon /></Link>
           </div>
+          </div>
         </div>
       </section>
-      <section className="section-pad blog-section">
+      <section className={"section-pad blog-section " + styles.guidesSection} id="patient-guides" aria-labelledby="patient-guides-title">
         <div className="container blog-list">
+          <div className={styles.collectionHeading}>
+            <p className="eyebrow">Patient guides</p>
+            <h2 id="patient-guides-title">Useful guidance for informed, whole-person care.</h2>
+            <p>Clear, grounded articles about women’s health, fertility and IVF support, pain management, stress, sleep, digestion, cupping, and Chinese herbal medicine.</p>
+          </div>
           {posts.map((post) => (
             <article className="journal-article" id={post.id} key={post.id}>
               <div className="journal-article-image">
