@@ -422,7 +422,6 @@ export default function BlogPage() {
           <div className={styles.collectionHeading}>
             <p className="eyebrow">Evidence &amp; Insights</p>
             <h2 id="evidence-insights-title">Research updates for fertility, pain, and stress.</h2>
-            <p>Periodically updated reviews of emerging evidence, with clear context about findings, limitations, and questions to discuss with your care team.</p>
             <div className={styles.topicPills} aria-label="Evidence topics">
               <span>Fertility</span>
               <span>Pain</span>
