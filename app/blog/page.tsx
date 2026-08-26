@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "../components/icons";
-import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
+import { BottomCTA, PageShell } from "../components/site-shell";
 import styles from "./research-blog.module.css";
 
 export const metadata: Metadata = {
@@ -404,19 +404,19 @@ export default function BlogPage() {
   return (
     <PageShell>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <InteriorHero
-        eyebrow="Springwell journal"
-        title="Research and practical guidance for thoughtful care."
-        text="Explore regularly updated evidence on fertility, pain, and stress, with concise patient guides for everyday questions."
-        image="/images/service-herbal-medicine.jpg"
-      />
-      <section className="blog-topic-nav" aria-label="Blog topics">
+      <header className={styles.journalHero}>
         <div className="container">
-          <span>Explore the journal</span>
-          <a href="#evidence-insights">Evidence &amp; Insights</a>
-          <a href="#patient-guides">Patient guides</a>
+          <p>Evidence, perspective, and practical guidance</p>
+          <h1>SpringWell Acupuncture Blog</h1>
+          <nav className={styles.journalTabs} aria-label="Blog topics">
+            <a className={styles.activeTab} href="#evidence-insights">All</a>
+            <a href="#fertility-evidence">Fertility</a>
+            <a href="#pain-evidence">Pain Relief</a>
+            <a href="#stress-evidence">Stress &amp; Sleep</a>
+            <a href="#patient-guides">Patient Guides</a>
+          </nav>
         </div>
-      </section>
+      </header>
       <section className={styles.featuredSection} id="evidence-insights" aria-labelledby="evidence-insights-title">
         <div className="container">
           <div className={styles.collectionHeading}>
