@@ -1,3 +1,43 @@
+.hero {
+  min-height: min(860px, calc(100vh - 88px));
+}
+
+.heroMedia img {
+  filter: none;
+  object-position: center 54%;
+  transform: scale(1.025);
+  animation: womens-hero-drift 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.heroSummary {
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+
+.heroSummary p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.08rem;
+  line-height: 1.68;
+}
+
+.heroSummary p + p {
+  margin-top: 16px;
+}
+
+@keyframes womens-hero-drift {
+  from { transform: scale(1.025) translate3d(0, 0, 0); }
+  to { transform: scale(1.085) translate3d(-0.8%, -1.2%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroMedia img {
+    animation: none;
+    transform: none;
+  }
+}
+
 .detailsSection {
   padding: 104px 0 112px;
   background: var(--paper);
@@ -92,6 +132,15 @@
 }
 
 @media (max-width: 680px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .heroSummary p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
   .detailsSection {
     padding: 76px 0 82px;
   }
