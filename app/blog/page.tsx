@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "../components/icons";
 import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
+import styles from "./research-blog.module.css";
 
 export const metadata: Metadata = {
   title: "Acupuncture & Chinese Medicine Journal",
@@ -416,6 +417,20 @@ export default function BlogPage() {
           <a href="#pain-management">Pain management</a>
           <a href="#stress-sleep-digestion">Stress, sleep &amp; digestion</a>
           <a href="#first-acupuncture-visit">Getting started</a>
+        </div>
+      </section>
+      <section className={styles.featuredSection} aria-labelledby="featured-research-title">
+        <div className={`container ${styles.featuredGrid}`}>
+          <div className={styles.featuredImage}>
+            <Image src="/images/home-womens-health-hero-hd.webp" alt="A calm fertility care consultation at Springwell Acupuncture" fill priority sizes="(max-width: 860px) 100vw, 44vw" />
+          </div>
+          <div className={styles.featuredCopy}>
+            <p className="eyebrow">Featured research · IVF</p>
+            <h2 id="featured-research-title">Can Acupuncture Support Embryo Quality During IVF?</h2>
+            <p>A patient friendly review of a 2026 systematic review and meta analysis examining embryo quality, fertilization, oocyte quality, and treatment timing.</p>
+            <div className={styles.featuredMeta}><time dateTime="2026-08-25">August 25, 2026</time><span>10 min read</span></div>
+            <Link className="button button-primary" href="/blog/acupuncture-embryo-quality-ivf-meta-analysis-2026">Read the article <ArrowIcon /></Link>
+          </div>
         </div>
       </section>
       <section className="section-pad blog-section">

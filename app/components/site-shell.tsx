@@ -28,6 +28,7 @@ const nav = [
       { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "A whole-person approach to stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
   },
+  { href: "/blog", label: "Blog" },
   { href: "/new-patients", label: "New Patients" },
 ];
 
@@ -194,6 +195,7 @@ export function SiteFooter() {
           <Link href="/services/cupping">Cupping</Link>
           <Link href="/services/herbal-medicine">Herbal Medicine</Link>
           <Link href="/specialist">What We Treat</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/new-patients">New Patients</Link>
         </div>
         <div>
