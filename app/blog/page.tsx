@@ -6,7 +6,7 @@ import { BottomCTA, PageShell } from "../components/site-shell";
 import styles from "./research-blog.module.css";
 
 export const metadata: Metadata = {
-  title: "Acupuncture & Chinese Medicine Journal",
+  title: "Acupuncture & Wellness Insights",
   description:
     "Patient-friendly articles about women’s health, fertility and IVF support, pain management, TMJ, stress, sleep, digestion, cupping, and Chinese herbal medicine.",
   alternates: { canonical: "/blog" },
