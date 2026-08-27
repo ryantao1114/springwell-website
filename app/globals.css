@@ -1939,3 +1939,76 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem) !important; font-weight: 650; }
     --springwell-header-height: 72px;
   }
 }
+
+.care-new-patient-offer {
+  padding: 62px 0;
+  background: #536577;
+  color: #fff;
+}
+
+.care-new-patient-offer-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr auto;
+  gap: 54px;
+  align-items: center;
+}
+
+.care-new-patient-offer h2 {
+  max-width: 520px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.5rem, 4vw, 4.25rem);
+  line-height: 1;
+}
+
+.care-new-patient-offer-copy p {
+  max-width: 570px;
+  margin: 0 0 10px;
+  color: rgba(255,255,255,.92);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.care-new-patient-offer-copy strong {
+  color: #fff;
+  font-size: 1.18em;
+}
+
+.care-new-patient-offer-copy small {
+  display: block;
+  color: rgba(255,255,255,.7);
+  font-size: .76rem;
+  line-height: 1.55;
+}
+
+.care-new-patient-offer .button {
+  white-space: nowrap;
+}
+
+@media (max-width: 960px) {
+  .care-new-patient-offer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .care-new-patient-offer .button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 680px) {
+  .care-new-patient-offer {
+    padding: 50px 0;
+  }
+
+  .care-new-patient-offer-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .care-new-patient-offer .button {
+    grid-column: auto;
+    width: 100%;
+    justify-content: center;
+  }
+}
