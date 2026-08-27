@@ -23,7 +23,8 @@ const nav = [
     label: "What We Treat",
     intro: "Focused, individualized care for the concerns that bring you in.",
     items: [
-      { href: "/care/womens-health-fertility", title: "Women’s Health & Fertility", text: "Menstrual health, fertility, IUI, IVF, and reproductive wellbeing.", tone: "fertility" },
+      { href: "/care/womens-health", title: "Women’s Health", text: "Menstrual health, cycle-related symptoms, PCOS concerns, and perimenopause.", tone: "fertility" },
+      { href: "/care/fertility-ivf-support", title: "Fertility & IVF", text: "Individualized support for fertility planning, IUI, IVF, and reproductive care.", tone: "needle" },
       { href: "/care/pain-management", title: "Pain Management", text: "Headache, TMJ, neck, back, muscle tension, and persistent pain support.", tone: "orofacial" },
       { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "A whole-person approach to stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
@@ -132,7 +133,7 @@ export function SiteHeader() {
                       View overview <ArrowIcon />
                     </Link>}
                   </div>
-                  <div className="mega-menu-grid">
+                  <div className={`mega-menu-grid ${item.items.length === 4 ? "mega-menu-grid-four" : ""}`}>
                     {item.items.map((subitem) => (
                       <Link className="mega-menu-card" href={subitem.href} key={subitem.href} onClick={closeNavigation}>
                         <span className={`mega-menu-visual visual-${subitem.tone}`} aria-hidden="true" />
@@ -195,6 +196,8 @@ export function SiteFooter() {
           <Link href="/services/cupping">Cupping</Link>
           <Link href="/services/herbal-medicine">Herbal Medicine</Link>
           <Link href="/specialist">What We Treat</Link>
+          <Link href="/care/womens-health">Women’s Health</Link>
+          <Link href="/care/fertility-ivf-support">Fertility &amp; IVF</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/new-patients">New Patients</Link>
         </div>

@@ -13,7 +13,7 @@ const slides = [
     video: "/images/videos/hero-womens-health-uploaded-v4.mp4",
     poster: "/images/videos/hero-womens-health-uploaded-poster-v4.jpg",
     alt: "Gentle clinical care for women’s health and fertility support",
-    href: "/specialist#womens-health",
+    href: "/care/womens-health",
     linkLabel: "Explore women’s health care",
   },
   {

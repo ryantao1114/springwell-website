@@ -123,7 +123,8 @@ export default function AboutPage() {
               Outside the clinic, she enjoys traveling, spending time outdoors, cooking, and discovering new foods.
             </p>
             <div className="provider-specialty-links" aria-label="Explore specialist care">
-              <Link href="/specialist#fertility-ivf">Women’s Health &amp; Fertility</Link>
+              <Link href="/care/womens-health">Women’s Health</Link>
+              <Link href="/care/fertility-ivf-support">Fertility &amp; IVF Support</Link>
               <Link href="/specialist#pain-management">Pain Management</Link>
               <Link href="/specialist#orofacial-pain">TMJ &amp; Orofacial Pain</Link>
               <Link href="/specialist#stress-sleep-digestion">Stress, Sleep &amp; Digestion</Link>

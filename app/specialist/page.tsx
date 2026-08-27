@@ -15,15 +15,24 @@ const focusAreas = [
   {
     id: "womens-health",
     eyebrow: "01 · Women’s health",
-    title: "Women’s Health & Fertility",
-    text: "Period pain, PMS, irregular cycles, PCOS-related symptoms, fertility planning, IUI, IVF support, and perimenopause concerns.",
+    title: "Women’s Health",
+    text: "Period pain, PMS, irregular cycles, PCOS-related symptoms, cycle-related headaches, and perimenopause concerns.",
+    image: "/images/home-womens-health-hero-hd.webp",
+    alt: "A supportive conversation during a women’s health visit",
+    link: "/care/womens-health",
+  },
+  {
+    id: "fertility-ivf",
+    eyebrow: "02 · Fertility care",
+    title: "Fertility & IVF Support",
+    text: "Individualized support for fertility planning, IUI, IVF preparation and stimulation, retrieval, transfer, stress, and sleep.",
     image: "/images/home-hero-care.jpg",
-    alt: "Gentle wrist assessment during a women’s health visit",
-    link: "/care/womens-health-fertility",
+    alt: "Gentle pulse assessment during fertility-focused acupuncture care",
+    link: "/care/fertility-ivf-support",
   },
   {
     id: "pain-management",
-    eyebrow: "02 · Pain care",
+    eyebrow: "03 · Pain care",
     title: "Pain Management",
     text: "Low-back pain, neck and shoulder tension, TMJ and jaw pain, myofascial pain, tension-type headache, migraine support, and movement restriction.",
     image: "/images/acupuncture-treatment-hero.png",
@@ -32,7 +41,7 @@ const focusAreas = [
   },
   {
     id: "stress-sleep-digestion",
-    eyebrow: "03 · Rest & recovery",
+    eyebrow: "04 · Rest & recovery",
     title: "Stress, Sleep & Digestion",
     text: "Insomnia, stress and overwhelm, anxiety-related tension, fatigue, restless energy, bloating, nausea, constipation, and stress-sensitive digestion.",
     image: "/images/service-herbal-medicine.jpg",
@@ -47,7 +56,7 @@ export default function SpecialistPage() {
       <InteriorHero
         eyebrow="What we treat"
         title="Care shaped around the concerns that brought you here."
-        text="Explore the conditions and symptoms Springwell commonly supports, from women’s health and fertility care to pain, stress, sleep, and digestive concerns."
+        text="Explore the conditions and symptoms Springwell commonly supports, from women’s health, fertility and IVF support to pain, stress, sleep, and digestive concerns."
         image="/images/acupuncture-treatment-hero.png"
       />
 

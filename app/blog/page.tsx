@@ -34,7 +34,7 @@ const posts: BlogPost[] = [
     readTime: "6 min read",
     image: "/images/home-hero-care.jpg",
     imageAlt: "Gentle wrist assessment during a fertility-focused consultation",
-    related: "/specialist#fertility-ivf",
+    related: "/care/fertility-ivf-support",
     sections: [
       {
         heading: "Supportive care is different from fertility treatment",
@@ -71,7 +71,7 @@ const posts: BlogPost[] = [
     readTime: "5 min read",
     image: "/images/chinese-medicine-consultation.jpg",
     imageAlt: "Pulse assessment during a Traditional Chinese Medicine consultation",
-    related: "/specialist#womens-health",
+    related: "/care/womens-health",
     sections: [
       {
         heading: "A period symptom is a pattern, not just a number",
@@ -407,7 +407,7 @@ export default function BlogPage() {
       <header className={styles.journalHero}>
         <div className="container">
           <p>Evidence, perspective, and practical guidance</p>
-          <h1>SpringWell Acupuncture Blog</h1>
+          <h1>Acupuncture &amp; Wellness Insights | SpringWell Acupuncture</h1>
           <nav className={styles.journalTabs} aria-label="Blog topics">
             <a className={styles.activeTab} href="#evidence-insights">All</a>
             <a href="#fertility-evidence">Fertility</a>
