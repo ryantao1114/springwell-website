@@ -1942,8 +1942,10 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem) !important; font-weight: 650; }
 
 .care-new-patient-offer {
   padding: 62px 0;
-  background: #536577;
-  color: #fff;
+  border-top: 1px solid #dfbaa8;
+  border-bottom: 1px solid #dfbaa8;
+  background: linear-gradient(135deg, #f8e8df 0%, #f1d6c9 62%, #eadde7 100%);
+  color: var(--ink-deep);
 }
 
 .care-new-patient-offer-inner {
@@ -1956,7 +1958,7 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem) !important; font-weight: 650; }
 .care-new-patient-offer h2 {
   max-width: 520px;
   margin: 0;
-  color: #fff;
+  color: var(--ink-deep);
   font-size: clamp(2.5rem, 4vw, 4.25rem);
   line-height: 1;
 }
@@ -1964,19 +1966,19 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem) !important; font-weight: 650; }
 .care-new-patient-offer-copy p {
   max-width: 570px;
   margin: 0 0 10px;
-  color: rgba(255,255,255,.92);
+  color: #554743;
   font-size: 1.08rem;
   line-height: 1.65;
 }
 
 .care-new-patient-offer-copy strong {
-  color: #fff;
+  color: var(--ink-deep);
   font-size: 1.18em;
 }
 
 .care-new-patient-offer-copy small {
   display: block;
-  color: rgba(255,255,255,.7);
+  color: #74635d;
   font-size: .76rem;
   line-height: 1.55;
 }
