@@ -91,7 +91,8 @@ export default function RootLayout({
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){window.dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-ZSK3ESH5HP');`}
+gtag('config', 'G-ZSK3ESH5HP');
+gtag('config', 'AW-18378983115');`}
         </Script>
         <LocalBusinessJsonLd />
         {children}
