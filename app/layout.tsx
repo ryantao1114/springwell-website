@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { DM_Sans, Newsreader } from "next/font/google";
-import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -81,19 +80,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dmSans.variable} ${newsreader.variable}`}>
-      <body className="antialiased">
-        <Script
-          id="google-tag-loader"
-          src="https://www.googletagmanager.com/gtag/js?id=G-ZSK3ESH5HP"
-          strategy="afterInteractive"
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18378983115"
         />
-        <Script id="google-tag-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){window.dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-ZSK3ESH5HP');
-gtag('config', 'AW-18378983115');`}
-        </Script>
+gtag('config', 'AW-18378983115');
+gtag('config', 'G-ZSK3ESH5HP');`,
+          }}
+        />
+      </head>
+      <body className="antialiased">
         <LocalBusinessJsonLd />
         {children}
         <ImageFallbacks />
