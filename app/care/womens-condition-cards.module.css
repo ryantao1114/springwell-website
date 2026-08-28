@@ -4,6 +4,11 @@
   gap: 24px;
 }
 
+.detailedGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
 .card {
   display: flex;
   min-width: 0;
@@ -63,6 +68,28 @@
   line-height: 1.6;
 }
 
+.support p + p {
+  margin-top: 12px;
+}
+
+.detailedCard .media {
+  aspect-ratio: 16 / 7;
+}
+
+.detailedCard .content {
+  padding: 30px 32px 31px;
+}
+
+.detailedCard .content h3 {
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+}
+
+.detailedCard .content > p,
+.detailedCard .support p {
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
 .support {
   margin-top: 18px;
   padding-top: 16px;
@@ -84,6 +111,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
   }
+
+  .detailedGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
@@ -94,6 +125,10 @@
 
   .content {
     padding: 22px 22px 21px;
+  }
+
+  .detailedCard .content {
+    padding: 24px 23px 25px;
   }
 }
 

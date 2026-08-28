@@ -5,16 +5,17 @@ import styles from "./womens-condition-cards.module.css";
 type Props = {
   conditions: string[];
   details: Record<string, ConditionDetail>;
+  detailed?: boolean;
 };
 
-export function WomensConditionCards({ conditions, details }: Props) {
+export function WomensConditionCards({ conditions, details, detailed = false }: Props) {
   return (
-    <div className={styles.grid}>
+    <div className={`${styles.grid} ${detailed ? styles.detailedGrid : ""}`}>
       {conditions.map((condition) => {
         const detail = details[condition];
 
         return (
-          <article className={styles.card} key={condition}>
+          <article className={`${styles.card} ${detailed ? styles.detailedCard : ""}`} key={condition}>
             <div className={styles.media}>
               <Image
                 src={detail.image}
@@ -27,8 +28,8 @@ export function WomensConditionCards({ conditions, details }: Props) {
               <h3>{condition}</h3>
               <p>{detail.symptoms}</p>
               <div className={styles.support}>
-                <span>How acupuncture may fit</span>
-                <p>{detail.how}</p>
+                <span>{detail.approachLabel ?? "How acupuncture may fit"}</span>
+                {detail.how.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
             </div>
           </article>
