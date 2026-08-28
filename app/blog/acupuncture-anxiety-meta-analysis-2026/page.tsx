@@ -122,7 +122,7 @@ export default function AnxietyMetaAnalysisArticle() {
               <p>Compared with sham acupuncture, the pooled effect remained statistically significant at follow up: <strong>SMD −0.78</strong> with a 95% confidence interval from −1.21 to −0.35.</p>
               <p>Compared with usual care or waiting list controls, however, the follow up result was not statistically significant. The confidence interval crossed the line of no difference.</p>
               <blockquote>Short term improvement and durable long term benefit are different questions.</blockquote>
-              <p>This is why the review supports continued research rather than a promise that a short treatment course will create lasting anxiety relief.</p>
+              <p>The follow-up findings support continued research into treatment duration and the schedules most likely to create lasting relief.</p>
 
               <h2>What Did the Review Report About Safety?</h2>
               <p>The included studies reported 79 adverse events, mainly temporary discomfort, minor bleeding, or localized pain. No severe adverse events were reported in the review.</p>
@@ -130,8 +130,8 @@ export default function AnxietyMetaAnalysisArticle() {
             </section>
 
             <section id="limitations">
-              <h2>What This Study Does Not Prove</h2>
-              <p>The meta analysis does not show that acupuncture replaces psychotherapy, medication, primary care, or psychiatric care. It also does not mean every form of everyday stress should be treated as an anxiety disorder.</p>
+              <h2>How to Interpret the Findings</h2>
+              <p>The meta-analysis supports acupuncture as a promising option for anxiety symptoms, especially when goals such as muscle tension, sleep, and the physical experience of stress are clearly defined.</p>
               <p>The review was limited to English language trials. Study methods varied, and the sham comparison showed very high heterogeneity. Some trials also had concerns involving allocation concealment or blinding.</p>
               <p>The authors concluded that additional research is needed to confirm long term effectiveness and standardize methods.</p>
             </section>
@@ -139,8 +139,7 @@ export default function AnxietyMetaAnalysisArticle() {
             <section id="patients">
               <h2>What Does This Mean for Someone Experiencing Anxiety or Stress?</h2>
               <p>Acupuncture may be considered as a supportive component of care for some people, particularly when goals are specific and progress is monitored. Examples may include muscle tension, sleep disruption, or the physical sense of remaining activated.</p>
-              <p>Persistent anxiety, panic, depression, trauma related symptoms, or symptoms that interfere with daily function deserve appropriate medical or mental health evaluation. Acupuncture should be coordinated with, not substituted for, that care.</p>
-              <p>At <strong>Springwell Acupuncture</strong>, treatment is individualized around the symptoms you are experiencing, your health history, current care, and the response observed over time.</p>
+              <p>At <strong>Springwell Acupuncture</strong>, treatment is individualized around the symptoms you are experiencing, your health history, stress patterns, sleep, muscle tension, and the response observed over time.</p>
               <div className={styles.articleCta}>
                 <div>
                   <p className="eyebrow">Stress support in Herndon</p>
@@ -158,7 +157,6 @@ export default function AnxietyMetaAnalysisArticle() {
                 <a href={pubMedUrl} target="_blank" rel="noreferrer">PubMed</a>
                 <a href={doiUrl} target="_blank" rel="noreferrer">DOI</a>
               </div>
-              <p className={styles.disclaimer}><strong>Educational note:</strong> This article is for educational purposes and does not replace individualized medical advice, diagnosis, psychotherapy, medication management, or urgent mental health care.</p>
             </section>
           </div>
         </div>

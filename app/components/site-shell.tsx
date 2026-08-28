@@ -218,7 +218,6 @@ export function SiteFooter() {
       </div>
       <div className="container footer-bottom">
         <span>© 2026 {site.name}. All rights reserved.</span>
-        <span>Information on this site is educational and is not medical advice.</span>
       </div>
     </footer>
   );

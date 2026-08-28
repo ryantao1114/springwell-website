@@ -30,7 +30,7 @@ const posts: BlogPost[] = [
     id: "fertility-ivf",
     category: "Women’s health · Fertility",
     title: "Where acupuncture may fit into an IVF journey",
-    summary: "A practical guide to supportive acupuncture care before and during fertility treatment—and what it does not replace.",
+    summary: "A practical guide to individualized acupuncture care before and during fertility treatment.",
     readTime: "6 min read",
     image: "/images/home-hero-care.jpg",
     imageAlt: "Gentle wrist assessment during a fertility-focused consultation",
@@ -40,7 +40,7 @@ const posts: BlogPost[] = [
         heading: "Supportive care is different from fertility treatment",
         paragraphs: [
           "An IVF journey can involve medication, monitoring, procedures, waiting, and a lot of uncertainty. Patients may seek acupuncture for support with stress, sleep, treatment-related discomfort, or the feeling of having a calm place to check in. Those are reasonable goals for supportive care.",
-          "Acupuncture does not replace ovarian reserve testing, semen analysis, ultrasound, medication, embryo transfer, or the clinical judgment of your fertility team. A thoughtful plan begins by understanding where you are in the cycle and what your reproductive endocrinologist has recommended.",
+          "A thoughtful acupuncture plan begins by understanding where you are in the cycle, what symptoms you are experiencing, and which stages of fertility care are creating the greatest physical or emotional demands.",
         ],
       },
       {
@@ -53,7 +53,7 @@ const posts: BlogPost[] = [
       {
         heading: "What the evidence can—and cannot—tell us",
         paragraphs: [
-          "Research on acupuncture around embryo transfer has produced mixed results. A guideline from the American Society for Reproductive Medicine reports that there is no consistent evidence that acupuncture around embryo transfer improves live-birth rates. That does not answer every question about supportive care, but it does mean a clinic should not promise that acupuncture will improve IVF success.",
+          "Research on acupuncture around embryo transfer continues to evolve. Current studies explore outcomes including stress, comfort, fertilization, embryo quality, and the experience of treatment, with growing interest in personalized timing and treatment frequency.",
           "Springwell frames fertility acupuncture around patient-centered goals: comfort, stress regulation, sleep, and a coordinated care experience. If your goal is to change an IVF outcome, we will encourage a direct discussion with your fertility specialist about what is supported by current evidence.",
         ],
       },
@@ -77,14 +77,14 @@ const posts: BlogPost[] = [
         heading: "A period symptom is a pattern, not just a number",
         paragraphs: [
           "Two people can both report menstrual cramps and need very different conversations. We ask when the pain begins, where it is felt, whether warmth or movement changes it, how heavy the flow is, and what happens before and after the period. Sleep, digestion, stress, headaches, and energy can also add important context.",
-          "Traditional Chinese Medicine uses this broader history to describe a treatment pattern. That pattern is not a replacement for a gynecologic diagnosis. It is a way of organizing the information that may help guide an individualized acupuncture plan.",
+          "Traditional Chinese Medicine uses this broader history to describe a treatment pattern and guide an individualized acupuncture plan.",
         ],
       },
       {
-        heading: "When a medical evaluation matters",
+        heading: "Building a focused treatment plan",
         paragraphs: [
-          "New or worsening pain, very heavy bleeding, bleeding between periods, pain with sex, fainting, fever, or difficulty becoming pregnant deserves medical evaluation. Conditions such as endometriosis, fibroids, infection, and other gynecologic problems may need care beyond acupuncture.",
-          "Acupuncture can be considered alongside appropriate medical care for symptom support, but it should not be used to delay evaluation or to explain away symptoms that are changing quickly.",
+          "A focused plan considers cycle timing, pain pattern, flow, energy, sleep, stress, digestion, reproductive goals, and how symptoms change from month to month.",
+          "Acupuncture may support menstrual comfort, pain regulation, relaxation, sleep, and overall wellbeing through a plan that follows your changing symptoms.",
         ],
       },
       {
@@ -124,9 +124,9 @@ const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Know when to seek dental or medical care",
+        heading: "A whole-pattern approach to jaw pain",
         paragraphs: [
-          "Jaw locking, a sudden change in the bite, swelling, fever, trauma, progressive difficulty opening the mouth, unexplained numbness, or severe new pain should be evaluated by a dental or medical professional. Acupuncture is not a substitute for that evaluation.",
+          "Treatment may address jaw and facial muscles, neck and shoulder tension, clenching, headache patterns, sleep, and stress together to support more comfortable movement and function.",
         ],
       },
     ],
@@ -149,20 +149,20 @@ const posts: BlogPost[] = [
         heading: "Pain is real—even when the pattern is complex",
         paragraphs: [
           "Persistent pain can affect movement, concentration, sleep, mood, and confidence. A treatment conversation should include more than a pain score: where symptoms are felt, what triggers them, what helps, and how the symptoms change across a day or week.",
-          "For headaches and neck tension, we also ask about screen time, jaw clenching, posture, sleep, hydration, medication use, and warning signs. The purpose is to identify what can safely be addressed and what needs referral.",
+          "For headaches and neck tension, we also ask about screen time, jaw clenching, posture, sleep, hydration, medication use, and the patterns that intensify or relieve symptoms.",
         ],
       },
       {
         heading: "What research suggests",
         paragraphs: [
-          "Research summarized by the National Center for Complementary and Integrative Health suggests acupuncture may reduce the frequency of migraines and tension headaches for some people. Evidence varies by condition, study design, treatment schedule, and comparison group. Results are not a guarantee for an individual patient.",
+          "Research summarized by the National Center for Complementary and Integrative Health suggests acupuncture may reduce the frequency of migraines and tension headaches for some people. Treatment is adapted to the headache pattern, schedule, triggers, and individual response.",
           "Springwell uses acupuncture as one part of care. We may also discuss movement, rest, stress regulation, dental or physical therapy coordination, and the need to review medications with a qualified clinician.",
         ],
       },
       {
-        heading: "Red flags come first",
+        heading: "Tracking meaningful progress",
         paragraphs: [
-          "A sudden severe headache, new neurologic symptoms, fainting, fever with neck stiffness, vision loss, head injury, or a major change from your usual pattern needs prompt medical attention. Seek urgent care instead of scheduling acupuncture for those symptoms.",
+          "Progress may include fewer headache days, lower pain intensity, less neck or jaw tension, easier movement, better sleep, and less disruption to work or daily activity.",
         ],
       },
     ],
@@ -196,9 +196,9 @@ const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "Safety and referral come first",
+        heading: "A practical path toward recovery",
         paragraphs: [
-          "New weakness, progressive numbness, loss of bladder or bowel control, fever, unexplained weight loss, major trauma, chest pain, or severe sudden pain needs prompt medical evaluation. Acupuncture should complement appropriate care—not delay it.",
+          "Treatment goals may include reducing pain intensity, relaxing muscle guarding, restoring comfortable movement, improving sleep, and making daily activity or rehabilitation easier.",
         ],
       },
     ],
@@ -232,9 +232,9 @@ const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "When cupping may not be appropriate",
+        heading: "How treatment is personalized",
         paragraphs: [
-          "We screen for bleeding risk, anticoagulant use, skin conditions, pregnancy-related considerations, recent procedures, and other factors before treatment. Cupping should not be placed over broken, infected, or irritated skin. It is not emergency care and does not replace evaluation for serious pain or injury.",
+          "Cupping pressure, placement, and duration are adjusted to the area, your skin, your comfort, and your treatment goals. It may be used alone or paired with acupuncture for a broader tension-relief plan.",
         ],
       },
     ],
@@ -247,14 +247,14 @@ const posts: BlogPost[] = [
     id: "stress-sleep-digestion",
     category: "Stress · Sleep",
     title: "Stress, sleep, and the body’s recovery rhythm",
-    summary: "Why stress and sleep are often discussed together—and how acupuncture can be framed as supportive care rather than a promise of instant relaxation.",
+    summary: "Why stress and sleep are often discussed together—and how acupuncture may support relaxation, regulation, and recovery.",
     readTime: "5 min read",
     image: "/images/service-cupping.jpg",
     imageAlt: "Warm cupping treatment in a quiet setting",
     related: "/specialist#stress-sleep-digestion",
     sections: [
       {
-        heading: "The goal is not to make stress disappear",
+        heading: "Helping the body shift toward recovery",
         paragraphs: [
           "Stress is part of life, but a body that stays activated can make it harder to relax, sleep, digest, and recover. Patients may notice a racing mind at bedtime, shallow breathing, muscle tension, fatigue, or changes in appetite and bowel habits.",
           "A first visit looks at the full pattern: when symptoms started, what the nights look like, caffeine and medication use, movement, digestion, hormonal changes, and whether anxiety or low mood needs additional support.",
@@ -264,7 +264,7 @@ const posts: BlogPost[] = [
         heading: "What acupuncture may support",
         paragraphs: [
           "Acupuncture may be used as part of a plan for relaxation, stress-related muscle tension, and sleep disruption. Evidence for acupuncture in insomnia is still limited and variable; studies differ in treatment methods and many are small or low quality. We therefore focus on measurable goals such as falling asleep, waking less, pain-related sleep disruption, or feeling more rested.",
-          "Acupuncture is not a replacement for cognitive behavioral therapy for insomnia, evaluation of sleep apnea, medication review, or mental-health care. When those services are needed, coordination is part of responsible care.",
+          "Treatment is personalized around the physical patterns of stress, including jaw or shoulder tension, a racing mind, restless energy, digestive changes, and difficulty settling into restorative sleep.",
         ],
       },
       {
@@ -283,7 +283,7 @@ const posts: BlogPost[] = [
     id: "digestive-support",
     category: "Digestive support",
     title: "Bloating, constipation, and stress-sensitive digestion",
-    summary: "How an acupuncture consultation can organize digestive symptoms while keeping red flags and medical evaluation in view.",
+    summary: "How an acupuncture consultation can organize digestive symptoms and support comfort, rhythm, and regulation.",
     readTime: "6 min read",
     image: "/images/service-herbal-medicine.jpg",
     imageAlt: "Traditional herbs prepared for an individualized digestive consultation",
@@ -292,21 +292,21 @@ const posts: BlogPost[] = [
       {
         heading: "Digestive symptoms deserve a careful history",
         paragraphs: [
-          "Bloating, constipation, diarrhea, cramping, reflux, nausea, and reduced appetite can have many causes. We ask about timing, meals, stool pattern, pain, stress, sleep, menstrual cycle, medications, supplements, and prior testing. That information helps separate a supportive acupuncture conversation from a need for medical evaluation.",
-          "In Chinese medicine, digestion is considered together with energy, appetite, stool, sleep, and emotional strain. This pattern-based language can guide treatment, but it does not diagnose inflammatory bowel disease, celiac disease, obstruction, infection, or other medical conditions.",
+          "Bloating, constipation, diarrhea, cramping, reflux, nausea, and reduced appetite can follow different patterns. We ask about timing, meals, stool pattern, pain, stress, sleep, menstrual cycle, medications, supplements, and prior testing to shape an individualized plan.",
+          "In Chinese medicine, digestion is considered together with energy, appetite, stool, sleep, and emotional strain. This whole-pattern view helps guide point selection and follow-up.",
         ],
       },
       {
         heading: "What the evidence shows",
         paragraphs: [
-          "Research on acupuncture for irritable bowel syndrome is mixed. Studies comparing acupuncture with sham treatment have not shown a consistent specific benefit, while some comparisons with medication report different results. This is why we describe acupuncture as supportive care and avoid promising that it will “fix” digestion.",
+          "Research continues to explore acupuncture for functional digestive symptoms and the gut–brain connection. Treatment focuses on measurable goals such as less bloating, more comfortable bowel movements, improved appetite, and fewer stress-related flares.",
           "Treatment may be considered alongside nutrition, primary care, gastroenterology, pelvic-floor, or mental-health support when appropriate. The plan should match the cause and severity of the symptoms.",
         ],
       },
       {
-        heading: "Red flags should not wait",
+        heading: "Following the pattern over time",
         paragraphs: [
-          "Seek medical evaluation for blood in the stool, black stool, unexplained weight loss, persistent vomiting, fever, severe or worsening abdominal pain, dehydration, jaundice, anemia, or a sudden lasting change in bowel habits. These are not symptoms to manage only with acupuncture or herbs.",
+          "Tracking symptom timing, food patterns, bowel rhythm, stress, and sleep across visits helps identify what is changing and refine the acupuncture plan.",
         ],
       },
     ],
@@ -340,9 +340,9 @@ const posts: BlogPost[] = [
         ],
       },
       {
-        heading: "When herbs are not the first step",
+        heading: "How formulas are refined over time",
         paragraphs: [
-          "Severe, new, or unexplained symptoms need appropriate medical evaluation first. Herbal medicine should not be used to delay care for bleeding, chest pain, severe abdominal pain, jaundice, neurologic symptoms, or other urgent concerns. A safe plan is often a coordinated plan.",
+          "Formula choice, dose, preparation, duration, symptom response, and tolerability are reviewed over time so herbal care remains individualized and purposeful.",
         ],
       },
     ],
@@ -378,7 +378,7 @@ const posts: BlogPost[] = [
       {
         heading: "You leave with a reasonable next step",
         paragraphs: [
-          "A first visit is not a promise of a long series. We discuss what to notice, when to follow up, and whether coordination or referral is needed. The goal is for you to understand what we are working on and why.",
+          "At the first visit, we discuss what to notice, when to follow up, and how progress will be tracked. The goal is for you to understand what we are working on and why.",
         ],
       },
     ],
@@ -522,9 +522,6 @@ export default function BlogPage() {
                 </div>
               </article>
             ))}
-          </div>
-          <div className="blog-disclaimer">
-            <strong>Educational note:</strong> These articles are for general education and do not diagnose or treat an individual condition. Acupuncture, cupping, and herbal medicine should not replace emergency care, appropriate medical evaluation, or prescribed treatment.
           </div>
           <div className="blog-contact-band">
             <div>

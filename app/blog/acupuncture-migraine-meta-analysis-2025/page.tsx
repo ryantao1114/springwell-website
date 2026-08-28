@@ -114,7 +114,7 @@ export default function MigraineMetaAnalysisArticle() {
               <p>The review also reported improvements in the restrictive and emotional function subscales of the Migraine Specific Quality of Life Questionnaire compared with sham acupuncture.</p>
               <aside className={styles.interpretation}>
                 <strong>How to read these numbers</strong>
-                <p>A pooled mean difference describes the average difference across study groups. It does not predict exactly how much one person will improve, and it does not mean every included trial showed the same result.</p>
+                <p>A pooled mean difference describes the average difference across study groups. Individual response can vary according to migraine pattern, treatment schedule, and the comparison used in each trial.</p>
               </aside>
 
               <h2>Results Also Varied by the Comparison Group</h2>
@@ -125,22 +125,21 @@ export default function MigraineMetaAnalysisArticle() {
             <section id="meaning">
               <h2>What the Study Adds to the Conversation</h2>
               <p>The review suggests acupuncture may be a reasonable component of a migraine prevention or symptom management plan for some patients. The outcomes extend beyond pain intensity and include attack burden and day to day function.</p>
-              <blockquote>The useful question is not whether acupuncture replaces migraine care, but where it may fit within a broader plan.</blockquote>
-              <p>A practical plan should consider migraine pattern, triggers, medication use, sleep, menstrual timing, neck or jaw tension, and the medical evaluation already completed.</p>
+              <blockquote>The useful question is how acupuncture can be personalized within a broader migraine plan.</blockquote>
+              <p>A practical plan should consider migraine pattern, triggers, medication use, sleep, menstrual timing, neck or jaw tension, and the goals most important to the patient.</p>
             </section>
 
             <section id="limitations">
-              <h2>What This Study Does Not Prove</h2>
-              <p>The review does not show that acupuncture cures migraine or that it will work equally well for every patient. It also does not establish that acupuncture should replace acute or preventive migraine medication.</p>
+              <h2>How to Interpret the Findings</h2>
+              <p>The review supports acupuncture as a promising option for reducing migraine frequency, attack burden, and disruption to daily life, with individual response shaped by the treatment plan and migraine pattern.</p>
               <p>The authors highlighted language restrictions and potential bias. The included trials also differed in acupuncture methods, treatment schedules, control groups, and follow up. These differences limit how precisely the pooled estimates can be applied to an individual patient.</p>
               <p>Further rigorous trials are needed to clarify which patients are most likely to benefit and what treatment schedules are most appropriate.</p>
             </section>
 
             <section id="patients">
               <h2>What Does This Mean for Someone With Migraine?</h2>
-              <p>Acupuncture may be considered as an <strong>adjunct to appropriate migraine care</strong>. It should not delay evaluation of a new, rapidly changing, or unusually severe headache.</p>
-              <p>Seek urgent medical care for a sudden severe headache, new weakness or numbness, confusion, fainting, fever with neck stiffness, headache after significant injury, or other concerning neurologic symptoms.</p>
-              <p>At <strong>Springwell Acupuncture</strong>, treatment is adapted to the pattern of your headaches and the broader factors that may influence them, while keeping medical or neurologic care central when it is needed.</p>
+              <p>Acupuncture may be considered as an <strong>individualized migraine-prevention and symptom-support option</strong>.</p>
+              <p>At <strong>Springwell Acupuncture</strong>, treatment is adapted to headache frequency, triggers, neck or jaw tension, sleep, menstrual timing, and the broader factors that may influence each episode.</p>
               <div className={styles.articleCta}>
                 <div>
                   <p className="eyebrow">Pain care in Herndon</p>
@@ -159,7 +158,6 @@ export default function MigraineMetaAnalysisArticle() {
                 <a href={doiUrl} target="_blank" rel="noreferrer">DOI</a>
                 <a href={fullTextUrl} target="_blank" rel="noreferrer">Full text</a>
               </div>
-              <p className={styles.disclaimer}><strong>Educational note:</strong> This article is for educational purposes and does not replace individualized medical advice, diagnosis, emergency evaluation, or migraine treatment.</p>
             </section>
           </div>
         </div>

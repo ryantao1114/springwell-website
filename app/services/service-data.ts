@@ -50,12 +50,12 @@ export const services: Service[] = [
       "Bloating and stress-sensitive digestive concerns",
     ],
     clinicalNote:
-      "Acupuncture may be used as supportive care alongside appropriate medical evaluation and treatment. New, severe, or unexplained symptoms should be assessed by a qualified healthcare professional. Fertility care should remain coordinated with your reproductive endocrinologist or OB-GYN.",
+      "Treatment is individualized around your symptoms, health history, comfort, goals, and response over time.",
     faqs: [
       { question: "What happens during an acupuncture visit?", answer: "We begin with a detailed conversation about your symptoms, health history, and goals. When appropriate, the visit includes tongue and pulse assessment, gentle needle placement, a quiet rest period, and a plan for follow-up." },
       { question: "Does acupuncture hurt?", answer: "Most people feel little or no pain. A brief pinch, heaviness, warmth, tingling, or a dull sensation can occur, and we adjust the treatment to your comfort." },
       { question: "How often should I receive acupuncture?", answer: "Frequency depends on the severity, duration, and pattern of your concern. We discuss a practical starting plan and adjust it according to your response." },
-      { question: "Can acupuncture replace medical care?", answer: "No. Acupuncture is supportive care. New, severe, or unexplained symptoms should be evaluated by an appropriate medical professional, and fertility care should remain coordinated with your medical team." },
+      { question: "What can acupuncture support?", answer: "Acupuncture may support pain relief, muscle relaxation, mobility, stress regulation, sleep, menstrual comfort, fertility care, digestive wellbeing, and overall recovery through an individualized plan." },
     ],
   },
   {
@@ -124,7 +124,7 @@ export const services: Service[] = [
       "A consultation includes your symptoms, medications, supplements, allergies, health history, and traditional tongue and pulse findings. When appropriate, a formula is selected with clear instructions and reviewed at follow-up.",
     safetyLabel: "Safety & comfort",
     safetyCopy:
-      "Herbs can cause side effects and interact with medicines. Please disclose pregnancy, fertility treatment, planned procedures, and all medications or supplements before use. Herbal care does not replace prescribed medical treatment.",
+      "Herbs can cause side effects and interact with medicines. Please disclose pregnancy, fertility treatment, planned procedures, and all medications or supplements so formula selection can be thoughtful and individualized.",
     careAreas: [
       "Digestive patterns such as bloating, irregularity, and reduced appetite",
       "Menstrual cycle and women’s health support",
@@ -138,7 +138,7 @@ export const services: Service[] = [
       { question: "Are Chinese herbs the same as supplements?", answer: "Not exactly. A formula is selected and adjusted around your symptoms, health history, medications, supplements, pregnancy or fertility care, and response over time." },
       { question: "How do you choose a formula?", answer: "We review your symptoms and timeline, medications, allergies, and relevant medical care, then consider tongue and pulse findings before discussing whether an individualized formula is appropriate." },
       { question: "Can herbs interact with medications?", answer: "Yes. Tell us about every prescription, over-the-counter medicine, supplement, pregnancy or fertility treatment, and planned procedure before using an herbal product." },
-      { question: "Do herbs replace prescribed treatment?", answer: "No. Herbal medicine is complementary care and should not replace prescribed treatment or medical evaluation. Do not stop medication without speaking with the prescribing clinician." },
+      { question: "How can herbal medicine be incorporated into care?", answer: "Formula selection considers your symptoms, medications, supplements, pregnancy or fertility treatment, and response over time, with clear instructions and follow-up." },
     ],
   },
 ];

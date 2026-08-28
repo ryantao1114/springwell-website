@@ -28,15 +28,15 @@ const fertilityFaqs=[
   ["When should acupuncture begin before IVF?","There is no single schedule that fits every patient. Some begin before a treatment cycle; others seek support during an active cycle. Timing should fit your reproductive specialist’s plan, symptoms, and practical availability."],
   ["Can acupuncture be used during an IVF cycle?","It may be used as supportive care when your reproductive team is informed. Treatment is adjusted around medications, procedures, symptoms, and your clinic’s instructions."],
   ["How often should I come?","Frequency depends on what brings you in, your treatment stage, response, and schedule. We discuss a realistic recommendation after the first assessment and adjust it over time."],
-  ["Can acupuncture replace fertility treatment?","No. Acupuncture is supportive care and is not a substitute for evaluation or treatment from a reproductive endocrinologist, OB-GYN, or other qualified medical professional."],
+  ["How can acupuncture support a fertility treatment cycle?","Treatment may be timed around preparation, stimulation, retrieval, transfer, and recovery, with a focus on comfort, stress regulation, sleep, muscle tension, and the day-to-day experience of care."],
   ["Can I come during menstruation?","Acupuncture can generally be adapted during menstruation. Tell your acupuncturist about heavy bleeding, severe or changing pain, pregnancy possibility, medications, and relevant diagnoses."],
   ["Should I tell my fertility specialist?","Yes. Keeping every clinician informed helps coordinate care, avoid conflicts, and ensure that symptoms or medication effects receive appropriate attention."],
 ] as const;
 const womensFaqs=[
   ["Can acupuncture be used during menstruation?","Acupuncture can generally be adapted during menstruation. Tell your acupuncturist about heavy bleeding, severe or changing pain, pregnancy possibility, medications, and relevant diagnoses."],
   ["Can acupuncture help period cramps?","Some patients use acupuncture as part of a plan for pain and muscle-tension support. New, severe, or worsening cramps still deserve gynecologic evaluation."],
-  ["Do irregular cycles need medical evaluation?","Often, yes. Irregular cycles can have many causes. Acupuncture may be used as supportive care while an OB-GYN or other qualified clinician evaluates persistent changes."],
-  ["Can I receive acupuncture if I have PCOS?","Treatment can be adapted to your symptoms and health history, but it does not replace medical evaluation or treatment for PCOS and related metabolic or reproductive concerns."],
+  ["How may acupuncture support irregular cycles?","Care is shaped around cycle timing, symptoms, stress, sleep, pain, and overall wellbeing, with progress tracked across more than one cycle."],
+  ["Can I receive acupuncture if I have PCOS?","Yes. Treatment can be adapted to your cycle pattern, stress, sleep, pain, energy, and the symptoms affecting daily life."],
   ["Can acupuncture support perimenopause symptoms?","Care may focus on sleep, tension, headaches, or overall comfort during perimenopause. Treatment is individualized, and changing symptoms should also be discussed with your medical clinician."],
   ["How often should I come?","Frequency depends on the concern, symptom pattern, response, and practical schedule. We recommend a realistic starting plan after your first assessment."],
 ] as const;
@@ -50,7 +50,6 @@ export default async function CareAreaPage({params}:Props){const {slug}=await pa
   {area.slug === "pain-management" && <PainTreatmentPath/>}
   {isWomensHealth ? null : <><section className="section-pad care-why-section"><div className="container care-why-grid"><div><p className="eyebrow">Why consider acupuncture?</p><h2>{area.whyTitle}</h2></div><div>{area.whyCopy.map((copy)=><p key={copy}>{copy}</p>)}</div></div></section><section className="section-pad care-evidence-section"><div className="container"><div className="care-evidence-heading"><p className="eyebrow">Science in context</p><h2>{area.evidenceTitle}</h2><p>{area.evidenceIntro}</p></div><div className="care-evidence-grid">{area.evidence.map(item=><article key={item.metric}><strong>{item.metric}</strong><p>{item.detail}</p><a href={item.sourceUrl} target="_blank" rel="noreferrer">Read source · {item.sourceLabel} <ArrowIcon/></a></article>)}</div></div></section></>}
   <section className="section-pad care-visit-section"><div className="container"><div className="care-section-heading"><p className="eyebrow">Your visit at Springwell</p><h2>Personalized care, step by step.</h2><p>Every plan is adjusted to your symptoms, health history, comfort, and goals.</p></div><div className="care-visit-grid">{area.visitSteps.map((step,index)=><article key={step.title}><span className="care-visit-number">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p><small>{step.tools}</small></article>)}</div><div className="care-visit-action"><a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book Your Visit <ArrowIcon/></a></div></div></section>
-  {area.clinicalNote && <section className="care-note-section"><div className="container"><p><strong>Important:</strong> {area.clinicalNote}</p></div></section>}
   {isWomensHealth && <CareFaq type="womens"/>}
   {isFertility && <CareFaq type="fertility"/>}
   <AppointmentOptions/>

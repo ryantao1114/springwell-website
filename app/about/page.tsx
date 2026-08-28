@@ -179,12 +179,12 @@ export default function AboutPage() {
         <div className="container about-standards-grid">
           <div>
             <p className="eyebrow">What you can expect</p>
-            <h2>Care that is specific, respectful, and honest about limits.</h2>
+            <h2>Care that is specific, respectful, and responsive to you.</h2>
           </div>
           <div className="about-standards-list">
             <div><CheckIcon /><p><strong>Specific</strong><br />Your plan follows your symptoms, timing, goals, and response.</p></div>
-            <div><CheckIcon /><p><strong>Collaborative</strong><br />We encourage coordination with your physicians, fertility team, dentist, or therapist.</p></div>
-            <div><CheckIcon /><p><strong>Clear</strong><br />We explain what a service may support, what evidence can and cannot show, and when referral is important.</p></div>
+            <div><CheckIcon /><p><strong>Responsive</strong><br />Your treatment evolves as your symptoms, schedule, and goals change.</p></div>
+            <div><CheckIcon /><p><strong>Clear</strong><br />We explain how each service may support your comfort, function, recovery, and wellbeing.</p></div>
           </div>
         </div>
       </section>

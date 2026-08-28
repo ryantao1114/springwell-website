@@ -105,7 +105,7 @@ export default function EmbryoQualityIvfArticle() {
               <a href="#study">What researchers studied</a>
               <a href="#results">Key findings</a>
               <a href="#individualized">Individualized care</a>
-              <a href="#limitations">What it does not prove</a>
+              <a href="#limitations">How to interpret the findings</a>
               <a href="#patients">What it means for patients</a>
               <a href="#reference">Research reference</a>
             </nav>
@@ -141,7 +141,7 @@ export default function EmbryoQualityIvfArticle() {
               <p>The researchers rated the certainty of evidence for the embryo quality result as <strong>moderate</strong>.</p>
               <aside className={styles.interpretation}>
                 <strong>How to read the result</strong>
-                <p>An odds ratio of 1.76 does not mean that acupuncture guarantees a 76% higher chance of having a good quality embryo. Odds ratios and absolute probabilities are different measures. The analysis indicates more favorable odds in the acupuncture groups across the included studies.</p>
+                <p>An odds ratio describes the relative odds between study groups rather than an individual absolute probability. Here, the analysis indicates more favorable odds of high quality embryos in the acupuncture groups across the included studies.</p>
               </aside>
 
               <h2>Fertilization Rate Also Improved</h2>
@@ -150,7 +150,7 @@ export default function EmbryoQualityIvfArticle() {
 
               <h2>What About Egg Quality?</h2>
               <p>Two randomized controlled trials reported the high quality oocyte rate. The pooled analysis favored acupuncture, but the certainty of this evidence was rated <strong>low</strong>, and there was substantial variation between studies.</p>
-              <p>This finding is promising, but it should not be interpreted as proof that acupuncture doubles egg quality. Too few rigorous studies have addressed this specific outcome, and more high quality trials are needed.</p>
+              <p>This promising finding comes from two trials and supports further high quality research into acupuncture and oocyte quality.</p>
             </section>
 
             <section id="individualized">
@@ -168,26 +168,25 @@ export default function EmbryoQualityIvfArticle() {
                 <li><strong>Number of retrieved oocytes:</strong> longer courses appeared more favorable, particularly 12–24 sessions.</li>
               </ul>
               <p>In the 12–24 session subgroup, acupuncture was associated with approximately <strong>1.44 additional retrieved oocytes</strong> compared with control treatment. This result was also based on low certainty evidence.</p>
-              <p>These subgroup findings can help generate treatment questions, but they should not be treated as a guaranteed or universal dosing formula.</p>
+              <p>These subgroup findings support an individualized approach to treatment frequency and timing.</p>
             </section>
 
             <section id="limitations">
-              <h2>What This Study Does Not Prove</h2>
-              <p>The study does not show that acupuncture guarantees pregnancy. It also does not establish that acupuncture improves live birth rates.</p>
-              <p>The main outcomes evaluated were egg retrieval, egg quality, fertilization, and embryo quality, not the final probability of taking home a baby.</p>
+              <h2>How to Interpret the Findings</h2>
+              <p>The review focused on egg retrieval, oocyte quality, fertilization, and embryo quality. These intermediate IVF outcomes help clarify where acupuncture may have a supportive role during treatment.</p>
               <p>There were important limitations. Acupuncture protocols varied across studies, including differences in acupuncture points, manual versus electroacupuncture techniques, treatment frequency, and number of sessions. Some studies did not adequately report allocation concealment, and relatively few trials were available for certain outcomes such as high quality oocytes.</p>
-              <p>These limitations are why the findings should be viewed as supportive evidence rather than definitive proof.</p>
+              <p>Together, these findings provide an encouraging foundation for more standardized and personalized fertility-acupuncture research.</p>
             </section>
 
             <section id="patients">
               <h2>What Does This Mean for Someone Going Through IVF?</h2>
-              <p>For patients undergoing IVF, acupuncture is best viewed as an <strong>adjunct, not a replacement, for reproductive medicine</strong>.</p>
+              <p>For patients undergoing IVF, acupuncture can provide <strong>individualized support throughout the treatment timeline</strong>.</p>
               <p>The 2026 meta analysis provides encouraging evidence that acupuncture used alongside IVF may support several intermediate reproductive outcomes, especially high quality embryo formation, fertilization, and potentially oocyte quality.</p>
               <p>It also suggests that a plan may be most useful when personalized according to ovarian function, treatment goals, and the timing of the IVF cycle.</p>
               <p>Fertility treatment is highly individual. Age, ovarian reserve, sperm quality, reproductive diagnosis, stimulation protocol, previous IVF history, and many other factors can influence the outcome of a cycle. Acupuncture should therefore be coordinated with the care provided by your reproductive endocrinologist and fertility team.</p>
 
               <h2>A More Individualized Approach to Fertility Acupuncture</h2>
-              <p>One of the most useful messages from this research is that fertility acupuncture should not necessarily follow one standard protocol. Someone preparing for ovarian stimulation may have different goals from someone approaching egg retrieval or embryo transfer.</p>
+              <p>One of the most useful messages from this research is that fertility acupuncture works best as an individualized plan. Someone preparing for ovarian stimulation may have different goals from someone approaching egg retrieval or embryo transfer.</p>
               <p>At <strong>Springwell Acupuncture</strong>, fertility acupuncture can be incorporated into an individualized care plan based on where you are in your fertility journey and coordinated around your IVF treatment schedule.</p>
               <p>If you are preparing for IVF or currently undergoing fertility treatment, acupuncture may be one supportive option to discuss as part of your broader care plan.</p>
               <div className={styles.articleCta}>
@@ -208,7 +207,6 @@ export default function EmbryoQualityIvfArticle() {
                 <a href={doiUrl} target="_blank" rel="noreferrer">DOI</a>
                 <a href={scienceDirectUrl} target="_blank" rel="noreferrer">ScienceDirect</a>
               </div>
-              <p className={styles.disclaimer}><strong>Educational note:</strong> This article is for educational purposes and does not replace individualized medical advice, diagnosis, or fertility treatment.</p>
             </section>
           </div>
         </div>
