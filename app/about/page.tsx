@@ -111,16 +111,28 @@ export default function AboutPage() {
             </div>
             <p className="credentials">Licensed Acupuncturist in Virginia · Diplomate of Acupuncture (NCCAOM)</p>
             <p className="provider-lead">
-              Renjinming Dai brings together formal Chinese medicine education, hospital-based clinical training, and research experience in China and the United States.
+              I’m Renjinming, a licensed acupuncturist with formal training in both Chinese and Western medicine and advanced training in Traditional Chinese Medicine gynecology.
             </p>
             <p>
-              She earned a master’s degree in Traditional Chinese Medicine Gynecology from Nanjing University of Chinese Medicine and completed three years of structured clinical training at Jiangsu Province Hospital of Chinese Medicine. Her research background includes women’s health, reproductive medicine, and neuroscience.
+              My journey with acupuncture and Traditional Chinese Medicine began at <strong>Hunan University of Chinese Medicine</strong>, where I completed five years of comprehensive training in both Chinese and Western medicine. My education included two years of clinical internship and rotations across a wide range of hospital departments, from Traditional Chinese Medicine Gynecology to Orthopedics.
             </p>
             <p>
-              Renjinming has a particular interest in menstrual and hormonal concerns, fertility and IVF support, pain, stress, sleep difficulties, and digestive health. Her approach combines careful listening, individualized assessment, and traditional diagnostic methods such as tongue and pulse evaluation.
+              During those years, I became especially interested in women’s health. That interest led me to pursue graduate training at <strong>Nanjing University of Chinese Medicine, China’s oldest and leading universities of Chinese medicine</strong>, where I earned a master’s degree in <strong>Traditional Chinese Medicine Gynecology</strong>.
             </p>
             <p>
-              Outside the clinic, she enjoys traveling, spending time outdoors, cooking, and discovering new foods.
+              During my graduate training, I completed three years of structured clinical training at <strong>Jiangsu Province Hospital of Chinese Medicine</strong> within a hospital based gynecology setting. Fertility was a major focus of my training, alongside menstrual disorders and other women’s health concerns. I cared for patients at many different stages of their reproductive journey, from those trying to conceive naturally to those undergoing IUI and IVF, and saw how acupuncture and Traditional Chinese Medicine could be thoughtfully integrated with modern gynecologic and reproductive care.
+            </p>
+            <p>
+              From my training and practice in China to my work today, I have seen firsthand the value of combining Acupuncture and the Traditional Chinese Medicine with modern fertility care.
+            </p>
+            <p>
+              My clinical background is also complemented by research experience in <strong>women’s health, reproductive medicine, and neuroscience in both China and the United States</strong>. Research has taught me to ask not only what has traditionally been done, but also what may be happening physiologically, what the evidence can tell us, and where important questions still remain. That scientific perspective continues to shape the way I think about acupuncture and Chinese medicine within modern healthcare.
+            </p>
+            <p>
+              Today, that integrative perspective guides the way I practice at <strong>SpringWell Acupuncture</strong>. <strong>I listen closely to your concerns and look at the bigger picture through an integrative lens.</strong> I do not believe in a one-size-fits-all treatment plan. Whether we are working with fertility and IVF, menstrual health, pain, stress, sleep, or digestive concerns, treatment is adjusted to who you are, how you are feeling, and what your body needs at that point in time. Outside the clinic, I enjoy traveling, spending time outdoors, cooking, and discovering new foods.
+            </p>
+            <p>
+              <strong>I’m grateful you’re considering Springwell as part of your health journey, and I look forward to supporting you along the way.</strong>
             </p>
             <div className="provider-specialty-links" aria-label="Explore specialist care">
               <Link href="/care/womens-health">Women’s Health</Link>
