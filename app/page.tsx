@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const specialties = [
   { title: "Women’s Health", text: "Individualized support for menstrual health, cycle-related symptoms, PCOS concerns, and perimenopause.", href: "/care/womens-health", image: "/images/home-womens-health-hero-hd.webp", alt: "A calm conversation about women’s health care" },
-  { title: "Fertility & IVF", text: "Support coordinated around fertility planning, IUI, IVF preparation, retrieval, and embryo transfer.", href: "/care/fertility-ivf-support", image: "/images/home-hero-care.jpg", alt: "Gentle pulse assessment during fertility-focused acupuncture care" },
+  { title: "Fertility & IVF", text: "Support coordinated around fertility planning, IUI, IVF preparation, retrieval, and embryo transfer.", href: "/care/fertility-ivf-support", image: "/images/home-fertility-family.jpg", alt: "A mother sharing a joyful moment with her baby" },
   { title: "Pain & Movement", text: "Care for neck and back pain, headaches, TMJ-related discomfort, muscle tension, and mobility concerns.", href: "/care/pain-management", image: "/images/home-pain-management-upload.webp", alt: "A person experiencing neck and back discomfort" },
   { title: "Stress, Sleep & Digestion", text: "Individualized acupuncture for stress regulation, sleep concerns, digestive comfort, and overall recovery.", href: "/care/stress-sleep", image: "/images/home-stress-sleep-upload.webp", alt: "A patient resting during a calm acupuncture treatment" },
 ];
