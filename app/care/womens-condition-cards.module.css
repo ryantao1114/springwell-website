@@ -78,18 +78,21 @@
   display: grid;
   grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
   gap: 18px;
-  align-items: center;
+  align-items: stretch;
   margin-top: 18px;
 }
 
 .womensMedia {
-  aspect-ratio: 4 / 5;
+  min-height: 224px;
+  aspect-ratio: auto;
+  align-self: stretch;
   border-radius: 46% 54% 44% 56% / 40% 44% 56% 60%;
   background: #f9eee9;
 }
 
 .womensMedia img {
   object-fit: cover;
+  object-position: center;
 }
 
 .womensSupport {
@@ -134,7 +137,7 @@
 .womensPoints p {
   margin: 0;
   color: #3f4b45;
-  font-size: 0.76rem;
+  font-size: 0.875rem;
   line-height: 1.42;
 }
 
@@ -293,6 +296,22 @@
   .womensBody {
     grid-template-columns: minmax(118px, .8fr) minmax(0, 1.2fr);
     gap: 16px;
+  }
+
+  .womensMedia {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 520px) {
+  .womensBody {
+    grid-template-columns: 1fr;
+  }
+
+  .womensMedia {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    border-radius: 34% 66% 30% 70% / 46% 35% 65% 54%;
   }
 }
 
