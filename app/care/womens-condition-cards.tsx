@@ -6,9 +6,10 @@ type Props = {
   conditions: string[];
   details: Record<string, ConditionDetail>;
   detailed?: boolean;
+  symptomLabel?: string;
 };
 
-export function WomensConditionCards({ conditions, details, detailed = false }: Props) {
+export function WomensConditionCards({ conditions, details, detailed = false, symptomLabel }: Props) {
   return (
     <div className={`${styles.grid} ${detailed ? styles.detailedGrid : ""}`}>
       {conditions.map((condition) => {
@@ -28,9 +29,11 @@ export function WomensConditionCards({ conditions, details, detailed = false }: 
             </div>
             <div className={styles.content}>
               <h3>{condition}</h3>
+              {detail.symptoms && symptomLabel ? <span className={styles.symptomLabel}>{symptomLabel}</span> : null}
               {detail.symptoms ? <p>{detail.symptoms}</p> : null}
               <div className={styles.support}>
                 <span>{detail.approachLabel ?? "How acupuncture may fit"}</span>
+                {detail.howPoints ? <ul className={styles.howPoints}>{detail.howPoints.map((point)=><li key={point.label}><strong>{point.label}:</strong> {point.text}</li>)}</ul> : null}
                 {detail.how.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
             </div>

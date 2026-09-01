@@ -70,6 +70,16 @@
   line-height: 1.6;
 }
 
+.symptomLabel {
+  display: block;
+  margin: 2px 0 7px;
+  color: var(--ink-deep);
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .support p + p {
   margin-top: 12px;
 }
@@ -106,6 +116,35 @@
   font-weight: 750;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.howPoints {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0 17px;
+  padding: 0;
+  list-style: none;
+}
+
+.howPoints li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.52;
+}
+
+.howPoints li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #7d8965;
+  font-weight: 800;
+}
+
+.howPoints strong {
+  color: var(--ink-deep);
+  font-weight: 700;
 }
 
 @media (max-width: 860px) {
