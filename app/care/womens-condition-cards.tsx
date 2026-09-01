@@ -22,6 +22,7 @@ export function WomensConditionCards({ conditions, details, detailed = false }: 
                 alt={detail.imageAlt}
                 fill
                 quality={100}
+                unoptimized={detail.image.endsWith("-hd.webp")}
                 sizes="(max-width: 560px) calc(100vw - 48px), (max-width: 860px) calc(50vw - 34px), 400px"
               />
             </div>
