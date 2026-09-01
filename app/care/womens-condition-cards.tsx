@@ -21,12 +21,13 @@ export function WomensConditionCards({ conditions, details, detailed = false }: 
                 src={detail.image}
                 alt={detail.imageAlt}
                 fill
-                sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+                quality={100}
+                sizes="(max-width: 560px) calc(100vw - 48px), (max-width: 860px) calc(50vw - 34px), 400px"
               />
             </div>
             <div className={styles.content}>
               <h3>{condition}</h3>
-              <p>{detail.symptoms}</p>
+              {detail.symptoms ? <p>{detail.symptoms}</p> : null}
               <div className={styles.support}>
                 <span>{detail.approachLabel ?? "How acupuncture may fit"}</span>
                 {detail.how.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
