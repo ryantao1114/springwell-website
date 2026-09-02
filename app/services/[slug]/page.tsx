@@ -36,7 +36,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const service = getService(slug);
   if (!service) notFound();
   const isAcupuncture = service.slug === "acupuncture";
-  const heroImage = isAcupuncture ? "/images/acupuncture-hero-background.webp" : service.image;
+  const heroImage = isAcupuncture ? "/images/acupuncture-treatment-hero.png" : service.image;
 
   return (
     <PageShell>

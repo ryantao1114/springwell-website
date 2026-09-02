@@ -22,8 +22,8 @@
 
 .background img {
   object-fit: cover;
-  object-position: 58% 48%;
-  transform: scale(1.025);
+  object-position: 60% 48%;
+  transform: scale(1.005);
   animation: backgroundDrift 18s ease-out both;
 }
 
@@ -107,8 +107,8 @@
 }
 
 @keyframes backgroundDrift {
-  from { transform: scale(1.075); }
-  to { transform: scale(1.025); }
+  from { transform: scale(1.035); }
+  to { transform: scale(1.005); }
 }
 
 @media (max-width: 860px) {
