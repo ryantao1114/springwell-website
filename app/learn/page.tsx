@@ -40,42 +40,60 @@ const topics = [
     number: "01",
     title: "Fertility & IVF",
     description: "Learn how acupuncture visits may be timed around fertility planning, IUI, ovarian stimulation, egg retrieval, embryo transfer, sleep, and stress.",
-    questions: ["When should I start before IVF?", "How does care change during stimulation?", "What can I expect around transfer?"],
+    guides: [
+      { title: "Planning before treatment", copy: "Cycle patterns, ovulation timing, sleep, digestion, stress, and your fertility goals help shape the starting plan." },
+      { title: "Care through IUI and IVF", copy: "Visit timing and treatment focus can change around stimulation, retrieval, recovery, and embryo transfer." },
+    ],
     href: "/care/fertility-ivf-support",
   },
   {
     number: "02",
     title: "Women’s Health",
     description: "Explore individualized acupuncture care for menstrual symptoms, irregular cycles, PCOS-related concerns, and perimenopause.",
-    questions: ["Why does cycle timing matter?", "Can each visit use a different plan?", "How are symptoms tracked across a cycle?"],
+    guides: [
+      { title: "Cycle-based care", copy: "Point selection can change with menstrual timing, pain, flow, sleep, digestion, energy, and other symptoms." },
+      { title: "Perimenopause and changing symptoms", copy: "Care follows the concerns affecting daily life, including hot flashes, sleep disruption, headaches, mood, and energy." },
+    ],
     href: "/care/womens-health",
   },
   {
     number: "03",
     title: "Pain & TMJ",
     description: "Understand how acupuncture may address pain sensitivity, muscle tension, jaw clenching, headaches, neck pain, back pain, and movement.",
-    questions: ["What happens during a pain visit?", "Can jaw and neck tension be treated together?", "How is progress measured?"],
+    guides: [
+      { title: "Pain and muscle tension", copy: "Treatment can combine local and distal points to address sensitivity, muscle guarding, movement, and recurring tension." },
+      { title: "The jaw, head, and neck connection", copy: "TMJ tension, headaches, neck tightness, and shoulder tension are often considered together instead of as isolated areas." },
+    ],
     href: "/care/pain-management",
   },
   {
     number: "04",
     title: "Stress & Sleep",
     description: "Learn how treatment can help the body slow down, release physical tension, support restful sleep, and recover more consistently.",
-    questions: ["Why do stress and sleep affect each other?", "What is wired-but-tired fatigue?", "Can ear seeds support care between visits?"],
+    guides: [
+      { title: "Helping the body slow down", copy: "Acupuncture gives the nervous system a physical signal to settle, helping breathing deepen and tense muscles release." },
+      { title: "Support between visits", copy: "Ear seeds provide gentle acupressure that can be activated during the day to reinforce a calmer, more consistent rhythm." },
+    ],
     href: "/care/stress-sleep",
   },
   {
     number: "05",
     title: "Digestive Health",
     description: "Read about acupuncture for bloating, nausea, constipation, abdominal tension, appetite changes, and stress-sensitive digestion.",
-    questions: ["Why can stress change digestion?", "What symptoms should I track?", "How is a treatment plan individualized?"],
+    guides: [
+      { title: "The stress–digestion connection", copy: "Because the digestive and nervous systems communicate closely, stress can quickly affect appetite, bloating, nausea, and bowel rhythm." },
+      { title: "Following your digestive pattern", copy: "Treatment considers timing, food-related changes, abdominal tension, sleep, stress, and how symptoms respond between visits." },
+    ],
     href: "/care/digestive-support",
   },
   {
     number: "06",
     title: "Your First Visit",
     description: "Know what to expect from the health history, Chinese medicine assessment, acupuncture treatment, and follow-up plan at SpringWell.",
-    questions: ["What should I wear?", "What does acupuncture feel like?", "How long is the first appointment?"],
+    guides: [
+      { title: "Consultation and assessment", copy: "Your first visit includes time to discuss your health history, current symptoms, goals, and relevant tongue and pulse findings." },
+      { title: "Treatment and next steps", copy: "Fine needles are placed while you rest comfortably, followed by a clear plan for timing, frequency, and what to notice afterward." },
+    ],
     href: "/new-patients",
   },
 ] as const;
@@ -164,7 +182,7 @@ export default function LearnPage() {
         <div className="container">
           <div className={styles.sectionHeading}><p className="eyebrow">Explore by topic</p><h2 id="topics-title">Find guidance for what brings you in.</h2></div>
           <div className={styles.topicList}>
-            {topics.map((topic) => <article className={styles.topicRow} key={topic.title}><span className={styles.topicNumber}>{topic.number}</span><div className={styles.topicIntro}><h3>{topic.title}</h3><p>{topic.description}</p></div><ul>{topic.questions.map((question) => <li key={question}>{question}</li>)}</ul><Link className={styles.topicLink} href={topic.href}>Explore {topic.title} <ArrowIcon /></Link></article>)}
+            {topics.map((topic) => <article className={styles.topicRow} key={topic.title}><span className={styles.topicNumber}>{topic.number}</span><div className={styles.topicIntro}><h3>{topic.title}</h3><p>{topic.description}</p></div><div className={styles.topicGuides}>{topic.guides.map((guide) => <div className={styles.topicGuide} key={guide.title}><h4>{guide.title}</h4><p>{guide.copy}</p></div>)}</div><Link className={styles.topicLink} href={topic.href}>Explore {topic.title} <ArrowIcon /></Link></article>)}
           </div>
         </div>
       </section>
