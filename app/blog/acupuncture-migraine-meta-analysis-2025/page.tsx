@@ -62,7 +62,7 @@ export default function MigraineMetaAnalysisArticle() {
         <header className={styles.articleHero}>
           <div className={"container " + styles.articleHeroGrid}>
             <div className={styles.articleHeroCopy}>
-              <Link className={styles.backLink} href="/blog">← Springwell Journal</Link>
+              <Link className={styles.backLink} href="/learn">← SpringWell Learning Center</Link>
               <p className="eyebrow">Research update · Pain &amp; migraine</p>
               <h1>{title}</h1>
               <p className={styles.articleDeck}>What the pooled results suggest, how large the differences were, and why migraine care still needs an individualized medical plan.</p>

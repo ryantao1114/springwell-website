@@ -29,7 +29,7 @@ const nav = [
       { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "A whole-person approach to stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
   },
-  { href: "/blog", label: "Blog" },
+  { href: "/learn", label: "Learn" },
   { href: "/new-patients", label: "New Patients" },
 ];
 
@@ -152,12 +152,6 @@ export function SiteHeader() {
             Book Now <ArrowIcon />
           </Link>
         </nav>
-        <a className="header-phone" href={site.phoneHref} aria-label={`Call SpringWell Acupuncture at ${site.phone}`}>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7.2 3.5 9.7 7.9 7.9 9.7c1.2 2.5 3.2 4.5 5.7 5.7l1.8-1.8 4.4 2.5-.7 3.1c-.2.8-.9 1.3-1.7 1.3C9.7 20.5 3.5 14.3 3.5 6.6c0-.8.5-1.5 1.3-1.7l2.4-.6Z" />
-          </svg>
-          <span>{site.phone}</span>
-        </a>
         <Link className="button button-small button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">
           Book Now <ArrowIcon />
         </Link>
@@ -204,7 +198,7 @@ export function SiteFooter() {
           <Link href="/specialist">What We Treat</Link>
           <Link href="/care/womens-health">Women’s Health</Link>
           <Link href="/care/fertility-ivf-support">Fertility &amp; IVF</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/learn">Learn</Link>
           <Link href="/new-patients">New Patients</Link>
         </div>
         <div>

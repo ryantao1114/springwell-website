@@ -82,7 +82,7 @@ export default function EmbryoQualityIvfArticle() {
         <header className={styles.articleHero}>
           <div className={"container " + styles.articleHeroGrid}>
             <div className={styles.articleHeroCopy}>
-              <Link className={styles.backLink} href="/blog">← Springwell Journal</Link>
+              <Link className={styles.backLink} href="/learn">← SpringWell Learning Center</Link>
               <p className="eyebrow">Research update · Fertility &amp; IVF</p>
               <h1>{title}</h1>
               <p className={styles.articleDeck}>What the study found, what the numbers mean, and why individualized care still matters.</p>

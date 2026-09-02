@@ -61,7 +61,7 @@ export default function AnxietyMetaAnalysisArticle() {
         <header className={styles.articleHero}>
           <div className={"container " + styles.articleHeroGrid}>
             <div className={styles.articleHeroCopy}>
-              <Link className={styles.backLink} href="/blog">← Springwell Journal</Link>
+              <Link className={styles.backLink} href="/learn">← SpringWell Learning Center</Link>
               <p className="eyebrow">Research update · Stress &amp; anxiety</p>
               <h1>{title}</h1>
               <p className={styles.articleDeck}>What the study found in the short term, what happened at follow up, and why anxiety care should remain coordinated and individualized.</p>
