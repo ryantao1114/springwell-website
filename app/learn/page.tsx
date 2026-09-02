@@ -5,7 +5,7 @@ import { BottomCTA, PageShell } from "../components/site-shell";
 import styles from "./learn.module.css";
 
 export const metadata: Metadata = {
-  title: "Acupuncture Learning Center | SpringWell Acupuncture",
+  title: "Acupuncture Learning Center",
   description:
     "Clear acupuncture guides and research insights for fertility and IVF, women’s health, pain, stress, sleep, and digestive concerns in Herndon, Virginia.",
   alternates: { canonical: "/learn" },
