@@ -152,6 +152,16 @@ export function SiteHeader() {
             Book Now <ArrowIcon />
           </Link>
         </nav>
+        <a
+          className="header-phone"
+          href={site.phoneHref}
+          aria-label={`Call ${site.name} at ${site.phone}`}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.2 3.8 9.6 8 7.9 9.7a14.4 14.4 0 0 0 6.4 6.4l1.7-1.7 4.2 2.4-.7 3a2 2 0 0 1-2 1.5A16.8 16.8 0 0 1 2.7 6.5a2 2 0 0 1 1.5-2Z" />
+          </svg>
+          <span>{site.phone}</span>
+        </a>
         <Link className="button button-small button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">
           Book Now <ArrowIcon />
         </Link>
