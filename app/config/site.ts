@@ -14,7 +14,8 @@ export const site = {
   addressLocality: "Herndon",
   addressRegion: "VA",
   postalCode: "20170",
-  directionsUrl: "https://www.google.com/maps/search/?api=1&query=463+Carlisle+Dr+Suite+B+Second+Floor+Herndon+VA+20170",
+  directionsUrl: "https://www.google.com/maps/search/?api=1&query=springwell+acupuncture",
+  mapEmbedUrl: "https://www.google.com/maps?q=springwell%20acupuncture&output=embed",
   hours: {
     days: "Tuesday, Thursday, Friday & Sunday",
     time: "9:00 AM–5:30 PM",
