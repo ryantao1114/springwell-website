@@ -48,7 +48,7 @@ export function HomeLocationMap() {
         <div className="about-map-wrap">
           <iframe
             title={`Map showing ${site.name} at ${site.address}`}
-            src={`https://www.google.com/maps?q=${encodeURIComponent(site.address)}&output=embed`}
+            src={site.mapEmbedUrl}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
