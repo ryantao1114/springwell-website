@@ -9,6 +9,7 @@ import { MechanismAnimation } from "../mechanism-animation";
 import { TcmPerspective } from "../tcm-perspective";
 import { site } from "../../config/site";
 import heroStyles from "./acupuncture-hero.module.css";
+import faqStyles from "./service-faq.module.css";
 import { ServiceExplainerCards } from "./service-explainer-cards";
 
 type ServicePageProps = {
@@ -70,21 +71,6 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       <ServiceExplainerCards service={service} />
 
-      {service.slug === "acupuncture" && <section className="section-pad expected-results-section" aria-labelledby="expected-results-title">
-        <div className="container expected-results-grid">
-          <div>
-            <p className="eyebrow">What you can expect</p>
-            <h2 id="expected-results-title">Expected Results</h2>
-            <p>Relief is often noticed during or after the first session, while symptoms may gradually change with each visit. Because tight or restricted muscles can be more vulnerable to strain, regular acupuncture may help address muscle tension and soreness as part of a broader plan for preventing recurring pain and injury.</p>
-          </div>
-          <div className="expected-results-detail">
-            <p className="eyebrow">Treatment frequency</p>
-            <h3>A plan that follows your condition.</h3>
-            <p>Frequency depends on the severity and duration of the condition. Some chronic concerns benefit from ongoing maintenance visits, while others may need a shorter course of care.</p>
-          </div>
-        </div>
-      </section>}
-
       <section className="section-pad service-care-detail-section">
         <div className="container service-care-detail-grid">
           <div>
@@ -100,15 +86,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
-      <section className="section-pad service-faq-section" aria-labelledby="service-faq-title">
-        <div className="container service-faq-grid">
-          <div>
-            <p className="eyebrow">Questions about {service.title.toLowerCase()}</p>
-            <h2 id="service-faq-title">A clearer place to begin.</h2>
-            <p>Every treatment is discussed with attention to your history, comfort, and goals. These are a few practical questions patients often ask before booking.</p>
+      <section className={faqStyles.section} aria-labelledby="service-faq-title">
+        <div className="container">
+          <div className={faqStyles.heading}>
+            <p className="eyebrow">Knowledge</p>
+            <h2 id="service-faq-title">Frequently Asked Questions</h2>
           </div>
-          <div className="service-faq-list">
-            {service.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span aria-hidden="true">＋</span></summary><p>{faq.answer}</p></details>)}
+          <div className={faqStyles.list}>
+            {service.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span aria-hidden="true">⌄</span></summary><p>{faq.answer}</p></details>)}
           </div>
         </div>
       </section>
