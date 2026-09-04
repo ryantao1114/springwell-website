@@ -98,7 +98,7 @@ export const careAreas: CareArea[] = [
     slug: "pain-management", number: "03", eyebrow: "Neck · Back · Muscle · TMJ pain",
     title: "Acupuncture for Pain Management", seoTitle: "Pain Management Acupuncture for TMJ, Neck & Back Pain",
     summary: "Focused care for musculoskeletal, jaw, facial, headache, and recurring tension patterns that affect movement and daily life.",
-    image: "/images/home-pain-management-upload.webp", imageAlt: "A person holding their neck and lower back while experiencing pain",
+    image: "/images/pain-management-electroacupuncture-hero.jpg", imageAlt: "Electroacupuncture treatment for lower-back pain beneath a warming therapy lamp",
     introTitle: "A treatment plan shaped around movement, function, and recovery.",
     introCopy: "Neck pain, back pain, muscle tension, TMJ symptoms, and headaches often overlap with sleep, stress, work habits, and movement. We look at the full pattern and create a treatment plan focused on pain relief, easier movement, and recovery.",
     conditions: ["Headache & migraine", "TMJ & jaw pain", "Neck & shoulder pain", "Back pain", "Muscle tension", "Persistent / chronic pain"],
