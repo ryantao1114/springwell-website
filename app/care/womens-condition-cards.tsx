@@ -35,7 +35,8 @@ export function WomensConditionCards({ conditions, details, detailed = false, sy
                     fill
                     quality={100}
                     unoptimized
-                    sizes="(max-width: 700px) 42vw, (max-width: 1100px) 22vw, 180px"
+                    style={{ objectFit: "contain" }}
+                    sizes="(max-width: 520px) 320px, (max-width: 700px) 36vw, (max-width: 1500px) 24vw, 220px"
                   />
                 </div>
                 <div className={`${styles.support} ${styles.womensSupport}`}>
