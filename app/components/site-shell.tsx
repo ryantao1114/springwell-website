@@ -10,7 +10,7 @@ const nav = [
   { href: "/about", label: "About" },
   {
     href: "/services/acupuncture",
-    label: "Acupuncture",
+    label: "Service",
     intro: "Traditional treatments, explained clearly and selected according to your needs.",
     items: [
       { href: "/services/acupuncture", title: "Acupuncture", text: "Personalized treatment using sterile, single-use needles, with electroacupuncture when appropriate.", tone: "needle" },
