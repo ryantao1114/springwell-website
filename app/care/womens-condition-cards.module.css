@@ -76,22 +76,22 @@
 
 .womensBody {
   display: grid;
-  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
-  gap: 18px;
-  align-items: stretch;
+  grid-template-columns: minmax(180px, 0.95fr) minmax(0, 1.2fr);
+  gap: 22px;
+  align-items: start;
   margin-top: 18px;
 }
 
 .womensMedia {
-  min-height: 224px;
-  aspect-ratio: auto;
-  align-self: stretch;
-  border-radius: 46% 54% 44% 56% / 40% 44% 56% 60%;
-  background: #f9eee9;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+  align-self: start;
+  border-radius: 18px;
+  background: #fbf4ef;
 }
 
 .womensMedia img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -259,7 +259,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1500px) {
   .womensGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -294,12 +294,8 @@
   }
 
   .womensBody {
-    grid-template-columns: minmax(118px, .8fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(150px, 0.9fr) minmax(0, 1.2fr);
     gap: 16px;
-  }
-
-  .womensMedia {
-    min-height: 250px;
   }
 }
 
@@ -309,9 +305,9 @@
   }
 
   .womensMedia {
-    min-height: 0;
-    aspect-ratio: 16 / 10;
-    border-radius: 34% 66% 30% 70% / 46% 35% 65% 54%;
+    width: min(100%, 320px);
+    margin-inline: auto;
+    aspect-ratio: 4 / 5;
   }
 }
 
