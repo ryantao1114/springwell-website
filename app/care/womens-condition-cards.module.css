@@ -86,13 +86,18 @@
   min-height: 0;
   aspect-ratio: 4 / 5;
   align-self: start;
-  border-radius: 18px;
-  background: #fbf4ef;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
 }
 
 .womensMedia img {
   object-fit: contain;
   object-position: center;
+}
+
+.card:hover .womensMedia img {
+  transform: none;
 }
 
 .womensSupport {
@@ -259,7 +264,7 @@
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
   .womensGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
