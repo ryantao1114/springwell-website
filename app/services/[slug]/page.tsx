@@ -176,12 +176,19 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div className={faqStyles.list}>
             {service.faqs.map((faq) => <details key={faq.question}><summary>{faq.question}<span aria-hidden="true">⌄</span></summary><p>{faq.answer}</p></details>)}
           </div>
+          {isAcupuncture && (
+            <div className={faqStyles.cta}>
+              <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">
+                BOOK NOW <ArrowIcon />
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
       <TcmPerspective />
 
-      <BottomCTA />
+      {!isAcupuncture && <BottomCTA />}
     </PageShell>
   );
 }
