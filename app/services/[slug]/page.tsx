@@ -157,7 +157,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div>
             <p className="eyebrow">Common care areas</p>
             <h2>Where {service.title} May Fit Into Your Care</h2>
-            <p className="service-care-detail-note">{service.clinicalNote}</p>
+            {!isAcupuncture && <p className="service-care-detail-note">{service.clinicalNote}</p>}
           </div>
           <ul className="service-care-detail-list">
             {service.careAreas.map((area) => (
