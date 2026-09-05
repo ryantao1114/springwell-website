@@ -35,7 +35,6 @@ export function LocalBusinessJsonLd() {
       "@type": "ContactPoint",
       telephone: "+1-703-495-2857",
       contactType: "appointments",
-      areaServed: "US",
     },
     areaServed: site.serviceArea.map((name) => ({
       "@type": "Place",
