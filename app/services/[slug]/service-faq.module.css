@@ -74,6 +74,16 @@
   line-height: 1.75;
 }
 
+.cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+}
+
+.cta a {
+  min-width: 178px;
+}
+
 @media (max-width: 760px) {
   .section {
     padding: 76px 0 86px;
@@ -96,5 +106,14 @@
   .list details p {
     padding: 0 36px 25px 0;
     font-size: 0.94rem;
+  }
+
+  .cta {
+    margin-top: 40px;
+  }
+
+  .cta a {
+    width: 100%;
+    max-width: 360px;
   }
 }
