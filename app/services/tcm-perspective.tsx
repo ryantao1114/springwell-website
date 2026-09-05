@@ -8,27 +8,28 @@ export function TcmPerspective() {
     <section className={styles.section} aria-labelledby="tcm-perspective-title">
       <div className={styles.inner}>
         <h2 className={styles.title} id="tcm-perspective-title">
-          A thoughtful view of Traditional Chinese Medicine
+          How Traditional Chinese Medicine shapes the visit
         </h2>
 
         <div className={styles.grid}>
           <div className={styles.leftColumn}>
             <div className={styles.copyBlock}>
-              <h3>A long clinical tradition</h3>
+              <h3>More than the location of a symptom</h3>
               <p>
-                Rooted in thousands of years of practice and refined through
-                generations of observation, Traditional Chinese Medicine
-                continues to support health and well-being in our modern world.
+                Traditional Chinese Medicine looks for patterns across the body,
+                not just the place that hurts. Sleep, digestion, temperature,
+                menstrual changes, stress, energy, tongue appearance, and pulse
+                quality may all add useful context when they are relevant to your concern.
               </p>
             </div>
 
             <div className={styles.copyBlock}>
-              <h3>A whole-person perspective</h3>
+              <h3>Traditional reasoning, used with modern safety</h3>
               <p>
-                TCM looks beyond isolated symptoms to understand the patterns,
-                lifestyle, and circumstances that influence your health. The
-                goal is to restore balance, build resilience, and support your
-                body’s natural capacity to heal.
+                Traditional pattern assessment helps guide point selection, while
+                medications, diagnoses, pregnancy status, recent procedures, and
+                other medical care are reviewed for safety. The two perspectives
+                are used together rather than treating them as competing systems.
               </p>
               <div className={styles.action}>
                 <a
@@ -53,12 +54,12 @@ export function TcmPerspective() {
           </div>
 
           <div className={`${styles.copyBlock} ${styles.rightColumn}`}>
-            <h3>Individualized care</h3>
+            <h3>Why point selection can change</h3>
             <p>
-              Treatments such as acupuncture, cupping, and herbal medicine are
-              personalized to your unique needs. Your care plan is designed
-              with intent and, when appropriate, coordinated with other
-              healthcare providers to support your overall well-being.
+              Two people with the same diagnosis may not receive exactly the same
+              treatment, and your own point selection may change from visit to visit.
+              What matters is the pattern of symptoms that is present that day and
+              whether the plan is producing meaningful change over time.
             </p>
           </div>
         </div>
