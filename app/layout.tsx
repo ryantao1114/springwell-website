@@ -24,17 +24,14 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "SpringWell Acupuncture | Holistic Care & Acupuncture in Herndon, VA",
+    default: "Acupuncture in Herndon, VA | SpringWell Acupuncture",
     template: `%s | ${site.name}`,
   },
   applicationName: site.name,
   description: site.description,
   keywords: [...site.seoKeywords],
-  alternates: {
-    canonical: site.url,
-  },
   openGraph: {
-    title: site.name,
+    title: "Acupuncture in Herndon, VA | SpringWell Acupuncture",
     description: site.description,
     url: site.url,
     siteName: site.name,
@@ -43,13 +40,13 @@ export const metadata: Metadata = {
       { url: "/images/springwell-official-logo.png", alt: site.name },
       {
         url: "/images/provider-renjinming-2026.webp",
-        alt: "Personalized acupuncture and holistic care in Herndon, Virginia",
+        alt: "SpringWell Acupuncture in Herndon, Virginia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: site.name,
+    title: "Acupuncture in Herndon, VA | SpringWell Acupuncture",
     description: site.description,
     images: ["/images/springwell-official-logo.png"],
   },
