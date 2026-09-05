@@ -72,12 +72,56 @@ export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
+
   const isAcupuncture = service.slug === "acupuncture";
   const heroImage = isAcupuncture ? "/images/acupuncture-treatment-hero.png" : service.image;
   const pageTitle = isAcupuncture ? "Acupuncture in Herndon, VA" : service.title;
+  const seo = serviceSeo[service.slug] ?? {
+    title: `${service.title} in Herndon, VA`,
+    description: service.summary,
+  };
+  const canonicalUrl = `${site.url}/services/${service.slug}`;
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${canonicalUrl}#service`,
+    name: seo.title,
+    serviceType: service.title,
+    description: seo.description,
+    url: canonicalUrl,
+    provider: { "@id": `${site.url}/#business` },
+    areaServed: [
+      { "@type": "City", name: "Herndon", addressRegion: "VA" },
+      { "@type": "City", name: "Reston", addressRegion: "VA" },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${canonicalUrl}#faq`,
+    mainEntity: service.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       <section className={`service-page-hero service-hero-${service.slug} ${heroStyles.hero}`}>
         <div className={`${heroStyles.background} ${heroStyles[`${service.slug.replace("-", "")}Background`] ?? ""}`} aria-hidden="true">
           <Image src={heroImage} alt="" fill priority sizes="100vw" unoptimized />
