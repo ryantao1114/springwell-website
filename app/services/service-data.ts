@@ -27,35 +27,69 @@ export const services: Service[] = [
     eyebrow: "Core treatment",
     title: "Acupuncture",
     summary:
-      "A personalized treatment using very fine, sterile, single-use needles placed at selected points on the body.",
+      "Acupuncture uses fine, sterile, single-use needles at carefully selected points to support pain, women’s health, stress, sleep, digestion, and overall wellbeing.",
     introTitle: "Care that begins with one point and considers the whole person.",
-    introCopy: "Our licensed acupuncturist selects points according to your symptoms, health history, treatment goals, and traditional tongue and pulse assessment. The aim is thoughtful, individualized care that connects a local treatment with the wider patterns affecting how you feel.",
+    introCopy:
+      "Acupuncture is more than placing needles where it hurts. We look at what is happening now, how long it has been going on, what makes it better or worse, your medications and medical care, and patterns such as sleep, digestion, menstrual changes, stress, and energy. Point selection is then guided by your main concern, physical findings, and traditional tongue and pulse assessment when useful.",
     image: "/images/service-acupuncture.png",
     imageAlt: "Acupuncture treatment using fine needles",
     primaryLabel: "How it may work",
     primaryCopy:
-      "Needle stimulation engages sensory nerves and local connective tissue. These signals may influence pain processing, muscle tone, local circulation, and autonomic regulation. Research suggests that acupuncture works through several overlapping pathways rather than one single mechanism.",
+      "Needle stimulation sends signals through sensory nerves and local connective tissue. These signals can influence pain processing, muscle tone, local blood flow, and parts of the nervous system involved in stress and recovery. Research suggests acupuncture works through several overlapping pathways rather than one single mechanism, and the strength of evidence varies by condition.",
     visitLabel: "What a visit may involve",
     visitCopy:
-      "Point selection is based on your health history, current symptoms, treatment goals, and traditional assessment. Needles are placed gently and usually remain for a short rest period while you relax.",
+      "We begin with your main concern, health history, medications, current medical treatment, and any changes since your last visit. Fine needles are placed gently and usually remain while you rest for about 20–30 minutes. Electroacupuncture or cupping may be added when there is a clear reason to use it. We track what changes between visits and adjust the plan rather than repeating the same treatment automatically.",
     safetyLabel: "Safety & comfort",
     safetyCopy:
-      "Temporary soreness, light bruising, or a brief heavy or tingling sensation can occur. We use sterile, single-use needles and adjust technique to your comfort.",
+      "Most people feel little or no pain when the needles are placed. Brief heaviness, warmth, tingling, mild soreness, or light bruising can occur. We use sterile, single-use needles and review pregnancy, medications, bleeding risk, recent procedures, and other health factors before treatment.",
     careAreas: [
-      "Women’s health and menstrual cycle concerns",
-      "Fertility planning, IUI, and IVF support",
-      "TMJ, jaw, and facial pain",
-      "Headaches and neck, shoulder, or back tension",
-      "Stress, sleep difficulties, and fatigue",
-      "Bloating and stress-sensitive digestive concerns",
+      "Menstrual cramps, cycle-related discomfort, and irregular-cycle concerns",
+      "Perimenopause and menopause symptoms such as hot flashes, night sweats, and sleep disruption",
+      "Fertility planning and supportive care during IUI or IVF",
+      "TMJ, jaw, facial pain, headaches, and migraine-related concerns",
+      "Neck, shoulder, back, and other musculoskeletal pain or tension",
+      "Stress, anxiety-related physical tension, and difficulty winding down",
+      "Sleep difficulties, fatigue, and recovery during demanding periods",
+      "Bloating and digestive symptoms that may fluctuate with stress or routine",
     ],
     clinicalNote:
-      "Treatment is individualized around your symptoms, health history, comfort, goals, and response over time.",
+      "Acupuncture can be useful as part of a broader care plan, but it is not the right tool for every problem. Evidence is strongest for some pain conditions and more mixed for many other concerns. We set clear goals, watch your response over time, and recommend medical evaluation or coordination when symptoms need more than acupuncture alone.",
     faqs: [
-      { question: "What happens during an acupuncture visit?", answer: "We begin with a detailed conversation about your symptoms, health history, and goals. When appropriate, the visit includes tongue and pulse assessment, gentle needle placement, a quiet rest period, and a plan for follow-up." },
-      { question: "Does acupuncture hurt?", answer: "Most people feel little or no pain. A brief pinch, heaviness, warmth, tingling, or a dull sensation can occur, and we adjust the treatment to your comfort." },
-      { question: "How often should I receive acupuncture?", answer: "Frequency depends on the severity, duration, and pattern of your concern. We discuss a practical starting plan and adjust it according to your response." },
-      { question: "What can acupuncture support?", answer: "Acupuncture may support pain relief, muscle relaxation, mobility, stress regulation, sleep, menstrual comfort, fertility care, digestive wellbeing, and overall recovery through an individualized plan." },
+      {
+        question: "What happens during an acupuncture visit?",
+        answer:
+          "We start with the reason you came in and the details that can change treatment: when symptoms began, what triggers them, sleep, digestion, menstrual or hormonal changes when relevant, medications, recent procedures, and other medical care. After an exam and traditional assessment when useful, fine needles are placed and you rest quietly for about 20–30 minutes. We review how you respond and use that information to guide the next visit.",
+      },
+      {
+        question: "Does acupuncture hurt?",
+        answer:
+          "Most people feel little or no pain. You may notice a quick pinch as a needle enters, followed by heaviness, warmth, tingling, pressure, or a dull ache around some points. These sensations should remain tolerable, and needles can be adjusted or removed at any time.",
+      },
+      {
+        question: "How soon should I expect to notice a change?",
+        answer:
+          "There is no single timeline. Some people notice relaxation or symptom changes after an early visit, while long-standing or complex concerns may change more gradually. We look for practical signs such as fewer painful days, better sleep, easier movement, less symptom intensity, or improved recovery rather than promising a specific result by a specific visit.",
+      },
+      {
+        question: "How often should I receive acupuncture?",
+        answer:
+          "Frequency depends on what you are treating, how severe or long-standing it is, and how you respond. Acute problems may be seen more closely at first, while maintenance or supportive care may be spaced farther apart. We agree on a practical starting schedule and reassess instead of assuming everyone needs the same number of visits.",
+      },
+      {
+        question: "Can acupuncture be used during fertility treatment, IUI, or IVF?",
+        answer:
+          "Yes, acupuncture can be used as supportive care during fertility treatment when it is coordinated with your reproductive plan. We take timing, medications, procedures, pregnancy possibility, symptoms, and your fertility clinic’s instructions into account. Acupuncture does not replace reproductive medical care or guarantee pregnancy or IVF success.",
+      },
+      {
+        question: "Can acupuncture help with perimenopause or menopause symptoms?",
+        answer:
+          "Acupuncture is sometimes used to support symptoms such as hot flashes, night sweats, sleep disruption, stress, headaches, and muscle tension during the menopause transition. Because symptoms can also reflect other medical issues, we review the broader picture and encourage appropriate medical evaluation when needed.",
+      },
+      {
+        question: "What can acupuncture support?",
+        answer:
+          "Common reasons people seek acupuncture include pain and muscle tension, headaches and TMJ symptoms, menstrual discomfort, fertility support, perimenopause symptoms, stress, sleep problems, and some digestive concerns. The evidence and expected benefit are not the same for every condition, so the plan should match the problem rather than treating acupuncture as a cure-all.",
+      },
     ],
   },
   {
