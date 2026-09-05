@@ -16,6 +16,24 @@ type ServicePageProps = {
   params: Promise<{ slug: string }>;
 };
 
+const serviceSeo: Record<string, { title: string; description: string }> = {
+  acupuncture: {
+    title: "Acupuncture in Herndon, VA",
+    description:
+      "Acupuncture in Herndon, VA for women’s health, fertility, perimenopause, pain, stress, sleep, and digestive concerns at SpringWell Acupuncture.",
+  },
+  cupping: {
+    title: "Cupping Therapy in Herndon, VA",
+    description:
+      "Cupping therapy in Herndon, VA for muscle tension, soreness, stiffness, and movement-related discomfort at SpringWell Acupuncture.",
+  },
+  "herbal-medicine": {
+    title: "Chinese Herbal Medicine in Herndon, VA",
+    description:
+      "Chinese herbal medicine in Herndon, VA with careful formula selection, medication review, and safety screening at SpringWell Acupuncture.",
+  },
+};
+
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
 }
@@ -25,10 +43,28 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   const service = getService(slug);
   if (!service) return {};
 
+  const seo = serviceSeo[service.slug] ?? {
+    title: `${service.title} in Herndon, VA`,
+    description: service.summary,
+  };
+  const canonicalUrl = `${site.url}/services/${service.slug}`;
+
   return {
-    title: service.title,
-    description: `${service.summary} Explore common care areas, what to expect, and safety information at Springwell Acupuncture in Northern Virginia.`,
-    alternates: { canonical: `/services/${service.slug}` },
+    title: seo.title,
+    description: seo.description,
+    alternates: { canonical: canonicalUrl },
+    openGraph: {
+      type: "website",
+      url: canonicalUrl,
+      title: `${seo.title} | SpringWell Acupuncture`,
+      description: seo.description,
+      siteName: site.name,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${seo.title} | SpringWell Acupuncture`,
+      description: seo.description,
+    },
   };
 }
 
@@ -38,6 +74,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
   if (!service) notFound();
   const isAcupuncture = service.slug === "acupuncture";
   const heroImage = isAcupuncture ? "/images/acupuncture-treatment-hero.png" : service.image;
+  const pageTitle = isAcupuncture ? "Acupuncture in Herndon, VA" : service.title;
 
   return (
     <PageShell>
@@ -50,7 +87,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           <div className={`service-page-hero-copy ${heroStyles.copy}`}>
             <Link className={`service-back-link ${heroStyles.back}`} href="/services">Services</Link>
             <p className={`eyebrow ${heroStyles.eyebrow}`}>{service.eyebrow}</p>
-            <h1 className={heroStyles.title}>{service.title}</h1>
+            <h1 className={heroStyles.title}>{pageTitle}</h1>
             <p className={heroStyles.summary}>{service.summary}</p>
             <a className={`button button-light ${heroStyles.button}`} href={site.bookingUrl} target="_blank" rel="noreferrer">
               BOOK NOW <ArrowIcon />
@@ -61,7 +98,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       <section className="section-pad service-intro-statement">
         <div className="container service-intro-statement-inner">
-          <p className="eyebrow">{service.eyebrow}</p>
+          <p className="eyebrow">{isAcupuncture ? "Acupuncture care in Herndon" : service.eyebrow}</p>
           <h2>{service.introTitle}</h2>
           <p>{service.introCopy}</p>
         </div>
