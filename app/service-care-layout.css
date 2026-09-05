@@ -1,0 +1,89 @@
+.service-care-detail-section {
+  padding-top: 96px;
+  padding-bottom: 104px;
+  background: var(--mist-surface);
+}
+
+.service-care-detail-section .service-care-detail-grid {
+  display: block;
+}
+
+.service-care-detail-section .service-care-detail-grid > div:first-child {
+  max-width: 900px;
+  margin-bottom: 46px;
+}
+
+.service-care-detail-section .service-care-detail-grid h2 {
+  max-width: 900px;
+  margin-bottom: 0;
+  font-size: clamp(2.75rem, 4.4vw, 4.6rem);
+  line-height: 1.02;
+}
+
+.service-care-detail-section .service-care-detail-note {
+  max-width: 760px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: .96rem;
+  line-height: 1.7;
+}
+
+.service-care-detail-section .service-care-detail-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 22px;
+  list-style: none;
+  border-top: 0;
+}
+
+.service-care-detail-section .service-care-detail-list li {
+  min-height: 112px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 24px 26px;
+  border: 1px solid rgba(105, 85, 76, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 251, 243, 0.82);
+  box-shadow: 0 14px 34px rgba(73, 60, 55, 0.055);
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.service-care-detail-section .service-care-detail-list .check-icon {
+  margin-top: 2px;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  background: var(--cream);
+}
+
+@media (max-width: 760px) {
+  .service-care-detail-section {
+    padding-top: 68px;
+    padding-bottom: 72px;
+  }
+
+  .service-care-detail-section .service-care-detail-grid > div:first-child {
+    margin-bottom: 30px;
+  }
+
+  .service-care-detail-section .service-care-detail-grid h2 {
+    font-size: clamp(2.45rem, 11vw, 3.25rem);
+    line-height: 1.04;
+  }
+
+  .service-care-detail-section .service-care-detail-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-care-detail-section .service-care-detail-list li {
+    min-height: 0;
+    padding: 20px 20px;
+    font-size: 1rem;
+  }
+}
