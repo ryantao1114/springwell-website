@@ -7,7 +7,7 @@ import styles from "./service-explainer-cards.module.css";
 const acupunctureCards = [
   {
     label: "How Acupuncture May Help",
-    copy: "Acupuncture may help manage pain, ease muscle tension, support mobility, and promote relaxation. It may also complement care for stress, sleep, digestive concerns, and menstrual or reproductive wellness. Treatment is tailored to your symptoms, health history, and goals.",
+    copy: "Acupuncture is commonly used for pain and muscle tension, but its role can be broader. Depending on the concern, treatment may also support menstrual comfort, perimenopause symptoms, fertility care, stress regulation, sleep, and some digestive symptoms. The goal is not to treat every symptom with the same point formula, but to choose a focused approach and track what actually changes.",
     image: {
       src: "/images/acupuncture-card-help.webp",
       alt: "Electroacupuncture clips connected to fine acupuncture needles",
@@ -16,7 +16,7 @@ const acupunctureCards = [
   },
   {
     label: "What to Expect",
-    copy: "Your first visit begins with a conversation about your health history, current concerns, and treatment goals. Your practitioner will select individualized acupuncture points and gently place fine needles while you rest comfortably. Based on your condition and treatment goals, electroacupuncture or cupping may also be included. Your treatment plan may be adjusted over time according to your needs and response.",
+    copy: "Your first visit starts with the details that matter clinically: when symptoms began, what makes them better or worse, medications, recent procedures, sleep, digestion, stress, and menstrual or fertility treatment when relevant. Fine needles are then placed at selected points while you rest. Electroacupuncture or cupping may be added only when it fits the problem. Follow-up visits focus on what changed and what still needs attention.",
     image: {
       src: "/images/acupuncture-card-expect.webp",
       alt: "Acupuncturist gently placing a needle during a back treatment",
@@ -24,8 +24,8 @@ const acupunctureCards = [
     },
   },
   {
-    label: "Safety & Comfort",
-    copy: "Treatment is provided by a licensed acupuncturist using sterile, single-use needles. Most patients feel little or no discomfort, although temporary soreness, mild bruising, heaviness, or tingling may occur. Your health history is reviewed, and each technique is adjusted for your safety and comfort.",
+    label: "What You May Notice",
+    copy: "Some people leave feeling deeply relaxed. Others first notice practical changes over the next day or two, such as easier movement, less muscle tension, fewer symptom spikes, or better sleep. Long-standing problems may change more gradually. Response varies, so we look for measurable improvement over time rather than promising a result after a set number of visits.",
     image: {
       src: "/images/acupuncture-card-safety.webp",
       alt: "Patient resting comfortably during a licensed acupuncture treatment",
@@ -83,7 +83,7 @@ export function ServiceExplainerCards({ service }: ServiceExplainerCardsProps) {
           { label: service.safetyLabel, copy: service.safetyCopy, image: herbalImages[2] },
         ];
   const heading = service.slug === "acupuncture"
-    ? "How acupuncture care comes together."
+    ? "What acupuncture can do — and what a visit is actually like."
     : service.slug === "cupping"
       ? "A closer look at fire cupping care."
       : "How herbal medicine care comes together.";
@@ -92,7 +92,7 @@ export function ServiceExplainerCards({ service }: ServiceExplainerCardsProps) {
     <section className={styles.section} data-theme={service.slug} aria-labelledby={`${service.slug}-explainer-title`}>
       <div className="container">
         <div className={styles.heading}>
-          <p className="eyebrow">A thoughtful approach to care</p>
+          <p className="eyebrow">A clear look at treatment</p>
           <h2 id={`${service.slug}-explainer-title`}>{heading}</h2>
         </div>
 
