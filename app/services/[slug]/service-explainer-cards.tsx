@@ -6,8 +6,8 @@ import styles from "./service-explainer-cards.module.css";
 
 const acupunctureCards = [
   {
-    label: "How Acupuncture May Help",
-    copy: "Acupuncture is commonly used for pain and muscle tension, but its role can be broader. Depending on the concern, treatment may also support menstrual comfort, perimenopause symptoms, fertility care, stress regulation, sleep, and some digestive symptoms. The goal is not to treat every symptom with the same point formula, but to choose a focused approach and track what actually changes.",
+    label: "How Acupuncture Works",
+    copy: "Acupuncture needles stimulate sensory nerves and local connective tissue. That input can influence how the nervous system processes pain, change muscle tone, affect local blood flow, and interact with systems involved in stress and recovery. No single pathway explains every effect, and the quality of evidence differs by condition — which is why treatment should have a clear goal rather than being used as a cure-all.",
     image: {
       src: "/images/acupuncture-card-help.webp",
       alt: "Electroacupuncture clips connected to fine acupuncture needles",
@@ -83,7 +83,7 @@ export function ServiceExplainerCards({ service }: ServiceExplainerCardsProps) {
           { label: service.safetyLabel, copy: service.safetyCopy, image: herbalImages[2] },
         ];
   const heading = service.slug === "acupuncture"
-    ? "What acupuncture can do — and what a visit is actually like."
+    ? "How acupuncture works, what happens, and what to watch for."
     : service.slug === "cupping"
       ? "A closer look at fire cupping care."
       : "How herbal medicine care comes together.";
