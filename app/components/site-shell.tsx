@@ -11,22 +11,22 @@ const nav = [
   {
     href: "/services/acupuncture",
     label: "Service",
-    intro: "Traditional treatments, explained clearly and selected according to your needs.",
+    intro: "Acupuncture, cupping, and herbal medicine explained clearly and used when appropriate.",
     items: [
-      { href: "/services/acupuncture", title: "Acupuncture", text: "Personalized treatment using sterile, single-use needles, with electroacupuncture when appropriate.", tone: "needle" },
+      { href: "/services/acupuncture", title: "Acupuncture", text: "Acupuncture using sterile, single-use needles, with electroacupuncture when appropriate.", tone: "needle" },
       { href: "/services/cupping", title: "Cupping", text: "Focused support for muscle tightness, soreness, stiffness, and movement-related tension.", tone: "cups" },
-      { href: "/services/herbal-medicine", title: "Herbal Medicine", text: "Individualized traditional formula guidance with careful medication and safety screening.", tone: "herbs" },
+      { href: "/services/herbal-medicine", title: "Herbal Medicine", text: "Traditional formula guidance with careful medication and safety screening.", tone: "herbs" },
     ],
   },
   {
     href: "/specialist",
     label: "What We Treat",
-    intro: "Focused, individualized care for the concerns that bring you in.",
+    intro: "Acupuncture care for women’s health, fertility, pain, stress, sleep, and digestive concerns.",
     items: [
-      { href: "/care/womens-health", title: "Women’s Health", text: "Menstrual health, cycle-related symptoms, PCOS concerns, and perimenopause.", tone: "fertility" },
-      { href: "/care/fertility-ivf-support", title: "Fertility & IVF", text: "Individualized support for fertility planning, IUI, IVF, and reproductive care.", tone: "needle" },
+      { href: "/care/womens-health", title: "Women’s Health", text: "Menstrual health, cycle-related symptoms, PCOS concerns, perimenopause, hot flashes, and night sweats.", tone: "fertility" },
+      { href: "/care/fertility-ivf-support", title: "Fertility & IVF", text: "Support for fertility planning, natural conception, IUI, IVF, retrieval, and embryo transfer.", tone: "needle" },
       { href: "/care/pain-management", title: "Pain Management", text: "Headache, TMJ, neck, back, muscle tension, and persistent pain support.", tone: "orofacial" },
-      { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "A whole-person approach to stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
+      { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "Acupuncture support for stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
   },
   { href: "/learn", label: "Learn" },
@@ -183,8 +183,8 @@ export function SiteFooter() {
             </span>
           </Link>
           <p className="footer-note">
-            Modern, personalized acupuncture for women’s health, fertility,
-            pain management, stress, sleep, and digestive wellbeing.
+            Acupuncture in Herndon for women’s health, fertility &amp; IVF, perimenopause,
+            pain, stress, sleep, and digestive concerns.
           </p>
           <div className="footer-socials" aria-label="Springwell social media">
             <p className="footer-label">Follow Springwell</p>
