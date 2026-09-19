@@ -1,5 +1,1 @@
-import { permanentRedirect } from "next/navigation";
-
-export default function BlogRedirectPage() {
-  permanentRedirect("/learn");
-}
+export { metadata, default } from "../learn/page";

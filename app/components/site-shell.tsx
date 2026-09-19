@@ -29,7 +29,7 @@ const nav = [
       { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "Acupuncture support for stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
   },
-  { href: "/learn", label: "Learn" },
+  { href: "/blog", label: "Blog" },
   { href: "/new-patients", label: "New Patients" },
 ];
 
@@ -208,7 +208,7 @@ export function SiteFooter() {
           <Link href="/specialist">What We Treat</Link>
           <Link href="/care/womens-health">Women’s Health</Link>
           <Link href="/care/fertility-ivf-support">Fertility &amp; IVF</Link>
-          <Link href="/learn">Learn</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/new-patients">New Patients</Link>
         </div>
         <div>

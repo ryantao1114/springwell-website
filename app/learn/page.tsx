@@ -5,10 +5,10 @@ import { BottomCTA, PageShell } from "../components/site-shell";
 import styles from "./learn.module.css";
 
 export const metadata: Metadata = {
-  title: "Acupuncture Learning Center",
+  title: "Acupuncture Blog & Patient Guides",
   description:
     "Clear acupuncture guides and research insights for fertility and IVF, women’s health, pain, stress, sleep, and digestive concerns in Herndon, Virginia.",
-  alternates: { canonical: "/learn" },
+  alternates: { canonical: "/blog" },
 };
 
 const research = [
@@ -121,9 +121,9 @@ export default function LearnPage() {
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "SpringWell Acupuncture Learning Center",
+    name: "SpringWell Acupuncture Blog",
     description: metadata.description,
-    url: "https://springwellacu.com/learn",
+    url: "https://springwellacu.com/blog",
     mainEntity: {
       "@type": "ItemList",
       itemListElement: research.map((article, index) => ({
@@ -149,13 +149,13 @@ export default function LearnPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([collectionSchema, faqSchema]) }} />
       <header className={styles.hero}>
         <div className="container">
-          <p className="eyebrow">SpringWell Learning Center</p>
+          <p className="eyebrow">SpringWell Blog</p>
           <h1>Clear answers about acupuncture and your care.</h1>
           <p className={styles.heroIntro}>Explore practical guidance on fertility and IVF, women’s health, pain, stress, sleep, and digestion—written to help you understand what acupuncture can do and what a personalized treatment plan may look like.</p>
-          <nav className={styles.jumpNav} aria-label="Learning center sections">
+          <nav className={styles.jumpNav} aria-label="Blog sections">
             <a href="#start-here">Start here</a>
             <a href="#research">Research &amp; evidence</a>
-            <a href="#topics">Explore by topic</a>
+            <a href="#springwell-view">SpringWell View</a>
           </nav>
         </div>
       </header>
@@ -178,11 +178,13 @@ export default function LearnPage() {
         </div>
       </section>
 
-      <section className={styles.topicsSection} id="topics" aria-labelledby="topics-title">
+      <section className={styles.topicsSection} id="springwell-view" aria-labelledby="springwell-view-title">
         <div className="container">
-          <div className={styles.sectionHeading}><p className="eyebrow">Explore by topic</p><h2 id="topics-title">Find guidance for what brings you in.</h2></div>
-          <div className={styles.topicList}>
-            {topics.map((topic) => <article className={styles.topicRow} key={topic.title}><span className={styles.topicNumber}>{topic.number}</span><div className={styles.topicIntro}><h3>{topic.title}</h3><p>{topic.description}</p></div><div className={styles.topicGuides}>{topic.guides.map((guide) => <div className={styles.topicGuide} key={guide.title}><h4>{guide.title}</h4><p>{guide.copy}</p></div>)}</div><Link className={styles.topicLink} href={topic.href}>Explore {topic.title} <ArrowIcon /></Link></article>)}
+          <div className={styles.sectionHeading}><p className="eyebrow">SpringWell View</p><h2 id="springwell-view-title">Practical guidance from our clinic.</h2><p>Thoughtful answers to the questions patients ask before, during, and after acupuncture care.</p></div>
+          <div className={styles.viewFeature}>
+            <div className={styles.viewMeta}><span>Fertility acupuncture</span><time dateTime="2026-09-19">September 19, 2026</time></div>
+            <div className={styles.viewCopy}><h3><Link href="/blog/first-fertility-acupuncture-visit-herndon-va">What to Expect at Your First Fertility Acupuncture Visit at SpringWell Acupuncture in Herndon, VA</Link></h3><p>From the first conversation and individualized assessment to the treatment itself, follow-up planning, and coordinating visits around an IUI or IVF timeline.</p></div>
+            <Link className={styles.arrowLink} href="/blog/first-fertility-acupuncture-visit-herndon-va" aria-label="Read what to expect at your first fertility acupuncture visit"><ArrowIcon /></Link>
           </div>
         </div>
       </section>
