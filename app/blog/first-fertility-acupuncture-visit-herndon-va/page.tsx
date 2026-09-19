@@ -208,7 +208,6 @@ export default function FirstFertilityAcupunctureVisitArticle() {
               {faqs.map((item) => <div key={item.question}><h3>{item.question}</h3><p>{item.answer}</p></div>)}
               <p><strong>How many fertility acupuncture visits will I need?</strong><br />There is no single schedule for everyone. Recommendations depend on your goals, symptoms, fertility timeline, and response to care.</p>
               <p>SpringWell Acupuncture is located at <a href={site.directionsUrl} target="_blank" rel="noreferrer">{site.address}</a>. You can also review information for <Link href="/new-patients">new patients</Link> or <Link href="/contact">contact the clinic</Link> before scheduling.</p>
-              <p className={styles.disclaimer}><strong>Medical note:</strong> Acupuncture is supportive care and does not guarantee conception, embryo development, pregnancy, or live birth. It should not delay evaluation or treatment recommended by your physician or fertility specialist.</p>
             </section>
           </div>
         </div>
