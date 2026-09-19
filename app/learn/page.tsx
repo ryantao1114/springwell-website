@@ -181,10 +181,17 @@ export default function LearnPage() {
       <section className={styles.topicsSection} id="springwell-view" aria-labelledby="springwell-view-title">
         <div className="container">
           <div className={styles.sectionHeading}><p className="eyebrow">SpringWell View</p><h2 id="springwell-view-title">Practical guidance from our clinic.</h2><p>Thoughtful answers to the questions patients ask before, during, and after acupuncture care.</p></div>
-          <div className={styles.viewFeature}>
-            <div className={styles.viewMeta}><span>Fertility acupuncture</span><time dateTime="2026-09-19">September 19, 2026</time></div>
-            <div className={styles.viewCopy}><h3><Link href="/blog/first-fertility-acupuncture-visit-herndon-va">What to Expect at Your First Fertility Acupuncture Visit at SpringWell Acupuncture in Herndon, VA</Link></h3><p>From the first conversation and individualized assessment to the treatment itself, follow-up planning, and coordinating visits around an IUI or IVF timeline.</p></div>
-            <Link className={styles.arrowLink} href="/blog/first-fertility-acupuncture-visit-herndon-va" aria-label="Read what to expect at your first fertility acupuncture visit"><ArrowIcon /></Link>
+          <div className={styles.viewList}>
+            <div className={styles.viewFeature}>
+              <div className={styles.viewMeta}><span>Natural conception</span><time dateTime="2026-09-19">September 19, 2026</time></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/fertility-acupuncture-herndon-va-natural-conception">Preparing Your Body for Pregnancy: How Fertility Acupuncture in Herndon, VA Supports Natural Conception</Link></h3><p>A cycle-aware approach to preconception care, TCM gynecology, and individualized fertility support from Renjinming Dai, L.Ac.</p></div>
+              <Link className={styles.arrowLink} href="/blog/fertility-acupuncture-herndon-va-natural-conception" aria-label="Read about fertility acupuncture and natural conception"><ArrowIcon /></Link>
+            </div>
+            <div className={styles.viewFeature}>
+              <div className={styles.viewMeta}><span>First visit</span><time dateTime="2026-09-19">September 19, 2026</time></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/first-fertility-acupuncture-visit-herndon-va">What to Expect at Your First Fertility Acupuncture Visit at SpringWell Acupuncture in Herndon, VA</Link></h3><p>From the first conversation and individualized assessment to the treatment itself, follow-up planning, and coordinating visits around an IUI or IVF timeline.</p></div>
+              <Link className={styles.arrowLink} href="/blog/first-fertility-acupuncture-visit-herndon-va" aria-label="Read what to expect at your first fertility acupuncture visit"><ArrowIcon /></Link>
+            </div>
           </div>
         </div>
       </section>
