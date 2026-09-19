@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "Where is SpringWell Acupuncture located?",
-    answer: "SpringWell Acupuncture is located at 463 Carlisle Drive, Suite B, Second Floor, Herndon, Virginia 20170, serving Herndon, Reston, Sterling, Oak Hill, Chantilly, Fairfax, Vienna, Tysons, McLean, and nearby Northern Virginia communities.",
+    answer: "SpringWell Acupuncture is located at 463 Carlisle Dr Ste B, Herndon, VA 20170, serving Herndon, Reston, Sterling, Oak Hill, Chantilly, Fairfax, Vienna, Tysons, McLean, and nearby Northern Virginia communities.",
   },
 ] as const;
 
