@@ -171,7 +171,7 @@ export default function LearnPage() {
 
       <section className={styles.researchSection} id="research" aria-labelledby="research-title">
         <div className="container">
-          <div className={styles.sectionHeading}><p className="eyebrow">Research &amp; evidence</p><h2 id="research-title">Read the research in plain language.</h2><p>Focused reviews of recent studies, with the findings, limitations, and practical meaning separated clearly.</p></div>
+          <div className={styles.sectionHeading}><p className="eyebrow" id="research-title">Research &amp; evidence</p></div>
           <div className={styles.researchList}>
             {research.map((article) => <article className={styles.researchRow} key={article.href}><div className={styles.researchMeta}><span>{article.topic}</span><time>{article.date}</time></div><div className={styles.researchCopy}><h3><Link href={article.href}>{article.title}</Link></h3><p>{article.summary}</p></div><Link className={styles.arrowLink} href={article.href} aria-label={`Read ${article.title}`}><ArrowIcon /></Link></article>)}
           </div>
@@ -180,7 +180,7 @@ export default function LearnPage() {
 
       <section className={styles.topicsSection} id="springwell-view" aria-labelledby="springwell-view-title">
         <div className="container">
-          <div className={styles.sectionHeading}><p className="eyebrow">SpringWell View</p><h2 id="springwell-view-title">Practical guidance from our clinic.</h2><p>Thoughtful answers to the questions patients ask before, during, and after acupuncture care.</p></div>
+          <div className={styles.sectionHeading}><p className="eyebrow" id="springwell-view-title">SpringWell View</p></div>
           <div className={styles.viewList}>
             <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>IVF &amp; IUI timing</span><time dateTime="2026-09-27">September 27, 2026</time></div>
