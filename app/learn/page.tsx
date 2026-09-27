@@ -183,6 +183,11 @@ export default function LearnPage() {
           <div className={styles.sectionHeading}><p className="eyebrow">SpringWell View</p><h2 id="springwell-view-title">Practical guidance from our clinic.</h2><p>Thoughtful answers to the questions patients ask before, during, and after acupuncture care.</p></div>
           <div className={styles.viewList}>
             <div className={styles.viewFeature}>
+              <div className={styles.viewMeta}><span>IVF &amp; IUI timing</span><time dateTime="2026-09-27">September 27, 2026</time></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/when-to-start-acupuncture-before-ivf-iui">When Should You Start Acupuncture Before IVF or IUI?</Link></h3><p>When to begin, why about three months can be useful, and how cycle-based care can fit around stimulation, retrieval, IUI, embryo transfer, and the two-week wait.</p></div>
+              <Link className={styles.arrowLink} href="/blog/when-to-start-acupuncture-before-ivf-iui" aria-label="Read when to start acupuncture before IVF or IUI"><ArrowIcon /></Link>
+            </div>
+            <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>Natural conception</span><time dateTime="2026-09-19">September 19, 2026</time></div>
               <div className={styles.viewCopy}><h3><Link href="/blog/fertility-acupuncture-herndon-va-natural-conception">Preparing Your Body for Pregnancy: How Fertility Acupuncture in Herndon, VA Supports Natural Conception</Link></h3><p>A cycle-aware approach to preconception care, TCM gynecology, and individualized fertility support from Renjinming Dai, L.Ac.</p></div>
               <Link className={styles.arrowLink} href="/blog/fertility-acupuncture-herndon-va-natural-conception" aria-label="Read about fertility acupuncture and natural conception"><ArrowIcon /></Link>

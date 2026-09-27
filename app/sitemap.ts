@@ -19,6 +19,7 @@ const routes = [
   { path: "/blog", priority: 0.85 },
   { path: "/blog/first-fertility-acupuncture-visit-herndon-va", priority: 0.8 },
   { path: "/blog/fertility-acupuncture-herndon-va-natural-conception", priority: 0.8 },
+  { path: "/blog/when-to-start-acupuncture-before-ivf-iui", priority: 0.8 },
   { path: "/blog/acupuncture-embryo-quality-ivf-meta-analysis-2026", priority: 0.8 },
   { path: "/blog/acupuncture-migraine-meta-analysis-2025", priority: 0.8 },
   { path: "/blog/acupuncture-anxiety-meta-analysis-2026", priority: 0.8 },

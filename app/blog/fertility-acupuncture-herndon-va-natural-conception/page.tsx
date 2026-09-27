@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   description,
   keywords: ["fertility acupuncture Herndon VA", "TCM fertility specialist Northern Virginia", "natural conception acupuncture Herndon", "Renjinming Dai acupuncturist", "reproductive acupuncture Reston VA", "TCM gynecology Herndon"],
   alternates: { canonical: slug },
-  openGraph: { title, description, type: "article", url: slug, publishedTime: "2026-09-19", authors: ["Renjinming Dai, L.Ac., Dipl. Ac. (NCCAOM)"], images: [{ url: "/images/fertility-journey-support.jpg", alt: "Natural conception and fertility acupuncture support in Herndon, Virginia" }] },
-  twitter: { card: "summary_large_image", title, description, images: ["/images/fertility-journey-support.jpg"] },
+  openGraph: { title, description, type: "article", url: slug, publishedTime: "2026-09-19", authors: ["Renjinming Dai, L.Ac., Dipl. Ac. (NCCAOM)"], images: [{ url: "/images/blog-natural-conception-family.jpg", alt: "A newborn holding a parent’s fingers, representing the path to parenthood" }] },
+  twitter: { card: "summary_large_image", title, description, images: ["/images/blog-natural-conception-family.jpg"] },
 };
 
 export default function NaturalConceptionFertilityArticle() {
@@ -32,7 +32,7 @@ export default function NaturalConceptionFertilityArticle() {
     "@graph": [
       {
         "@type": "BlogPosting", headline: title, description,
-        image: new URL("/images/fertility-journey-support.jpg", site.url).toString(),
+        image: new URL("/images/blog-natural-conception-family.jpg", site.url).toString(),
         datePublished: "2026-09-19", dateModified: "2026-09-19",
         author: { "@type": "Person", name: "Renjinming Dai, L.Ac., Dipl. Ac. (NCCAOM)", jobTitle: "Virginia Licensed Acupuncturist", url: new URL("/about", site.url).toString(), alumniOf: ["Nanjing University of Chinese Medicine", "Hunan University of Chinese Medicine"], knowsAbout: ["Traditional Chinese medicine gynecology", "Fertility acupuncture", "Natural conception", "Women’s health acupuncture"] },
         publisher: { "@type": "MedicalBusiness", name: site.name, url: site.url, telephone: site.phone, address: { "@type": "PostalAddress", streetAddress: site.streetAddress, addressLocality: site.addressLocality, addressRegion: site.addressRegion, postalCode: site.postalCode, addressCountry: "US" } },
@@ -56,7 +56,7 @@ export default function NaturalConceptionFertilityArticle() {
               <p className={styles.articleDeck}>A cycle-aware, whole-person approach to preconception care grounded in traditional Chinese medicine gynecology.</p>
               <div className={styles.articleByline}><span>By Renjinming Dai, L.Ac., Dipl. Ac. (NCCAOM)</span><time dateTime="2026-09-19">September 19, 2026</time><span>8 min read</span></div>
             </div>
-            <div className={styles.articleHeroImage}><Image src="/images/fertility-journey-support.jpg" alt="Fertility acupuncture and natural conception support at SpringWell Acupuncture in Herndon, VA" fill priority sizes="(max-width: 760px) 100vw, 42vw" /></div>
+            <div className={styles.articleHeroImage}><Image src="/images/blog-natural-conception-family.jpg" alt="A newborn holding a parent’s fingers, representing the path to parenthood" fill priority sizes="(max-width: 760px) 100vw, 42vw" /></div>
           </div>
         </header>
 
