@@ -17,6 +17,7 @@ const routes = [
   { path: "/pricing", priority: 0.8 },
   { path: "/new-patients", priority: 0.9 },
   { path: "/blog", priority: 0.85 },
+  { path: "/blog/renjinming-dai-bioengineering-informed-acupuncture-publication", priority: 0.8 },
   { path: "/blog/first-fertility-acupuncture-visit-herndon-va", priority: 0.8 },
   { path: "/blog/fertility-acupuncture-herndon-va-natural-conception", priority: 0.8 },
   { path: "/blog/when-to-start-acupuncture-before-ivf-iui", priority: 0.8 },

@@ -13,6 +13,13 @@ export const metadata: Metadata = {
 
 const research = [
   {
+    topic: "Special News · Publication Milestone",
+    date: "October 3, 2026",
+    title: "Celebrating Renjinming Dai’s Publication in Medical Acupuncture",
+    summary: "Our Herndon acupuncturist is first author of Toward Bioengineering-Informed Acupuncture. Join us in celebrating her contribution to the field.",
+    href: "/blog/renjinming-dai-bioengineering-informed-acupuncture-publication",
+  },
+  {
     topic: "Fertility & IVF",
     date: "August 25, 2026",
     title: "Can Acupuncture Support Embryo Quality During IVF?",
