@@ -10,7 +10,7 @@ const slug = "/blog/adenomyosis-ivf-acupuncture";
 const title = "Adenomyosis, IVF & Acupuncture: Endometrial Thickness Is Not the Whole Story";
 const description = "Learn how adenomyosis may affect endometrial receptivity and implantation, and how cycle-based acupuncture can support patients during IVF and FET care.";
 const published = "2026-10-15";
-const heroImage = "/images/adenomyosis-ivf-pelvic-anatomy.jpg";
+const heroImage = "/images/adenomyosis-ivf-pelvic-anatomy-v2.jpg";
 const heroImageAlt = "A practitioner explaining pelvic anatomy with an anatomical model during a consultation";
 
 export const metadata: Metadata = {
