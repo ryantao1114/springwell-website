@@ -13,6 +13,13 @@ export const metadata: Metadata = {
 
 const research = [
   {
+    topic: "Fertility & IVF",
+    date: "October 15, 2026",
+    title: "Adenomyosis, IVF & Acupuncture: Endometrial Thickness Is Not the Whole Story",
+    summary: "New research is helping explain how adenomyosis may affect endometrial receptivity and implantation, and why lining thickness is only one part of the IVF picture.",
+    href: "/blog/adenomyosis-ivf-acupuncture",
+  },
+  {
     topic: "Special News · Publication Milestone",
     date: "October 3, 2026",
     title: "Celebrating Renjinming Dai’s Publication in Medical Acupuncture",
