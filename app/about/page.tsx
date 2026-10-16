@@ -8,7 +8,7 @@ import { site } from "../config/site";
 export const metadata: Metadata = {
   title: "About Springwell | Modern Acupuncture in Northern Virginia",
   description:
-    "Learn about Springwell Integrative Acupuncture in Herndon, Virginia, and Renjinming Dai’s thoughtful approach to acupuncture and Chinese medicine.",
+    "Learn about Springwell Acupuncture in Herndon, Virginia, and Renjinming Dai’s thoughtful approach to acupuncture and Chinese medicine.",
   alternates: { canonical: "/about" },
 };
 
@@ -20,8 +20,8 @@ export default function AboutPage() {
           <div className="about-modern-hero-card">
             <p className="eyebrow">About Springwell</p>
             <h1 id="about-title">Traditional depth.<br />Modern perspective.<br />Personal care.</h1>
-            <p>Springwell Integrative Acupuncture is a modern acupuncture and Chinese medicine clinic in Herndon, Virginia. We serve Herndon, Reston, Northern Virginia, and the greater DMV region with thoughtful, individualized care.</p>
-            <a className="button button-dark" href={site.bookingUrl} target="_blank" rel="noreferrer">Book now <ArrowIcon /></a>
+            <p>Springwell Acupuncture is a modern acupuncture and Chinese medicine clinic in Herndon, Virginia. We serve Herndon, Reston, Northern Virginia, and the greater DMV region with thoughtful, individualized care.</p>
+            <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book now <ArrowIcon /></a>
           </div>
           <div className="about-modern-hero-media">
             <Image
