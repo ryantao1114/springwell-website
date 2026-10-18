@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: slug,
     publishedTime: "2026-08-25",
     authors: ["Renjinming Dai, L.Ac."],
-    images: [{ url: "/images/home-pain-management-upload.webp", alt: "Migraine and pain acupuncture research update from Springwell Acupuncture" }],
+    images: [{ url: "/images/home-pain-management-upload.webp", alt: "Migraine and pain acupuncture research update from SpringWell Acupuncture" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ export default function MigraineMetaAnalysisArticle() {
     datePublished: "2026-08-25",
     dateModified: "2026-08-25",
     author: { "@type": "Person", name: "Renjinming Dai, L.Ac.", jobTitle: "Virginia Licensed Acupuncturist" },
-    publisher: { "@type": "MedicalBusiness", name: "Springwell Acupuncture", url: site.url },
+    publisher: { "@type": "MedicalBusiness", name: "SpringWell Acupuncture", url: site.url },
     mainEntityOfPage: new URL(slug, site.url).toString(),
   };
 
@@ -139,7 +139,7 @@ export default function MigraineMetaAnalysisArticle() {
             <section id="patients">
               <h2>What Does This Mean for Someone With Migraine?</h2>
               <p>Acupuncture may be considered as an <strong>individualized migraine-prevention and symptom-support option</strong>.</p>
-              <p>At <strong>Springwell Acupuncture</strong>, treatment is adapted to headache frequency, triggers, neck or jaw tension, sleep, menstrual timing, and the broader factors that may influence each episode.</p>
+              <p>At <strong>SpringWell Acupuncture</strong>, treatment is adapted to headache frequency, triggers, neck or jaw tension, sleep, menstrual timing, and the broader factors that may influence each episode.</p>
               <div className={styles.articleCta}>
                 <div>
                   <p className="eyebrow">Pain care in Herndon</p>

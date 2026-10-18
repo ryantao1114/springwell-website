@@ -5,9 +5,9 @@ import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
 import { services } from "./service-data";
 
 export const metadata: Metadata = {
-  title: "Acupuncture, Fire Cupping & Herbal Medicine",
+  title: "Acupuncture Services in Herndon, VA",
   description:
-    "Explore personalized acupuncture, traditional fire cupping, and Chinese herbal medicine at Springwell Acupuncture in Northern Virginia.",
+    "Explore personalized acupuncture, traditional fire cupping, and Chinese herbal medicine at SpringWell Acupuncture in Herndon, Virginia.",
   alternates: { canonical: "/services" },
 };
 
@@ -17,7 +17,7 @@ export default function ServicesPage() {
       <InteriorHero
         eyebrow="Our services"
         title="Three therapies. One individualized plan."
-        text="Explore the treatments available at Springwell. Each service has its own page with a clear explanation of the clinical approach, what a visit may involve, and safety considerations."
+        text="Explore the treatments available at SpringWell. Each service has its own page with a clear explanation of the clinical approach, what a visit may involve, and safety considerations."
         image="/images/service-acupuncture.png"
       />
 
@@ -45,6 +45,13 @@ export default function ServicesPage() {
               </article>
             ))}
           </div>
+          <nav className="button-row" aria-label="Explore acupuncture care by concern">
+            <Link className="text-link" href="/care/fertility-ivf-support">Fertility &amp; IVF acupuncture <ArrowIcon /></Link>
+            <Link className="text-link" href="/care/womens-health">Women’s health acupuncture <ArrowIcon /></Link>
+            <Link className="text-link" href="/care/pain-management">TMJ &amp; pain relief acupuncture <ArrowIcon /></Link>
+            <Link className="text-link" href="/care/stress-sleep">Stress &amp; sleep acupuncture <ArrowIcon /></Link>
+            <Link className="text-link" href="/book">Book an acupuncture appointment <ArrowIcon /></Link>
+          </nav>
         </div>
       </section>
 

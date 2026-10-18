@@ -3,14 +3,14 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { CheckIcon } from "../components/icons";
 import { InteriorHero, PageShell } from "../components/site-shell";
-import { AppointmentForm } from "./appointment-form";
+import { SafeContactOptions } from "./appointment-form";
 import { SquareAppointmentsEmbed } from "./square-appointments-embed";
 import { site } from "../config/site";
 
 export const metadata: Metadata = {
-  title: "Request an Acupuncture Appointment",
+  title: "Book an Acupuncture Appointment in Herndon, VA",
   description:
-    "Request an appointment with Springwell Acupuncture for women’s health, fertility and IVF support, pain management, stress, sleep, or digestive care.",
+    "Book an acupuncture appointment with SpringWell Acupuncture in Herndon, VA for fertility, women’s health, TMJ and pain, stress, or sleep support.",
   alternates: { canonical: "/book" },
 };
 
@@ -18,9 +18,9 @@ export default function BookPage() {
   return (
     <PageShell>
       <InteriorHero
-        eyebrow="Request an appointment"
-        title="Tell us how we can support you."
-        text="Share a few details below. We’ll follow up to answer questions, confirm availability, and help plan your first visit."
+        eyebrow="Book an appointment"
+        title="Book an acupuncture appointment in Herndon, VA."
+        text="View current availability and schedule through our secure Square booking calendar. Call us if you need help choosing the right visit."
         image="/images/acupuncture-treatment-hero.png"
       />
       <section className="section-pad booking-section">
@@ -52,8 +52,8 @@ export default function BookPage() {
               </p>
               <SquareAppointmentsEmbed />
             </div>
-            <div className="booking-form-divider" aria-hidden="true"><span>or send an appointment request</span></div>
-            <AppointmentForm />
+            <div className="booking-form-divider" aria-hidden="true"><span>Need help booking?</span></div>
+            <SafeContactOptions />
           </div>
         </div>
       </section>

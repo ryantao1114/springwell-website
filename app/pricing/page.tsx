@@ -1,8 +1,15 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { ArrowIcon, CheckIcon } from "../components/icons";
 import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
 import { CurrencyMark } from "../components/currency-mark";
 import { site } from "../config/site";
+
+export const metadata: Metadata = {
+  title: "Acupuncture Pricing in Herndon, VA",
+  description: "Review acupuncture and cupping visit pricing, appointment length, self-pay information, and superbill support at SpringWell Acupuncture.",
+  alternates: { canonical: "/pricing" },
+};
 
 export default function PricingPage() {
   return (
@@ -61,17 +68,18 @@ export default function PricingPage() {
           <div className="payment-note" id="insurance">
             <div>
               <p className="eyebrow">Insurance & payment</p>
-              <h2>Superbills available for out-of-network reimbursement.</h2>
+              <h2>Clear self-pay care, with simple reimbursement support.</h2>
             </div>
             <div>
               <p>
-                Springwell is a self-pay practice. Upon request, we can provide a
-                detailed superbill for you to submit to your insurance plan for
-                possible out-of-network reimbursement. Coverage varies by plan,
-                and reimbursement is not guaranteed. We recommend contacting your
-                insurer before your visit to confirm acupuncture benefits,
-                deductible requirements, and the claims-submission process.
+                SpringWell is an out-of-network, self-pay practice. We provide a
+                detailed superbill upon request so patients with eligible commercial
+                PPO benefits can submit a claim for possible reimbursement. Coverage,
+                deductibles, and reimbursement vary by plan and are not guaranteed,
+                so please confirm your acupuncture benefits directly with your insurer.
               </p>
+              <p>HSA and FSA cards are accepted for eligible acupuncture services.</p>
+              <p>Self-pay care allows visits to remain individualized and one-on-one, with treatment decisions guided by your goals, clinical needs, comfort, and response rather than a fixed insurance protocol.</p>
               <Link className="text-link" href="/contact">Ask about insurance <ArrowIcon /></Link>
             </div>
           </div>
@@ -90,8 +98,8 @@ export default function PricingPage() {
             <article>
               <p className="eyebrow">Questions about payment?</p>
               <h3>Ask before you book.</h3>
-              <p>For current payment details, superbill questions, or documentation needs, contact Springwell before scheduling so expectations are clear.</p>
-              <Link className="text-link" href="/contact">Contact Springwell <ArrowIcon /></Link>
+              <p>For current payment details, superbill questions, or documentation needs, contact SpringWell before scheduling so expectations are clear.</p>
+              <Link className="text-link" href="/contact">Contact SpringWell <ArrowIcon /></Link>
             </article>
           </div>
         </div>

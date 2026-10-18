@@ -18,7 +18,7 @@ type ServicePageProps = {
 
 const serviceSeo: Record<string, { title: string; description: string }> = {
   acupuncture: {
-    title: "Acupuncture in Herndon, VA",
+    title: "Acupuncture Treatment in Herndon, VA",
     description:
       "Acupuncture in Herndon, VA for women’s health, fertility, perimenopause, pain, stress, sleep, and digestive concerns at SpringWell Acupuncture.",
   },
@@ -75,7 +75,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
   const isAcupuncture = service.slug === "acupuncture";
   const heroImage = isAcupuncture ? "/images/acupuncture-treatment-hero.png" : service.image;
-  const pageTitle = isAcupuncture ? "Acupuncture in Herndon, VA" : service.title;
+  const pageTitle = serviceSeo[service.slug]?.title ?? `${service.title} in Herndon, VA`;
   const seo = serviceSeo[service.slug] ?? {
     title: `${service.title} in Herndon, VA`,
     description: service.summary,

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/home-womens-health-hero-hd.webp",
-        alt: "Fertility acupuncture research update from Springwell Acupuncture",
+        alt: "Fertility acupuncture research update from SpringWell Acupuncture",
       },
     ],
   },
@@ -93,7 +93,7 @@ export default function EmbryoQualityIvfArticle() {
               </div>
             </div>
             <div className={styles.articleHeroImage}>
-              <Image src="/images/home-womens-health-hero-hd.webp" alt="A calm fertility care consultation at Springwell Acupuncture" fill priority sizes="(max-width: 860px) 100vw, 42vw" />
+              <Image src="/images/home-womens-health-hero-hd.webp" alt="A calm fertility care consultation at SpringWell Acupuncture" fill priority sizes="(max-width: 860px) 100vw, 42vw" />
             </div>
           </div>
         </header>
@@ -146,7 +146,7 @@ export default function EmbryoQualityIvfArticle() {
 
               <h2>Fertilization Rate Also Improved</h2>
               <p>Four randomized trials evaluated fertilization rates. The pooled analysis favored acupuncture, with very low statistical heterogeneity and moderate certainty evidence.</p>
-              <p>This is relevant because egg retrieval alone does not determine the outcome of a cycle. Retrieved oocytes must mature, fertilize, and continue developing into viable embryos. The result raises the possibility that acupuncture's potential role may extend beyond influencing the number of eggs retrieved.</p>
+              <p>This is relevant because egg retrieval alone does not determine the outcome of a cycle. Retrieved oocytes must mature, fertilize, and continue developing into viable embryos. The result raises the possibility that acupuncture&apos;s potential role may extend beyond influencing the number of eggs retrieved.</p>
 
               <h2>What About Egg Quality?</h2>
               <p>Two randomized controlled trials reported the high quality oocyte rate. The pooled analysis favored acupuncture, but the certainty of this evidence was rated <strong>low</strong>, and there was substantial variation between studies.</p>
@@ -155,7 +155,7 @@ export default function EmbryoQualityIvfArticle() {
 
             <section id="individualized">
               <h2>One of the Most Interesting Findings: Not Every Patient Responded the Same Way</h2>
-              <p>The researchers found that acupuncture's association with the number of eggs retrieved was not uniform across all IVF patients. The clearest benefit appeared among women with <strong>FSH ≥ 25 mIU/mL</strong>.</p>
+              <p>The researchers found that acupuncture&apos;s association with the number of eggs retrieved was not uniform across all IVF patients. The clearest benefit appeared among women with <strong>FSH ≥ 25 mIU/mL</strong>.</p>
               <p>In this subgroup, acupuncture was associated with an average increase of approximately <strong>0.55 retrieved oocytes</strong>. The evidence was considered low certainty, so the finding should be interpreted cautiously.</p>
               <blockquote>Fertility acupuncture may need to be individualized.</blockquote>
               <p>The authors proposed that ovarian function may be more useful than chronological age alone when determining which patients could potentially benefit from adjunctive acupuncture.</p>
@@ -187,7 +187,7 @@ export default function EmbryoQualityIvfArticle() {
 
               <h2>A More Individualized Approach to Fertility Acupuncture</h2>
               <p>One of the most useful messages from this research is that fertility acupuncture works best as an individualized plan. Someone preparing for ovarian stimulation may have different goals from someone approaching egg retrieval or embryo transfer.</p>
-              <p>At <strong>Springwell Acupuncture</strong>, fertility acupuncture can be incorporated into an individualized care plan based on where you are in your fertility journey and coordinated around your IVF treatment schedule.</p>
+              <p>At <strong>SpringWell Acupuncture</strong>, fertility acupuncture can be incorporated into an individualized care plan based on where you are in your fertility journey and coordinated around your IVF treatment schedule.</p>
               <p>If you are preparing for IVF or currently undergoing fertility treatment, acupuncture may be one supportive option to discuss as part of your broader care plan.</p>
               <div className={styles.articleCta}>
                 <div>

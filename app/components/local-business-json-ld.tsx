@@ -2,11 +2,25 @@ import { site } from "../config/site";
 
 export function LocalBusinessJsonLd() {
   const logo = new URL("/images/springwell-official-logo.png", site.url).toString();
+  const organization = {
+    "@type": "Organization",
+    "@id": `${site.url}/#organization`,
+    name: site.name,
+    url: site.url,
+    logo: {
+      "@type": "ImageObject",
+      url: logo,
+      contentUrl: logo,
+    },
+    description: site.description,
+    email: site.email,
+    telephone: "+1-703-495-2857",
+    sameAs: site.socialLinks.map((social) => social.href),
+  };
   const business = {
     "@id": `${site.url}/#business`,
     "@type": ["MedicalBusiness", "LocalBusiness"],
     name: site.name,
-    alternateName: "Springwell Acupuncture",
     url: site.url,
     logo,
     image: [
@@ -48,6 +62,7 @@ export function LocalBusinessJsonLd() {
       "Digestive Health",
     ],
     sameAs: site.socialLinks.map((social) => social.href),
+    parentOrganization: { "@id": `${site.url}/#organization` },
     employee: {
       "@type": "Person",
       name: "Renjinming Dai",
@@ -67,10 +82,10 @@ export function LocalBusinessJsonLd() {
         "@id": `${site.url}/#website`,
         url: site.url,
         name: site.name,
-        alternateName: "Springwell Acupuncture",
         description: site.description,
-        publisher: { "@id": `${site.url}/#business` },
+        publisher: { "@id": `${site.url}/#organization` },
       },
+      organization,
       business,
     ],
   };

@@ -46,10 +46,10 @@ export function CycleTreatmentSection() {
     <section className={styles.section} aria-labelledby="cycle-treatment-title">
       <div className="container">
         <div className={styles.heading}>
-          <p className="eyebrow">The Springwell approach</p>
+          <p className="eyebrow">The SpringWell approach</p>
           <h2 id="cycle-treatment-title">Treatment Changes With Your Cycle</h2>
           <p>
-            At Springwell, a core principle of women&apos;s health care is adjusting
+            At SpringWell, a core principle of women&apos;s health care is adjusting
             treatment dynamically throughout the menstrual cycle.
           </p>
         </div>

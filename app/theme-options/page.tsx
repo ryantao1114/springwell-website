@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Design Theme Options",
+  robots: { index: false, follow: false },
+};
+
 const themes = [
   { id: "A", name: "Mist Blue", note: "Quiet, refined, and slightly editorial", className: "theme-mist", colors: ["#69554C", "#9AACC8", "#CDE4F4", "#FFF7E8"] },
   { id: "B", name: "Warm Sand", note: "Natural, grounded, and softly luxurious", className: "theme-sand", colors: ["#4D4542", "#B7A79A", "#CCC3BA", "#DDCDA6"] },
@@ -13,7 +20,7 @@ export default function ThemeOptionsPage() {
   return (
     <main className="theme-options-page">
       <header className="theme-options-header">
-        <p>Springwell Acupuncture</p><h1>Color Direction Options</h1>
+        <p>SpringWell Acupuncture</p><h1>Color Direction Options</h1>
         <span>The layout and content are identical so you can compare color alone.</span>
       </header>
       <div className="theme-options-list">
@@ -27,7 +34,7 @@ export default function ThemeOptionsPage() {
             </div>
             <div className={`theme-preview ${theme.className}`}>
               <div className="preview-nav">
-                <div className="preview-brand"><span>SW</span><b>Springwell<small>Acupuncture</small></b></div>
+                <div className="preview-brand"><span>SW</span><b>SpringWell<small>Acupuncture</small></b></div>
                 <div className="preview-links"><span>About</span><span>Services</span><span>Specialist</span><span>Pricing</span></div>
                 <button>Book a visit</button>
               </div>

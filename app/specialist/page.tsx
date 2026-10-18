@@ -7,7 +7,7 @@ import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
 export const metadata: Metadata = {
   title: "What We Treat | Acupuncture Care Areas",
   description:
-    "Explore Springwell Acupuncture’s focus areas: women’s health, fertility and IVF support, pain management, TMJ, stress, sleep, and digestive support in Northern Virginia.",
+    "Explore SpringWell Acupuncture’s focus areas: women’s health, fertility and IVF support, pain management, TMJ, stress, sleep, and digestive support in Northern Virginia.",
   alternates: { canonical: "/specialist" },
 };
 
@@ -56,14 +56,14 @@ export default function SpecialistPage() {
       <InteriorHero
         eyebrow="What we treat"
         title="Care shaped around the concerns that brought you here."
-        text="Explore the conditions and symptoms Springwell commonly supports, from women’s health, fertility and IVF support to pain, stress, sleep, and digestive concerns."
+        text="Explore the conditions and symptoms SpringWell commonly supports, from women’s health, fertility and IVF support to pain, stress, sleep, and digestive concerns."
         image="/images/acupuncture-treatment-hero.png"
       />
 
       <section className="section-pad specialist-provider-intro">
         <div className="container specialist-provider-grid">
           <div className="specialist-provider-image">
-            <Image src="/images/provider-renjinming-2026.webp" alt="Renjinming Dai, licensed acupuncturist at Springwell" fill unoptimized sizes="(max-width: 860px) 100vw, 45vw" />
+            <Image src="/images/provider-renjinming-2026.webp" alt="Renjinming Dai, licensed acupuncturist at SpringWell" fill unoptimized sizes="(max-width: 860px) 100vw, 45vw" />
           </div>
           <div>
             <p className="eyebrow">Licensed acupuncturist</p>
@@ -97,7 +97,7 @@ export default function SpecialistPage() {
               <h2>Start with the concern that brought you here.</h2>
             </div>
             <p>
-              Each area includes common conditions, research in context, and a clear picture of what treatment may involve at Springwell.
+              Each area includes common conditions, research in context, and a clear picture of what treatment may involve at SpringWell.
             </p>
           </div>
           <div className="specialist-focus-grid">

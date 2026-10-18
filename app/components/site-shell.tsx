@@ -132,6 +132,9 @@ export function SiteHeader() {
                     {item.label !== "Services" && <Link className="text-link" href={item.href} onClick={closeNavigation}>
                       View overview <ArrowIcon />
                     </Link>}
+                    <Link className="text-link" href="/book" onClick={closeNavigation}>
+                      Book an appointment <ArrowIcon />
+                    </Link>
                   </div>
                   <div className={`mega-menu-grid ${item.items.length === 4 ? "mega-menu-grid-four" : ""}`}>
                     {item.items.map((subitem) => (
@@ -186,8 +189,9 @@ export function SiteFooter() {
             Acupuncture in Herndon for women’s health, fertility &amp; IVF, perimenopause,
             pain, stress, sleep, and digestive concerns.
           </p>
-          <div className="footer-socials" aria-label="Springwell social media">
-            <p className="footer-label">Follow Springwell</p>
+          <p className="footer-note">Out-of-network care · Superbills available · HSA/FSA cards accepted</p>
+          <div className="footer-socials" aria-label="SpringWell social media">
+            <p className="footer-label">Follow SpringWell</p>
             <div className="social-links">
               {site.socialLinks.map((social) => (
                 <a href={social.href} key={social.href} target="_blank" rel="noreferrer">
@@ -206,8 +210,11 @@ export function SiteFooter() {
           <Link href="/services/cupping">Cupping</Link>
           <Link href="/services/herbal-medicine">Herbal Medicine</Link>
           <Link href="/specialist">What We Treat</Link>
-          <Link href="/care/womens-health">Women’s Health</Link>
-          <Link href="/care/fertility-ivf-support">Fertility &amp; IVF</Link>
+          <Link href="/care/fertility-ivf-support">Fertility &amp; IVF Acupuncture</Link>
+          <Link href="/care/womens-health">Women’s Health Acupuncture</Link>
+          <Link href="/care/pain-management">TMJ &amp; Pain Relief</Link>
+          <Link href="/care/stress-sleep">Stress &amp; Sleep Acupuncture</Link>
+          <Link href="/book">Book an Appointment</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/new-patients">New Patients</Link>
         </div>
@@ -285,7 +292,7 @@ export function BottomCTA() {
   return (
     <section className="section-pad cta-section compact-cta">
       <div className="container cta-card">
-        <p className="eyebrow light">Springwell Acupuncture</p>
+        <p className="eyebrow light">SpringWell Acupuncture</p>
         <h2>Ready to take the next step?</h2>
         <p className="cta-copy">Tell us what brings you in, and we’ll help you choose the right first visit.</p>
         <Link className="button button-light cta-button" href={site.bookingUrl} target="_blank" rel="noreferrer">

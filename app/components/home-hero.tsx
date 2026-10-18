@@ -68,7 +68,7 @@ export function HomeHero() {
   };
 
   return (
-    <section className="home-video-hero" aria-label="Springwell care areas">
+    <section className="home-video-hero" aria-label="SpringWell care areas">
       <video
         ref={videoRef}
         key={slide.video}

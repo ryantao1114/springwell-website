@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ArrowIcon } from "../components/icons";
 import { InteriorHero, PageShell } from "../components/site-shell";
-import { AppointmentForm } from "../book/appointment-form";
+import { SafeContactOptions } from "../book/appointment-form";
 import { site } from "../config/site";
 
 export const metadata: Metadata = {
@@ -17,13 +17,13 @@ export default function ContactPage() {
       <InteriorHero
         eyebrow="Contact us"
         title="Let’s find the right next step."
-        text="Send an appointment request or a brief question. We’ll follow up with availability and the information you need before scheduling."
+        text="Book securely online, call the clinic, or email a general question before scheduling."
         image="/images/chinese-medicine-consultation.jpg"
       />
       <section className="section-pad contact-simple-section" id="request">
         <div className="container contact-simple-grid">
           <div className="contact-simple-info" id="visit-details">
-            <p className="eyebrow">Visit Springwell</p>
+            <p className="eyebrow">Visit SpringWell</p>
             <h2>One clear place to ask a question.</h2>
             <p>Tell us what you would like to know about care, scheduling, or payment. Please do not include sensitive medical details.</p>
             <div className="contact-detail-block">
@@ -41,7 +41,7 @@ export default function ContactPage() {
           <div className="form-card contact-form-card">
             <p className="eyebrow">Have a question?</p>
             <h2>We’re here to help.</h2>
-            <AppointmentForm mode="question" />
+            <SafeContactOptions mode="question" />
           </div>
         </div>
       </section>

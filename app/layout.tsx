@@ -5,7 +5,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import "./service-care-layout.css";
 import { ImageFallbacks } from "./components/image-fallbacks";
-import { LocalBusinessJsonLd } from "./components/local-business-json-ld";
 import { site } from "./config/site";
 
 const dmSans = DM_Sans({
@@ -133,7 +132,6 @@ gtag('config', 'G-ZSK3ESH5HP');`,
         />
       </head>
       <body className="antialiased">
-        <LocalBusinessJsonLd />
         {children}
         <ImageFallbacks />
         <Analytics />

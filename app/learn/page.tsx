@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Clear acupuncture guides and research insights for fertility and IVF, women’s health, pain, stress, sleep, and digestive concerns in Herndon, Virginia.",
   alternates: { canonical: "/blog" },
+  robots: { index: false, follow: true },
 };
 
 const research = [

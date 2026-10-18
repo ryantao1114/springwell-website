@@ -721,19 +721,14 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .booking-form-divider { display: flex; align-items: center; gap: 14px; margin: 42px 0 34px; color: var(--muted); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
 .booking-form-divider::before, .booking-form-divider::after { content: ""; height: 1px; flex: 1; background: var(--line); }
 .booking-form-divider span { white-space: nowrap; }
-.appointment-form { display: flex; flex-direction: column; gap: 22px; }
-.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.appointment-form label { display: flex; flex-direction: column; gap: 8px; color: var(--ink); font-size: .78rem; font-weight: 700; }
-.appointment-form label small { color: var(--muted); font-weight: 400; }
-.appointment-form input, .appointment-form select, .appointment-form textarea { width: 100%; border: 1px solid var(--line); border-radius: 2px; background: #fffaf1; color: var(--text); outline: none; padding: 13px 14px; }
-.appointment-form input:focus, .appointment-form select:focus, .appointment-form textarea:focus { border-color: var(--sage); box-shadow: 0 0 0 3px rgba(141,166,154,.18); }
-.consent-field { flex-direction: row !important; align-items: flex-start; color: var(--muted) !important; font-weight: 400 !important; line-height: 1.5; }
-.consent-field input { width: 17px; flex: 0 0 17px; margin-top: 3px; }
-.form-button { width: 100%; border: 0; }
-.form-disclaimer { margin: -8px 0 0; text-align: center; color: var(--muted); font-size: .7rem; }
-.form-success { min-height: 520px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-.form-success > span { width: 64px; height: 64px; display: grid; place-items: center; margin-bottom: 24px; border-radius: 50%; background: var(--sage-soft); color: var(--ink); font-size: 1.4rem; }
-.form-success h2 { font-size: 2.7rem; }.form-success p { max-width: 430px; color: var(--muted); }
+.safe-contact-options { display: flex; flex-direction: column; gap: 24px; }
+.safe-contact-notice { padding: 24px; border-left: 3px solid var(--sage); background: var(--mist-surface); }
+.safe-contact-notice strong { color: var(--ink); font-family: var(--serif); font-size: 1.35rem; font-weight: 600; }
+.safe-contact-notice p { margin: 10px 0 0; color: var(--muted); font-size: .86rem; line-height: 1.7; }
+.safe-contact-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+.safe-contact-actions .button { justify-content: center; width: 100%; text-align: center; }
+.safe-contact-actions .text-link { justify-content: center; padding: 10px 0; text-align: center; }
+.form-disclaimer { margin: 0; text-align: center; color: var(--muted); font-size: .7rem; line-height: 1.6; }
 
 .specialist-focus-grid { grid-template-columns: repeat(2, 1fr); }
 .cost-section { background: var(--mist-surface); }
@@ -1867,8 +1862,6 @@ h3 { font-size: clamp(1.45rem, 2.2vw, 2rem) !important; font-weight: 650; }
 .contact-book-button { min-width: 190px; }
 .contact-form-card { border-top: 4px solid var(--coral); }
 .contact-form-card h2 { margin-bottom: 30px; }
-.form-error { margin: 0; color: #9c3d35; font-size: .82rem; }
-.appointment-form button:disabled { cursor: wait; opacity: .7; }
 
 @media (max-width: 860px) {
   .cost-grid, .contact-simple-grid { grid-template-columns: 1fr; }

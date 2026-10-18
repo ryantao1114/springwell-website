@@ -14,17 +14,19 @@ export function HomeLocationMap() {
     const footer = document.querySelector(".site-footer");
 
     if (pathname !== "/" || !footer?.parentNode) {
-      setMount(null);
       return;
     }
 
     const host = document.createElement("div");
     host.setAttribute("data-home-location-map", "true");
     footer.parentNode.insertBefore(host, footer);
-    setMount(host);
+    let active = true;
+    queueMicrotask(() => {
+      if (active) setMount(host);
+    });
 
     return () => {
-      setMount(null);
+      active = false;
       host.remove();
     };
   }, [pathname]);
@@ -35,7 +37,7 @@ export function HomeLocationMap() {
     <section className="section-pad about-location-section home-location-section" aria-labelledby="home-location-title">
       <div className="container about-location-grid">
         <div>
-          <p className="eyebrow">Visit Springwell</p>
+          <p className="eyebrow">Visit SpringWell</p>
           <h2 id="home-location-title">Acupuncture care in Herndon, Virginia.</h2>
           <p>
             <strong>{site.streetAddress}<br />{site.addressLocality}, {site.addressRegion} {site.postalCode}</strong>

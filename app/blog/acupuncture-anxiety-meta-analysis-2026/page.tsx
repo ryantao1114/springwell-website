@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: slug,
     publishedTime: "2026-08-25",
     authors: ["Renjinming Dai, L.Ac."],
-    images: [{ url: "/images/home-stress-sleep-upload.webp", alt: "Stress and anxiety acupuncture research update from Springwell Acupuncture" }],
+    images: [{ url: "/images/home-stress-sleep-upload.webp", alt: "Stress and anxiety acupuncture research update from SpringWell Acupuncture" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -50,7 +50,7 @@ export default function AnxietyMetaAnalysisArticle() {
     datePublished: "2026-08-25",
     dateModified: "2026-08-25",
     author: { "@type": "Person", name: "Renjinming Dai, L.Ac.", jobTitle: "Virginia Licensed Acupuncturist" },
-    publisher: { "@type": "MedicalBusiness", name: "Springwell Acupuncture", url: site.url },
+    publisher: { "@type": "MedicalBusiness", name: "SpringWell Acupuncture", url: site.url },
     mainEntityOfPage: new URL(slug, site.url).toString(),
   };
 
@@ -139,7 +139,7 @@ export default function AnxietyMetaAnalysisArticle() {
             <section id="patients">
               <h2>What Does This Mean for Someone Experiencing Anxiety or Stress?</h2>
               <p>Acupuncture may be considered as a supportive component of care for some people, particularly when goals are specific and progress is monitored. Examples may include muscle tension, sleep disruption, or the physical sense of remaining activated.</p>
-              <p>At <strong>Springwell Acupuncture</strong>, treatment is individualized around the symptoms you are experiencing, your health history, stress patterns, sleep, muscle tension, and the response observed over time.</p>
+              <p>At <strong>SpringWell Acupuncture</strong>, treatment is individualized around the symptoms you are experiencing, your health history, stress patterns, sleep, muscle tension, and the response observed over time.</p>
               <div className={styles.articleCta}>
                 <div>
                   <p className="eyebrow">Stress support in Herndon</p>

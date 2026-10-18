@@ -6,9 +6,9 @@ import { PageShell } from "../components/site-shell";
 import { site } from "../config/site";
 
 export const metadata: Metadata = {
-  title: "About Springwell | Modern Acupuncture in Northern Virginia",
+  title: "About SpringWell Acupuncture in Herndon, VA",
   description:
-    "Learn about Springwell Acupuncture in Herndon, Virginia, and Renjinming Dai’s thoughtful approach to acupuncture and Chinese medicine.",
+    "Learn about SpringWell Acupuncture in Herndon, Virginia, and Renjinming Dai’s thoughtful approach to acupuncture and Chinese medicine.",
   alternates: { canonical: "/about" },
 };
 
@@ -18,15 +18,15 @@ export default function AboutPage() {
       <section className="about-modern-hero" aria-labelledby="about-title">
         <div className="container about-modern-hero-grid">
           <div className="about-modern-hero-card">
-            <p className="eyebrow">About Springwell</p>
+            <p className="eyebrow">About SpringWell</p>
             <h1 id="about-title">Traditional depth.<br />Modern perspective.<br />Personal care.</h1>
-            <p>Springwell Acupuncture is a modern acupuncture and Chinese medicine clinic in Herndon, Virginia. We serve Herndon, Reston, Northern Virginia, and the greater DMV region with thoughtful, individualized care.</p>
+            <p>SpringWell Acupuncture is a modern acupuncture and Chinese medicine clinic in Herndon, Virginia. We serve Herndon, Reston, Northern Virginia, and the greater DMV region with thoughtful, individualized care.</p>
             <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book now <ArrowIcon /></a>
           </div>
           <div className="about-modern-hero-media">
             <Image
               src="/images/about-springwell-user.webp"
-              alt="Acupuncture meridian model representing Springwell’s traditional and modern approach"
+              alt="Acupuncture meridian model representing SpringWell’s traditional and modern approach"
               fill
               priority
               sizes="(max-width: 860px) 100vw, 52vw"
@@ -45,7 +45,7 @@ export default function AboutPage() {
             <h2 id="about-acupuncture-title">What is acupuncture?</h2>
             <p className="about-acupuncture-lead">A traditional therapy studied through a modern lens.</p>
             <p>Acupuncture uses very fine, sterile needles at carefully selected points on the body. The gentle sensory input may influence pain processing, muscle tone, local tissue response, and autonomic regulation.</p>
-            <p>At Springwell, acupuncture is individualized around your symptoms, history, goals, and response. Traditional assessment—including careful questions, tongue observation, and pulse evaluation—helps shape a focused treatment plan.</p>
+            <p>At SpringWell, acupuncture is individualized around your symptoms, history, goals, and response. Traditional assessment—including careful questions, tongue observation, and pulse evaluation—helps shape a focused treatment plan.</p>
             <div className="about-acupuncture-points">
               <div><strong>Individualized</strong><span>Points and techniques are selected for your pattern and needs.</span></div>
               <div><strong>Supportive</strong><span>Care can complement medical, fertility, dental, or mental-health treatment.</span></div>
@@ -78,7 +78,7 @@ export default function AboutPage() {
             <Image
               src="/images/provider-renjinming-2026.webp"
               unoptimized
-              alt="Renjinming Dai, licensed acupuncturist at Springwell"
+              alt="Renjinming Dai, licensed acupuncturist at SpringWell"
               fill
               sizes="(max-width: 860px) 100vw, 42vw"
             />
@@ -122,7 +122,7 @@ export default function AboutPage() {
               Today, that integrative perspective guides the way I practice at <strong>SpringWell Acupuncture</strong>. <strong>I listen closely to your concerns and look at the bigger picture through an integrative lens.</strong> I do not believe in a one-size-fits-all treatment plan. Whether we are working with fertility and IVF, menstrual health, pain, stress, sleep, or digestive concerns, treatment is adjusted to who you are, how you are feeling, and what your body needs at that point in time. Outside the clinic, I enjoy traveling, spending time outdoors, cooking, and discovering new foods.
             </p>
             <p>
-              <strong>I’m grateful you’re considering Springwell as part of your health journey, and I look forward to supporting you along the way.</strong>
+              <strong>I’m grateful you’re considering SpringWell as part of your health journey, and I look forward to supporting you along the way.</strong>
             </p>
             <div className="provider-specialty-links" aria-label="Explore specialist care">
               <Link href="/care/womens-health">Women’s Health</Link>
@@ -171,7 +171,7 @@ export default function AboutPage() {
               Renjinming’s master’s education and hospital-based clinical training placed particular emphasis on menstrual health, fertility, and reproductive care. During her training, she learned from clinicians carrying forward the academic approach of TCM Master Xia Guicheng, whose work emphasized the phases and rhythms of the menstrual cycle and individualized pattern differentiation.
             </p>
             <p>
-              At Springwell, this perspective informs an individualized approach that considers menstrual cycle patterns, symptoms, health history, lifestyle, and reproductive goals. Care is supported by careful history-taking, clear communication, and appropriate coordination with other healthcare professionals.
+              At SpringWell, this perspective informs an individualized approach that considers menstrual cycle patterns, symptoms, health history, lifestyle, and reproductive goals. Care is supported by careful history-taking, clear communication, and appropriate coordination with other healthcare professionals.
             </p>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function AboutPage() {
       <section className="section-pad about-location-section" id="location">
         <div className="container about-location-grid">
           <div>
-            <p className="eyebrow">Visit Springwell</p>
+            <p className="eyebrow">Visit SpringWell</p>
             <h2>Thoughtful care in Herndon, Virginia.</h2>
             <p>Our clinic is located at <strong>{site.address}</strong>. We welcome patients from Herndon, Reston, Northern Virginia, and the greater DMV region.</p>
             <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book Your Visit <ArrowIcon /></a>

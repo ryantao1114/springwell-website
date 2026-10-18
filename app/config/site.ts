@@ -43,7 +43,7 @@ export const site = {
   ],
   seoKeywords: [
     "SpringWell Acupuncture",
-    "Springwell Acupuncture Herndon",
+    "SpringWell Acupuncture Herndon",
     "acupuncture Herndon VA",
     "acupuncturist Herndon VA",
     "acupuncture Reston VA",

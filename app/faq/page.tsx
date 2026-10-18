@@ -7,7 +7,7 @@ import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
 export const metadata: Metadata = {
   title: "Acupuncture FAQ",
   description:
-    "Answers about acupuncture visits, IVF support, TMJ and pain care, digestive concerns, herbal medicine, safety, pricing, and what to expect at Springwell.",
+    "Answers about acupuncture visits, IVF support, TMJ and pain care, digestive concerns, herbal medicine, safety, pricing, and what to expect at SpringWell.",
   alternates: { canonical: "/faq" },
 };
 
@@ -21,7 +21,7 @@ const faqs = [
   ["Can acupuncture support digestive issues?", "Yes. Patients often seek care for bloating, constipation, irregular digestion, nausea, appetite changes, and stress-sensitive digestive symptoms. Treatment is individualized around symptom timing, sleep, stress, food patterns, and overall digestive rhythm."],
   ["What should I know about Chinese herbal medicine?", "Herbs can have side effects, vary in quality, and interact with medications. Tell us about pregnancy, fertility treatment, planned procedures, allergies, and every medication or supplement before using an herbal product. Do not stop prescribed medicine without speaking with the prescribing clinician."],
   ["How should I prepare?", "Eat a light meal within a few hours of your appointment, stay hydrated, and wear comfortable clothing that allows access to the arms and lower legs. Bring a medication and supplement list and any relevant fertility, medical, or dental information."],
-  ["Do you accept insurance?", "Springwell currently presents self-pay pricing. Upon request, we can provide a detailed superbill for possible out-of-network reimbursement. Coverage varies by plan, so contact your insurer before the visit to confirm acupuncture benefits and claim requirements."],
+  ["Do you accept insurance?", "SpringWell currently presents self-pay pricing. Upon request, we can provide a detailed superbill for possible out-of-network reimbursement. Coverage varies by plan, so contact your insurer before the visit to confirm acupuncture benefits and claim requirements."],
   ["Is acupuncture safe?", "Acupuncture is generally considered safe when performed by a qualified licensed practitioner using sterile, single-use needles. Please tell us about pregnancy, medications, bleeding disorders, implanted devices, infection, recent surgery, or other relevant health concerns so care can be planned appropriately."],
   ["What information helps you personalize care?", "Tell us about your current symptoms, health history, medications, supplements, pregnancy or fertility treatment, recent procedures, and the goals that matter most to you. This helps us select points, techniques, and visit timing thoughtfully."],
 ];
