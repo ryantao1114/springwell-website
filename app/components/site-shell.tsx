@@ -189,7 +189,8 @@ export function SiteFooter() {
             Acupuncture in Herndon for women’s health, fertility &amp; IVF, perimenopause,
             pain, stress, sleep, and digestive concerns.
           </p>
-          <p className="footer-note">Out-of-network care · Superbills available · HSA/FSA cards accepted</p>
+          <p className="footer-note">Out-of-network care with detailed superbills for possible PPO reimbursement. HSA/FSA cards accepted.</p>
+          <Link className="text-link footer-link" href="/pricing#insurance">Insurance &amp; pricing <ArrowIcon /></Link>
           <div className="footer-socials" aria-label="SpringWell social media">
             <p className="footer-label">Follow SpringWell</p>
             <div className="social-links">

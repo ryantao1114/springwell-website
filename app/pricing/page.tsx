@@ -67,19 +67,36 @@ export default function PricingPage() {
 
           <div className="payment-note" id="insurance">
             <div>
-              <p className="eyebrow">Insurance & payment</p>
-              <h2>Clear self-pay care, with simple reimbursement support.</h2>
+              <p className="eyebrow">Insurance &amp; pricing</p>
+              <h2>Transparent self-pay care, with support for using your benefits.</h2>
             </div>
-            <div>
+            <div className="payment-copy">
+              <p className="eyebrow">Out-of-network, made easier</p>
               <p>
-                SpringWell is an out-of-network, self-pay practice. We provide a
-                detailed superbill upon request so patients with eligible commercial
-                PPO benefits can submit a claim for possible reimbursement. Coverage,
-                deductibles, and reimbursement vary by plan and are not guaranteed,
-                so please confirm your acupuncture benefits directly with your insurer.
+                SpringWell Acupuncture is an out-of-network, self-pay practice. Payment
+                is due at the time of service. Upon request, we provide a detailed,
+                professionally formatted superbill that you can submit directly to a
+                commercial PPO plan—such as Blue Cross Blue Shield, Aetna, or Cigna—for
+                consideration of out-of-network reimbursement.
               </p>
-              <p>HSA and FSA cards are accepted for eligible acupuncture services.</p>
-              <p>Self-pay care allows visits to remain individualized and one-on-one, with treatment decisions guided by your goals, clinical needs, comfort, and response rather than a fixed insurance protocol.</p>
+              <p>
+                Your individual plan determines eligibility, deductible requirements,
+                reimbursement rates, and claim decisions. A superbill does not guarantee
+                coverage or payment. We recommend contacting your insurer before your
+                visit to confirm out-of-network acupuncture benefits and submission requirements.
+              </p>
+              <p className="eyebrow">HSA &amp; FSA welcome</p>
+              <p>
+                We gladly accept Health Savings Account (HSA) and Flexible Spending
+                Account (FSA) cards for eligible services.
+              </p>
+              <p className="eyebrow">More time for individualized care</p>
+              <p>
+                Our self-pay model allows us to reserve meaningful, one-on-one time for
+                you and tailor each visit to your symptoms, goals, comfort, and response.
+                Treatment decisions are made with you based on clinical needs, rather
+                than being limited by an insurer’s visit structure or preset protocol.
+              </p>
               <Link className="text-link" href="/contact">Ask about insurance <ArrowIcon /></Link>
             </div>
           </div>
