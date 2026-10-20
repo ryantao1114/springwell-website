@@ -22,7 +22,7 @@ const specialties = [
   { title: "Headaches & Migraine", text: "Target headache triggers, jaw tension, and migraine patterns with personalized, drug-free support.", href: "/care/pain-management", image: "/images/home-headaches-migraine-user.jpg", alt: "A woman holding her head during a severe headache or migraine" },
   { title: "Back, Neck & Sciatica", text: "Ease back, neck, and sciatic pain while supporting comfortable, confident movement.", href: "/care/pain-management", image: "/images/home-back-neck-sciatica-user.jpg", imagePosition: "center 46%", alt: "A person experiencing neck and lower-back pain" },
   { title: "Facial & Rejuvenation", text: "Encourage microcirculation and support a naturally refreshed, radiant appearance.", href: "/services/acupuncture", image: "/images/about-facial-acupuncture.webp", alt: "A calm facial acupuncture and rejuvenation treatment" },
-  { title: "Chinese Herbal & Cupping", text: "Personalized Chinese herbal and cupping care tailored to your symptoms, constitution, and goals.", href: "/services", image: "/images/home-herbal-cupping-user.jpg", imagePosition: "center 48%", alt: "A selection of traditional herbal tea blends arranged in small bowls" },
+  { title: "Custom Herbal", text: "Personalized Chinese herbal care tailored to your symptoms, constitution, and goals.", href: "/services/herbal-medicine", image: "/images/home-herbal-cupping-user.jpg", imagePosition: "center 48%", alt: "A selection of traditional herbal tea blends arranged in small bowls" },
 ];
 
 const benefits = [
