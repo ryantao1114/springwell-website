@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description:
     "Clear acupuncture guides and research insights for fertility and IVF, women’s health, pain, stress, sleep, and digestive concerns in Herndon, Virginia.",
   alternates: { canonical: "/blog" },
-  robots: { index: false, follow: true },
 };
 
 const research = [
@@ -197,6 +196,11 @@ export default function LearnPage() {
         <div className="container">
           <div className={styles.sectionHeading}><p className="eyebrow" id="springwell-view-title">SpringWell View</p></div>
           <div className={styles.viewList}>
+            <div className={styles.viewFeature}>
+              <div className={styles.viewMeta}><span>IVF &amp; IUI outcomes</span><time dateTime="2026-10-18">October 18, 2026</time></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-ivf-iui-success-rates-reston-herndon-va">Can Acupuncture Enhance IVF and IUI Success Rates in Reston &amp; Herndon, VA?</Link></h3><p>A balanced guide to the evidence, supportive mechanisms, when to start, transfer-day protocols, and what acupuncture can—and cannot—promise.</p></div>
+              <Link className={styles.arrowLink} href="/blog/acupuncture-ivf-iui-success-rates-reston-herndon-va" aria-label="Read about acupuncture, IVF and IUI outcomes in Reston and Herndon"><ArrowIcon /></Link>
+            </div>
             <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>IVF &amp; IUI timing</span><time dateTime="2026-09-27">September 27, 2026</time></div>
               <div className={styles.viewCopy}><h3><Link href="/blog/when-to-start-acupuncture-before-ivf-iui">When Should You Start Acupuncture Before IVF or IUI?</Link></h3><p>When to begin, why about three months can be useful, and how cycle-based care can fit around stimulation, retrieval, IUI, embryo transfer, and the two-week wait.</p></div>
