@@ -43,6 +43,18 @@
   line-height: 1.68;
 }
 
+.hero ~ :global(.pain-treatment-path) :global(.care-section-heading .eyebrow),
+.hero ~ :global(section[aria-label="Science in context"]) :global(.eyebrow),
+.hero ~ :global(.care-visit-section) :global(.care-section-heading .eyebrow) {
+  color: var(--ink-deep) !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(1.9rem, 3vw, 3rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.025em !important;
+  text-transform: none !important;
+}
+
 @media (max-width: 760px) {
   .hero {
     display: flex;
