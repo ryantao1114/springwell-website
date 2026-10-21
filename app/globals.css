@@ -123,6 +123,7 @@ nav a:hover::after, nav a:focus-visible::after { right: 0; }
 .mega-menu-intro .text-link::after, .mega-menu-card::after { display: none; }
 .mega-menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .mega-menu-grid-four { grid-template-columns: repeat(4, 1fr); }
+.mega-menu-cluster { min-width: 0; }
 .mega-menu-card { display: flex; flex-direction: column; min-width: 0; }
 .mega-menu-visual { position: relative; height: 132px; margin-bottom: 18px; overflow: hidden; background: linear-gradient(145deg,var(--sage-soft),var(--sage)); }
 .mega-menu-visual::before, .mega-menu-visual::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.62); border-radius: 50%; }
@@ -137,6 +138,10 @@ nav a:hover::after, nav a:focus-visible::after { right: 0; }
 .mega-menu-card strong { margin-bottom: 7px; color: var(--ink-deep); font-family: var(--serif); font-size: 1.35rem; font-weight: 500; line-height: 1.2; }
 .mega-menu-card small { color: var(--muted); font-size: .72rem; line-height: 1.55; }
 .mega-menu-card:hover strong, .mega-menu-card:focus-visible strong { color: var(--coral); }
+.mega-menu-condition-links { display: grid; gap: 7px; margin-top: 14px; padding-top: 13px; border-top: 1px solid var(--line); }
+.mega-menu-condition-links a { display: flex; justify-content: space-between; gap: 8px; color: var(--ink); font-size: .68rem; font-weight: 650; line-height: 1.35; }
+.mega-menu-condition-links a:hover, .mega-menu-condition-links a:focus-visible { color: var(--coral); }
+.mega-menu-condition-links span { color: var(--coral); }
 .modality-feature, .cost-card, .payment-note, .blog-card, #our-story, #provider, #principles, #scholarship, #request, #visit-details { scroll-margin-top: 112px; }
 
 .button { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 16px; padding: 0 24px; border: 1px solid transparent; border-radius: 999px; font-size: 0.88rem; font-weight: 700; transition: transform .2s ease, background .2s ease, color .2s ease; }
@@ -972,6 +977,7 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
     font-size: .78rem;
   }
   .mega-menu-grid { grid-template-columns: 1fr; gap: 10px; }
+  .mega-menu-cluster { display: grid; grid-template-columns: 1fr; }
   .mega-menu-card {
     min-height: 74px;
     display: grid;
@@ -989,6 +995,8 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
   }
   .mega-menu-card strong { align-self: end; margin: 0; font-size: 1.12rem; }
   .mega-menu-card small { align-self: start; font-size: .69rem; }
+  .mega-menu-condition-links { grid-template-columns: 1fr 1fr; gap: 0 14px; margin: 0; padding: 7px 14px 12px 58px; border-top: 0; background: rgba(116,133,102,.06); }
+  .mega-menu-condition-links a { padding: 6px 0; font-size: .67rem; }
   .mobile-book-link {
     min-height: 52px;
     display: inline-flex;

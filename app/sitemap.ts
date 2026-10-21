@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "./config/site";
+import { painConditions } from "./care/pain-management/pain-condition-data";
 
 const routes = [
   { path: "/", priority: 1 },
@@ -32,7 +33,8 @@ const routes = [
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
+  const painRoutes = painConditions.map((condition) => ({ path: `/care/pain-management/${condition.slug}`, priority: 0.9 }));
+  return [...routes, ...painRoutes].map((route) => ({
     url: new URL(route.path, site.url).toString(),
     changeFrequency: "monthly",
     priority: route.priority,

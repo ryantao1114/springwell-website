@@ -5,7 +5,31 @@ import { useEffect, useState } from "react";
 import { site } from "../config/site";
 import { ArrowIcon } from "./icons";
 
-const nav = [
+type NavSubitem = {
+  href: string;
+  title: string;
+  text: string;
+  tone: string;
+  links?: { href: string; label: string }[];
+};
+
+type NavItem = {
+  href: string;
+  label: string;
+  intro?: string;
+  items?: NavSubitem[];
+};
+
+const painMenuLinks = [
+  { href: "/care/pain-management/headache-migraine", label: "Headache & Migraine" },
+  { href: "/care/pain-management/tmj-jaw-pain", label: "TMJ & Jaw Pain" },
+  { href: "/care/pain-management/neck-shoulder-pain", label: "Neck & Shoulder Pain" },
+  { href: "/care/pain-management/low-back-pain-sciatica", label: "Low-Back Pain & Sciatica" },
+  { href: "/care/pain-management/myofascial-pain-muscle-tension", label: "Myofascial Pain" },
+  { href: "/care/pain-management/chronic-pain-mobility", label: "Chronic Pain & Mobility" },
+];
+
+const nav: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   {
@@ -25,7 +49,7 @@ const nav = [
     items: [
       { href: "/care/womens-health", title: "Women’s Health", text: "Menstrual health, cycle-related symptoms, PCOS concerns, perimenopause, hot flashes, and night sweats.", tone: "fertility" },
       { href: "/care/fertility-ivf-support", title: "Fertility & IVF", text: "Support for fertility planning, natural conception, IUI, IVF, retrieval, and embryo transfer.", tone: "needle" },
-      { href: "/care/pain-management", title: "Pain Management", text: "Headache, TMJ, neck, back, muscle tension, and persistent pain support.", tone: "orofacial" },
+      { href: "/care/pain-management", title: "Pain Management", text: "Headache, TMJ, neck, back, muscle tension, and persistent pain support.", tone: "orofacial", links: painMenuLinks },
       { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "Acupuncture support for stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
     ],
   },
@@ -138,11 +162,14 @@ export function SiteHeader() {
                   </div>
                   <div className={`mega-menu-grid ${item.items.length === 4 ? "mega-menu-grid-four" : ""}`}>
                     {item.items.map((subitem) => (
-                      <Link className="mega-menu-card" href={subitem.href} key={subitem.href} onClick={closeNavigation}>
-                        <span className={`mega-menu-visual visual-${subitem.tone}`} aria-hidden="true" />
-                        <strong>{subitem.title}</strong>
-                        <small>{subitem.text}</small>
-                      </Link>
+                      <div className={`mega-menu-cluster ${subitem.links ? "has-condition-links" : ""}`} key={subitem.href}>
+                        <Link className="mega-menu-card" href={subitem.href} onClick={closeNavigation}>
+                          <span className={`mega-menu-visual visual-${subitem.tone}`} aria-hidden="true" />
+                          <strong>{subitem.title}</strong>
+                          <small>{subitem.text}</small>
+                        </Link>
+                        {subitem.links ? <div className="mega-menu-condition-links" role="group" aria-label="Pain management conditions">{subitem.links.map((link) => <Link href={link.href} key={link.href} onClick={closeNavigation}>{link.label}<span aria-hidden="true">→</span></Link>)}</div> : null}
+                      </div>
                     ))}
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ConditionDetail } from "./care-data";
 import styles from "./womens-condition-cards.module.css";
 
@@ -6,6 +7,7 @@ type Props = {
   conditions: string[];
   details: Record<string, ConditionDetail>;
   detailed?: boolean;
+  hrefs?: Record<string, string>;
   symptomLabel?: string;
   womensLayout?: boolean;
 };
@@ -14,7 +16,7 @@ function WomensHowIcon() {
   return <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><path d="M11 17c3 0 3-5 6-5 2 0 3 2 4 4"/><path d="M12 21c3-1 6-1 9 0"/></svg>;
 }
 
-export function WomensConditionCards({ conditions, details, detailed = false, symptomLabel, womensLayout = false }: Props) {
+export function WomensConditionCards({ conditions, details, detailed = false, hrefs, symptomLabel, womensLayout = false }: Props) {
   return (
     <div className={`${styles.grid} ${detailed ? styles.detailedGrid : ""} ${womensLayout ? styles.womensGrid : ""}`}>
       {conditions.map((condition) => {
@@ -69,6 +71,7 @@ export function WomensConditionCards({ conditions, details, detailed = false, sy
                 {detail.howPoints ? <ul className={styles.howPoints}>{detail.howPoints.map((point)=><li key={point.label}><strong>{point.label}:</strong> {point.text}</li>)}</ul> : null}
                 {detail.how.split("\n\n").map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
+              {hrefs?.[condition] ? <Link className={styles.cardLink} href={hrefs[condition]}>Explore this pain condition <span aria-hidden="true">→</span></Link> : null}
             </div>
           </article>
         );
