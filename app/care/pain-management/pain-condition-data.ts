@@ -2,7 +2,6 @@ export type PainCondition = {
   slug: string;
   title: string;
   menuTitle: string;
-  cardTitle: string;
   seoTitle: string;
   description: string;
   eyebrow: string;
@@ -23,7 +22,6 @@ export const painConditions: PainCondition[] = [
     slug: "headache-migraine",
     title: "Headache & Migraine Acupuncture",
     menuTitle: "Headache & Migraine",
-    cardTitle: "Headache & Migraine Acupuncture",
     seoTitle: "Migraine & Headache Acupuncture in Herndon, VA",
     description: "Individualized acupuncture for migraine and tension headaches in Herndon, VA, serving Reston and Northern Virginia.",
     eyebrow: "Migraine · tension headache · neck and jaw tension",
@@ -53,7 +51,6 @@ export const painConditions: PainCondition[] = [
     slug: "tmj-jaw-pain",
     title: "TMJ & Jaw Pain Acupuncture",
     menuTitle: "TMJ & Jaw Pain",
-    cardTitle: "TMJ & Jaw Pain Acupuncture",
     seoTitle: "TMJ & Jaw Pain Acupuncture in Herndon, VA",
     description: "Acupuncture for TMJ pain, jaw tension, clenching, and related headaches in Herndon, VA, near Reston.",
     eyebrow: "TMJ pain · clenching · facial tension",
@@ -83,7 +80,6 @@ export const painConditions: PainCondition[] = [
     slug: "neck-shoulder-pain",
     title: "Neck & Shoulder Pain Acupuncture",
     menuTitle: "Neck & Shoulder Pain",
-    cardTitle: "Neck & Shoulder Pain Acupuncture",
     seoTitle: "Neck & Shoulder Pain Acupuncture in Herndon, VA",
     description: "Individualized acupuncture for neck stiffness, shoulder tension, and movement-related pain in Herndon, VA, near Reston.",
     eyebrow: "Neck stiffness · shoulder tension · limited movement",
@@ -113,7 +109,6 @@ export const painConditions: PainCondition[] = [
     slug: "low-back-pain-sciatica",
     title: "Low-Back Pain & Sciatica Acupuncture",
     menuTitle: "Low-Back Pain & Sciatica",
-    cardTitle: "Low-Back Pain & Sciatica Acupuncture",
     seoTitle: "Low-Back Pain & Sciatica Acupuncture in Herndon, VA",
     description: "Acupuncture for low-back pain, stiffness, and sciatica symptoms in Herndon, VA, serving Reston and Northern Virginia.",
     eyebrow: "Low-back pain · stiffness · sciatica",
@@ -143,7 +138,6 @@ export const painConditions: PainCondition[] = [
     slug: "myofascial-pain-muscle-tension",
     title: "Myofascial Pain & Muscle Tension Acupuncture",
     menuTitle: "Myofascial Pain",
-    cardTitle: "Myofascial Pain & Muscle Tension",
     seoTitle: "Myofascial Pain Acupuncture in Herndon, VA",
     description: "Acupuncture and optional cupping for myofascial pain, trigger points, and muscle tension in Herndon, VA, near Reston.",
     eyebrow: "Trigger points · muscle knots · referred pain",
@@ -173,7 +167,6 @@ export const painConditions: PainCondition[] = [
     slug: "chronic-pain-mobility",
     title: "Chronic Pain & Mobility Support",
     menuTitle: "Chronic Pain & Mobility",
-    cardTitle: "Chronic Pain & Mobility Support",
     seoTitle: "Chronic Pain Acupuncture in Herndon, VA",
     description: "Personalized acupuncture for chronic pain, recurring tension, and mobility goals in Herndon, VA, serving Reston.",
     eyebrow: "Persistent pain · recurring tension · mobility support",
@@ -202,7 +195,3 @@ export const painConditions: PainCondition[] = [
 ];
 
 export const painConditionBySlug = Object.fromEntries(painConditions.map((condition) => [condition.slug, condition])) as Record<string, PainCondition>;
-
-export const painConditionHrefByCardTitle = Object.fromEntries(
-  painConditions.map((condition) => [condition.cardTitle, `/care/pain-management/${condition.slug}`]),
-) as Record<string, string>;

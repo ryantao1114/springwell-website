@@ -21,12 +21,12 @@ type NavItem = {
 };
 
 const painMenuLinks = [
-  { href: "/care/pain-management/headache-migraine", label: "Headache & Migraine" },
-  { href: "/care/pain-management/tmj-jaw-pain", label: "TMJ & Jaw Pain" },
-  { href: "/care/pain-management/neck-shoulder-pain", label: "Neck & Shoulder Pain" },
-  { href: "/care/pain-management/low-back-pain-sciatica", label: "Low-Back Pain & Sciatica" },
-  { href: "/care/pain-management/myofascial-pain-muscle-tension", label: "Myofascial Pain" },
-  { href: "/care/pain-management/chronic-pain-mobility", label: "Chronic Pain & Mobility" },
+  { href: "/care/pain-management#headache-migraine", label: "Headache & Migraine" },
+  { href: "/care/pain-management#tmj-jaw-pain", label: "TMJ & Jaw Pain" },
+  { href: "/care/pain-management#neck-shoulder-pain", label: "Neck & Shoulder Pain" },
+  { href: "/care/pain-management#low-back-pain-sciatica", label: "Low-Back Pain & Sciatica" },
+  { href: "/care/pain-management#myofascial-pain-muscle-tension", label: "Myofascial Pain" },
+  { href: "/care/pain-management#chronic-pain-mobility", label: "Chronic Pain & Mobility" },
 ];
 
 const nav: NavItem[] = [
