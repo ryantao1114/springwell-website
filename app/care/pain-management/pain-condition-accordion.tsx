@@ -12,7 +12,7 @@ export function PainConditionAccordion() {
       <div className="care-section-heading">
         <p className="eyebrow">Pain conditions we treat</p>
         <h2 id="pain-conditions-title">Explore pain care in one place.</h2>
-        <p>Open a topic to review common symptoms, our treatment approach, safety guidance, research context, and frequently asked questions—all without leaving this page.</p>
+        <p>Open a topic to review common symptoms, our treatment approach, and research context—all without leaving this page.</p>
       </div>
       <div className={styles.list}>
         {painConditions.map((condition, index) => <details className={styles.item} id={condition.slug} key={condition.slug}>
@@ -30,8 +30,6 @@ export function PainConditionAccordion() {
               <section><h4>Common symptoms and patterns</h4><ul>{condition.symptoms.map((symptom) => <li key={symptom}>{symptom}</li>)}</ul></section>
               <section><h4>Personalized treatment focus</h4><ol>{condition.treatmentFocus.map((item) => <li key={item.title}><strong>{item.title}</strong><span>{item.text}</span></li>)}</ol></section>
             </div>
-            <aside className={styles.safety}><strong>Safety and coordinated care</strong><p>{condition.careCoordination}</p></aside>
-            <div className={styles.faq}><h4>Frequently asked questions</h4><div>{condition.faqs.map((faq) => <article key={faq.question}><h5>{faq.question}</h5><p>{faq.answer}</p></article>)}</div></div>
             <div className={styles.actions}>
               <div><span>Research in context</span><p>{condition.evidence.text}</p><a className="text-link" href={condition.evidence.url} target="_blank" rel="noreferrer">{condition.evidence.label} <ArrowIcon /></a></div>
               <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book your first visit <ArrowIcon /></a>
