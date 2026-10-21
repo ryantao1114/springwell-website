@@ -9,9 +9,6 @@ export function PainConditionAccordion() {
   return <section className={`section-pad care-conditions-section ${styles.section}`} aria-label="Pain conditions we treat">
     <PainHashOpener />
     <div className="container">
-      <div className="care-section-heading">
-        <p className="eyebrow">Pain conditions we treat</p>
-      </div>
       <div className={styles.list}>
         {painConditions.map((condition, index) => <details className={styles.item} id={condition.slug} key={condition.slug}>
           <summary>

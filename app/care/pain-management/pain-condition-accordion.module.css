@@ -1,5 +1,4 @@
-.section { background: var(--cream); }
-.section :global(.care-section-heading .eyebrow) { color: var(--ink-deep); font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 3rem); font-weight: 500; line-height: 1.08; letter-spacing: -.025em; text-transform: none; }
+.section { padding-top: 0; background: var(--cream); }
 .list { border-top: 1px solid var(--line); }
 .item { scroll-margin-top: 110px; border-bottom: 1px solid var(--line); background: var(--paper); }
 .item summary { display: grid; grid-template-columns: 70px 1fr 44px; gap: 24px; align-items: center; min-height: 150px; padding: 28px 32px; cursor: pointer; list-style: none; }
