@@ -97,10 +97,10 @@ export const careAreas: CareArea[] = [
     clinicalNote: ""
   },
   {
-    slug: "pain-management", number: "03", eyebrow: "Neck · Back · Muscle · TMJ pain",
-    title: "TMJ & Pain Relief Acupuncture", seoTitle: "TMJ & Pain Relief Acupuncture in Herndon, VA",
-    seoDescription: "Acupuncture in Herndon, VA for TMJ pain, migraine, neck and shoulder pain, low-back pain, sciatica, muscle tension, and chronic pain. Serving Reston.",
-    summary: "Focused care for musculoskeletal, jaw, facial, headache, and recurring tension patterns that affect movement and daily life.",
+    slug: "pain-management", number: "03", eyebrow: "Neck pain · Back pain · Migraine · Sciatica · TMJ",
+    title: "Pain Relief & TMJ Acupuncture in Herndon, VA", seoTitle: "Pain Relief & TMJ Acupuncture in Herndon, VA",
+    seoDescription: "Acupuncture in Herndon, VA for neck and back pain, migraine, TMJ and jaw pain, sciatica, muscle tension, and chronic pain. Serving Reston.",
+    summary: "Personalized acupuncture for neck and back pain, migraine, TMJ and jaw tension, sciatica, and recurring muscle pain—supporting easier movement, better rest, and everyday comfort.",
     image: "/images/pain-management-electroacupuncture-hero.jpg", imageAlt: "Electroacupuncture treatment for lower-back pain beneath a warming therapy lamp",
     introTitle: "A treatment plan shaped around movement, function, and recovery.",
     introCopy: "Neck pain, back pain, muscle tension, TMJ symptoms, and headaches often overlap with sleep, stress, work habits, and movement. We look at the full pattern and create a treatment plan focused on pain relief, easier movement, and recovery.",
