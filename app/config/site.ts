@@ -18,9 +18,9 @@ export const site = {
   mapEmbedUrl: "https://www.google.com/maps?q=springwell%20acupuncture&output=embed",
   hours: {
     days: "Tuesday, Thursday, Friday & Sunday",
-    time: "9:00 AM–5:30 PM",
+    time: "9:00 AM–6:30 PM",
     opens: "09:00",
-    closes: "17:30",
+    closes: "18:30",
   },
   socialLinks: [
     {

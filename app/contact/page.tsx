@@ -7,7 +7,7 @@ import { site } from "../config/site";
 export const metadata: Metadata = {
   title: "Contact SpringWell Acupuncture",
   description:
-    `Call SpringWell Acupuncture at ${site.phone}. Visit ${site.address}, Tuesday, Thursday, Friday, and Sunday, 9:00 AM–5:30 PM.`,
+    `Call SpringWell Acupuncture at ${site.phone}. Visit ${site.address}, ${site.hours.days}, ${site.hours.time}.`,
   alternates: { canonical: "/contact" },
 };
 
