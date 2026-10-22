@@ -148,7 +148,7 @@ export function SiteHeader() {
               >
                 {item.label}<span aria-hidden="true">⌄</span>
               </button>
-              <div className="mega-menu">
+              <div className={`mega-menu ${item.label === "What We Treat" ? "mega-menu-treatments" : ""}`}>
                 <div className="container mega-menu-inner">
                   <div className="mega-menu-intro">
                     <p className="eyebrow">Explore {item.label}</p>
@@ -161,7 +161,7 @@ export function SiteHeader() {
                       Book an appointment <ArrowIcon />
                     </Link>
                   </div>
-                  <div className={`mega-menu-grid ${item.items.length === 4 ? "mega-menu-grid-four" : ""}`}>
+                  <div className={`mega-menu-grid ${item.items.length === 4 ? "mega-menu-grid-four" : ""} ${item.items.length === 5 ? "mega-menu-grid-five" : ""}`}>
                     {item.items.map((subitem) => (
                       <div className={`mega-menu-cluster ${subitem.links ? "has-condition-links" : ""}`} key={subitem.href}>
                         <Link className="mega-menu-card" href={subitem.href} onClick={closeNavigation}>
