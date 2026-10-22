@@ -1,4 +1,5 @@
 import { ArrowIcon } from "../../components/icons";
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "../../config/site";
 import { painConditions } from "./pain-condition-data";
@@ -13,6 +14,9 @@ export function PainConditionAccordion() {
         {painConditions.map((condition, index) => <details className={styles.item} id={condition.slug} key={condition.slug}>
           <summary>
             <span className={styles.number}>{String(index + 1).padStart(2, "0")}</span>
+            <span className={styles.image}>
+              <Image src={condition.image} alt={condition.imageAlt} fill sizes="(max-width: 640px) 100vw, 240px" />
+            </span>
             <span className={styles.summaryCopy}><strong>{condition.title}</strong><small>{condition.summary}</small></span>
             <span className={styles.toggle} aria-hidden="true">+</span>
           </summary>
