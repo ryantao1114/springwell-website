@@ -20,18 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!area) return {};
   const canonical = `/care/${area.slug}`;
   return {
-    title: area.seoTitle,
+    title: { absolute: area.seoTitle },
     description: area.seoDescription,
     alternates: { canonical },
     openGraph: {
-      title: `${area.seoTitle} | ${site.name}`,
+      title: area.seoTitle,
       description: area.seoDescription,
       url: canonical,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${area.seoTitle} | ${site.name}`,
+      title: area.seoTitle,
       description: area.seoDescription,
     },
   };
@@ -83,7 +83,7 @@ const womensFaqs=[
   ["Can acupuncture support perimenopause symptoms?","Care may focus on sleep, tension, headaches, or overall comfort during perimenopause. Treatment is individualized, and changing symptoms should also be discussed with your medical clinician."],
   ["How often should I come?","Frequency depends on the concern, symptom pattern, response, and practical schedule. We recommend a realistic starting plan after your first assessment."],
 ] as const;
-function CareFaq({type}:{type:"womens"|"fertility"}){const items=type==="fertility"?fertilityFaqs:womensFaqs;return <section className={redesignStyles.faq}><div className="container"><div className={redesignStyles.faqHeading}><p className="eyebrow">{type==="fertility"?"Fertility support FAQ":"Women’s health FAQ"}</p><h2>{type==="fertility"?"Common questions about fertility acupuncture":"Common questions about women’s health acupuncture"}</h2></div><div className={redesignStyles.faqList}>{items.map(([question,answer])=><details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>}
+function CareFaq({type}:{type:"womens"|"fertility"}){const items=type==="fertility"?fertilityFaqs:womensFaqs;return <section className={redesignStyles.faq}><div className="container"><div className={redesignStyles.faqHeading}><p className="eyebrow">{type==="fertility"?"Fertility support FAQ":"Women’s health FAQ"}</p><h2>{type==="fertility"?"What should I know about fertility acupuncture?":"Common questions about women’s health acupuncture"}</h2></div><div className={redesignStyles.faqList}>{items.map(([question,answer])=><details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>}
 const directConditionCardSlugs = new Set(["womens-health", "fertility-ivf-support", "pain-management", "stress-sleep", "digestive-support"]);
 export default async function CareAreaPage({params}:Props){const {slug}=await params;if(slug==="womens-health-fertility")permanentRedirect("/care/womens-health");const area=getCareArea(slug);if(!area)notFound();const useDirectConditionCards=directConditionCardSlugs.has(area.slug);const isWomensHealth=area.slug === "womens-health";const isFertility=area.slug === "fertility-ivf-support";const isPain=area.slug === "pain-management";const isStress=area.slug === "stress-sleep";const isDigestive=area.slug === "digestive-support";const introImage=isStress?"/images/stress-mind-line-illustration.webp":isFertility?"/images/fertility-journey-support.jpg":"/images/bringing-balance-back.jpeg";const introAlt=isStress?"Minimal line illustration of a person gently untangling a busy mind":isFertility?"Two women sharing a supportive moment outdoors during a hike":"Hands gently balancing a stack of smooth stones";return <PageShell><section className={`care-page-hero ${isWomensHealth ? womensStyles.hero : ""} ${isStress ? redesignStyles.stressHero : ""} ${isPain ? painStyles.hero : ""}`}><div className={`care-page-hero-media ${isWomensHealth ? womensStyles.heroMedia : ""} ${isStress ? redesignStyles.stressHeroMedia : ""} ${isPain ? painStyles.media : ""}`}><Image src={area.image} alt={area.imageAlt} fill priority quality={isWomensHealth || isStress || isPain ? 100 : 95} unoptimized={isWomensHealth || isStress || isPain} sizes={isStress ? "(max-width: 760px) 100vw, 52vw" : isPain ? "(max-width: 760px) 100vw, 50vw" : "100vw"}/></div><div className={`care-page-hero-overlay ${isStress ? redesignStyles.stressHeroOverlay : ""} ${isPain ? painStyles.overlay : ""}`}/><div className={`container care-page-hero-content ${isStress ? redesignStyles.stressHeroContent : ""} ${isPain ? painStyles.content : ""}`}><p className="eyebrow light">{area.eyebrow}</p><h1>{area.title}</h1><div className={womensStyles.heroSummary}>{area.summary.split("\n\n").map((paragraph)=><p key={paragraph}>{paragraph}</p>)}</div><a className="button button-light" href={site.bookingUrl} target="_blank" rel="noreferrer">Book your first visit <ArrowIcon/></a></div></section>
   {area.slug === "stress-sleep" && <StressDomains/>}
