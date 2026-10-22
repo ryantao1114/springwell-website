@@ -50,7 +50,8 @@ const nav: NavItem[] = [
       { href: "/care/womens-health", title: "Women’s Health", text: "Menstrual health, cycle-related symptoms, PCOS concerns, perimenopause, hot flashes, and night sweats.", tone: "fertility" },
       { href: "/care/fertility-ivf-support", title: "Fertility & IVF", text: "Support for fertility planning, natural conception, IUI, IVF, retrieval, and embryo transfer.", tone: "needle" },
       { href: "/care/pain-management", title: "Pain Management", text: "Headache, TMJ, neck, back, muscle tension, and persistent pain support.", tone: "orofacial", links: painMenuLinks },
-      { href: "/care/stress-sleep", title: "Stress, Sleep & Digestion", text: "Acupuncture support for stress, sleep disruption, bloating, and digestive discomfort.", tone: "wellness" },
+      { href: "/care/stress-sleep", title: "Stress & Sleep", text: "Acupuncture support for stress, insomnia, restless sleep, fatigue, and difficulty winding down.", tone: "wellness" },
+      { href: "/care/digestive-support", title: "Digestive Health", text: "Individualized support for bloating, nausea, irregularity, appetite changes, and stress-sensitive digestion.", tone: "herbs" },
     ],
   },
   { href: "/blog", label: "Blog" },
@@ -242,6 +243,7 @@ export function SiteFooter() {
           <Link href="/care/womens-health">Women’s Health Acupuncture</Link>
           <Link href="/care/pain-management">TMJ &amp; Pain Relief</Link>
           <Link href="/care/stress-sleep">Stress &amp; Sleep Acupuncture</Link>
+          <Link href="/care/digestive-support">Digestive Health Acupuncture</Link>
           <Link href="/book">Book an Appointment</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/new-patients">New Patients</Link>

@@ -50,6 +50,7 @@ export default function ServicesPage() {
             <Link className="text-link" href="/care/womens-health">Women’s health acupuncture <ArrowIcon /></Link>
             <Link className="text-link" href="/care/pain-management">TMJ &amp; pain relief acupuncture <ArrowIcon /></Link>
             <Link className="text-link" href="/care/stress-sleep">Stress &amp; sleep acupuncture <ArrowIcon /></Link>
+            <Link className="text-link" href="/care/digestive-support">Digestive health acupuncture <ArrowIcon /></Link>
             <Link className="text-link" href="/book">Book an acupuncture appointment <ArrowIcon /></Link>
           </nav>
         </div>

@@ -129,7 +129,8 @@ export default function AboutPage() {
               <Link href="/care/fertility-ivf-support">Fertility &amp; IVF Support</Link>
               <Link href="/specialist#pain-management">Pain Management</Link>
               <Link href="/specialist#orofacial-pain">TMJ &amp; Orofacial Pain</Link>
-              <Link href="/specialist#stress-sleep-digestion">Stress, Sleep &amp; Digestion</Link>
+              <Link href="/care/stress-sleep">Stress &amp; Sleep</Link>
+              <Link href="/care/digestive-support">Digestive Health</Link>
             </div>
           </div>
         </div>

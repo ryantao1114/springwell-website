@@ -40,13 +40,22 @@ const focusAreas = [
     link: "/care/pain-management",
   },
   {
-    id: "stress-sleep-digestion",
+    id: "stress-sleep",
     eyebrow: "04 · Rest & recovery",
-    title: "Stress, Sleep & Digestion",
-    text: "Insomnia, stress and overwhelm, anxiety-related tension, fatigue, restless energy, bloating, nausea, constipation, and stress-sensitive digestion.",
-    image: "/images/service-herbal-medicine.jpg",
-    alt: "Traditional herbs arranged for a digestive and wellness consultation",
+    title: "Stress & Sleep",
+    text: "Insomnia, stress and overwhelm, anxiety-related tension, fatigue, restless energy, and difficulty winding down.",
+    image: "/images/home-stress-sleep-upload.webp",
+    alt: "A patient resting during calming acupuncture care for stress and sleep",
     link: "/care/stress-sleep",
+  },
+  {
+    id: "digestive-support",
+    eyebrow: "05 · Digestive health",
+    title: "Digestive Health",
+    text: "Bloating, abdominal discomfort, nausea, appetite changes, constipation, irregularity, and stress-sensitive digestive symptoms.",
+    image: "/images/home-digestive-support-upload.webp",
+    alt: "Traditional herbs arranged for an individualized digestive health consultation",
+    link: "/care/digestive-support",
   },
 ];
 
