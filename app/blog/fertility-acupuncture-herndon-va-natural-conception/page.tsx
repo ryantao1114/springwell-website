@@ -15,6 +15,8 @@ const faqs = [
   { question: "Does fertility acupuncture follow the phases of the menstrual cycle?", answer: "It can. At SpringWell, point selection and treatment goals may change during menstruation, the follicular phase, the ovulatory window, and the luteal phase. Care is based on your actual cycle rather than assuming every cycle is 28 days." },
   { question: "Can I receive acupuncture while working with an OB-GYN or fertility specialist?", answer: "Yes. Acupuncture can be used as complementary care while you follow the evaluation, medication, testing, or treatment plan recommended by your physician or reproductive endocrinologist." },
   { question: "Where can I find fertility acupuncture near Herndon and Reston, Virginia?", answer: `SpringWell Acupuncture is located at ${site.address} and serves patients from Herndon, Reston, Sterling, Vienna, Tysons, Fairfax, and nearby Northern Virginia communities.` },
+  { question: "How often should I come in for fertility acupuncture?", answer: "Most natural-conception plans involve regular visits, often weekly, with timing adjusted to the phases of your cycle. Your frequency is set at the first consultation based on your cycle pattern, health history, and goals, and it can change as your cycle and plans change." },
+  { question: "Can acupuncture support irregular cycles or PCOS-related symptoms?", answer: "Care can be adapted when cycles are irregular or when symptoms associated with PCOS are part of the picture. Treatment focuses on observing your cycle pattern and supporting symptoms such as discomfort, stress, and sleep disruption, alongside the evaluation and treatment your physician recommends." },
 ] as const;
 
 export const metadata: Metadata = {
@@ -33,7 +35,7 @@ export default function NaturalConceptionFertilityArticle() {
       {
         "@type": "BlogPosting", headline: title, description,
         image: new URL("/images/blog-natural-conception-family.jpg", site.url).toString(),
-        datePublished: "2026-09-19", dateModified: "2026-09-19",
+        datePublished: "2026-09-19", dateModified: "2026-10-23",
         author: { "@type": "Person", name: "Renjinming Dai, L.Ac., Dipl. Ac. (NCCAOM)", jobTitle: "Virginia Licensed Acupuncturist", url: new URL("/about", site.url).toString(), alumniOf: ["Nanjing University of Chinese Medicine", "Hunan University of Chinese Medicine"], knowsAbout: ["Traditional Chinese medicine gynecology", "Fertility acupuncture", "Natural conception", "Women’s health acupuncture"] },
         publisher: { "@type": "MedicalBusiness", name: site.name, url: site.url, telephone: site.phone, address: { "@type": "PostalAddress", streetAddress: site.streetAddress, addressLocality: site.addressLocality, addressRegion: site.addressRegion, postalCode: site.postalCode, addressCountry: "US" } },
         mainEntityOfPage: new URL(slug, site.url).toString(), about: ["Fertility acupuncture", "Natural conception", "Menstrual cycle", "TCM gynecology", "Herndon, Virginia"],
@@ -54,7 +56,7 @@ export default function NaturalConceptionFertilityArticle() {
               <p className="eyebrow">SpringWell View · Natural conception</p>
               <h1>Preparing Your Body for Pregnancy: How Fertility Acupuncture in Herndon, VA Supports Natural Conception</h1>
               <p className={styles.articleDeck}>A cycle-aware, whole-person approach to preconception care grounded in traditional Chinese medicine gynecology.</p>
-              <div className={styles.articleByline}><span>By Renjinming Dai, L.Ac., Dipl. Ac. (NCCAOM)</span><time dateTime="2026-09-19">September 19, 2026</time><span>8 min read</span></div>
+              <div className={styles.articleByline}><span>By Renjinming Dai, L.Ac., Dipl. Ac. (NCCAOM)</span><time dateTime="2026-09-19">September 19, 2026</time><span>Updated October 23, 2026</span><span>8 min read</span></div>
             </div>
             <div className={styles.articleHeroImage}><Image src="/images/blog-natural-conception-family.jpg" alt="A newborn holding a parent’s fingers, representing the path to parenthood" fill priority sizes="(max-width: 760px) 100vw, 42vw" /></div>
           </div>
@@ -70,6 +72,10 @@ export default function NaturalConceptionFertilityArticle() {
             <p className={styles.lead}>For patients trying to conceive naturally in Herndon and Northern Virginia, fertility acupuncture offers individualized, cycle-aware support alongside appropriate reproductive healthcare.</p>
             <p>Trying to conceive can be an exciting milestone. When pregnancy does not happen as quickly as expected, however, tracking, testing, and uncertainty can begin to feel overwhelming. At <strong>SpringWell Acupuncture in Herndon, VA</strong>, preconception care considers the menstrual cycle together with sleep, stress, digestion, energy, pain, and your broader health history.</p>
             <p>Fertility acupuncture does not force ovulation or replace medical evaluation. Its role is complementary: to provide thoughtful care based on your individual symptoms, menstrual pattern, stage of family planning, and response from one visit to the next.</p>
+            <div className={styles.answerBlock}>
+              <p className={styles.answerLabel}>Short answer</p>
+              <p>Fertility acupuncture for natural conception is cycle-phased supportive care. At SpringWell Acupuncture in Herndon, VA, treatment follows your actual menstrual cycle — period, follicular phase, ovulation window, and luteal phase — and many patients begin two to three cycles before they hope to conceive. It complements, and does not replace, medical evaluation.</p>
+            </div>
 
             <section id="tcm-view">
               <h2>Cultivating the “Soil”: A TCM View of Natural Fertility</h2>

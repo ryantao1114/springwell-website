@@ -1,0 +1,24 @@
+# SpringWell Acupuncture
+
+> SpringWell Acupuncture is an acupuncture clinic in Herndon, Virginia, providing individualized care for women's health, fertility and IVF/IUI support, pain, stress, sleep, and digestive concerns. Located at 463 Carlisle Dr Ste B, Herndon, VA 20170. Phone: 703-495-2857. Open Tuesday, Thursday, Friday, and Sunday, 9:00 AM to 6:30 PM. Care is provided by a Virginia-licensed acupuncturist with graduate training in TCM gynecology. Serving Herndon, Reston, Sterling, Vienna, Tysons, and Fairfax in Northern Virginia.
+
+## Care pages
+
+- [Fertility & IVF Acupuncture](https://springwellacu.com/care/fertility-ivf-support): Cycle-based fertility acupuncture, including support alongside IUI and IVF.
+- [Women's Health Acupuncture](https://springwellacu.com/care/womens-health): Menstrual health, PCOS-related symptoms, perimenopause, and hormonal transitions.
+- [Pain Management](https://springwellacu.com/care/pain-management): Headache and migraine, TMJ, neck and shoulder pain, low-back pain and sciatica, myofascial pain, and chronic pain.
+- [Stress & Sleep Acupuncture](https://springwellacu.com/care/stress-sleep): Stress, anxiety, and sleep support.
+- [Digestive Health Acupuncture](https://springwellacu.com/care/digestive-support): Digestive comfort, including IBS-type symptoms and bloating.
+- [Acupuncture](https://springwellacu.com/services/acupuncture): What acupuncture is and what to expect.
+- [New Patients](https://springwellacu.com/new-patients): First visit, pricing and insurance information.
+
+## Blog guides
+
+- [When Should You Start Acupuncture Before IVF or IUI?](https://springwellacu.com/blog/when-to-start-acupuncture-before-ivf-iui): Timing guidance for starting fertility acupuncture around stimulation, retrieval, IUI, and embryo transfer.
+- [Fertility Acupuncture in Herndon, VA: Natural Conception](https://springwellacu.com/blog/fertility-acupuncture-herndon-va-natural-conception): Cycle-phased preconception care for patients trying to conceive naturally.
+- [SpringWell Blog](https://springwellacu.com/blog): All articles and research summaries.
+
+## About
+
+- [About SpringWell Acupuncture](https://springwellacu.com/about): Practitioner background and clinic information.
+- [Book an Appointment](https://springwellacu.com/book): Online scheduling.

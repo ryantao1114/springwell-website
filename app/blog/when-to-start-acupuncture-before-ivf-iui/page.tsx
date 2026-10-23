@@ -27,6 +27,10 @@ const faqs = [
     question: "Where is SpringWell Acupuncture located?",
     answer: `SpringWell Acupuncture is located at ${site.address} and provides cycle-based fertility acupuncture care for patients in Herndon and surrounding Northern Virginia communities.`,
   },
+  {
+    question: "How often should I have acupuncture during an IVF cycle?",
+    answer: "Frequency follows your treatment stage. Visits are often weekly during preparation, may be timed more closely around stimulation monitoring, egg retrieval, and embryo transfer, and are usually gentler during the two-week wait. Your plan adjusts as your fertility clinic updates your schedule.",
+  },
 ] as const;
 
 export const metadata: Metadata = {
@@ -63,7 +67,7 @@ export default function WhenToStartAcupunctureArticle() {
         description,
         image: new URL("/images/blog-natural-conception-family.jpg", site.url).toString(),
         datePublished: "2026-09-27",
-        dateModified: "2026-09-27",
+        dateModified: "2026-10-23",
         author: { "@type": "Person", name: "Renjinming Dai, L.Ac.", jobTitle: "Virginia Licensed Acupuncturist", url: new URL("/about", site.url).toString() },
         publisher: {
           "@type": "MedicalBusiness",
@@ -98,7 +102,7 @@ export default function WhenToStartAcupunctureArticle() {
               <p className="eyebrow">SpringWell View · IVF &amp; IUI timing</p>
               <h1>{title}</h1>
               <p className={styles.articleDeck}>How cycle-based fertility acupuncture can fit around preparation, ovarian stimulation, egg retrieval, IUI, embryo transfer, and the two-week wait.</p>
-              <div className={styles.articleByline}><span>By Renjinming Dai, L.Ac.</span><time dateTime="2026-09-27">September 27, 2026</time><span>7 min read</span></div>
+              <div className={styles.articleByline}><span>By Renjinming Dai, L.Ac.</span><time dateTime="2026-09-27">September 27, 2026</time><span>Updated October 23, 2026</span><span>7 min read</span></div>
             </div>
             <div className={styles.articleHeroImage}><Image src="/images/blog-natural-conception-family.jpg" alt="A newborn holding a parent’s fingers, representing fertility and the path to parenthood" fill priority sizes="(max-width: 760px) 100vw, 42vw" /></div>
           </div>
@@ -122,6 +126,10 @@ export default function WhenToStartAcupunctureArticle() {
             <p className={styles.lead}>When possible, about three months before an IVF or IUI cycle is a useful time to begin acupuncture. If your medications or treatment cycle have already started, you can still begin from where you are now.</p>
             <p>If you are preparing for IVF or IUI, you probably already have many dates on your calendar: blood work, ultrasounds, medications, injections, monitoring appointments, and procedures. Some patients contact SpringWell several months before treatment. Others call after stimulation begins or when an embryo transfer is approaching.</p>
             <p>Starting earlier gives cycle-based care time to follow your menstrual pattern, address symptoms, and prepare for the changing stages of fertility treatment. It is a helpful preparation window, not a deadline.</p>
+            <div className={styles.answerBlock}>
+              <p className={styles.answerLabel}>Short answer</p>
+              <p>Start acupuncture about three months before an IVF or IUI cycle when you can, so care can follow several menstrual cycles before stimulation or insemination. Starting later still helps — treatment can begin at any stage, including during stimulation, before retrieval or transfer, and in the two-week wait, timed to your fertility clinic&rsquo;s schedule.</p>
+            </div>
 
             <section id="three-months">
               <h2>Why Start About Three Months Before IVF or IUI?</h2>
@@ -129,6 +137,17 @@ export default function WhenToStartAcupunctureArticle() {
               <p>It also gives us an opportunity to understand the bigger picture: your menstrual pattern, previous fertility treatment, current IVF or IUI plan, medications, sleep, stress, digestion, pelvic symptoms, and how you feel throughout the month.</p>
               <p>For patients planning IVF, the plan may begin with preparation for ovarian stimulation and egg retrieval. For patients planning IUI, appointments may be coordinated around follicular development, ovulation, trigger timing, and the expected insemination date.</p>
               <blockquote>The treatment plan changes as your cycle and fertility schedule change. That is the foundation of cycle-based fertility acupuncture.</blockquote>
+              <h3>Acupuncture Timing Around IVF and IUI, at a Glance</h3>
+              <table className={styles.timingTable}>
+                <thead><tr><th>Treatment stage</th><th>How acupuncture fits</th></tr></thead>
+                <tbody>
+                  <tr><td>About 3 months before</td><td>Cycle observation, whole-person preparation, and building your plan before treatment begins.</td></tr>
+                  <tr><td>Ovarian stimulation</td><td>Appointments timed around monitoring visits, medication changes, and follicle development.</td></tr>
+                  <tr><td>Egg retrieval</td><td>Sessions planned around your trigger and retrieval dates, with gentle care afterwards.</td></tr>
+                  <tr><td>IUI</td><td>Care timed around follicle checks, trigger timing, and the insemination day.</td></tr>
+                  <tr><td>Embryo transfer &amp; the two-week wait</td><td>Support around transfer day, then calm, gentle care while you wait for your test.</td></tr>
+                </tbody>
+              </table>
             </section>
 
             <section id="stimulation">
