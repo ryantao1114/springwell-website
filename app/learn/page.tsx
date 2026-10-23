@@ -197,6 +197,11 @@ export default function LearnPage() {
           <div className={styles.sectionHeading}><p className="eyebrow" id="springwell-view-title">SpringWell View</p></div>
           <div className={styles.viewList}>
             <div className={styles.viewFeature}>
+              <div className={styles.viewMeta}><span>Sleep &amp; insomnia</span><time dateTime="2026-10-23">October 23, 2026</time></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-insomnia-herndon-va">Acupuncture for Insomnia in Herndon, VA: Support for Deeper, Steadier Sleep</Link></h3><p>What the evidence says, the sleep patterns we see most often, what treatment looks like, and the daily habits that help acupuncture work better.</p></div>
+              <Link className={styles.arrowLink} href="/blog/acupuncture-for-insomnia-herndon-va" aria-label="Read about acupuncture for insomnia in Herndon"><ArrowIcon /></Link>
+            </div>
+            <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>IVF &amp; IUI outcomes</span><time dateTime="2026-10-18">October 18, 2026</time></div>
               <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-ivf-iui-success-rates-reston-herndon-va">Can Acupuncture Enhance IVF and IUI Success Rates in Reston &amp; Herndon, VA?</Link></h3><p>A balanced guide to the evidence, supportive mechanisms, when to start, transfer-day protocols, and what acupuncture can—and cannot—promise.</p></div>
               <Link className={styles.arrowLink} href="/blog/acupuncture-ivf-iui-success-rates-reston-herndon-va" aria-label="Read about acupuncture, IVF and IUI outcomes in Reston and Herndon"><ArrowIcon /></Link>

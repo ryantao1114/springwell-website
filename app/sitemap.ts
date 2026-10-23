@@ -26,6 +26,7 @@ const routes = [
   { path: "/blog/acupuncture-embryo-quality-ivf-meta-analysis-2026", priority: 0.8 },
   { path: "/blog/acupuncture-migraine-meta-analysis-2025", priority: 0.8 },
   { path: "/blog/acupuncture-anxiety-meta-analysis-2026", priority: 0.8 },
+  { path: "/blog/acupuncture-for-insomnia-herndon-va", priority: 0.8 },
   { path: "/faq", priority: 0.7 },
   { path: "/contact", priority: 0.8 },
   { path: "/book", priority: 0.95 },
