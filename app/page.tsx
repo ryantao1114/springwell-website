@@ -54,7 +54,32 @@ export default function Home() {
 
     <section className={`${styles.section} ${styles.visitSection}`}><div className="container"><SectionHeading eyebrow="New patients" title="Your first visit, made clear" text="Know what happens and what it costs before you schedule." /><div className={styles.visitGrid}><div className={styles.visitSteps}><div><span>01</span><h3>Book</h3><p>Choose an available appointment online.</p></div><div><span>02</span><h3>Tell us what brings you in</h3><p>Complete your intake form before your visit.</p></div><div><span>03</span><h3>Your first appointment</h3><p>We review your concerns, medical history, and goals, followed by individualized treatment.</p></div></div><aside className={styles.priceCard}><p className="eyebrow">Self-pay pricing</p><div><span>Initial Visit</span><strong><CurrencyMark />145</strong><small>Consultation + acupuncture treatment</small></div><div><span>Follow-up</span><strong><CurrencyMark />95</strong><small>Progress review + acupuncture treatment</small></div><div><span>Cupping</span><strong><CurrencyMark />50</strong><small>Focused cupping session · 30 minutes</small></div><Link className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book your first visit <ArrowIcon /></Link><TextLink href="/new-patients">New patient details</TextLink></aside></div></div></section>
 
-    <section className={styles.insuranceBand}><div className={`container ${styles.insuranceGrid}`}><div><p className="eyebrow">Insurance & payment</p><h2>Now in network with Anthem.</h2></div><p>We are actively working to join additional insurance networks. Self-pay, HSA/FSA, and superbill options remain available.</p><Link className="button button-secondary" href="/pricing#insurance">Insurance details <ArrowIcon /></Link></div></section>
+    <section className={styles.insuranceSection} aria-labelledby="home-insurance-heading">
+      <div className="container">
+        <div className={styles.insuranceHeading}>
+          <div><p className="eyebrow">Insurance at SpringWell</p><h2 id="home-insurance-heading">In-network care, with more access coming soon.</h2></div>
+          <p>SpringWell Acupuncture is in network with Anthem. We are actively working to join additional insurance networks.</p>
+        </div>
+        <div className={styles.insuranceCards}>
+          <article className={`${styles.insuranceCard} ${styles.insuranceCardActive}`}>
+            <span className={styles.insuranceStatus}>In Network</span>
+            <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo.svg" alt="Anthem Blue Cross and Blue Shield" width={360} height={92} />
+            <p>Anthem</p>
+          </article>
+          <article className={styles.insuranceCard}>
+            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
+            <strong>Additional PPO Networks</strong>
+            <p>We are expanding insurance access.</p>
+          </article>
+          <article className={styles.insuranceCard}>
+            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
+            <strong>More Insurance Options</strong>
+            <p>Updates will be shared as networks become available.</p>
+          </article>
+        </div>
+        <div className={styles.insuranceFooter}><p>Self-pay, HSA/FSA, and superbill options remain available.</p><Link className="button button-secondary" href="/pricing#insurance">Insurance &amp; pricing <ArrowIcon /></Link></div>
+      </div>
+    </section>
 
     <section className={styles.section}><div className={`container ${styles.locationGrid}`}><div><p className="eyebrow">Herndon, Virginia</p><h2>Conveniently located in Northern Virginia</h2><p>{site.address}</p><p><a href={site.phoneHref}>{site.phone}</a></p><p>{site.hours.days}<br />{site.hours.time}</p><p className={styles.cities}>Serving Herndon · Reston · Sterling · Vienna · Tysons · Fairfax</p><a className="button button-secondary" href={site.directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div><div className={styles.locationImage}><iframe className={styles.locationMap} title={`Google map showing ${site.name} at ${site.address}`} src={site.mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></div></section>
 
