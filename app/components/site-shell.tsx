@@ -217,7 +217,15 @@ export function SiteFooter() {
             Acupuncture in Herndon for women’s health, fertility &amp; IVF, perimenopause,
             pain, stress, sleep, and digestive concerns.
           </p>
-          <p className="footer-note">Out-of-network care with detailed superbills for possible PPO reimbursement. HSA/FSA cards accepted.</p>
+          <div className="footer-insurance-status" aria-label="Insurance participation update">
+            <Link className="footer-insurance-logo" href="/pricing#insurance" aria-label="View Anthem insurance and pricing information">
+              <img src="/images/anthem-bcbs-logo.svg" alt="Anthem Blue Cross and Blue Shield" />
+            </Link>
+            <div>
+              <p><strong>In network with Anthem.</strong></p>
+              <p>We are actively working to join additional insurance networks.</p>
+            </div>
+          </div>
           <Link className="text-link footer-link" href="/pricing#insurance">Insurance &amp; pricing <ArrowIcon /></Link>
           <div className="footer-socials" aria-label="SpringWell social media">
             <p className="footer-label">Follow SpringWell</p>
