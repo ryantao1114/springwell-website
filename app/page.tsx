@@ -63,7 +63,7 @@ export default function Home() {
         <div className={styles.insuranceCards}>
           <article className={`${styles.insuranceCard} ${styles.insuranceCardActive}`}>
             <span className={styles.insuranceStatus}>In Network</span>
-            <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo.svg" alt="Anthem Blue Cross and Blue Shield" width={360} height={92} />
+            <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo-user.png" alt="Anthem Blue Cross and Blue Shield" width={618} height={242} />
             <p>Anthem</p>
           </article>
           <article className={styles.insuranceCard}>
@@ -76,6 +76,10 @@ export default function Home() {
             <strong>More Insurance Options</strong>
             <p>Updates will be shared as networks become available.</p>
           </article>
+        </div>
+        <div className={styles.insuranceVerification}>
+          <div><p className="eyebrow">Benefits verification</p><h3>Not sure if your insurance plan covers acupuncture?</h3></div>
+          <div><p>We’re happy to help verify your insurance benefits before your first visit.</p><p>Email <a href="mailto:info@springwellacu.com">info@springwellacu.com</a> to request our secure benefits-verification instructions. For your privacy, please do not send insurance card images, your date of birth, address, or other sensitive information through standard email.</p></div>
         </div>
         <div className={styles.insuranceFooter}><p>Self-pay, HSA/FSA, and superbill options remain available.</p><Link className="button button-secondary" href="/pricing#insurance">Insurance &amp; pricing <ArrowIcon /></Link></div>
       </div>
