@@ -779,6 +779,12 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .footer-grid { display: grid; grid-template-columns: 1.5fr .7fr .85fr 1fr; gap: 70px; }
 .footer-brand .brand-mark { border-color: rgba(255,255,255,.35); color: white; }.footer-brand .brand-name strong { color: white; }.footer-brand .brand-name small { color: #b8c4d5; }
 .footer-note { max-width: 320px; margin-top: 24px; color: #b8ada5; font-size: .82rem; }
+.footer-insurance-status { max-width: 360px; display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 15px; align-items: center; margin-top: 24px; padding: 14px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; background: rgba(255,255,255,.055); }
+.footer-insurance-logo { min-height: 66px; display: grid; place-items: center; padding: 10px; border-radius: 8px; background: #fff; }
+.footer-insurance-logo img { display: block; width: 100%; height: auto; }
+.footer-insurance-status p { color: #c9beb6; font-size: .73rem; line-height: 1.5; }
+.footer-insurance-status p + p { margin-top: 5px; }
+.footer-insurance-status strong { color: #fff; font-weight: 700; }
 .footer-label { margin: 0 0 20px; color: #dcc39e; font-size: .67rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .footer-grid > div:not(:first-child) { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; font-size: .79rem; }
 .footer-grid p { margin: 0; }
@@ -1190,7 +1196,9 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
   .footer-grid > div:first-child,
   .footer-grid > div:last-child { grid-column: auto; }
   .footer-note { margin-top: 18px; }
+  .footer-insurance-status { max-width: 420px; }
   .footer-bottom { margin-top: 44px; }
+  .footer-insurance-status { grid-template-columns: 104px minmax(0,1fr); }
 }
 
 @media (hover: none) {
