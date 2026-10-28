@@ -188,7 +188,7 @@ export default function WhenToStartAcupunctureArticle() {
               <h2>Fertility Acupuncture in Herndon, VA</h2>
               <p>SpringWell Acupuncture provides <strong>cycle-based fertility acupuncture care</strong> for patients preparing for or going through IVF and IUI. Treatment can change with your menstrual cycle and fertility schedule, including IVF preparation, ovarian stimulation, egg retrieval, IUI, frozen embryo transfer, fresh embryo transfer, and the two-week wait.</p>
               <p>Fertility schedules can change quickly. Your reproductive endocrinologist may adjust medication, move a retrieval date, or confirm a transfer date with short notice. Your acupuncture schedule can change with it.</p>
-              <p>SpringWell Acupuncture is located at <a href={site.directionsUrl} target="_blank" rel="noreferrer">{site.address}</a>, serving patients in Herndon, Reston, Sterling, Vienna, Tysons, Fairfax, and surrounding Northern Virginia communities.</p>
+              <p>SpringWell Acupuncture is located at <a href={site.directionsUrl} target="_blank" rel="noreferrer">{site.address}</a>, serving patients in Herndon, Reston, Sterling, Ashburn, Vienna, Tysons, Fairfax, and surrounding Northern Virginia communities.</p>
 
               <h2>Common Questions About Starting Acupuncture Before IVF or IUI</h2>
               {faqs.map((item) => <div key={item.question}><h3>{item.question}</h3><p>{item.answer}</p></div>)}

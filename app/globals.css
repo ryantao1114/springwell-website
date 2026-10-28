@@ -725,7 +725,8 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .form-card { padding: 48px; background: var(--paper); box-shadow: 0 24px 70px rgba(23,59,58,.08); }
 .online-booking-block h2 { margin: 0 0 14px; font-size: 2.6rem; }
 .booking-intro { max-width: 540px; margin: 0 0 28px; color: var(--muted); font-size: .94rem; line-height: 1.7; }
-.square-appointments-embed { min-height: 80px; overflow: hidden; }
+.square-appointments-embed { min-height: 500px; overflow: hidden; }
+.square-appointments-embed > iframe { display: block; width: 100% !important; max-width: 100%; border: 0; }
 .booking-form-divider { display: flex; align-items: center; gap: 14px; margin: 42px 0 34px; color: var(--muted); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
 .booking-form-divider::before, .booking-form-divider::after { content: ""; height: 1px; flex: 1; background: var(--line); }
 .booking-form-divider span { white-space: nowrap; }

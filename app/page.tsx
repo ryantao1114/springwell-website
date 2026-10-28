@@ -48,7 +48,7 @@ export default function Home() {
           <article className={`${styles.insuranceCard} ${styles.insuranceCardActive}`}>
             <span className={styles.insuranceStatus}>In Network</span>
             <div className={styles.anthemLogoFrame}>
-              <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo-user.png" alt="Anthem Blue Cross and Blue Shield" width={1448} height={1086} />
+              <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo-clean.png" alt="Anthem Blue Cross and Blue Shield" width={1448} height={400} />
             </div>
             <p>Anthem</p>
           </article>
@@ -83,7 +83,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className={styles.section}><div className={`container ${styles.locationGrid}`}><div><p className="eyebrow">Herndon, Virginia</p><h2>Conveniently located in Northern Virginia</h2><p>{site.address}</p><p><a href={site.phoneHref}>{site.phone}</a></p><p>{site.hours.days}<br />{site.hours.time}</p><p className={styles.cities}>Serving Herndon · Reston · Sterling · Vienna · Tysons · Fairfax</p><a className="button button-secondary" href={site.directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div><div className={styles.locationImage}><iframe className={styles.locationMap} title={`Google map showing ${site.name} at ${site.address}`} src={site.mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></div></section>
+    <section className={styles.section}><div className={`container ${styles.locationGrid}`}><div><p className="eyebrow">Herndon, Virginia</p><h2>Conveniently located in Northern Virginia</h2><p>{site.address}</p><p><a href={site.phoneHref}>{site.phone}</a></p><p>{site.hours.days}<br />{site.hours.time}</p><p className={styles.cities}>Serving Herndon · Reston · Sterling · Ashburn · Vienna · Tysons · Fairfax</p><a className="button button-secondary" href={site.directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowIcon /></a></div><div className={styles.locationImage}><iframe className={styles.locationMap} title={`Google map showing ${site.name} at ${site.address}`} src={site.mapEmbedUrl} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></div></section>
 
     <section className={styles.finalCta}><div className="container"><p className="eyebrow light">Ready to begin?</p><h2>Personalized acupuncture care begins with understanding what brings you in.</h2><Link className="button button-light" href={site.bookingUrl} target="_blank" rel="noreferrer">Book an appointment <ArrowIcon /></Link></div></section>
   </PageShell>;

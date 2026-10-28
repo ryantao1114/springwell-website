@@ -220,7 +220,7 @@ export function SiteFooter() {
           </p>
           <div className="footer-insurance-status" aria-label="Insurance participation update">
             <Link className="footer-insurance-logo" href="/pricing#insurance" aria-label="View Anthem insurance and pricing information">
-              <img src="/images/anthem-bcbs-logo-user.png" alt="Anthem Blue Cross and Blue Shield" />
+              <img src="/images/anthem-bcbs-logo-clean.png" alt="Anthem Blue Cross and Blue Shield" />
             </Link>
             <div>
               <p><strong>In network with Anthem.</strong></p>
