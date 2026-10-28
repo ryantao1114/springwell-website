@@ -22,5 +22,6 @@
 .insuranceCard{overflow:hidden;background:#fff}
 .insuranceCardActive{background:#feffff}
 .insuranceCardAccepted{background:#d3fffe}
-.anthemLogo{display:block;width:100%;height:112px;object-fit:cover;object-position:center 56%;transform:scale(1.12)}
+.insuranceStatus,.insuranceStatusSoon{z-index:2}
+.anthemLogo{display:block;width:100%;height:112px;object-fit:contain;object-position:center;transform:scale(1.85);pointer-events:none}
 .insuranceLogo{height:112px;image-rendering:auto}

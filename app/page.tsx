@@ -58,17 +58,14 @@ export default function Home() {
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
             <Image className={styles.insuranceLogo} src="/images/insurance/united-healthcare.jpg" alt="UnitedHealthcare" width={800} height={600} />
-            <p>Insurance network access</p>
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
             <Image className={styles.insuranceLogo} src="/images/insurance/aetna.jpg" alt="Aetna" width={3150} height={863} />
-            <p>Insurance network access</p>
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
             <Image className={styles.insuranceLogo} src="/images/insurance/cigna.jpg" alt="Cigna" width={1200} height={630} />
-            <p>Insurance network access</p>
           </article>
           <article className={`${styles.insuranceCard} ${styles.insuranceCardAccepted}`}>
             <span className={styles.insuranceStatus}>Accepted</span>
