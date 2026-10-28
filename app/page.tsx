@@ -68,37 +68,27 @@ export default function Home() {
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
-            <strong className={`${styles.insuranceBrand} ${styles.brandCareFirst}`}>CareFirst</strong>
+            <Image className={styles.insuranceLogo} src="/images/insurance/carefirst-bcbs.jpg" alt="CareFirst BlueCross BlueShield" width={620} height={375} />
             <p>BlueCross BlueShield</p>
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
-            <strong className={`${styles.insuranceBrand} ${styles.brandUnited}`}>UnitedHealthcare</strong>
+            <Image className={styles.insuranceLogo} src="/images/insurance/united-healthcare.jpg" alt="UnitedHealthcare" width={800} height={600} />
             <p>Insurance network access</p>
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
-            <strong className={`${styles.insuranceBrand} ${styles.brandOptum}`}>Optum</strong>
-            <p>VA Community Care Network</p>
-          </article>
-          <article className={styles.insuranceCard}>
-            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
-            <strong className={`${styles.insuranceBrand} ${styles.brandAetna}`}>aetna</strong>
+            <Image className={styles.insuranceLogo} src="/images/insurance/aetna.jpg" alt="Aetna" width={3150} height={863} />
             <p>Insurance network access</p>
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
-            <strong className={`${styles.insuranceBrand} ${styles.brandGeha}`}>GEHA</strong>
-            <p>Insurance network access</p>
-          </article>
-          <article className={styles.insuranceCard}>
-            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
-            <strong className={`${styles.insuranceBrand} ${styles.brandCigna}`}>Cigna</strong>
+            <Image className={styles.insuranceLogo} src="/images/insurance/cigna.jpg" alt="Cigna" width={1200} height={630} />
             <p>Insurance network access</p>
           </article>
           <article className={`${styles.insuranceCard} ${styles.insuranceCardAccepted}`}>
             <span className={styles.insuranceStatus}>Accepted</span>
-            <strong className={`${styles.insuranceBrand} ${styles.brandHsa}`}>HSA &amp; FSA</strong>
+            <Image className={styles.insuranceLogo} src="/images/insurance/hsa-fsa.jpg" alt="HSA and FSA cards accepted" width={590} height={203} />
             <p>Cards welcome for eligible services</p>
           </article>
         </div>

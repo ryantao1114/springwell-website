@@ -12,6 +12,7 @@
 .insuranceCards{grid-template-columns:repeat(4,minmax(0,1fr))}
 .insuranceCard{min-height:205px}
 .insuranceCardActive,.insuranceCardAccepted{border-color:rgba(72,101,143,.38);background:#fff}
+.insuranceLogo{display:block;width:100%;height:92px;object-fit:contain;object-position:center}
 .insuranceBrand{display:block;max-width:none!important;font-family:var(--font-body),Arial,sans-serif!important;font-size:clamp(1.45rem,2.15vw,2rem)!important;font-weight:800;letter-spacing:-.035em}
 .brandCareFirst{color:#171717!important;font-family:var(--serif)!important}.brandUnited{color:#123b88!important}.brandOptum{color:#4b4b4b!important}.brandAetna{color:#7c3b96!important;font-size:2.45rem!important}.brandGeha{color:#5c3d8d!important;letter-spacing:.08em}.brandCigna{color:#087e9a!important}.brandHsa{color:#5b28c8!important}
 @media(max-width:1020px){.insuranceCards{grid-template-columns:repeat(2,minmax(0,1fr))}.insuranceCardActive{grid-column:auto}}
