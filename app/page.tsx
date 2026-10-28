@@ -47,7 +47,9 @@ export default function Home() {
         <div className={styles.insuranceCards}>
           <article className={`${styles.insuranceCard} ${styles.insuranceCardActive}`}>
             <span className={styles.insuranceStatus}>In Network</span>
-            <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo-user.png" alt="Anthem Blue Cross and Blue Shield" width={1448} height={1086} />
+            <div className={styles.anthemLogoFrame}>
+              <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo-user.png" alt="Anthem Blue Cross and Blue Shield" width={1448} height={1086} />
+            </div>
             <p>Anthem</p>
           </article>
           <article className={styles.insuranceCard}>

@@ -54,6 +54,7 @@ const nav: NavItem[] = [
       { href: "/care/digestive-support", title: "Digestive Health", text: "Individualized support for bloating, nausea, irregularity, appetite changes, and stress-sensitive digestion.", tone: "herbs" },
     ],
   },
+  { href: "/pricing#insurance", label: "Insurance & Pricing" },
   { href: "/blog", label: "Blog" },
   { href: "/new-patients", label: "New Patients" },
 ];
