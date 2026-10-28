@@ -92,24 +92,6 @@ export default function PricingPage() {
             </div>
           </div>
 
-          <div className="pricing-details-grid">
-            <article>
-              <p className="eyebrow">Before you schedule</p>
-              <h3>What to have ready</h3>
-              <p>Bring a current medication and supplement list, relevant fertility or medical records, and the questions you want to discuss. Please do not send sensitive medical details through an unsecured form or email.</p>
-            </article>
-            <article>
-              <p className="eyebrow">Choosing care</p>
-              <h3>Start with the concern that matters most.</h3>
-              <p>Your first visit is not a commitment to a long treatment series. We will review your goals, explain a reasonable starting plan, and adjust the plan based on your response.</p>
-            </article>
-            <article>
-              <p className="eyebrow">Questions about payment?</p>
-              <h3>Ask before you book.</h3>
-              <p>For current payment details, superbill questions, or documentation needs, contact SpringWell before scheduling so expectations are clear.</p>
-              <Link className="text-link" href="/contact">Contact SpringWell <ArrowIcon /></Link>
-            </article>
-          </div>
         </div>
       </section>
       <BottomCTA />

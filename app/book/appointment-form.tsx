@@ -8,13 +8,6 @@ export function SafeContactOptions({ mode = "appointment" }: { mode?: "appointme
 
   return (
     <div className="safe-contact-options">
-      <div className="safe-contact-notice">
-        <strong>Your privacy matters.</strong>
-        <p>
-          This website does not collect appointment or health information through a contact form.
-          Please do not send medical history, diagnoses, or other sensitive details by email.
-        </p>
-      </div>
       <div className="safe-contact-actions">
         {mode === "appointment" && (
           <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">
