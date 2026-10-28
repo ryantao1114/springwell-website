@@ -68,18 +68,43 @@ export default function Home() {
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
-            <strong>Additional PPO Networks</strong>
-            <p>We are expanding insurance access.</p>
+            <strong className={`${styles.insuranceBrand} ${styles.brandCareFirst}`}>CareFirst</strong>
+            <p>BlueCross BlueShield</p>
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
-            <strong>More Insurance Options</strong>
-            <p>Updates will be shared as networks become available.</p>
+            <strong className={`${styles.insuranceBrand} ${styles.brandUnited}`}>UnitedHealthcare</strong>
+            <p>Insurance network access</p>
+          </article>
+          <article className={styles.insuranceCard}>
+            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
+            <strong className={`${styles.insuranceBrand} ${styles.brandOptum}`}>Optum</strong>
+            <p>VA Community Care Network</p>
+          </article>
+          <article className={styles.insuranceCard}>
+            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
+            <strong className={`${styles.insuranceBrand} ${styles.brandAetna}`}>aetna</strong>
+            <p>Insurance network access</p>
+          </article>
+          <article className={styles.insuranceCard}>
+            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
+            <strong className={`${styles.insuranceBrand} ${styles.brandGeha}`}>GEHA</strong>
+            <p>Insurance network access</p>
+          </article>
+          <article className={styles.insuranceCard}>
+            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
+            <strong className={`${styles.insuranceBrand} ${styles.brandCigna}`}>Cigna</strong>
+            <p>Insurance network access</p>
+          </article>
+          <article className={`${styles.insuranceCard} ${styles.insuranceCardAccepted}`}>
+            <span className={styles.insuranceStatus}>Accepted</span>
+            <strong className={`${styles.insuranceBrand} ${styles.brandHsa}`}>HSA &amp; FSA</strong>
+            <p>Cards welcome for eligible services</p>
           </article>
         </div>
         <div className={styles.insuranceVerification}>
           <div><p className="eyebrow">Benefits verification</p><h3>Not sure if your insurance plan covers acupuncture?</h3></div>
-          <div><p>We’re happy to help verify your insurance benefits before your first visit.</p><p>Email <a href="mailto:info@springwellacu.com">info@springwellacu.com</a> to request our secure benefits-verification instructions. For your privacy, please do not send insurance card images, your date of birth, address, or other sensitive information through standard email.</p></div>
+          <div><p>We’re happy to help verify your insurance benefits before your first visit.</p><p>Email <a href="mailto:info@springwellacu.com">info@springwellacu.com</a>. We’ll get back to you as soon as possible.</p></div>
         </div>
         <div className={styles.insuranceFooter}><p>Self-pay, HSA/FSA, and superbill options remain available.</p><Link className="button button-secondary" href="/pricing#insurance">Insurance &amp; pricing <ArrowIcon /></Link></div>
       </div>
