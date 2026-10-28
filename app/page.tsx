@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "./components/icons";
-import { CurrencyMark } from "./components/currency-mark";
 import { LocalBusinessJsonLd } from "./components/local-business-json-ld";
 import { PageShell } from "./components/site-shell";
 import { site } from "./config/site";
@@ -25,15 +24,6 @@ const specialties = [
   { title: "Custom Herbal", text: "Personalized Chinese herbal care tailored to your symptoms, constitution, and goals.", href: "/services/herbal-medicine", image: "/images/home-herbal-cupping-user.jpg", imagePosition: "center 48%", alt: "A selection of traditional herbal tea blends arranged in small bowls" },
 ];
 
-const benefits = [
-  ["pain", "Pain Relief", "Helps calm pain signalling and ease discomfort that affects daily activity.", "/care/pain-management"],
-  ["muscle-tension", "Muscle Tension", "Targets tight muscles and trigger points to encourage release and easier movement.", "/care/pain-management"],
-  ["mobility-function", "Mobility & Movement", "Reduces muscle guarding and stiffness that can limit comfortable movement.", "/care/pain-management"],
-  ["stress-regulation", "Stress & Sleep", "Helps the nervous system slow down so the body can release tension and settle into more restorative rest.", "/care/stress-sleep"],
-  ["menstrual-reproductive", "Menstrual & Fertility Health", "Care changes with cycle timing, menstrual symptoms, fertility planning, IUI, and IVF stages.", "/care/fertility-ivf-support"],
-  ["digestive-comfort", "Digestive Comfort", "Addresses bloating, nausea, abdominal tension, and stress-related changes in digestion.", "/care/digestive-support"],
-] as const;
-
 export default function Home() {
   return <PageShell>
     <LocalBusinessJsonLd />
@@ -46,13 +36,7 @@ export default function Home() {
 
     <section className={`${styles.section} ${styles.providerSection}`}><div className={`container ${styles.providerGrid}`}><div className={styles.providerImage}><Image src="/images/provider-renjinming-2026.webp" alt="Renjinming Dai, licensed acupuncturist at SpringWell" fill unoptimized sizes="(max-width: 860px) 100vw, 43vw" /></div><div className={styles.providerCopy}><p className="eyebrow">Meet your acupuncturist</p><h2>Renjinming Dai, L.Ac.</h2><p className={styles.credentials}>Virginia Licensed Acupuncturist · Diplomate of Acupuncture (NCCAOM)</p><div className={styles.providerPoints}><div><h3>Deep roots in Chinese medicine</h3><p>More than 10 years of study and clinical practice in <strong>Traditional Chinese Medicine and acupuncture</strong>, with advanced training in TCM gynecology and extensive experience in <strong>women’s health and fertility care</strong>.</p></div><div><h3>Biomedical perspective</h3><p>With a <strong>U.S. Master’s degree in Biomedical Engineering and research experience in biomedical science</strong>, Renjinming brings a modern scientific perspective to acupuncture and integrative care.</p></div><div><h3>Individualized care</h3><p>Care is tailored to your <strong>symptoms, health history, goals, and response to treatment</strong> — never a one-size-fits-all approach.</p></div></div><div className={styles.providerActions}><Link className={`button button-secondary ${styles.providerStoryButton}`} href="/about#provider">Read the provider story <ArrowIcon /></Link><Link className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book an appointment <ArrowIcon /></Link></div></div></div></section>
 
-    <section className={styles.section}><div className={`container ${styles.benefitsHeading}`}><SectionHeading eyebrow="Potential benefits" title="How acupuncture may support your care" text="Acupuncture works with the nervous system, muscles, circulation, and the body’s natural regulatory processes to support pain relief, easier movement, restful sleep, menstrual and fertility health, and digestive comfort." /><div className={styles.benefitGrid}>{benefits.map(([icon,title,text,href]) => <Link className={styles.iconCard} href={href} key={title} aria-label={`Explore acupuncture for ${title}`}><Image src={`/images/benefits/${icon}.webp`} alt="" width={86} height={86} /><div><h3>{title}</h3><p>{text}</p><span className={styles.cardLink}>Explore care <ArrowIcon /></span></div></Link>)}</div></div></section>
-
     <section className={`${styles.section} ${styles.womensFeature}`}><div className={`container ${styles.featureGrid}`}><div className={styles.featureImage}><Image src="/images/home-womens-health-hero-hd.webp" alt="A clinician offering calm, reassuring support during a women’s health consultation" fill quality={95} unoptimized sizes="(max-width: 860px) 100vw, 58vw" /></div><div className={styles.featureCopy}><p className="eyebrow">Women’s health focus</p><h2>Care for every chapter of women’s health</h2><p>Individualized acupuncture that respects where you are, what you are navigating, and the medical care already supporting you.</p><ul><li>Fertility, IUI &amp; IVF support</li><li>Menstrual concerns</li><li>Irregular cycles</li><li>PCOS-related symptoms</li><li>Cycle-related headaches</li><li>Perimenopause and hormonal transitions</li></ul><div className={styles.featureActions}><Link className="button button-primary" href="/care/womens-health">Explore women’s health <ArrowIcon /></Link><Link className="button button-primary" href="/care/fertility-ivf-support">Explore fertility &amp; IVF <ArrowIcon /></Link></div></div></div></section>
-
-    <section className={styles.section}><div className="container"><NarrowHeading eyebrow="Why SpringWell" title="Clinical depth, delivered with warmth" /><div className={styles.whyGrid}><InfoCard number="01" title="Specialized Training in Women’s Health" text="Graduate training in Traditional Chinese Medicine gynecology informs care for menstrual health, fertility concerns, reproductive treatment, and changing needs across different stages of life." /><InfoCard number="02" title="Traditional Medicine with a Modern Perspective" text="Traditional Chinese medicine training is considered alongside biomedical knowledge, pain science, safety, current treatment, and the evolving research around acupuncture." /><InfoCard number="03" title="Thoughtful Fertility, IUI & IVF Support" text="Care is tailored to your symptoms, cycle, treatment stage, emotional needs, and the changing demands of your fertility journey." /></div></div></section>
-
-    <section className={`${styles.section} ${styles.visitSection}`}><div className="container"><SectionHeading eyebrow="New patients" title="Your first visit, made clear" text="Know what happens and what it costs before you schedule." /><div className={styles.visitGrid}><div className={styles.visitSteps}><div><span>01</span><h3>Book</h3><p>Choose an available appointment online.</p></div><div><span>02</span><h3>Tell us what brings you in</h3><p>Complete your intake form before your visit.</p></div><div><span>03</span><h3>Your first appointment</h3><p>We review your concerns, medical history, and goals, followed by individualized treatment.</p></div></div><aside className={styles.priceCard}><p className="eyebrow">Self-pay pricing</p><div><span>Initial Visit</span><strong><CurrencyMark />145</strong><small>Consultation + acupuncture treatment</small></div><div><span>Follow-up</span><strong><CurrencyMark />95</strong><small>Progress review + acupuncture treatment</small></div><div><span>Cupping</span><strong><CurrencyMark />50</strong><small>Focused cupping session · 30 minutes</small></div><Link className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book your first visit <ArrowIcon /></Link><TextLink href="/new-patients">New patient details</TextLink></aside></div></div></section>
 
     <section className={styles.insuranceSection} aria-labelledby="home-insurance-heading">
       <div className="container">
@@ -63,7 +47,7 @@ export default function Home() {
         <div className={styles.insuranceCards}>
           <article className={`${styles.insuranceCard} ${styles.insuranceCardActive}`}>
             <span className={styles.insuranceStatus}>In Network</span>
-            <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo-user.png" alt="Anthem Blue Cross and Blue Shield" width={618} height={242} />
+            <Image className={styles.anthemLogo} src="/images/anthem-bcbs-logo-user.png" alt="Anthem Blue Cross and Blue Shield" width={1448} height={1086} />
             <p>Anthem</p>
           </article>
           <article className={styles.insuranceCard}>
@@ -107,6 +91,4 @@ export default function Home() {
 }
 
 function SectionHeading({eyebrow,title,text}:{eyebrow:string;title:string;text?:string}){return <div className={text?styles.sectionHeading:`${styles.sectionHeading} ${styles.sectionHeadingSingle}`}><div><p className="eyebrow">{eyebrow}</p><h2>{title}</h2></div>{text&&<p>{text}</p>}</div>}
-function NarrowHeading({eyebrow,title,text}:{eyebrow:string;title:string;text?:string}){return <div className={styles.narrowHeading}><p className="eyebrow">{eyebrow}</p><h2>{title}</h2>{text&&<p>{text}</p>}</div>}
-function InfoCard({number,title,text}:{number:string;title:string;text:string}){return <article className={styles.infoCard}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>}
 function TextLink({href,children}:{href:string;children:React.ReactNode}){return <Link className={styles.inlineLink} href={href}>{children} <ArrowIcon /></Link>}

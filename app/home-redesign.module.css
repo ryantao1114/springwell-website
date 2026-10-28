@@ -17,3 +17,10 @@
 .brandCareFirst{color:#171717!important;font-family:var(--serif)!important}.brandUnited{color:#123b88!important}.brandOptum{color:#4b4b4b!important}.brandAetna{color:#7c3b96!important;font-size:2.45rem!important}.brandGeha{color:#5c3d8d!important;letter-spacing:.08em}.brandCigna{color:#087e9a!important}.brandHsa{color:#5b28c8!important}
 @media(max-width:1020px){.insuranceCards{grid-template-columns:repeat(2,minmax(0,1fr))}.insuranceCardActive{grid-column:auto}}
 @media(max-width:760px){.insuranceCards{grid-template-columns:1fr}}
+
+/* Insurance logo cards use each artwork's native background for a seamless presentation. */
+.insuranceCard{overflow:hidden;background:#fff}
+.insuranceCardActive{background:#feffff}
+.insuranceCardAccepted{background:#d3fffe}
+.anthemLogo{display:block;width:100%;height:112px;object-fit:cover;object-position:center 56%;transform:scale(1.12)}
+.insuranceLogo{height:112px;image-rendering:auto}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowIcon, CheckIcon } from "../components/icons";
 import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
+import homeStyles from "../home-redesign.module.css";
 
 export const metadata: Metadata = {
   title: "What We Treat | Acupuncture Care Areas",
@@ -59,6 +60,15 @@ const focusAreas = [
   },
 ];
 
+const benefits = [
+  ["pain", "Pain Relief", "Helps calm pain signalling and ease discomfort that affects daily activity.", "/care/pain-management"],
+  ["muscle-tension", "Muscle Tension", "Targets tight muscles and trigger points to encourage release and easier movement.", "/care/pain-management"],
+  ["mobility-function", "Mobility & Movement", "Reduces muscle guarding and stiffness that can limit comfortable movement.", "/care/pain-management"],
+  ["stress-regulation", "Stress & Sleep", "Helps the nervous system slow down so the body can release tension and settle into more restorative rest.", "/care/stress-sleep"],
+  ["menstrual-reproductive", "Menstrual & Fertility Health", "Care changes with cycle timing, menstrual symptoms, fertility planning, IUI, and IVF stages.", "/care/fertility-ivf-support"],
+  ["digestive-comfort", "Digestive Comfort", "Addresses bloating, nausea, abdominal tension, and stress-related changes in digestion.", "/care/digestive-support"],
+] as const;
+
 export default function SpecialistPage() {
   return (
     <PageShell>
@@ -98,6 +108,20 @@ export default function SpecialistPage() {
         </div>
       </section>
 
+      <section className={homeStyles.section}>
+        <div className="container">
+          <div className={homeStyles.narrowHeading}>
+            <p className="eyebrow">Why SpringWell</p>
+            <h2>Clinical depth, delivered with warmth</h2>
+          </div>
+          <div className={homeStyles.whyGrid}>
+            <InfoCard number="01" title="Specialized Training in Women’s Health" text="Graduate training in Traditional Chinese Medicine gynecology informs care for menstrual health, fertility concerns, reproductive treatment, and changing needs across different stages of life." />
+            <InfoCard number="02" title="Traditional Medicine with a Modern Perspective" text="Traditional Chinese medicine training is considered alongside biomedical knowledge, pain science, safety, current treatment, and the evolving research around acupuncture." />
+            <InfoCard number="03" title="Thoughtful Fertility, IUI & IVF Support" text="Care is tailored to your symptoms, cycle, treatment stage, emotional needs, and the changing demands of your fertility journey." />
+          </div>
+        </div>
+      </section>
+
       <section className="section-pad specialist-focus-section">
         <div className="container">
           <div className="section-heading split-heading">
@@ -126,7 +150,28 @@ export default function SpecialistPage() {
           </div>
         </div>
       </section>
+
+      <section className={homeStyles.section}>
+        <div className={`container ${homeStyles.benefitsHeading}`}>
+          <div className={homeStyles.sectionHeading}>
+            <div><p className="eyebrow">Potential benefits</p><h2>How acupuncture may support your care</h2></div>
+            <p>Acupuncture works with the nervous system, muscles, circulation, and the body’s natural regulatory processes to support pain relief, easier movement, restful sleep, menstrual and fertility health, and digestive comfort.</p>
+          </div>
+          <div className={homeStyles.benefitGrid}>
+            {benefits.map(([icon, title, text, href]) => (
+              <Link className={homeStyles.iconCard} href={href} key={title} aria-label={`Explore acupuncture for ${title}`}>
+                <Image src={`/images/benefits/${icon}.webp`} alt="" width={86} height={86} />
+                <div><h3>{title}</h3><p>{text}</p><span className={homeStyles.cardLink}>Explore care <ArrowIcon /></span></div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
       <BottomCTA />
     </PageShell>
   );
+}
+
+function InfoCard({ number, title, text }: { number: string; title: string; text: string }) {
+  return <article className={homeStyles.infoCard}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>;
 }
