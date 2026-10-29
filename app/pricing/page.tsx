@@ -6,6 +6,33 @@ import { BottomCTA, PageShell } from "../components/site-shell";
 import { CurrencyMark } from "../components/currency-mark";
 import { site } from "../config/site";
 
+const pricingFaqs = [
+  {
+    question: "Does SpringWell Acupuncture accept in-network insurance?",
+    answer: "SpringWell Acupuncture participates with select in-network insurance plans for acupuncture services. Coverage and patient responsibility vary by plan, so benefits should be verified before treatment.",
+  },
+  {
+    question: "How can I verify my acupuncture insurance benefits?",
+    answer: "Contact SpringWell before your first visit and check directly with your insurance plan. We can help you understand the information needed for benefit verification, but verification is not a guarantee of payment by the insurer.",
+  },
+  {
+    question: "What if my insurance plan is out of network?",
+    answer: "You may use our transparent self-pay rates. Upon request, we can also provide a detailed superbill that you may submit to your insurer for possible out-of-network reimbursement.",
+  },
+  {
+    question: "Can I use an HSA or FSA card for acupuncture?",
+    answer: "Yes. SpringWell welcomes Health Savings Account (HSA) and Flexible Spending Account (FSA) cards for eligible acupuncture and related services.",
+  },
+  {
+    question: "How much does acupuncture cost at SpringWell?",
+    answer: "The self-pay rate is $145 for an initial consultation and acupuncture treatment and $95 for a follow-up acupuncture visit. A focused 30-minute fire-cupping session is $50.",
+  },
+  {
+    question: "Do I need a referral or prior authorization for acupuncture?",
+    answer: "Requirements depend on your insurance plan. Some plans may require a referral, authorization, visit limit, copay, coinsurance, or deductible. Confirm your plan requirements before your appointment.",
+  },
+];
+
 export const metadata: Metadata = {
   title: { absolute: "Acupuncture Insurance & Pricing | Herndon, VA" },
   description: "Review acupuncture insurance and pricing at SpringWell Acupuncture in Herndon, VA, including in-network care, self-pay rates, HSA/FSA, and superbill options.",
@@ -13,8 +40,26 @@ export const metadata: Metadata = {
 };
 
 export default function PricingPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${site.url}/pricing#faq`,
+    mainEntity: pricingFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="pricing-page-hero">
         <div className="pricing-page-hero-media">
           <Image
@@ -30,8 +75,8 @@ export default function PricingPage() {
         <div className="pricing-page-hero-overlay" aria-hidden="true" />
         <div className="container pricing-page-hero-content">
           <p className="eyebrow light">Insurance &amp; pricing</p>
-          <h1>Acupuncture Insurance &amp; Pricing in Herndon, VA</h1>
-          <p>Review in-network insurance information, transparent self-pay pricing, HSA/FSA options, and superbill support before scheduling care.</p>
+          <h1>In-Network Acupuncture Insurance &amp; Pricing in Herndon, VA</h1>
+          <p>SpringWell Acupuncture accepts select in-network insurance plans for acupuncture services. Check your insurance benefits, explore self-pay pricing, and learn about HSA/FSA payments and superbill options before your visit.</p>
         </div>
       </section>
 
@@ -108,6 +153,25 @@ export default function PricingPage() {
 
         </div>
       </section>
+
+      <section className="section-pad pricing-faq-section" aria-labelledby="pricing-faq-heading">
+        <div className="container faq-grid">
+          <aside>
+            <p className="eyebrow">Insurance &amp; payment</p>
+            <h2 id="pricing-faq-heading">Acupuncture Insurance &amp; Pricing FAQs</h2>
+            <p>Clear answers about benefits, self-pay rates, HSA/FSA payments, and superbills before your visit.</p>
+          </aside>
+          <div className="faq-list">
+            {pricingFaqs.map((faq) => (
+              <details key={faq.question}>
+                <summary>{faq.question}<i aria-hidden="true">+</i></summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <BottomCTA />
     </PageShell>
   );
