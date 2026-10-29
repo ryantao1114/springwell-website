@@ -35,17 +35,6 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="pricing-network-strip" aria-labelledby="pricing-network-heading">
-        <div className="container pricing-network-strip-inner">
-          <h2 id="pricing-network-heading">Current in-network insurance</h2>
-          <div className="pricing-network-mini-card">
-            <span>In network</span>
-            <strong>Anthem</strong>
-            <p>Coverage varies by plan. Contact us to verify your acupuncture benefits.</p>
-          </div>
-        </div>
-      </section>
-
       <section className="section-pad cost-section">
         <div className="container">
           <div className="cost-grid">
