@@ -5,6 +5,7 @@ import { ArrowIcon, CheckIcon } from "../components/icons";
 import { BottomCTA, PageShell } from "../components/site-shell";
 import { CurrencyMark } from "../components/currency-mark";
 import { site } from "../config/site";
+import homeStyles from "../home-redesign.module.css";
 
 const pricingFaqs = [
   {
@@ -77,6 +78,49 @@ export default function PricingPage() {
           <p className="eyebrow light">Insurance &amp; pricing</p>
           <h1>In-Network Acupuncture Insurance &amp; Pricing in Herndon, VA</h1>
           <p>SpringWell Acupuncture accepts select in-network insurance plans for acupuncture services. Check your insurance benefits, explore self-pay pricing, and learn about HSA/FSA payments and superbill options before your visit.</p>
+        </div>
+      </section>
+
+      <section className={homeStyles.insuranceSection} aria-labelledby="pricing-insurance-plans-heading">
+        <div className="container">
+          <div className={homeStyles.insuranceHeading}>
+            <div>
+              <p className="eyebrow">Insurance plans at SpringWell</p>
+              <h2 id="pricing-insurance-plans-heading">In-network care and accepted payment options.</h2>
+            </div>
+            <p>Insurance participation is shown below. Coverage and patient responsibility vary by plan.</p>
+          </div>
+          <div className={homeStyles.insuranceCards}>
+            <article className={`${homeStyles.insuranceCard} ${homeStyles.insuranceCardActive}`}>
+              <span className={homeStyles.insuranceStatus}>In Network</span>
+              <div className={homeStyles.anthemLogoFrame}>
+                <Image className={homeStyles.anthemLogo} src="/images/anthem-bcbs-logo-clean.png" alt="Anthem Blue Cross and Blue Shield" width={1448} height={400} />
+              </div>
+              <p>Anthem</p>
+            </article>
+            <article className={homeStyles.insuranceCard}>
+              <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
+              <Image className={homeStyles.insuranceLogo} src="/images/insurance/carefirst-bcbs.jpg" alt="CareFirst BlueCross BlueShield" width={620} height={375} />
+              <p>BlueCross BlueShield</p>
+            </article>
+            <article className={homeStyles.insuranceCard}>
+              <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
+              <Image className={homeStyles.insuranceLogo} src="/images/insurance/united-healthcare.jpg" alt="UnitedHealthcare" width={800} height={600} />
+            </article>
+            <article className={homeStyles.insuranceCard}>
+              <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
+              <Image className={homeStyles.insuranceLogo} src="/images/insurance/aetna.jpg" alt="Aetna" width={3150} height={863} />
+            </article>
+            <article className={homeStyles.insuranceCard}>
+              <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
+              <Image className={homeStyles.insuranceLogo} src="/images/insurance/cigna.jpg" alt="Cigna" width={1200} height={630} />
+            </article>
+            <article className={`${homeStyles.insuranceCard} ${homeStyles.insuranceCardAccepted}`}>
+              <span className={homeStyles.insuranceStatus}>Accepted</span>
+              <Image className={homeStyles.insuranceLogo} src="/images/insurance/hsa-fsa.jpg" alt="HSA and FSA cards accepted" width={590} height={203} />
+              <p>Cards welcome for eligible services</p>
+            </article>
+          </div>
         </div>
       </section>
 
