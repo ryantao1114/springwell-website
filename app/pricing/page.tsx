@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowIcon, CheckIcon } from "../components/icons";
-import { BottomCTA, InteriorHero, PageShell } from "../components/site-shell";
+import { BottomCTA, PageShell } from "../components/site-shell";
 import { CurrencyMark } from "../components/currency-mark";
 import { site } from "../config/site";
 
@@ -14,12 +15,25 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <PageShell>
-      <InteriorHero
-        eyebrow="Insurance & pricing"
-        title="Acupuncture Insurance & Pricing in Herndon, VA"
-        text="Review in-network insurance information, transparent self-pay pricing, HSA/FSA options, and superbill support before scheduling care."
-        image="/images/service-herbal-medicine.jpg"
-      />
+      <section className="pricing-page-hero">
+        <div className="pricing-page-hero-media">
+          <Image
+            src="/images/pricing-acupuncture-hero.jpg"
+            alt="Acupuncture treatment in a calm SpringWell treatment room"
+            fill
+            priority
+            quality={100}
+            unoptimized
+            sizes="(max-width: 760px) 100vw, 52vw"
+          />
+        </div>
+        <div className="pricing-page-hero-overlay" aria-hidden="true" />
+        <div className="container pricing-page-hero-content">
+          <p className="eyebrow light">Insurance &amp; pricing</p>
+          <h1>Acupuncture Insurance &amp; Pricing in Herndon, VA</h1>
+          <p>Review in-network insurance information, transparent self-pay pricing, HSA/FSA options, and superbill support before scheduling care.</p>
+        </div>
+      </section>
 
       <section className="pricing-network-strip" aria-labelledby="pricing-network-heading">
         <div className="container pricing-network-strip-inner">
