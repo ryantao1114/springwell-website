@@ -6,8 +6,8 @@ import { CurrencyMark } from "../components/currency-mark";
 import { site } from "../config/site";
 
 export const metadata: Metadata = {
-  title: "Acupuncture Pricing in Herndon, VA",
-  description: "Review Anthem in-network care, acupuncture and cupping self-pay pricing, HSA/FSA options, and superbill support at SpringWell Acupuncture.",
+  title: { absolute: "Anthem Acupuncture Insurance & Pricing | Herndon, VA" },
+  description: "SpringWell Acupuncture is in network with Anthem in Herndon, VA. Review insurance information, acupuncture pricing, HSA/FSA, and superbill options.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -15,9 +15,9 @@ export default function PricingPage() {
   return (
     <PageShell>
       <InteriorHero
-        eyebrow="Pricing & payment"
-        title="Clear information before your first visit."
-        text="We believe you should understand visit length, payment expectations, and available documentation before scheduling care."
+        eyebrow="Insurance & pricing"
+        title="Anthem In-Network Acupuncture Insurance & Pricing in Herndon, VA"
+        text="SpringWell Acupuncture is in network with Anthem. Review insurance information, transparent self-pay pricing, HSA/FSA options, and superbill support before scheduling care."
         image="/images/service-herbal-medicine.jpg"
       />
 
