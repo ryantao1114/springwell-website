@@ -737,6 +737,13 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
 .form-disclaimer { margin: 0; text-align: center; color: var(--muted); font-size: .7rem; line-height: 1.6; }
 
 .specialist-focus-grid { grid-template-columns: repeat(2, 1fr); }
+.pricing-network-strip { padding: 30px 0; border-bottom: 1px solid var(--line); background: var(--paper); }
+.pricing-network-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.pricing-network-strip h2 { margin: 0; color: var(--muted); font-family: var(--font-geist-sans); font-size: .76rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.pricing-network-mini-card { min-width: min(100%, 430px); display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 3px 16px; padding: 16px 20px; border: 1px solid var(--line); border-left: 3px solid var(--sage); background: var(--mist-surface); }
+.pricing-network-mini-card span { grid-row: 1 / span 2; padding: 6px 9px; border-radius: 999px; background: #dcebdc; color: #2f663f; font-size: .66rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.pricing-network-mini-card strong { color: var(--ink-deep); font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+.pricing-network-mini-card p { margin: 0; color: var(--muted); font-size: .72rem; line-height: 1.45; }
 .cost-section { background: var(--mist-surface); }
 .cost-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .cost-card { padding: 52px; background: var(--paper); border-top: 3px solid var(--sage); }
@@ -1147,6 +1154,8 @@ a:hover .arrow-icon { transform: translate(2px, -2px); }
   .field-row { grid-template-columns: 1fr; }
   .form-card { padding: 32px 22px; }
   .cost-card, .payment-note { padding: 34px 26px; }
+  .pricing-network-strip-inner { align-items: stretch; flex-direction: column; gap: 16px; }
+  .pricing-network-mini-card { min-width: 0; }
   .blog-grid { grid-template-columns: 1fr; }
   .blog-copy h2 { min-height: auto; }
   .blog-contact-band { align-items: flex-start; flex-direction: column; }

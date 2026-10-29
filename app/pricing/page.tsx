@@ -6,8 +6,8 @@ import { CurrencyMark } from "../components/currency-mark";
 import { site } from "../config/site";
 
 export const metadata: Metadata = {
-  title: { absolute: "Anthem Acupuncture Insurance & Pricing | Herndon, VA" },
-  description: "SpringWell Acupuncture is in network with Anthem in Herndon, VA. Review insurance information, acupuncture pricing, HSA/FSA, and superbill options.",
+  title: { absolute: "Acupuncture Insurance & Pricing | Herndon, VA" },
+  description: "Review acupuncture insurance and pricing at SpringWell Acupuncture in Herndon, VA, including in-network care, self-pay rates, HSA/FSA, and superbill options.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -16,10 +16,21 @@ export default function PricingPage() {
     <PageShell>
       <InteriorHero
         eyebrow="Insurance & pricing"
-        title="Anthem In-Network Acupuncture Insurance & Pricing in Herndon, VA"
-        text="SpringWell Acupuncture is in network with Anthem. Review insurance information, transparent self-pay pricing, HSA/FSA options, and superbill support before scheduling care."
+        title="Acupuncture Insurance & Pricing in Herndon, VA"
+        text="Review in-network insurance information, transparent self-pay pricing, HSA/FSA options, and superbill support before scheduling care."
         image="/images/service-herbal-medicine.jpg"
       />
+
+      <section className="pricing-network-strip" aria-labelledby="pricing-network-heading">
+        <div className="container pricing-network-strip-inner">
+          <h2 id="pricing-network-heading">Current in-network insurance</h2>
+          <div className="pricing-network-mini-card">
+            <span>In network</span>
+            <strong>Anthem</strong>
+            <p>Coverage varies by plan. Contact us to verify your acupuncture benefits.</p>
+          </div>
+        </div>
+      </section>
 
       <section className="section-pad cost-section">
         <div className="container">
