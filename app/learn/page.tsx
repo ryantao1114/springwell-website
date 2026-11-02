@@ -197,6 +197,11 @@ export default function LearnPage() {
           <div className={styles.sectionHeading}><p className="eyebrow" id="springwell-view-title">SpringWell View</p></div>
           <div className={styles.viewList}>
             <div className={styles.viewFeature}>
+              <div className={styles.viewMeta}><span>Insurance update</span><time dateTime="2026-11-02">November 2, 2026</time></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/anthem-in-network-herndon-va">Now In-Network with Anthem at SpringWell Acupuncture in Herndon, VA</Link></h3><p>SpringWell is now in-network with Anthem, effective September 2, 2026. What that means for your coverage and how to use your benefits.</p></div>
+              <Link className={styles.arrowLink} href="/blog/anthem-in-network-herndon-va" aria-label="Read about SpringWell in-network with Anthem"><ArrowIcon /></Link>
+            </div>
+            <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>Sleep &amp; insomnia</span><time dateTime="2026-10-23">October 23, 2026</time></div>
               <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-insomnia-herndon-va">Acupuncture for Insomnia in Herndon, VA: Support for Deeper, Steadier Sleep</Link></h3><p>What the evidence says, the sleep patterns we see most often, what treatment looks like, and the daily habits that help acupuncture work better.</p></div>
               <Link className={styles.arrowLink} href="/blog/acupuncture-for-insomnia-herndon-va" aria-label="Read about acupuncture for insomnia in Herndon"><ArrowIcon /></Link>
