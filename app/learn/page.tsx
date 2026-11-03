@@ -197,6 +197,11 @@ export default function LearnPage() {
           <div className={styles.sectionHeading}><p className="eyebrow" id="springwell-view-title">SpringWell View</p></div>
           <div className={styles.viewList}>
             <div className={styles.viewFeature}>
+              <div className={styles.viewMeta}><span>Pain &amp; sciatica</span><time dateTime="2026-11-03">November 3, 2026</time></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-sciatica-herndon-va">Acupuncture for Sciatica in Herndon, VA: Relief for Low-Back and Leg Pain</Link></h3><p>How acupuncture calms shooting leg pain, releases guarded muscles, and restores freer movement — plus what a typical first six weeks of care looks like.</p></div>
+              <Link className={styles.arrowLink} href="/blog/acupuncture-for-sciatica-herndon-va" aria-label="Read about acupuncture for sciatica in Herndon"><ArrowIcon /></Link>
+            </div>
+            <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>Insurance update</span><time dateTime="2026-11-02">November 2, 2026</time></div>
               <div className={styles.viewCopy}><h3><Link href="/blog/anthem-in-network-herndon-va">Now In-Network with Anthem at SpringWell Acupuncture in Herndon, VA</Link></h3><p>SpringWell is now in-network with Anthem, effective September 2, 2026. What that means for your coverage and how to use your benefits.</p></div>
               <Link className={styles.arrowLink} href="/blog/anthem-in-network-herndon-va" aria-label="Read about SpringWell in-network with Anthem"><ArrowIcon /></Link>
