@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     url: slug,
     publishedTime: "2026-11-10",
     authors: ["Renjinming Dai, L.Ac."],
-    images: [{ url: "/images/home-back-neck-sciatica-user.jpg", alt: "A patient receiving acupuncture treatment for neck, shoulder, and back pain" }],
+    images: [{ url: "/images/stress-sleep-cards/jaw-neck-shoulder-hd.webp", alt: "Illustration of acupuncture points for jaw, neck, and shoulder pain" }],
   },
-  twitter: { card: "summary_large_image", title, description, images: ["/images/home-back-neck-sciatica-user.jpg"] },
+  twitter: { card: "summary_large_image", title, description, images: ["/images/stress-sleep-cards/jaw-neck-shoulder-hd.webp"] },
 };
 
 export default function AcupunctureForNeckShoulderPainArticle() {
@@ -65,7 +65,7 @@ export default function AcupunctureForNeckShoulderPainArticle() {
         "@type": "BlogPosting",
         headline: title,
         description,
-        image: new URL("/images/home-back-neck-sciatica-user.jpg", site.url).toString(),
+        image: new URL("/images/stress-sleep-cards/jaw-neck-shoulder-hd.webp", site.url).toString(),
         datePublished: "2026-11-10",
         dateModified: "2026-11-10",
         author: { "@type": "Person", name: "Renjinming Dai, L.Ac.", jobTitle: "Virginia Licensed Acupuncturist", url: new URL("/about", site.url).toString() },
@@ -104,7 +104,7 @@ export default function AcupunctureForNeckShoulderPainArticle() {
               <p className={styles.articleDeck}>How individualized acupuncture releases tight neck and shoulder muscles, eases the tension headaches that start there, and restores freer movement — and what a realistic course of care looks like.</p>
               <div className={styles.articleByline}><span>By Renjinming Dai, L.Ac.</span><time dateTime="2026-11-10">November 10, 2026</time><span>7 min read</span></div>
             </div>
-            <div className={styles.articleHeroImage}><Image src="/images/home-back-neck-sciatica-user.jpg" alt="A patient receiving acupuncture treatment for neck, shoulder, and back pain" fill priority sizes="(max-width: 760px) 100vw, 42vw" /></div>
+            <div className={styles.articleHeroImage}><Image src="/images/stress-sleep-cards/jaw-neck-shoulder-hd.webp" alt="Illustration of acupuncture points for jaw, neck, and shoulder pain" fill priority sizes="(max-width: 760px) 100vw, 42vw" /></div>
           </div>
         </header>
 
