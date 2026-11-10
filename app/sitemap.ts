@@ -28,6 +28,7 @@ const routes = [
   { path: "/blog/acupuncture-anxiety-meta-analysis-2026", priority: 0.8 },
   { path: "/blog/acupuncture-for-insomnia-herndon-va", priority: 0.8 },
   { path: "/blog/acupuncture-for-sciatica-herndon-va", priority: 0.8 },
+  { path: "/blog/acupuncture-for-neck-shoulder-pain-herndon-va", priority: 0.8 },
   { path: "/blog/anthem-in-network-herndon-va", priority: 0.8 },
   { path: "/faq", priority: 0.7 },
   { path: "/contact", priority: 0.8 },
