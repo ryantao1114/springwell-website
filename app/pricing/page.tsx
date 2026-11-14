@@ -111,9 +111,10 @@ export default function PricingPage() {
               <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
               <Image className={homeStyles.insuranceLogo} src="/images/insurance/aetna.jpg" alt="Aetna" width={3150} height={863} />
             </article>
-            <article className={homeStyles.insuranceCard}>
-              <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
+            <article className={`${homeStyles.insuranceCard} ${homeStyles.insuranceCardActive}`}>
+              <span className={homeStyles.insuranceStatus}>In Network</span>
               <Image className={homeStyles.insuranceLogo} src="/images/insurance/cigna.jpg" alt="Cigna" width={1200} height={630} />
+              <p>Cigna</p>
             </article>
             <article className={`${homeStyles.insuranceCard} ${homeStyles.insuranceCardAccepted}`}>
               <span className={homeStyles.insuranceStatus}>Accepted</span>
@@ -171,11 +172,11 @@ export default function PricingPage() {
           <div className="payment-note" id="insurance">
             <div>
               <p className="eyebrow">Insurance &amp; pricing</p>
-              <h2>In-network Anthem care and transparent self-pay options.</h2>
+              <h2>In-network insurance care and transparent self-pay options.</h2>
             </div>
             <div className="payment-copy">
-              <p className="eyebrow">Anthem insurance</p>
-              <p>SpringWell Acupuncture is in network with Anthem.</p>
+              <p className="eyebrow">In-network insurance</p>
+              <p>SpringWell Acupuncture is in network with Anthem and Cigna. Coverage and patient responsibility vary by plan, so benefits should be verified before treatment.</p>
               <p className="eyebrow">Expanding insurance access</p>
               <p>We are actively working to join additional insurance networks and will update this page as participation becomes effective.</p>
               <p className="eyebrow">Self-pay &amp; superbills</p>

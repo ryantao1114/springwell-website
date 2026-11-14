@@ -57,7 +57,7 @@ export const careAreas: CareArea[] = [
     title: "Women’s Health Acupuncture", seoTitle: "Women’s Health · Acupuncture in Herndon, VA · SpringWell",
     seoDescription: "Personalized women’s health acupuncture in Herndon, VA for menstrual concerns, PCOS-related symptoms, perimenopause, stress, and sleep.",
     summary: "At SpringWell Acupuncture, we offer personalized women’s health acupuncture in Herndon, Virginia, serving Herndon, Reston, Tysons, and communities throughout Northern Virginia. Care may support menstrual health, cycle-related symptoms, PCOS-related concerns, perimenopause, stress, sleep, and overall wellness.\n\nYour care is tailored to your health history, current symptoms, and goals. Through an individualized approach, acupuncture can support your body’s natural ability to restore balance and work alongside your existing medical care.",
-    image: "/images/home-womens-health-hero-hd.webp", imageAlt: "A practitioner offering supportive care during a women’s health consultation",
+    image: "/images/womens-health-pelvic-care-hero.jpg", imageAlt: "A women’s health practitioner explaining pelvic anatomy during a personalized consultation",
     introTitle: "Care that follows your changing health, with no one size fits all protocol.",
     introCopy: "Women’s health concerns can shift across the menstrual cycle and through hormonal transitions. We begin with your timeline, symptoms, medical care, and goals, then create a focused plan that fits real life.",
     conditions: ["Period pain & PMS", "Irregular cycles", "PCOS-related symptoms", "Perimenopause symptoms", "Cycle-related headaches", "Sleep & stress during hormonal changes"],
