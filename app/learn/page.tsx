@@ -198,17 +198,17 @@ export default function LearnPage() {
           <div className={styles.viewList}>
             <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>Pain &amp; headache and migraine</span><time dateTime="2026-11-17">November 17, 2026</time></div>
-              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-migraine-herndon-va">Acupuncture for Migraine in Herndon, VA: Relief for Headaches and Triggers</Link></h3><p>How acupuncture calms migraine patterns, eases the tension that travels with headaches, and helps you get ahead of your triggers — plus what a typical first six weeks of care looks like.</p></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-migraine-herndon-va">Acupuncture for Migraine in Herndon, VA: Relief for Headaches and Triggers</Link></h3><p>How acupuncture calms migraine patterns, eases the tension that travels with headaches, and helps you get ahead of your triggers.</p></div>
               <Link className={styles.arrowLink} href="/blog/acupuncture-for-migraine-herndon-va" aria-label="Read about acupuncture for migraine in Herndon"><ArrowIcon /></Link>
             </div>
             <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>Pain &amp; neck and shoulder</span><time dateTime="2026-11-10">November 10, 2026</time></div>
-              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-neck-shoulder-pain-herndon-va">Acupuncture for Neck and Shoulder Pain in Herndon, VA: Relief for Stiffness, Tension, and Desk Strain</Link></h3><p>How acupuncture releases tight neck and shoulder muscles, eases the tension headaches that start there, and restores freer movement — plus what a typical first six weeks of care looks like.</p></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-neck-shoulder-pain-herndon-va">Acupuncture for Neck and Shoulder Pain in Herndon, VA: Relief for Stiffness, Tension, and Desk Strain</Link></h3><p>How acupuncture releases tight neck and shoulder muscles, eases the tension headaches that start there, and restores freer movement.</p></div>
               <Link className={styles.arrowLink} href="/blog/acupuncture-for-neck-shoulder-pain-herndon-va" aria-label="Read about acupuncture for neck and shoulder pain in Herndon"><ArrowIcon /></Link>
             </div>
             <div className={styles.viewFeature}>
               <div className={styles.viewMeta}><span>Pain &amp; sciatica</span><time dateTime="2026-11-03">November 3, 2026</time></div>
-              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-sciatica-herndon-va">Acupuncture for Sciatica in Herndon, VA: Relief for Low-Back and Leg Pain</Link></h3><p>How acupuncture calms shooting leg pain, releases guarded muscles, and restores freer movement — plus what a typical first six weeks of care looks like.</p></div>
+              <div className={styles.viewCopy}><h3><Link href="/blog/acupuncture-for-sciatica-herndon-va">Acupuncture for Sciatica in Herndon, VA: Relief for Low-Back and Leg Pain</Link></h3><p>How acupuncture calms shooting leg pain, releases guarded muscles, and restores freer movement.</p></div>
               <Link className={styles.arrowLink} href="/blog/acupuncture-for-sciatica-herndon-va" aria-label="Read about acupuncture for sciatica in Herndon"><ArrowIcon /></Link>
             </div>
             <div className={styles.viewFeature}>

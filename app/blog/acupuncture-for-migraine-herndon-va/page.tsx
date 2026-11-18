@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "How many acupuncture sessions does migraine relief usually take?",
-    answer: "Care often begins with weekly visits over about four to six weeks, then reassesses together. Some patients notice fewer or milder attacks sooner; steadier, longer-lasting change tends to build over a series of visits as sleep, tension, and trigger patterns settle.",
+    answer: "Care often begins with weekly visits, then reassesses together. Some patients notice fewer or milder attacks sooner; steadier, longer-lasting change tends to build over a series of visits as sleep, tension, and trigger patterns settle.",
   },
   {
     question: "Can acupuncture help tension headaches as well as migraine?",
@@ -115,7 +115,6 @@ export default function AcupunctureForMigraineArticle() {
               <a href="#how-it-helps">How does acupuncture help?</a>
               <a href="#patterns">Patterns we see</a>
               <a href="#treatment">What treatment looks like</a>
-              <a href="#timeline">A typical first six weeks</a>
               <a href="#daily-life">Triggers, sleep, and daily life</a>
               <a href="#questions">Common questions</a>
             </nav>
@@ -159,24 +158,10 @@ export default function AcupunctureForMigraineArticle() {
             <section id="treatment">
               <h2>What Treatment Looks Like at SpringWell</h2>
               <p>Your first visit begins with a conversation: when the attacks started, how often they come, what they feel like, and what seems to set them off — sleep, stress, screens, the cycle, or foods and drinks. Treatment itself is quiet and unhurried — fine needles while you rest comfortably, with time for tight muscles and a wired nervous system to genuinely settle.</p>
-              <p>Most migraine plans begin with <strong>weekly visits over about four to six weeks</strong>, then reassess together. As attacks become less frequent and less intense, visits may space out, and the plan keeps adjusting to your pattern — points, focus, and rhythm all follow how your headaches are changing.</p>
+              <p>Most migraine plans begin with <strong>weekly visits</strong>, then reassess together. As attacks become less frequent and less intense, visits may space out, and the plan keeps adjusting to your pattern — points, focus, and rhythm all follow how your headaches are changing.</p>
               <p>SpringWell is open Tuesday, Thursday, Friday, and Sunday, 9:00 AM to 6:30 PM, so visits can be scheduled at a consistent time that fits work and family life.</p>
             </section>
 
-            <section id="timeline">
-              <h2>A Typical First Six Weeks</h2>
-              <p>Every pattern moves at its own pace, but this timeline is what most migraine and headache patients can expect:</p>
-              <table>
-                <thead><tr><th>Stage</th><th>What usually changes</th></tr></thead>
-                <tbody>
-                  <tr><td>Visits 1–2</td><td>Neck and jaw tension starts to ease; sleep often deepens, and headaches feel less intense.</td></tr>
-                  <tr><td>Visits 3–4</td><td>Good days become more frequent; attacks shorten, and the gap between them starts to widen.</td></tr>
-                  <tr><td>Visits 5–6</td><td>The pattern feels steadier and more predictable; together we reassess and set the spacing for the next phase.</td></tr>
-                  <tr><td>Beyond</td><td>Visits space out as gains hold, with a plan for the sleep, stress, and trigger habits that keep migraine from returning.</td></tr>
-                </tbody>
-              </table>
-              <p>Progress is rarely a straight line — a demanding week or a weather change can stir symptoms — but the trend across the first six weeks is what we judge together.</p>
-            </section>
 
             <section id="daily-life">
               <h2>Triggers, Sleep, and Daily Habits That Support Treatment</h2>

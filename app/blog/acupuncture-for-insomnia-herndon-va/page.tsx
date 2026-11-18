@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "How many sessions before I notice a change in my sleep?",
-    answer: "It varies. Sleep patterns usually change gradually, so care often begins with weekly visits over about four to six weeks before judging the response together. Some patients notice calmer evenings sooner; steadier sleep tends to build over a series of visits.",
+    answer: "It varies. Sleep patterns usually change gradually, so care often begins with weekly visits before judging the response together. Some patients notice calmer evenings sooner; steadier sleep tends to build over a series of visits.",
   },
   {
     question: "Can I have acupuncture while taking sleep medication?",
@@ -159,7 +159,7 @@ export default function AcupunctureForInsomniaArticle() {
             <section id="treatment">
               <h2>What Treatment Looks Like at SpringWell</h2>
               <p>Your first visit begins with a conversation: when sleep became difficult, what your nights actually look like, caffeine and alcohol, medications, work schedule, and what else is going on with your health. Treatment itself is quiet and unhurried — fine needles, a darkened room, and time to genuinely rest.</p>
-              <p>Most insomnia plans begin with <strong>weekly visits over about four to six weeks</strong>, then reassess together. As sleep steadies, visits may space out, and the plan keeps adjusting to your pattern — points, focus, and rhythm all follow how your nights are changing.</p>
+              <p>Most insomnia plans begin with <strong>weekly visits</strong>, then reassess together. As sleep steadies, visits may space out, and the plan keeps adjusting to your pattern — points, focus, and rhythm all follow how your nights are changing.</p>
               <p>SpringWell is open Tuesday, Thursday, Friday, and Sunday, 9:00 AM to 6:30 PM, so visits can be scheduled at a consistent time that supports a steadier routine.</p>
             </section>
 

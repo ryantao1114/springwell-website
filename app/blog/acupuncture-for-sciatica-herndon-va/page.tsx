@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "How many acupuncture sessions does sciatica usually take?",
-    answer: "Care often begins with weekly visits over about four to six weeks, then reassesses together. Some patients notice easier movement and calmer pain sooner; steadier, longer-lasting change tends to build over a series of visits as guarded muscles release and movement returns.",
+    answer: "Care often begins with weekly visits, then reassesses together. Some patients notice easier movement and calmer pain sooner; steadier, longer-lasting change tends to build over a series of visits as guarded muscles release and movement returns.",
   },
   {
     question: "Does acupuncture for sciatica hurt?",
@@ -115,7 +115,6 @@ export default function AcupunctureForSciaticaArticle() {
               <a href="#how-it-helps">How does acupuncture help?</a>
               <a href="#patterns">Patterns we see</a>
               <a href="#treatment">What treatment looks like</a>
-              <a href="#timeline">A typical first six weeks</a>
               <a href="#daily-life">Sitting, walking, and daily life</a>
               <a href="#questions">Common questions</a>
             </nav>
@@ -159,24 +158,10 @@ export default function AcupunctureForSciaticaArticle() {
             <section id="treatment">
               <h2>What Treatment Looks Like at SpringWell</h2>
               <p>Your first visit begins with a conversation: when the pain started, exactly where it travels, what sitting, standing, and walking feel like, and what you most want to get back to. Treatment itself is quiet and unhurried — fine needles while you rest comfortably, with time for guarded muscles to genuinely release.</p>
-              <p>Most sciatica plans begin with <strong>weekly visits over about four to six weeks</strong>, then reassess together. As pain calms and movement returns, visits may space out, and the plan keeps adjusting to your pattern — points, focus, and rhythm all follow how your leg and back are changing.</p>
+              <p>Most sciatica plans begin with <strong>weekly visits</strong>, then reassess together. As pain calms and movement returns, visits may space out, and the plan keeps adjusting to your pattern — points, focus, and rhythm all follow how your leg and back are changing.</p>
               <p>SpringWell is open Tuesday, Thursday, Friday, and Sunday, 9:00 AM to 6:30 PM, so visits can be scheduled at a consistent time that fits work and family life.</p>
             </section>
 
-            <section id="timeline">
-              <h2>A Typical First Six Weeks</h2>
-              <p>Every pattern moves at its own pace, but this timeline is what most sciatica patients can expect:</p>
-              <table>
-                <thead><tr><th>Stage</th><th>What usually changes</th></tr></thead>
-                <tbody>
-                  <tr><td>Visits 1–2</td><td>Pain intensity and muscle guarding start to ease; sitting and first steps in the morning feel less sharp.</td></tr>
-                  <tr><td>Visits 3–4</td><td>Good days become more frequent; walking distance grows and flare-ups shorten.</td></tr>
-                  <tr><td>Visits 5–6</td><td>Movement feels freer and steadier; together we reassess and set the spacing for the next phase.</td></tr>
-                  <tr><td>Beyond</td><td>Visits space out as gains hold, with a plan for the sitting, work, and activity habits that keep sciatica from returning.</td></tr>
-                </tbody>
-              </table>
-              <p>Progress is rarely a straight line — a demanding week can stir symptoms — but the trend across the first six weeks is what we judge together.</p>
-            </section>
 
             <section id="daily-life">
               <h2>Sitting, Walking, and Daily Life With Sciatica</h2>

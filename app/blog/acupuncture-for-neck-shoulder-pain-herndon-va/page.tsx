@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "How many acupuncture sessions does neck and shoulder pain usually take?",
-    answer: "Care often begins with weekly visits over about four to six weeks, then reassesses together. Some patients notice looser movement and calmer pain sooner; steadier, longer-lasting change tends to build over a series of visits as tight muscles release and posture and habits adjust.",
+    answer: "Care often begins with weekly visits, then reassesses together. Some patients notice looser movement and calmer pain sooner; steadier, longer-lasting change tends to build over a series of visits as tight muscles release and posture and habits adjust.",
   },
   {
     question: "Does acupuncture for neck and shoulder pain hurt?",
@@ -115,7 +115,6 @@ export default function AcupunctureForNeckShoulderPainArticle() {
               <a href="#how-it-helps">How does acupuncture help?</a>
               <a href="#patterns">Patterns we see</a>
               <a href="#treatment">What treatment looks like</a>
-              <a href="#timeline">A typical first six weeks</a>
               <a href="#daily-life">Desk, driving, and daily life</a>
               <a href="#questions">Common questions</a>
             </nav>
@@ -159,24 +158,10 @@ export default function AcupunctureForNeckShoulderPainArticle() {
             <section id="treatment">
               <h2>What Treatment Looks Like at SpringWell</h2>
               <p>Your first visit begins with a conversation: when the pain started, exactly where it gathers, what desk work, driving, and sleep feel like, and what you most want to get back to. Treatment itself is quiet and unhurried — fine needles while you rest comfortably, with time for tight muscles to genuinely release.</p>
-              <p>Most neck and shoulder plans begin with <strong>weekly visits over about four to six weeks</strong>, then reassess together. As tension releases and movement returns, visits may space out, and the plan keeps adjusting to your pattern — points, focus, and rhythm all follow how your neck and shoulders are changing.</p>
+              <p>Most neck and shoulder plans begin with <strong>weekly visits</strong>, then reassess together. As tension releases and movement returns, visits may space out, and the plan keeps adjusting to your pattern — points, focus, and rhythm all follow how your neck and shoulders are changing.</p>
               <p>SpringWell is open Tuesday, Thursday, Friday, and Sunday, 9:00 AM to 6:30 PM, so visits can be scheduled at a consistent time that fits work and family life.</p>
             </section>
 
-            <section id="timeline">
-              <h2>A Typical First Six Weeks</h2>
-              <p>Every pattern moves at its own pace, but this timeline is what most neck and shoulder patients can expect:</p>
-              <table>
-                <thead><tr><th>Stage</th><th>What usually changes</th></tr></thead>
-                <tbody>
-                  <tr><td>Visits 1–2</td><td>Muscle tightness and pain intensity start to ease; turning the head and reaching feel less restricted.</td></tr>
-                  <tr><td>Visits 3–4</td><td>Good days become more frequent; tension headaches shorten and desk work feels easier to sustain.</td></tr>
-                  <tr><td>Visits 5–6</td><td>Movement feels freer and steadier; together we reassess and set the spacing for the next phase.</td></tr>
-                  <tr><td>Beyond</td><td>Visits space out as gains hold, with a plan for the desk, driving, and sleep habits that keep neck and shoulder pain from returning.</td></tr>
-                </tbody>
-              </table>
-              <p>Progress is rarely a straight line — a demanding week can stir symptoms — but the trend across the first six weeks is what we judge together.</p>
-            </section>
 
             <section id="daily-life">
               <h2>Desk Setup, Driving, and Daily Life With Neck and Shoulder Pain</h2>
