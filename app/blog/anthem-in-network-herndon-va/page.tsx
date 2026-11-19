@@ -166,7 +166,6 @@ export default function InsuranceBenefitsArticle() {
                 <li><strong>Women&apos;s Health:</strong> Individualized care for menstrual concerns, perimenopause, and related symptoms.</li>
                 <li><strong>Digestive Wellness:</strong> Acupuncture for digestive discomfort and overall digestive well-being.</li>
               </ul>
-              <p><strong>Please note:</strong> Not every condition or service is covered by insurance. Some plans limit acupuncture benefits to specific medically necessary conditions, particularly musculoskeletal pain. Fertility, wellness, and preventive acupuncture may require self-payment depending on your plan.</p>
             </section>
 
             <section id="questions">
@@ -174,7 +173,7 @@ export default function InsuranceBenefitsArticle() {
               {faqs.map((item) => <div key={item.question}><h3>{item.question}</h3><p>{item.answer}</p></div>)}
               <p><strong>SpringWell Acupuncture</strong><br />463 Carlisle Dr, Suite B<br />Herndon, VA 20170</p>
               <p><strong>Office Hours:</strong> Tuesday, Thursday, Friday, and Sunday, 9:00 AM–6:30 PM.</p>
-              <p>We welcome patients from <strong>Herndon, Reston, Sterling, Vienna, Tysons, Fairfax</strong>, and surrounding Northern Virginia communities.</p>
+              <p>We welcome patients from <strong>Herndon, Reston, Sterling, Ashburn, Vienna, Tysons, Fairfax</strong>, and surrounding Northern Virginia communities.</p>
             </section>
 
             <section id="have-questions">
