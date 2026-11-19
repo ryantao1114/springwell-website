@@ -7,7 +7,7 @@ import { site } from "../../config/site";
 import styles from "../research-blog.module.css";
 
 const slug = "/blog/anthem-in-network-herndon-va";
-const title = "Now In-Network with Anthem at SpringWell Acupuncture in Herndon, VA";
+const title = "We Accept Insurance for Acupuncture at SpringWell Acupuncture Herndon, VA";
 const description = "SpringWell Acupuncture in Herndon, VA is now in-network with Anthem, effective September 2, 2026. Learn what that means for your coverage and how to use your benefits.";
 const logo = "/images/anthem-blue-cross-blue-shield-logo.png";
 
@@ -85,7 +85,7 @@ export default function AnthemInNetworkArticle() {
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: site.url },
           { "@type": "ListItem", position: 2, name: "Blog", item: new URL("/blog", site.url).toString() },
-          { "@type": "ListItem", position: 3, name: "Now In-Network with Anthem at SpringWell Acupuncture in Herndon, VA", item: new URL(slug, site.url).toString() },
+          { "@type": "ListItem", position: 3, name: "We Accept Insurance for Acupuncture at SpringWell Acupuncture Herndon, VA", item: new URL(slug, site.url).toString() },
         ],
       },
     ],
