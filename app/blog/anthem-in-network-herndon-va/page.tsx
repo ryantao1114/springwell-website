@@ -133,14 +133,14 @@ export default function AnthemInNetworkArticle() {
             </section>
 
             <section id="how-to-use">
-              <h2>How to Use Your Anthem Benefits at SpringWell</h2>
+              <h2>How to Use Your Insurance Benefits at SpringWell</h2>
               <p>Getting started is simple:</p>
               <ol>
-                <li><strong>Call us at 703-495-2857</strong> and tell us you have Anthem coverage.</li>
-                <li><strong>Bring your Anthem insurance card</strong> to your visit.</li>
-                <li><strong>We will help you confirm</strong> your plan&apos;s acupuncture benefits and what to expect.</li>
+                <li><strong>Contact us:</strong> Call us at <strong>703-495-2857</strong> or email <strong>info@springwellacu.com</strong>. We&apos;ll help you verify your acupuncture benefits before your visit, including coverage, copays, deductibles, and estimated out-of-pocket costs.</li>
+                <li><strong>Bring your ID and insurance card:</strong> Please bring a valid photo ID and your insurance card to your appointment.</li>
+                <li><strong>Start your treatment:</strong> We&apos;ll discuss your health concerns, develop a personalized treatment plan, and get started with your acupuncture care.</li>
               </ol>
-              <p>Coverage and referral requirements vary by plan, so a quick call before your first visit is the best way to know exactly where you stand.</p>
+              <p>Insurance coverage and requirements vary by plan. We recommend contacting us before your first visit so you can feel confident about your benefits and know what to expect.</p>
             </section>
 
             <section id="what-we-treat">
