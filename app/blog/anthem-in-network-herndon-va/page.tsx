@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowIcon } from "../../components/icons";
 import { BottomCTA, PageShell } from "../../components/site-shell";
 import { site } from "../../config/site";
 import styles from "../research-blog.module.css";
@@ -181,6 +182,10 @@ export default function InsuranceBenefitsArticle() {
               <p>Understanding insurance shouldn&apos;t be complicated. Whether you&apos;re visiting us for the first time or exploring acupuncture as part of your ongoing care, we&apos;re happy to help you understand your options.</p>
               <p><strong>Call 703-495-2857 or email info@springwellacu.com to verify your acupuncture benefits before your visit.</strong></p>
               <p>We look forward to welcoming you to SpringWell Acupuncture.</p>
+              <div className={styles.articleCta}>
+                <div><p className="eyebrow">Ready to use your benefits?</p><h2>Book your first visit.</h2><p>Call us to confirm your plan&apos;s coverage, or book online now.</p></div>
+                <a className="button button-primary" href={site.bookingUrl} target="_blank" rel="noreferrer">Book an initial appointment <ArrowIcon /></a>
+              </div>
             </section>
           </div>
         </div>
