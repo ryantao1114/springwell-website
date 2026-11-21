@@ -68,11 +68,11 @@
         send_page_view: false, allow_enhanced_conversions: false,
         allow_google_signals: false, allow_ad_personalization_signals: false
       });
-      gtag('config', 'AW-18378983115', config);
+      gtag('config', 'GT-KT45HCVM', config);
       gtag('config', 'G-ZSK3ESH5HP', config);
       var script = d.createElement('script');
       script.id = 'google-tag-loader'; script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18378983115';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=GT-KT45HCVM';
       script.referrerPolicy = 'no-referrer';
       d.head.appendChild(script);
     }
