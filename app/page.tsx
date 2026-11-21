@@ -42,7 +42,7 @@ export default function Home() {
       <div className="container">
         <div className={styles.insuranceHeading}>
           <div><p className="eyebrow">Insurance at SpringWell</p><h2 id="home-insurance-heading">In-network care, with more access coming soon.</h2></div>
-          <p>SpringWell Acupuncture is in network with Anthem and Cigna. We are actively working to join additional insurance networks.</p>
+          <p>SpringWell Acupuncture is in network with Anthem, Cigna, and CareFirst BlueCross BlueShield. We are actively working to join additional insurance networks.</p>
         </div>
         <div className={styles.insuranceCards}>
           <article className={`${styles.insuranceCard} ${styles.insuranceCardActive}`}>
@@ -52,10 +52,10 @@ export default function Home() {
             </div>
             <p>Anthem</p>
           </article>
-          <article className={styles.insuranceCard}>
-            <span className={styles.insuranceStatusSoon}>Coming Soon</span>
+          <article className={`${styles.insuranceCard} ${styles.insuranceCardActive}`}>
+            <span className={styles.insuranceStatus}>In Network</span>
             <Image className={styles.insuranceLogo} src="/images/insurance/carefirst-bcbs.jpg" alt="CareFirst BlueCross BlueShield" width={620} height={375} />
-            <p>BlueCross BlueShield</p>
+            <p>CareFirst BlueCross BlueShield</p>
           </article>
           <article className={styles.insuranceCard}>
             <span className={styles.insuranceStatusSoon}>Coming Soon</span>
