@@ -223,7 +223,7 @@ export function SiteFooter() {
               <img src="/images/anthem-bcbs-logo-clean.png" alt="Anthem Blue Cross and Blue Shield" />
             </Link>
             <div>
-              <p><strong>In network with Anthem, Cigna, and CareFirst BlueCross BlueShield.</strong></p>
+              <p><strong>In network with Anthem, Cigna, CareFirst BlueCross BlueShield, and FEP Blue.</strong></p>
               <p>We are actively working to join additional insurance networks.</p>
             </div>
           </div>
