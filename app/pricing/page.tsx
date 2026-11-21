@@ -98,10 +98,10 @@ export default function PricingPage() {
               </div>
               <p>Anthem</p>
             </article>
-            <article className={homeStyles.insuranceCard}>
-              <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
+            <article className={`${homeStyles.insuranceCard} ${homeStyles.insuranceCardActive}`}>
+              <span className={homeStyles.insuranceStatus}>In Network</span>
               <Image className={homeStyles.insuranceLogo} src="/images/insurance/carefirst-bcbs.jpg" alt="CareFirst BlueCross BlueShield" width={620} height={375} />
-              <p>BlueCross BlueShield</p>
+              <p>CareFirst BlueCross BlueShield</p>
             </article>
             <article className={homeStyles.insuranceCard}>
               <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
@@ -176,7 +176,7 @@ export default function PricingPage() {
             </div>
             <div className="payment-copy">
               <p className="eyebrow">In-network insurance</p>
-              <p>SpringWell Acupuncture is in network with Anthem and Cigna. Coverage and patient responsibility vary by plan, so benefits should be verified before treatment.</p>
+              <p>SpringWell Acupuncture is in network with Anthem, Cigna, and CareFirst BlueCross BlueShield. Coverage and patient responsibility vary by plan, so benefits should be verified before treatment.</p>
               <p className="eyebrow">Expanding insurance access</p>
               <p>We are actively working to join additional insurance networks and will update this page as participation becomes effective.</p>
               <p className="eyebrow">Self-pay &amp; superbills</p>
