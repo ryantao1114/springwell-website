@@ -103,6 +103,11 @@ export default function PricingPage() {
               <Image className={homeStyles.insuranceLogo} src="/images/insurance/carefirst-bcbs.jpg" alt="CareFirst BlueCross BlueShield" width={620} height={375} />
               <p>CareFirst BlueCross BlueShield</p>
             </article>
+            <article className={`${homeStyles.insuranceCard} ${homeStyles.insuranceCardActive} ${homeStyles.insuranceCardFep}`}>
+              <span className={homeStyles.insuranceStatus}>In Network</span>
+              <Image className={homeStyles.insuranceLogo} src="/images/insurance/fep-blue.svg" alt="Blue Cross and Blue Shield Federal Employee Program" width={138} height={46} />
+              <p>FEP Blue</p>
+            </article>
             <article className={homeStyles.insuranceCard}>
               <span className={homeStyles.insuranceStatusSoon}>Coming Soon</span>
               <Image className={homeStyles.insuranceLogo} src="/images/insurance/united-healthcare.jpg" alt="UnitedHealthcare" width={800} height={600} />
@@ -176,7 +181,7 @@ export default function PricingPage() {
             </div>
             <div className="payment-copy">
               <p className="eyebrow">In-network insurance</p>
-              <p>SpringWell Acupuncture is in network with Anthem, Cigna, and CareFirst BlueCross BlueShield. Coverage and patient responsibility vary by plan, so benefits should be verified before treatment.</p>
+              <p>SpringWell Acupuncture is in network with Anthem, Cigna, CareFirst BlueCross BlueShield, and FEP Blue. Coverage and patient responsibility vary by plan, so benefits should be verified before treatment.</p>
               <p className="eyebrow">Expanding insurance access</p>
               <p>We are actively working to join additional insurance networks and will update this page as participation becomes effective.</p>
               <p className="eyebrow">Self-pay &amp; superbills</p>
