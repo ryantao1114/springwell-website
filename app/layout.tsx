@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { DM_Sans, Newsreader } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import "./service-care-layout.css";
 import { ImageFallbacks } from "./components/image-fallbacks";
 import { site } from "./config/site";
+import { MeasurementConsent } from "./components/measurement-consent";
 
 const dmSans = DM_Sans({
   variable: "--font-body",
@@ -50,9 +49,6 @@ export const metadata: Metadata = {
     description: site.description,
     images: ["/images/springwell-official-logo.png"],
   },
-  other: {
-    "codex-preview": "development",
-  },
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -78,64 +74,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable} ${newsreader.variable}`}>
       <head>
-        <script
-          id="google-tag-loader"
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18378983115"
-        />
-        <script
-          id="google-tag-init"
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18378983115');
-gtag('config', 'G-ZSK3ESH5HP');`,
-          }}
-        />
-        <script
-          id="google-ads-click-to-call"
-          dangerouslySetInnerHTML={{
-            __html: `(function () {
-  var sendTo = 'AW-18378983115/SkwXC0CO-egCEMuN5LtE';
-
-  function reportClickToCall(url) {
-    var navigated = false;
-    var continueToPhone = function () {
-      if (navigated) return;
-      navigated = true;
-      window.location.href = url;
-    };
-
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'conversion', {
-        send_to: sendTo,
-        event_callback: continueToPhone,
-        event_timeout: 1200
-      });
-      window.setTimeout(continueToPhone, 1200);
-    } else {
-      continueToPhone();
-    }
-  }
-
-  document.addEventListener('click', function (event) {
-    var target = event.target;
-    if (!(target instanceof Element)) return;
-    var phoneLink = target.closest('a[href^="tel:"]');
-    if (!phoneLink) return;
-    event.preventDefault();
-    reportClickToCall(phoneLink.href);
-  }, true);
-})();`,
-          }}
-        />
+        <script id="springwell-measurement" src="/measurement.js" />
       </head>
       <body className="antialiased">
         {children}
         <ImageFallbacks />
-        <Analytics />
-        <SpeedInsights />
+        <MeasurementConsent />
       </body>
     </html>
   );
