@@ -22,7 +22,8 @@
     send_page_view: false, allow_enhanced_conversions: false,
     allow_google_signals: false, allow_ad_personalization_signals: false
   });
-  w.gtag('config', 'GT-KT45HCVM', config);
+  // Ads config pings ignore page_location redaction and expose medical routes.
+  // Keep Ads call-asset measurement in Google Ads; do not initialize its web tag.
   w.gtag('config', 'G-ZSK3ESH5HP', config);
   // One generic visit per session. No medical route or page-specific conversion.
   var recorded = false;
@@ -33,7 +34,7 @@
   }
   var script = d.createElement('script');
   script.id = 'google-tag-loader'; script.async = true;
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=GT-KT45HCVM';
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZSK3ESH5HP';
   script.referrerPolicy = 'no-referrer';
   d.head.appendChild(script);
 })(window, document);
