@@ -4,7 +4,6 @@ import "./globals.css";
 import "./service-care-layout.css";
 import { ImageFallbacks } from "./components/image-fallbacks";
 import { site } from "./config/site";
-import { MeasurementConsent } from "./components/measurement-consent";
 
 const dmSans = DM_Sans({
   variable: "--font-body",
@@ -79,7 +78,6 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <ImageFallbacks />
-        <MeasurementConsent />
       </body>
     </html>
   );
