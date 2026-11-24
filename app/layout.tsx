@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Newsreader } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import "./service-care-layout.css";
 import { ImageFallbacks } from "./components/image-fallbacks";
@@ -80,6 +82,8 @@ export default function RootLayout({
         {children}
         <ImageFallbacks />
         <FertilityPageAnalytics />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
