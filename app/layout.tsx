@@ -3,6 +3,7 @@ import { DM_Sans, Newsreader } from "next/font/google";
 import "./globals.css";
 import "./service-care-layout.css";
 import { ImageFallbacks } from "./components/image-fallbacks";
+import { FertilityPageAnalytics } from "./components/fertility-page-analytics";
 import { site } from "./config/site";
 
 const dmSans = DM_Sans({
@@ -78,6 +79,7 @@ export default function RootLayout({
       <body className="antialiased">
         {children}
         <ImageFallbacks />
+        <FertilityPageAnalytics />
       </body>
     </html>
   );
