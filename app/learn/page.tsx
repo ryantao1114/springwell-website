@@ -167,13 +167,14 @@ export default function LearnPage() {
           <h1>Clear answers about acupuncture and your care.</h1>
           <p className={styles.heroIntro}>Explore practical guidance on fertility and IVF, women’s health, pain, stress, sleep, and digestion—written to help you understand what acupuncture can do and what a personalized treatment plan may look like.</p>
           <nav className={styles.jumpNav} aria-label="Blog sections">
+            <a href="#springwell-view">SpringWell View</a>
             <a href="#start-here">Start here</a>
             <a href="#research">Research &amp; evidence</a>
-            <a href="#springwell-view">SpringWell View</a>
           </nav>
         </div>
       </header>
 
+      <main className={styles.pageSections}>
       <section className={styles.answersSection} id="start-here" aria-labelledby="start-here-title">
         <div className="container">
           <div className={styles.sectionHeading}><p className="eyebrow">Start here</p><h2 id="start-here-title">Common questions, direct answers.</h2></div>
@@ -256,6 +257,7 @@ export default function LearnPage() {
           <div><p>SpringWell provides individualized acupuncture care for patients in Herndon, Reston, Sterling, Tysons, and across Northern Virginia.</p><div className={styles.localActions}><Link className="button button-primary" href="/book">Book an appointment <ArrowIcon /></Link><Link className="text-link" href="/contact">Ask a question <ArrowIcon /></Link></div></div>
         </div>
       </section>
+      </main>
       <BottomCTA />
     </PageShell>
   );
